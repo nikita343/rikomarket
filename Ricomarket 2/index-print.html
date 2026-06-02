@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UAB Riko Market — Print</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Barlow+Condensed:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    html, body { margin: 0; padding: 0; background: #ffffff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { font-family: 'Manrope', system-ui, sans-serif; color: #1a2438; }
+    * { box-sizing: border-box; }
+
+    /* Each .print-sheet renders as one landscape A4 page. The page frame
+       holds a fixed 1440-wide design and scales it down to fit the sheet. */
+    @page { size: A4 landscape; margin: 0; }
+
+    .print-root { display: flex; flex-direction: column; }
+    .print-sheet {
+      width: 297mm;
+      height: 210mm;
+      padding: 12mm 14mm;
+      page-break-after: always;
+      break-after: page;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: #ffffff;
+    }
+    .print-sheet:last-child { page-break-after: auto; break-after: auto; }
+
+    .print-cover { justify-content: flex-start; }
+
+    .print-sheet-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8mm;
+      font-family: 'Archivo', sans-serif;
+    }
+    .print-page-label {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #0F2545;
+    }
+    .print-dir-label {
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      padding: 5px 12px;
+    }
+    .print-page-frame {
+      flex: 1;
+      min-height: 0;
+      border: 1px solid #dadfe7;
+      overflow: hidden;
+      position: relative;
+    }
+    /* The page is designed at 1440px wide. Scale it to fit the frame width. */
+    .print-page-frame > * {
+      width: 1440px;
+      transform-origin: top left;
+      /* Frame inner width ≈ 297mm − 28mm padding − 2px border ≈ 269mm ≈ 1017px.
+         Scale 1017/1440 ≈ 0.706. We compensate height by setting max height
+         on frame via flex. */
+      transform: scale(0.706);
+      width: calc(1440px);
+    }
+
+    /* Screen-mode preview: stack sheets visibly with grey gap */
+    @media screen {
+      body { background: #e5e5e5; padding: 24px 0; }
+      .print-sheet {
+        margin: 0 auto 24px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      }
+    }
+
+    /* Hide any interactive chrome that may sneak in */
+    @media print {
+      .rk-tweaks-panel, .om-tweaks-handle { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="src/data.jsx"></script>
+  <script type="text/babel" src="src/tokens.jsx"></script>
+  <script type="text/babel" src="src/styles.jsx"></script>
+  <script type="text/babel" src="src/atoms.jsx"></script>
+  <script type="text/babel" src="src/chrome.jsx"></script>
+  <script type="text/babel" src="src/cards.jsx"></script>
+  <script type="text/babel" src="src/page-home.jsx"></script>
+  <script type="text/babel" src="src/page-industries.jsx"></script>
+  <script type="text/babel" src="src/page-products.jsx"></script>
+  <script type="text/babel" src="src/page-utility.jsx"></script>
+  <script type="text/babel" src="src/print.jsx"></script>
+</body>
+</html>

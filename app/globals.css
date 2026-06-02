@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+/*
+  Riko Market design tokens — "Direction B" (Specifikacijų katalogas):
+  compact data catalog, navy + red, Manrope sentence-case headings, soft
+  buttons, light grey page background. Mirrors Ricomarket 2 DIRECTIONS.B.
+*/
+@theme {
+  --color-navy: #14233a;
+  --color-navy-2: #1d3052;
+  --color-navy-deep: #0d1a2e;
+  --color-red: #b12731;
+  --color-red-dark: #8e1f28;
+  --color-yellow: #ebb30e;
+  --color-yellow-dark: #c69708;
+  --color-blue-accent: #1a56b5;
+  --color-ink: #152033;
+  --color-mute: #5a667a;
+  --color-line: #d4d9e1;
+  --color-line-soft: #e8ebef;
+  --color-bg: #f3f4f6;
+  --color-bg-alt: #ffffff;
+  --color-bg-warm: #f7efd1;
+
+  --color-ok: #2a8c4a;
+  --color-warn: #d8a020;
+
+  --font-sans: var(--font-manrope), "Helvetica Neue", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01", "kern";
+}
+
+/* Heading — Manrope, sentence case, tight tracking (Direction B headStyle). */
+.heading {
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--color-navy);
+  line-height: 1.05;
+}
+
+/* Eyebrow / kicker — small red uppercase label with a short red rule. */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-red);
+}
+.eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: currentColor;
+}
+
+/* Nav link hover underline (ported from styles.jsx .rk-nav-link). */
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 0.12s;
+}
+.nav-link:hover::after {
+  opacity: 0.9;
+}
+
+/* Spec table (ported from styles.jsx .rk-spec-table). */
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.spec-table th,
+.spec-table td {
+  padding: 15px 20px;
+  text-align: left;
+  vertical-align: middle;
+}
+.spec-table tbody tr {
+  transition: background 0.1s;
+}
