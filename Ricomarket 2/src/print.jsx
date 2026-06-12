@@ -1,5 +1,3 @@
-// Print-mode root — renders every direction × page stacked vertically with
-// page breaks. Replaces the interactive canvas for PDF export.
 
 const {
   DATA, DIRECTIONS, applyTweaks,

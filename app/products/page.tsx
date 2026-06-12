@@ -24,7 +24,7 @@ export default async function ProductsPage({
   const browserCats: BrowserCat[] = categories.map((c) => ({
     id: c.id,
     name: c.name,
-    sub: c.sub,
+    parent: c.parent,
     count: counts[c.id] ?? 0,
   }));
 

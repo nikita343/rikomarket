@@ -76,6 +76,10 @@ export default async function ProductPage({ params }: { params: Params }) {
   const category = categoryById(product.category);
   const chips = keyChips(product);
   const rows = specRows(product);
+  const leadText =
+    product.shortNote ||
+    product.descLines.find((l) => !l.heading)?.text ||
+    product.description;
   const industryNames = product.industries
     .map((id) => industryById(id)?.name)
     .filter((n): n is string => Boolean(n));
@@ -158,7 +162,7 @@ export default async function ProductPage({ params }: { params: Params }) {
               </span>
               <h1 className="heading mt-3 text-3xl sm:text-4xl">{product.name}</h1>
               <p className="mt-4 max-w-[540px] text-[15.5px] leading-relaxed text-ink">
-                {product.description || product.shortNote}
+                {leadText}
               </p>
 
               {/* Key chips */}
@@ -221,6 +225,67 @@ export default async function ProductPage({ params }: { params: Params }) {
           </div>
         </Container>
       </section>
+
+      {/* Full description */}
+      {product.descLines.length > 0 && (
+        <section className="border-t border-line bg-bg-alt py-12 pb-14">
+          <Container>
+            <SectionHead eyebrow="Aprašymas" title="Gaminio aprašymas" className="mb-7" />
+            <div className="max-w-[760px] space-y-2.5">
+              {product.descLines.map((line, i) =>
+                line.heading ? (
+                  <h3
+                    key={i}
+                    className="pt-3 text-[15px] font-bold uppercase tracking-[0.04em] text-navy first:pt-0"
+                  >
+                    {line.text.replace(/:$/, "")}
+                  </h3>
+                ) : (
+                  <p key={i} className="text-[15px] leading-relaxed text-ink">
+                    {line.text}
+                  </p>
+                ),
+              )}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* Dimensions table (sourced 1:1 from the original product page) */}
+      {product.specTable && product.specTable.rows.length > 0 && (
+        <section className="border-t border-line bg-bg py-12 pb-14">
+          <Container>
+            <SectionHead eyebrow="Matmenys" title="Matmenų lentelė" className="mb-7" />
+            <div className="max-w-full overflow-x-auto border border-line">
+              <table className="w-full min-w-[480px] border-collapse bg-white text-sm">
+                <thead>
+                  <tr className="bg-navy text-white">
+                    {product.specTable.headers.map((h, i) => (
+                      <th
+                        key={i}
+                        className="border-r border-white/15 px-3 py-2.5 text-left text-xs font-bold uppercase tracking-[0.04em] last:border-r-0"
+                      >
+                        {h}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {product.specTable.rows.map((r, ri) => (
+                    <tr key={ri} className={`border-t border-line ${ri % 2 ? "bg-bg-warm" : "bg-white"}`}>
+                      {r.map((c, ci) => (
+                        <td key={ci} className="border-r border-line-soft px-3 py-2 tabular-nums text-ink last:border-r-0">
+                          {c}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </Container>
+        </section>
+      )}
 
       {/* Specifications */}
       {rows.length > 0 && (

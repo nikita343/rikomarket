@@ -20,6 +20,26 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Product catalog
+
+The catalog (`data/products.json`, `lib/categories.ts`) is generated from the
+original Ukrainian site `https://rikomarket.com.ua` and translated to Lithuanian.
+The pipeline lives in `scripts/` and is re-runnable (the HTML cache under
+`scripts/.scrape-cache/` is git-ignored):
+
+```bash
+node scripts/scrape-fetch.mjs            # 1. cache all product + category pages
+node scripts/scrape-parse-categories.mjs # 2. categories-raw.json (UA hierarchy)
+node scripts/scrape-parse-products.mjs   # 3. products-raw.json (UA, structured)
+node scripts/scrape-inventory.mjs        # 4. (optional) list strings to translate
+node scripts/scrape-generate.mjs         # 5. write data/products.json + lib/categories.ts
+node scripts/scrape-images.mjs           # 6. download images to public/products/orig/
+```
+
+Step 5 applies the `scripts/translations-*.json` dictionaries (UA → LT) by exact
+match and prints any untranslated strings. `lib/products.ts` reads the generated
+JSON; `lib/categories.ts` is generated and should not be hand-edited.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

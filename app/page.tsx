@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { company, usps } from "@/lib/site";
-import { categories } from "@/lib/categories";
+import { categoryById } from "@/lib/categories";
 import { industries } from "@/lib/industries";
 import {
   getAllProducts,
@@ -13,20 +13,34 @@ import { Icon, type IconName } from "@/components/icons";
 import { IndustryTile } from "@/components/IndustryTile";
 import { CategoryTabs, type TabCat } from "@/components/CategoryTabs";
 
+// The six material families shown on the homepage (application areas live in
+// the Industries section above).
+const HOME_CATEGORIES = [
+  "rukava-z-polihlorvinilu",
+  "rukava-z-poliuretanu",
+  "rukava-typu-klyn",
+  "metalorukavy",
+  "elementi-ziednannya",
+  "rizne",
+];
+
 export default function HomePage() {
   const counts = countByCategory();
-  const tabCats: TabCat[] = categories.map((c) => ({
+  const homeCats = HOME_CATEGORIES.map((id) => categoryById(id)).filter(
+    (c): c is NonNullable<typeof c> => Boolean(c),
+  );
+  const tabCats: TabCat[] = homeCats.map((c) => ({
     id: c.id,
     name: c.name,
     count: counts[c.id] ?? 0,
   }));
   const productsByCat: Record<string, Product[]> = {};
-  for (const c of categories) {
+  for (const c of homeCats) {
     productsByCat[c.id] = getProductsByCategory(c.id).slice(0, 4);
   }
   // Ensure every category tab shows something even if seeded thinly.
   const fallback = getAllProducts().slice(0, 4);
-  for (const c of categories) {
+  for (const c of homeCats) {
     if (productsByCat[c.id].length === 0) productsByCat[c.id] = fallback;
   }
 

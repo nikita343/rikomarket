@@ -3,11 +3,10 @@
 import { useMemo, useState } from "react";
 import type { Product } from "@/lib/products";
 import { ProductCard } from "@/components/ProductCard";
-import { Icon } from "@/components/icons";
 
-export type BrowserCat = { id: string; name: string; sub: string[]; count: number };
+export type BrowserCat = { id: string; name: string; parent: string | null; count: number };
 
-const PAGE_SIZE = 8;
+const PAGE_SIZE = 12;
 
 // ── Parse helpers (pure, client-safe) ───────────────────────────────
 function minDiameter(dn: string): number | null {
@@ -33,7 +32,6 @@ const TEMP_BUCKETS: { label: string; max: number }[] = [
   { label: "Iki +650 °C", max: 650 },
   { label: "Iki +1100 °C", max: 1100 },
 ];
-const REINFORCEMENT = ["Metalo spiralė", "PVC spiralė", "Be spiralės"];
 const SORTS = [
   { value: "name", label: "Pagal pavadinimą" },
   { value: "dn", label: "Pagal diametrą" },
@@ -65,28 +63,62 @@ export function ProductsBrowser({
   initialCategory?: string;
 }) {
   const [category, setCategory] = useState<string | null>(initialCategory ?? null);
-  const [subs, setSubs] = useState<Set<string>>(new Set());
   const [diameters, setDiameters] = useState<Set<string>>(new Set());
   const [temps, setTemps] = useState<Set<string>>(new Set());
-  const [reinf, setReinf] = useState<Set<string>>(new Set());
   const [sort, setSort] = useState("name");
   const [page, setPage] = useState(1);
 
-  const activeCat = categories.find((c) => c.id === category) ?? null;
+  // ── Category tree helpers (derived once) ──────────────────────────
+  const tree = useMemo(() => {
+    const byId = new Map(categories.map((c) => [c.id, c]));
+    const childrenOf = (id: string | null) =>
+      categories.filter((c) => c.parent === id);
+    const topAncestor = (id: string): string => {
+      let cur = byId.get(id);
+      const seen = new Set<string>();
+      while (cur && cur.parent && byId.has(cur.parent) && !seen.has(cur.id)) {
+        seen.add(cur.id);
+        cur = byId.get(cur.parent);
+      }
+      return cur ? cur.id : id;
+    };
+    const subtree = (id: string): Set<string> => {
+      const ids = new Set<string>([id]);
+      const walk = (x: string) => {
+        for (const c of childrenOf(x))
+          if (!ids.has(c.id)) {
+            ids.add(c.id);
+            walk(c.id);
+          }
+      };
+      walk(id);
+      return ids;
+    };
+    return { byId, childrenOf, topAncestor, subtree };
+  }, [categories]);
+
+  const tops = tree.childrenOf(null);
+  const activeCat = category ? tree.byId.get(category) ?? null : null;
+  // Which top-level branch should show its children expanded.
+  const expandedTop = category ? tree.topAncestor(category) : null;
 
   function chooseCategory(id: string | null) {
     setCategory(id);
-    setSubs(new Set());
+    setDiameters(new Set());
+    setTemps(new Set());
     setPage(1);
-    // Reflect in the URL without a full navigation.
     const url = id ? `/products?category=${id}` : "/products";
     window.history.replaceState(null, "", url);
   }
 
   const filtered = useMemo(() => {
     let list = products;
-    if (category) list = list.filter((p) => p.category === category);
-    if (subs.size) list = list.filter((p) => subs.has(p.subcategory));
+    if (category) {
+      const ids = tree.subtree(category);
+      list = list.filter(
+        (p) => p.category === category || p.categories.some((c) => ids.has(c)),
+      );
+    }
     if (diameters.size) {
       list = list.filter((p) => {
         const min = minDiameter(p.dn);
@@ -101,13 +133,6 @@ export function ProductsBrowser({
         return TEMP_BUCKETS.some((b) => temps.has(b.label) && mx <= b.max);
       });
     }
-    if (reinf.size) {
-      list = list.filter((p) =>
-        REINFORCEMENT.some(
-          (r) => reinf.has(r) && p.reinforcement.toLowerCase().includes(r.toLowerCase()),
-        ),
-      );
-    }
     const sorted = [...list];
     sorted.sort((a, b) => {
       if (sort === "dn") return (minDiameter(a.dn) ?? 1e9) - (minDiameter(b.dn) ?? 1e9);
@@ -115,7 +140,7 @@ export function ProductsBrowser({
       return a.name.localeCompare(b.name, "lt");
     });
     return sorted;
-  }, [products, category, subs, diameters, temps, reinf, sort]);
+  }, [products, category, diameters, temps, sort, tree]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
@@ -144,32 +169,36 @@ export function ProductsBrowser({
             <span>Visi produktai</span>
             <span className="text-xs font-semibold text-mute">{products.length}</span>
           </button>
-          {categories.map((cat) => {
-            const active = category === cat.id;
+          {tops.map((top) => {
+            const active = category === top.id;
+            const open = expandedTop === top.id;
+            const children = tree.childrenOf(top.id);
             return (
-              <div key={cat.id}>
+              <div key={top.id}>
                 <button
                   type="button"
-                  onClick={() => chooseCategory(cat.id)}
+                  onClick={() => chooseCategory(top.id)}
                   className={`flex w-full items-center justify-between border-t border-line-soft px-[18px] py-[13px] text-left text-sm transition-colors hover:bg-bg-warm ${
                     active ? "bg-bg-warm font-bold text-red" : "font-semibold text-navy"
                   }`}
                 >
-                  <span>{cat.name}</span>
-                  <span className="text-xs font-semibold text-mute">{cat.count}</span>
+                  <span>{top.name}</span>
+                  <span className="text-xs font-semibold text-mute">{top.count}</span>
                 </button>
-                {active && cat.sub.length > 0 && (
-                  <div className="bg-bg-warm px-[18px] pb-3">
-                    {cat.sub.map((s) => (
-                      <label key={s} className="flex cursor-pointer items-center gap-2.5 py-1.5 text-[13px] text-ink">
-                        <input
-                          type="checkbox"
-                          className="accent-red"
-                          checked={subs.has(s)}
-                          onChange={() => onFilterChange(() => setSubs((v) => toggle(v, s)))}
-                        />
-                        {s}
-                      </label>
+                {open && children.length > 0 && (
+                  <div className="bg-bg-warm/60 pb-1">
+                    {children.map((child) => (
+                      <button
+                        key={child.id}
+                        type="button"
+                        onClick={() => chooseCategory(child.id)}
+                        className={`flex w-full items-center justify-between py-2 pl-[30px] pr-[18px] text-left text-[13px] transition-colors hover:bg-bg-warm ${
+                          category === child.id ? "font-bold text-red" : "text-ink"
+                        }`}
+                      >
+                        <span>{child.name}</span>
+                        <span className="text-[11px] font-semibold text-mute">{child.count}</span>
+                      </button>
                     ))}
                   </div>
                 )}
@@ -195,16 +224,6 @@ export function ProductsBrowser({
               label={b.label}
               checked={temps.has(b.label)}
               onChange={() => onFilterChange(() => setTemps((v) => toggle(v, b.label)))}
-            />
-          ))}
-        </FilterBlock>
-        <FilterBlock label="Armatūra">
-          {REINFORCEMENT.map((r) => (
-            <FilterCheck
-              key={r}
-              label={r}
-              checked={reinf.has(r)}
-              onChange={() => onFilterChange(() => setReinf((v) => toggle(v, r)))}
             />
           ))}
         </FilterBlock>
@@ -252,7 +271,7 @@ export function ProductsBrowser({
         )}
 
         {totalPages > 1 && (
-          <div className="mt-9 flex justify-center gap-2">
+          <div className="mt-9 flex flex-wrap justify-center gap-2">
             <PageBtn disabled={safePage === 1} onClick={() => setPage(safePage - 1)}>
               ‹
             </PageBtn>

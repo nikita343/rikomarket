@@ -24,6 +24,9 @@
 .DS_Store
 *.pem
 
+# scrape cache (raw HTML pulled from original site)
+/scripts/.scrape-cache
+
 # debug
 npm-debug.log*
 yarn-debug.log*

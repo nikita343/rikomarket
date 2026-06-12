@@ -127,8 +127,7 @@ export function SectionHead({
   );
 }
 
-/* ── Page hero (inner pages) ─────────────────────────────────────────
-   Light band with breadcrumb, red eyebrow, big navy title, sub. */
+
 export type Crumb = { label: string; href?: string };
 
 export function PageHero({
