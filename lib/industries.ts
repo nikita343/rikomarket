@@ -15,8 +15,6 @@ export const industries: Industry[] = [
   { id: "chem", name: "Cheminė pramonė", desc: "Atsparios chemikalams žarnos. Galvanika, laboratorijos, garų ištraukimas.", icon: "chem" },
   { id: "agri", name: "Žemės ūkis", desc: "Sėjamosios, granuliatoriai, purkštuvai, grūdų transportavimas.", icon: "agri" },
   { id: "spec", name: "Specialioji technika", desc: "Asenizacija, komunalinė technika, motopompos, vakuuminiai siurbliai.", icon: "spec" },
-  { id: "oil", name: "Nafta ir dujos", desc: "Naftos perdirbimas ir degalų perpylimas. Camlock perėjikliai.", icon: "oil" },
-  { id: "exhaust", name: "Išmetamosios dujos", desc: "Aukštatemperatūrinės žarnos automobilių servisams ir bandymų stotims.", icon: "exhaust" },
 ];
 
 const byId = new Map(industries.map((i) => [i.id, i]));

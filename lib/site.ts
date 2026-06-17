@@ -13,7 +13,7 @@ export const company = {
   phoneHref: "tel:+37066142272",
   email: "rikomarket.lt@gmail.com",
   website: "www.rikomarket.lt",
-  address: "Vilnius, Lietuva",
+  address: "Elektrėnai, Lietuva",
   hours: "I–V / 9:00–18:00",
   foundedNote: "Įm. kodas 305XXXXXX · PVM LT100020123613",
   legalLine:
@@ -32,7 +32,7 @@ export const nav = [
 export const usps = [
   {
     title: "Pristatymas visoje Lietuvoje",
-    desc: "Greitas siuntimas iš sandėlio Vilniuje. Pristatymas per 1–3 d.d.",
+    desc: "Greitas siuntimas iš sandėlio Elektrėnuose. Pristatymas per 1–3 d.d.",
     icon: "truck",
   },
   {

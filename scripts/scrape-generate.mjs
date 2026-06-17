@@ -61,10 +61,40 @@ for (const c of rawCats) {
 // fix parents that point at a merged-away id
 for (const c of catMap.values()) c.parent = c.parent && catMap.has(c.parent) ? c.parent : (c.parent ? canon(c.parent) : null);
 
-const MATERIAL_TOP = new Set([
+// Per client: keep only these 5 material categories (drop "Kita"/rizne and all
+// application categories). Their subcategories are kept too.
+const KEEP_TOP = new Set([
   "rukava-z-polihlorvinilu", "rukava-z-poliuretanu", "rukava-typu-klyn",
-  "metalorukavy", "elementi-ziednannya", "rizne",
+  "metalorukavy", "elementi-ziednannya",
 ]);
+const PVC = "rukava-z-polihlorvinilu", PUR = "rukava-z-poliuretanu",
+  KLIN = "rukava-typu-klyn", METAL = "metalorukavy", FIT = "elementi-ziednannya";
+// Application landing pages have no material category — fold each into the best
+// fitting one of the 5 (client request; application names → material family).
+const FOLD = {
+  "dlya-verstativ-chpu": PUR, "dlya-ruchnogo-zastosuvannya": PVC,
+  "dlya-vyrobnycztva-mebliv": PVC, "dlya-obrobky-masyviv": PUR, "dlya-pelet": PUR,
+  "dlya-struzhkopylotyagiv": PUR, "dlya-alkogolyu": PVC, "dlya-zernovyh": PVC,
+  "dlya-molochnyh-produktiv": PVC, "dlya-vysokyh-temperatur": KLIN, "dlya-sokiv": PVC,
+  "dlya-himichnyh-laboratorij": KLIN, "dlya-himichnyh-vypariv": KLIN, "dlya-galvaniky": PVC,
+  "dlya-naftopererobnoyi-promyslovosti-1": FIT, "dlya-naftopererobnoyi-promyslovosti-2": FIT,
+  "dlya-granulyatoriv": PUR, "dlya-zemsnaryadiv-i-motopomp": PVC, "dlya-pnevmotransportu": PUR,
+  "dlya-siyalok": PVC, "dlya-opryskuvachiv-ta-himichnyh-dobryv": PVC,
+  "dlya-transportuvannya-zernovyh": PVC, "dlya-himichnix-vypariv": KLIN,
+  "dlya-mobilnyh-kondyczioneriv": KLIN, "dlya-vyhlopnyh-gaziv": KLIN, "dlya-galvaniky-2": PVC,
+  "dlya-teplovyh-garmat": KLIN, "dlya-vysokyh-temperatur-2": KLIN, "dlya-nyzkyh-temperatur": KLIN,
+  "dlya-shaht-z-zagrozoyu-vybuhu": KLIN, "gnuchki-rukavy": PVC,
+  "dlya-vodopostachannya-1": PVC, "dlya-vodopostachannya-2": PVC, "dlya-vodopostachannya-3": PVC,
+  "dlya-vodopostachannya-4": PVC, "dlya-vodopostachannya-5": PVC, "dlya-vodopostachannya-6": PVC,
+  "dlya-vodopostachannya-7": PVC, "dlya-vodopostachannya-8": PVC, "dlya-vodopostachannya": PVC,
+  "dlya-vyhlopnyh-gaziv-2": KLIN, "dlya-vyhlopnyh-gaziv-3": KLIN, "dlya-vyhlopnyh-gaziv-4": KLIN,
+  "dlya-vyhlopnyh-gaziv-5": KLIN, "dlya-vyhlopnyh-gaziv-6": KLIN, "dlya-vyhlopnyh-gaziv-7": KLIN,
+  "dlya-betonu-ta-czementu": PUR, "dlya-komunalnoyi-tehniky": PVC,
+  "dlya-dorozhnyh-vakuumnyh-pylotyagiv": PVC, "dlya-motopomp": PVC, "dlya-promyvky": PVC,
+  "dlya-asenizacziyi": PVC, "z-oczynkovanoyi-stali": METAL, "z-nerzhaviyuchoyi-stali": METAL,
+  "dlya-naftopererobnoyi-promyslovosti": FIT, "zagalni-harakterystyky-7": PVC,
+  "tpr": KLIN, "tpr-600": KLIN,
+};
 const APP_TOP_INDUSTRY = {
   derevoobrobna: "wood", ventilyacziya: "vent", "himichna-promislovist": "chem",
   "silske-gospodarstvo": "agri", "specztehnika-2": "spec", "vihlopni-gazi": "exhaust",
@@ -84,6 +114,11 @@ function topAncestor(id) {
   }
   return cur ? cur.id : id;
 }
+
+// Category ids that survive the keep-only-5 filter (the 5 tops + their children).
+const keptIds = new Set(
+  [...catMap.keys()].filter((id) => KEEP_TOP.has(topAncestor(id))),
+);
 
 // ── Spec derivation helpers ─────────────────────────────────────────
 const afterColon = (s) => {
@@ -106,12 +141,26 @@ function deriveSpecs(descLines) {
 // ── Products ────────────────────────────────────────────────────────
 const imageManifest = {};
 const products = rawProducts.map((p) => {
-  const cats = [...new Set(p.categorySlugs.map(canon).filter((c) => catMap.has(c)))];
-  const materialCats = cats.filter((c) => MATERIAL_TOP.has(topAncestor(c)));
-  const primaryTop = materialCats.length ? topAncestor(materialCats[0]) : (cats.length ? topAncestor(cats[0]) : "rizne");
-  const childMaterial = materialCats.find((c) => catMap.get(c)?.parent); // a sub-category
-  const subcategory = childMaterial ? catMap.get(childMaterial).name : "";
-  const industries = [...new Set(cats.map((c) => APP_TOP_INDUSTRY[topAncestor(c)]).filter(Boolean))];
+  const allCats = [...new Set(p.categorySlugs.map(canon).filter((c) => catMap.has(c)))];
+  // industries derived from the FULL tree (incl. application cats) before filtering
+  const industries = [...new Set(allCats.map((c) => APP_TOP_INDUSTRY[topAncestor(c)]).filter(Boolean))];
+
+  let cats = allCats.filter((c) => keptIds.has(c)); // memberships among the kept 5
+  let primaryTop, subcategory;
+  if (cats.length) {
+    primaryTop = topAncestor(cats[0]);
+    const child = cats.find((c) => catMap.get(c)?.parent); // a sub-category
+    subcategory = child ? catMap.get(child).name : "";
+  } else {
+    // orphan application page → fold into a material family
+    primaryTop = FOLD[p.slug];
+    if (!primaryTop) {
+      console.warn("UNMAPPED orphan, defaulting to PVC:", p.slug);
+      primaryTop = PVC;
+    }
+    cats = [primaryTop];
+    subcategory = "";
+  }
 
   const descLines = (p.lines || [])
     .map((l) => ({ text: tr(l.text), heading: !!l.heading }))
@@ -176,23 +225,27 @@ const FEATURED = new Set([
 ]);
 for (const p of products) if (FEATURED.has(p.slug)) p.featured = true;
 
-// ── Emit categories.ts ──────────────────────────────────────────────
-const orderedCats = [...catMap.values()].sort((a, b) => {
-  const ta = topAncestor(a.id), tb = topAncestor(b.id);
-  if (ta !== tb) return ta.localeCompare(tb);
-  if (!a.parent !== !b.parent) return a.parent ? 1 : -1; // parent before child
-  return a.name.localeCompare(b.name, "lt");
-});
+// ── Emit categories.ts (only the kept 5 trees) ──────────────────────
+// Stable display order for the 5 top-level material families.
+const TOP_ORDER = [
+  "rukava-z-polihlorvinilu", "rukava-z-poliuretanu", "rukava-typu-klyn",
+  "metalorukavy", "elementi-ziednannya",
+];
+const orderedCats = [...catMap.values()]
+  .filter((c) => keptIds.has(c.id))
+  .sort((a, b) => {
+    const ta = topAncestor(a.id), tb = topAncestor(b.id);
+    if (ta !== tb) return TOP_ORDER.indexOf(ta) - TOP_ORDER.indexOf(tb);
+    if (!a.parent !== !b.parent) return a.parent ? 1 : -1; // parent before child
+    return a.name.localeCompare(b.name, "lt");
+  });
 const catsLiteral = orderedCats
   .map((c) => `  { id: ${JSON.stringify(c.id)}, name: ${JSON.stringify(c.name)}, slug: ${JSON.stringify(c.slug)}, parent: ${JSON.stringify(c.parent)} },`)
   .join("\n");
-const categoriesTs = `// Product categories — full hierarchy mirrored 1:1 from the original site
-// (https://rikomarket.com.ua), names translated to Lithuanian. Generated by
-// scripts/scrape-generate.mjs — do not edit by hand.
-//
-// Top-level categories are either material types (PVC/PUR/KLIN/metal/fittings/
-// "Kita") or application areas (woodworking, ventilation, …). \`parent\` is the
-// parent category id, or null for a top-level category.
+const categoriesTs = `// Product categories — the 5 material families kept per client request
+// (PVC / PUR / KLIN / metal / sujungimo elementai), names translated to
+// Lithuanian. Generated by scripts/scrape-generate.mjs — do not edit by hand.
+// \`parent\` is the parent category id, or null for a top-level category.
 
 export type Category = {
   id: string;

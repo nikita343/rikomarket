@@ -13,15 +13,13 @@ import { Icon, type IconName } from "@/components/icons";
 import { IndustryTile } from "@/components/IndustryTile";
 import { CategoryTabs, type TabCat } from "@/components/CategoryTabs";
 
-// The six material families shown on the homepage (application areas live in
-// the Industries section above).
+// The five material families shown on the homepage.
 const HOME_CATEGORIES = [
   "rukava-z-polihlorvinilu",
   "rukava-z-poliuretanu",
   "rukava-typu-klyn",
   "metalorukavy",
   "elementi-ziednannya",
-  "rizne",
 ];
 
 export default function HomePage() {
@@ -70,7 +68,7 @@ export default function HomePage() {
               <span className="text-yellow">patikimas</span> rezultatas
             </h1>
             <p className="mt-6 max-w-[480px] text-[17px] leading-relaxed text-white/85">
-              Techninės žarnos ir Camlock jungtys. Sandėlys Vilniuje.
+              Techninės žarnos ir Camlock jungtys. Sandėlys Elektrėnuose.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href="/products" kind="primary" size="lg">
@@ -134,7 +132,7 @@ export default function HomePage() {
               Visos sritys <Icon name="arrow" size={14} />
             </a>
           </div>
-          <div className="grid gap-3 sm:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {industries.map((ind) => (
               <IndustryTile key={ind.id} industry={ind} />
             ))}
@@ -148,7 +146,7 @@ export default function HomePage() {
           <SectionHead
             eyebrow="Produktai"
             title="Produktų kategorijos"
-            sub="Šešios pagrindinės kategorijos."
+            sub="Penkios pagrindinės kategorijos."
             className="mb-7"
           />
           <CategoryTabs cats={tabCats} productsByCat={productsByCat} />

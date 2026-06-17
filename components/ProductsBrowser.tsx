@@ -1,10 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { Product } from "@/lib/products";
-import { ProductCard } from "@/components/ProductCard";
+import Image from "next/image";
+import { useSearchParams } from "next/navigation";
+import { ProductCard, type ProductCardData } from "@/components/ProductCard";
 
 export type BrowserCat = { id: string; name: string; parent: string | null; count: number };
+export type BrowserProduct = ProductCardData & { categories: string[] };
 
 const PAGE_SIZE = 12;
 
@@ -56,13 +58,13 @@ function plural(n: number): string {
 export function ProductsBrowser({
   products,
   categories,
-  initialCategory,
 }: {
-  products: Product[];
+  products: BrowserProduct[];
   categories: BrowserCat[];
-  initialCategory?: string;
 }) {
-  const [category, setCategory] = useState<string | null>(initialCategory ?? null);
+  // Selected category comes from the URL (?category=) so the page can stay static.
+  const params = useSearchParams();
+  const [category, setCategory] = useState<string | null>(params.get("category"));
   const [diameters, setDiameters] = useState<Set<string>>(new Set());
   const [temps, setTemps] = useState<Set<string>>(new Set());
   const [sort, setSort] = useState("name");
@@ -101,6 +103,19 @@ export function ProductsBrowser({
   const activeCat = category ? tree.byId.get(category) ?? null : null;
   // Which top-level branch should show its children expanded.
   const expandedTop = category ? tree.topAncestor(category) : null;
+
+  // A representative image for each top-level category (first product in it).
+  const catImage = useMemo(() => {
+    const m: Record<string, string> = {};
+    for (const top of categories.filter((c) => !c.parent)) {
+      const ids = tree.subtree(top.id);
+      const p = products.find(
+        (pr) => pr.image && (pr.category === top.id || pr.categories.some((c) => ids.has(c))),
+      );
+      if (p) m[top.id] = p.image;
+    }
+    return m;
+  }, [products, categories, tree]);
 
   function chooseCategory(id: string | null) {
     setCategory(id);
@@ -151,6 +166,43 @@ export function ProductsBrowser({
     setPage(1);
   };
 
+  // ── Default view: category cards (products are browsed per category) ──
+  if (!category) {
+    return (
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {tops.map((top) => (
+          <button
+            key={top.id}
+            type="button"
+            onClick={() => chooseCategory(top.id)}
+            className="group flex flex-col overflow-hidden border border-line bg-white text-left transition-colors hover:border-navy"
+          >
+            <div className="relative flex h-44 items-center justify-center overflow-hidden bg-bg-warm p-4">
+              {catImage[top.id] && (
+                <Image
+                  src={catImage[top.id]}
+                  alt={top.name}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-contain p-5 transition-transform duration-300 group-hover:scale-105"
+                />
+              )}
+            </div>
+            <div className="flex items-center justify-between border-t border-line px-5 py-4">
+              <div>
+                <div className="text-base font-bold text-navy group-hover:text-red">{top.name}</div>
+                <div className="mt-0.5 text-[12.5px] text-mute">
+                  {top.count} {plural(top.count)}
+                </div>
+              </div>
+              <span className="text-red transition-transform group-hover:translate-x-0.5">→</span>
+            </div>
+          </button>
+        ))}
+      </div>
+    );
+  }
+
   return (
     <div className="grid gap-9 lg:grid-cols-[280px_1fr]">
       {/* ── Sidebar ──────────────────────────────────────── */}
@@ -162,12 +214,10 @@ export function ProductsBrowser({
           <button
             type="button"
             onClick={() => chooseCategory(null)}
-            className={`flex w-full items-center justify-between px-[18px] py-[13px] text-left text-sm font-semibold transition-colors hover:bg-bg-warm ${
-              !category ? "bg-bg-warm text-red" : "text-navy"
-            }`}
+            className="flex w-full items-center gap-2 px-[18px] py-[13px] text-left text-sm font-semibold text-navy transition-colors hover:bg-bg-warm"
           >
-            <span>Visi produktai</span>
-            <span className="text-xs font-semibold text-mute">{products.length}</span>
+            <span aria-hidden>←</span>
+            <span>Visos kategorijos</span>
           </button>
           {tops.map((top) => {
             const active = category === top.id;

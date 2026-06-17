@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { company } from "@/lib/site";
-import { categories } from "@/lib/categories";
+import { topCategories } from "@/lib/categories";
 import { industries } from "@/lib/industries";
 import { Container, Logo, Button } from "@/components/ui";
 import { Icon } from "@/components/icons";
@@ -39,7 +39,7 @@ export function Footer() {
           {/* Products */}
           <div>
             <ColHead>Produktai</ColHead>
-            {categories.map((c) => (
+            {topCategories().map((c) => (
               <Link
                 key={c.id}
                 href={`/products?category=${c.id}`}

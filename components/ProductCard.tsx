@@ -4,8 +4,15 @@ import type { Product } from "@/lib/products";
 import { categoryById } from "@/lib/categories";
 import { Icon } from "@/components/icons";
 
+// The fields a product card actually renders — both the full Product and the
+// trimmed catalog payload satisfy this.
+export type ProductCardData = Pick<
+  Product,
+  "slug" | "name" | "category" | "shortNote" | "image" | "dn" | "temp" | "pressure"
+>;
+
 // List-style row (Direction B cardKind: "list"): image · name+note · specs · arrow.
-export function ProductCard({ product }: { product: Product }) {
+export function ProductCard({ product }: { product: ProductCardData }) {
   const category = categoryById(product.category);
   return (
     <Link

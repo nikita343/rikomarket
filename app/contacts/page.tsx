@@ -5,7 +5,7 @@ import { Icon, type IconName } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Kontaktai",
-  description: "Susisiekite su UAB „Riko Market“ — Vilnius, Lietuva.",
+  description: "Susisiekite su UAB „Riko Market“ — Elektrėnai, Lietuva.",
 };
 
 const DETAILS: { ic: IconName; label: string; value: string; sub: string }[] = [
