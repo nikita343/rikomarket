@@ -12,13 +12,33 @@ const ROOT = process.cwd();
 const CACHE = path.join(ROOT, "scripts", ".scrape-cache");
 const rawProducts = JSON.parse(fs.readFileSync(path.join(CACHE, "products-raw.json"), "utf8"));
 const rawCats = JSON.parse(fs.readFileSync(path.join(CACHE, "categories-raw.json"), "utf8"));
+// Products imported from polynect.com.ua that replace the "Armuotos PVC spirale"
+// subcategory contents (see scripts/scrape-polynect.mjs).
+const polyRaw = JSON.parse(fs.readFileSync(path.join(CACHE, "polynect-raw.json"), "utf8"));
 
 const dict = {
   ...JSON.parse(fs.readFileSync(path.join(ROOT, "scripts", "translations-cats.json"), "utf8")),
   ...JSON.parse(fs.readFileSync(path.join(ROOT, "scripts", "translations-names.json"), "utf8")),
   ...JSON.parse(fs.readFileSync(path.join(ROOT, "scripts", "translations-desc.json"), "utf8")),
   ...JSON.parse(fs.readFileSync(path.join(ROOT, "scripts", "translations-table.json"), "utf8")),
+  ...JSON.parse(fs.readFileSync(path.join(ROOT, "scripts", "translations-polynect.json"), "utf8")),
 };
+
+// ── Products removed from the catalog (client review) ───────────────
+// 1. KLIN must mirror the original /product-category/rukava-typu-klyn/ exactly —
+//    everything else previously folded into KLIN is dropped.
+// 2. The old "Armuotos PVC spirale" products are replaced by the polynect import.
+const DELETE = new Set([
+  // not in the original KLIN category
+  "dlya-vysokyh-temperatur", "dlya-vysokyh-temperatur-2", "dlya-nyzkyh-temperatur",
+  "dlya-himichnyh-vypariv", "dlya-himichnix-vypariv", "dlya-himichnyh-laboratorij",
+  "dlya-mobilnyh-kondyczioneriv", "dlya-teplovyh-garmat", "dlya-shaht-z-zagrozoyu-vybuhu",
+  "dlya-vyhlopnyh-gaziv", "dlya-vyhlopnyh-gaziv-2", "dlya-vyhlopnyh-gaziv-3",
+  "dlya-vyhlopnyh-gaziv-4", "dlya-vyhlopnyh-gaziv-5", "dlya-vyhlopnyh-gaziv-6",
+  "dlya-vyhlopnyh-gaziv-7", "tpr", "tpr-600",
+  // replaced by the polynect products
+  "rukav-pvh-vent", "kopiyarukav-pvh-vent", "kopiyarukav-pvh-vent-2", "kopiyarukav-pvh-agrohim",
+]);
 
 // Fold quote / dash / whitespace variants so hand-typed keys match the source.
 const normalize = (s) =>
@@ -140,7 +160,7 @@ function deriveSpecs(descLines) {
 
 // ── Products ────────────────────────────────────────────────────────
 const imageManifest = {};
-const products = rawProducts.map((p) => {
+const products = rawProducts.filter((p) => !DELETE.has(p.slug)).map((p) => {
   const allCats = [...new Set(p.categorySlugs.map(canon).filter((c) => catMap.has(c)))];
   // industries derived from the FULL tree (incl. application cats) before filtering
   const industries = [...new Set(allCats.map((c) => APP_TOP_INDUSTRY[topAncestor(c)]).filter(Boolean))];
@@ -218,9 +238,83 @@ const products = rawProducts.map((p) => {
   };
 });
 
+// ── polynect.com.ua import → PVC "Armuotos PVC spirale" ─────────────
+const PVC_SPIRAL = "armovani-pvh-stallyu-ua";
+const POLY_INDUSTRIES = {
+  "rukava-i-shlangi-gardenpress": ["agri"],
+  "rukav-agrochem": ["agri", "chem"],
+  "rukav-aquaflex": ["agri"],
+  "rukav-aspirato": ["wood", "vent"],
+  "rukav-aspirato-pu": ["wood", "vent"],
+  "crystal-x": ["food"],
+  crystalline: ["food"],
+  "rukav-elastic-super-nova": ["agri", "spec"],
+  "rukav-grain-press": ["agri", "food"],
+  "rukav-grain-press-s": ["agri", "food"],
+  "rukav-terraspray-20-bar-60-bar": ["agri", "chem"],
+  "rukav-vacuum-fr": ["agri", "spec"],
+};
+
+const existingSlugs = new Set(products.map((p) => p.slug));
+for (const p of polyRaw) {
+  if (existingSlugs.has(p.slug)) {
+    console.warn("polynect slug collides with an existing product:", p.slug);
+    continue;
+  }
+  const descLines = (p.lines || [])
+    .map((l) => ({ text: tr(l.text), heading: !!l.heading }))
+    .filter((l) => l.text);
+  const description = descLines.map((l) => l.text).join("\n");
+
+  let specTable = null;
+  let sizes = [];
+  if (p.tables && p.tables[0] && p.tables[0].length > 1) {
+    const [header, ...rows] = p.tables[0];
+    const trHeader = header.map(tr);
+    specTable = { headers: trHeader, rows: rows.map((r) => r.map(tr)) };
+    if (/diametr/i.test(trHeader[0] || "")) {
+      sizes = rows.map((r) => r[0]).filter((v) => /^\d+([.,]\d+)?$/.test((v || "").trim()));
+    }
+  }
+
+  let image = "";
+  if (p.image) {
+    const base = p.image.split("/").pop().split("?")[0];
+    image = `/products/orig/poly-${base}`; // prefixed: avoids clashing with rikomarket files
+    imageManifest[image] = p.image;
+  }
+  const noteSrc = descLines.find((l) => !l.heading && /[a-ząčęėįšųūž]/i.test(l.text));
+  const shortNote = noteSrc ? noteSrc.text.split(/[.;]/)[0].slice(0, 70).trim() : "";
+
+  products.push({
+    slug: p.slug,
+    name: tr(p.nameUA),
+    category: "rukava-z-polihlorvinilu",
+    categories: [PVC_SPIRAL, "rukava-z-polihlorvinilu"],
+    subcategory: catMap.get(PVC_SPIRAL)?.name ?? "",
+    industries: POLY_INDUSTRIES[p.slug] ?? ["agri"],
+    color: "navy",
+    featured: false,
+    image,
+    shortNote,
+    description,
+    descLines,
+    ...deriveSpecs(descLines),
+    vacuum: "",
+    bendRadius: "",
+    material: "",
+    reinforcement: "",
+    colorsAvailable: "",
+    certifications: "",
+    origin: "",
+    sizes,
+    specTable,
+  });
+}
+
 // Feature a handful of flagship products on the homepage.
 const FEATURED = new Set([
-  "rukav-pvh-vent", "typ-a1-polyhlorvynyl-legkaya-konstrukczyya", "klyn-k1-d-teflon-steklovolokno",
+  "rukav-agrochem", "typ-a1-polyhlorvynyl-legkaya-konstrukczyya", "klyn-k1-d-teflon-steklovolokno",
   "z-nerzhaviyuchoyi-stali", "brs-kamlok-camlock-tip-a-aljuminiievij", "typ-v1-poliuretan-legka-konstrukcziya",
 ]);
 for (const p of products) if (FEATURED.has(p.slug)) p.featured = true;

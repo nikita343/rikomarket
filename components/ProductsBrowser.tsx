@@ -101,8 +101,6 @@ export function ProductsBrowser({
 
   const tops = tree.childrenOf(null);
   const activeCat = category ? tree.byId.get(category) ?? null : null;
-  // Which top-level branch should show its children expanded.
-  const expandedTop = category ? tree.topAncestor(category) : null;
 
   // A representative image for each top-level category (first product in it).
   const catImage = useMemo(() => {
@@ -221,7 +219,6 @@ export function ProductsBrowser({
           </button>
           {tops.map((top) => {
             const active = category === top.id;
-            const open = expandedTop === top.id;
             const children = tree.childrenOf(top.id);
             return (
               <div key={top.id}>
@@ -235,7 +232,7 @@ export function ProductsBrowser({
                   <span>{top.name}</span>
                   <span className="text-xs font-semibold text-mute">{top.count}</span>
                 </button>
-                {open && children.length > 0 && (
+                {children.length > 0 && (
                   <div className="bg-bg-warm/60 pb-1">
                     {children.map((child) => (
                       <button

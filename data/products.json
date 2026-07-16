@@ -11010,36 +11010,6 @@
     "specTable": null
   },
   {
-    "slug": "dlya-vysokyh-temperatur",
-    "name": "Aukštoms temperatūroms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/hight-temperature.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
     "slug": "dlya-sokiv",
     "name": "Sultims",
     "category": "rukava-z-polihlorvinilu",
@@ -11051,66 +11021,6 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/juice.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-himichnyh-laboratorij",
-    "name": "Cheminėms laboratorijoms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/laboratory.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-himichnyh-vypariv",
-    "name": "Cheminiams garams",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/fumes.jpg",
     "shortNote": "",
     "description": "",
     "descLines": [],
@@ -11400,96 +11310,6 @@
     "specTable": null
   },
   {
-    "slug": "dlya-himichnix-vypariv",
-    "name": "Cheminiams garams",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/chemical-fumes-1.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-mobilnyh-kondyczioneriv",
-    "name": "Mobiliesiems kondicionieriams",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/conditioner.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-vyhlopnyh-gaziv",
-    "name": "Išmetamosioms dujoms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/exhaust.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
     "slug": "dlya-galvaniky-2",
     "name": "Galvanikai",
     "category": "rukava-z-polihlorvinilu",
@@ -11501,126 +11321,6 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/galvanic-1.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-teplovyh-garmat",
-    "name": "Šildymo patrankoms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/heat-gun.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-vysokyh-temperatur-2",
-    "name": "Aukštoms temperatūroms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/high-temperature.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-nyzkyh-temperatur",
-    "name": "Žemoms temperatūroms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/low-temperature.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-shaht-z-zagrozoyu-vybuhu",
-    "name": "Sprogioms šachtoms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/shaft.jpg",
     "shortNote": "",
     "description": "",
     "descLines": [],
@@ -11940,156 +11640,6 @@
     "specTable": null
   },
   {
-    "slug": "dlya-vyhlopnyh-gaziv-2",
-    "name": "Išmetamosioms dujoms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/1-2.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-vyhlopnyh-gaziv-3",
-    "name": "Išmetamosioms dujoms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/2-1.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-vyhlopnyh-gaziv-4",
-    "name": "Išmetamosioms dujoms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/4-1.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-vyhlopnyh-gaziv-6",
-    "name": "Išmetamosioms dujoms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/5-2.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-vyhlopnyh-gaziv-5",
-    "name": "Išmetamosioms dujoms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/6-2.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
     "slug": "dlya-betonu-ta-czementu",
     "name": "Betonui ir cementui",
     "category": "rukava-z-poliuretanu",
@@ -12341,36 +11891,6 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/7-2.jpg",
-    "shortNote": "",
-    "description": "",
-    "descLines": [],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
-    "slug": "dlya-vyhlopnyh-gaziv-7",
-    "name": "Išmetamosioms dujoms",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/3-2.jpg",
     "shortNote": "",
     "description": "",
     "descLines": [],
@@ -15210,1441 +14730,6 @@
     }
   },
   {
-    "slug": "rukav-pvh-vent",
-    "name": "PVC žarna „Vent“",
-    "category": "rukava-z-polihlorvinilu",
-    "categories": [
-      "armovani-pvh-stallyu-ua",
-      "rukava-z-polihlorvinilu"
-    ],
-    "subcategory": "Armuotos PVC spirale",
-    "industries": [
-      "chem",
-      "agri"
-    ],
-    "color": "navy",
-    "featured": true,
-    "image": "/products/orig/1586939606159.png",
-    "shortNote": "Naudojimo sritys: aspiracijos žarna oro, dūmų, dujų, dulkių, pjuvenų,",
-    "description": "Naudojimo sritys: aspiracijos žarna oro, dūmų, dujų, dulkių, pjuvenų, drožlių ištraukimui. Naudojama kondicionavimo ir vėdinimo įrenginiuose, medienos apdirbimo staklėms. Gali būti naudojama įvairaus tipo sėjamosiose („Červona Zirka“, „SUPN“, „GASPARDO“).\nSavybės: žarna iš plastifikuoto PVC, armuota kieto, smūgiams atsparaus PVC spirale. Vidinis paviršius idealiai lygus, išorinis – gofruotas. Labai lengvas ir lankstus, patogus naudoti. Atsparus atmosferos poveikiui ir ultravioletiniams spinduliams.\nMedžiaga: minkštas PVC.\nSutvirtinimas: smūgiams atsparus PVC.\nSpalva: pilka. Galimi variantai: skaidri su balta PVC spirale, mėlyna.\nDarbinė temperatūra: nuo −10 °C iki +60 °C",
-    "descLines": [
-      {
-        "text": "Naudojimo sritys: aspiracijos žarna oro, dūmų, dujų, dulkių, pjuvenų, drožlių ištraukimui. Naudojama kondicionavimo ir vėdinimo įrenginiuose, medienos apdirbimo staklėms. Gali būti naudojama įvairaus tipo sėjamosiose („Červona Zirka“, „SUPN“, „GASPARDO“).",
-        "heading": false
-      },
-      {
-        "text": "Savybės: žarna iš plastifikuoto PVC, armuota kieto, smūgiams atsparaus PVC spirale. Vidinis paviršius idealiai lygus, išorinis – gofruotas. Labai lengvas ir lankstus, patogus naudoti. Atsparus atmosferos poveikiui ir ultravioletiniams spinduliams.",
-        "heading": false
-      },
-      {
-        "text": "Medžiaga: minkštas PVC.",
-        "heading": false
-      },
-      {
-        "text": "Sutvirtinimas: smūgiams atsparus PVC.",
-        "heading": false
-      },
-      {
-        "text": "Spalva: pilka. Galimi variantai: skaidri su balta PVC spirale, mėlyna.",
-        "heading": false
-      },
-      {
-        "text": "Darbinė temperatūra: nuo −10 °C iki +60 °C",
-        "heading": false
-      }
-    ],
-    "dn": "",
-    "temp": "nuo −10 °C iki +60 °C",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [
-      "20",
-      "25",
-      "30",
-      "32",
-      "35",
-      "38",
-      "40",
-      "50",
-      "55",
-      "60",
-      "63",
-      "65",
-      "70",
-      "76",
-      "80",
-      "90",
-      "100",
-      "102",
-      "110",
-      "120",
-      "127"
-    ],
-    "specTable": {
-      "headers": [
-        "Vid. diametras (mm)",
-        "Svoris (g/m)",
-        "Sienelės storis (mm)",
-        "Lenkimo spindulys (mm)",
-        "Darb. slėgis (bar)",
-        "Maks. slėgis (bar)",
-        "Vakuumas (m/H₂O)",
-        "Pakuotė (m)",
-        "Pakuotės tūris (m³)"
-      ],
-      "rows": [
-        [
-          "20",
-          "370",
-          "3,7",
-          "100",
-          "7",
-          "21",
-          "10",
-          "30",
-          "0,055"
-        ],
-        [
-          "25",
-          "390",
-          "3,9",
-          "100",
-          "7",
-          "21",
-          "10",
-          "30",
-          "0,059"
-        ],
-        [
-          "30",
-          "560",
-          "4,2",
-          "130",
-          "6",
-          "18",
-          "10",
-          "30",
-          "0,128"
-        ],
-        [
-          "32",
-          "570",
-          "4,4",
-          "130",
-          "6",
-          "18",
-          "10",
-          "30",
-          "0,129"
-        ],
-        [
-          "35",
-          "620",
-          "4,5",
-          "140",
-          "5",
-          "15",
-          "10",
-          "30",
-          "0,18"
-        ],
-        [
-          "38",
-          "670",
-          "4,6",
-          "155",
-          "5",
-          "15",
-          "10",
-          "30",
-          "0,21"
-        ],
-        [
-          "40",
-          "700",
-          "4,6",
-          "160",
-          "5",
-          "15",
-          "10",
-          "30",
-          "0,219"
-        ],
-        [
-          "50",
-          "950",
-          "5,2",
-          "200",
-          "4",
-          "12",
-          "10",
-          "30",
-          "0,343"
-        ],
-        [
-          "55",
-          "1050",
-          "5,4",
-          "220",
-          "4",
-          "12",
-          "10",
-          "30",
-          "0,38"
-        ],
-        [
-          "60",
-          "1250",
-          "5,6",
-          "250",
-          "4",
-          "12",
-          "10",
-          "30",
-          "0,62"
-        ],
-        [
-          "63",
-          "1370",
-          "5,7",
-          "260",
-          "4",
-          "12",
-          "9",
-          "30",
-          "0,535"
-        ],
-        [
-          "65",
-          "1450",
-          "5,8",
-          "280",
-          "4",
-          "12",
-          "9",
-          "30",
-          "0,62"
-        ],
-        [
-          "70",
-          "1560",
-          "6",
-          "290",
-          "3",
-          "9",
-          "9",
-          "30",
-          "0,72"
-        ],
-        [
-          "76",
-          "1750",
-          "6,2",
-          "310",
-          "3",
-          "9",
-          "9",
-          "30",
-          "0,764"
-        ],
-        [
-          "80",
-          "1860",
-          "6,6",
-          "320",
-          "3",
-          "9",
-          "9",
-          "30",
-          "0,8"
-        ],
-        [
-          "90",
-          "2340",
-          "7,2",
-          "370",
-          "3",
-          "9",
-          "8,5",
-          "30",
-          "0,86"
-        ],
-        [
-          "100",
-          "2830",
-          "7,6",
-          "410",
-          "3",
-          "9",
-          "8,5",
-          "30",
-          "0,885"
-        ],
-        [
-          "102",
-          "2880",
-          "7,6",
-          "410",
-          "3",
-          "9",
-          "8,5",
-          "30",
-          "0,9"
-        ],
-        [
-          "110",
-          "3200",
-          "8,2",
-          "450",
-          "3",
-          "9",
-          "8,5",
-          "30",
-          "0,99"
-        ],
-        [
-          "120",
-          "3400",
-          "9",
-          "490",
-          "3",
-          "9",
-          "8",
-          "30",
-          "1,065"
-        ],
-        [
-          "127",
-          "3560",
-          "9,5",
-          "520",
-          "3",
-          "9",
-          "8",
-          "30",
-          "1,11"
-        ]
-      ]
-    }
-  },
-  {
-    "slug": "kopiyarukav-pvh-vent",
-    "name": "PVC žarna „Grin“",
-    "category": "rukava-z-polihlorvinilu",
-    "categories": [
-      "armovani-pvh-stallyu-ua",
-      "rukava-z-polihlorvinilu"
-    ],
-    "subcategory": "Armuotos PVC spirale",
-    "industries": [
-      "agri",
-      "spec"
-    ],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/20200415_114301-600x800.jpg",
-    "shortNote": "Naudojimo sritys: slėginė-siurbimo žarna vandeniui, iki 20 % alkoholio",
-    "description": "Naudojimo sritys: slėginė-siurbimo žarna vandeniui, iki 20 % alkoholio turintiems gėrimams, maisto produktams transportuoti. Plačiai naudojama žemės ūkyje kaip sėklų tiekimo žarna pneumatiniuose sėjos kompleksuose. Plačiai naudojama pesticidams ir įvairioms trąšoms, KAS (karbamido-amoniako mišiniui), įsk. sausas birias, perpumpuoti, taip pat grūdų kultūroms transportuoti. Žarna naudojama žemės ūkio technikoje (sėjamosiose, purkštuvuose ir t. t.).\nSavybės: žarna iš elastingo PVC, armuota stiprinančia spirale iš smūgiams ir slėgiui atsparaus PVC. Vidinis paviršius lygus, išorinis – šiek tiek briaunotas. Atsparus slėgiui, abrazyviniam dilimui, ultravioletiniam spinduliavimui ir atmosferos reiškiniams.\nMedžiaga: minkštas skaidrus PVC.\nSutvirtinimas: kietas, smūgiams atsparus PVC.\nSpalva: skaidri su balta PVC spirale. Galimi spiralės variantai: juoda, mėlyna, pilka.\nDarbinė temperatūra: nuo −10 °C iki +60 °C.",
-    "descLines": [
-      {
-        "text": "Naudojimo sritys: slėginė-siurbimo žarna vandeniui, iki 20 % alkoholio turintiems gėrimams, maisto produktams transportuoti. Plačiai naudojama žemės ūkyje kaip sėklų tiekimo žarna pneumatiniuose sėjos kompleksuose. Plačiai naudojama pesticidams ir įvairioms trąšoms, KAS (karbamido-amoniako mišiniui), įsk. sausas birias, perpumpuoti, taip pat grūdų kultūroms transportuoti. Žarna naudojama žemės ūkio technikoje (sėjamosiose, purkštuvuose ir t. t.).",
-        "heading": false
-      },
-      {
-        "text": "Savybės: žarna iš elastingo PVC, armuota stiprinančia spirale iš smūgiams ir slėgiui atsparaus PVC. Vidinis paviršius lygus, išorinis – šiek tiek briaunotas. Atsparus slėgiui, abrazyviniam dilimui, ultravioletiniam spinduliavimui ir atmosferos reiškiniams.",
-        "heading": false
-      },
-      {
-        "text": "Medžiaga: minkštas skaidrus PVC.",
-        "heading": false
-      },
-      {
-        "text": "Sutvirtinimas: kietas, smūgiams atsparus PVC.",
-        "heading": false
-      },
-      {
-        "text": "Spalva: skaidri su balta PVC spirale. Galimi spiralės variantai: juoda, mėlyna, pilka.",
-        "heading": false
-      },
-      {
-        "text": "Darbinė temperatūra: nuo −10 °C iki +60 °C.",
-        "heading": false
-      }
-    ],
-    "dn": "",
-    "temp": "nuo −10 °C iki +60 °C.",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [
-      "16",
-      "20",
-      "25",
-      "30",
-      "32",
-      "35",
-      "38",
-      "40",
-      "45",
-      "50",
-      "51",
-      "55",
-      "60",
-      "63",
-      "65",
-      "70",
-      "75",
-      "76",
-      "80",
-      "90",
-      "100",
-      "102",
-      "110",
-      "120",
-      "125",
-      "127",
-      "130",
-      "140",
-      "150",
-      "200"
-    ],
-    "specTable": {
-      "headers": [
-        "Vid. diametras (mm)",
-        "Svoris (g/m)",
-        "Sienelės storis (mm)",
-        "Lenkimo spindulys (mm)",
-        "Darb. slėgis (bar)",
-        "Maks. slėgis (bar)",
-        "Vakuumas (m/H₂O)",
-        "Pakuotė (m)",
-        "Pakuotės tūris (m³)"
-      ],
-      "rows": [
-        [
-          "16",
-          "200",
-          "2,5",
-          "80",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,03"
-        ],
-        [
-          "20",
-          "240",
-          "2,8",
-          "110",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,037"
-        ],
-        [
-          "25",
-          "300",
-          "2,8",
-          "130",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,056"
-        ],
-        [
-          "30",
-          "360",
-          "2,9",
-          "150",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,073"
-        ],
-        [
-          "32",
-          "390",
-          "3",
-          "155",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,078"
-        ],
-        [
-          "35",
-          "440",
-          "3,2",
-          "170",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,087"
-        ],
-        [
-          "38",
-          "520",
-          "3,4",
-          "182",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,114"
-        ],
-        [
-          "40",
-          "550",
-          "3,5",
-          "195",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,125"
-        ],
-        [
-          "45",
-          "670",
-          "3,8",
-          "215",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,15"
-        ],
-        [
-          "50",
-          "800",
-          "4,1",
-          "235",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,197"
-        ],
-        [
-          "51",
-          "820",
-          "4,1",
-          "240",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,199"
-        ],
-        [
-          "55",
-          "900",
-          "4,1",
-          "255",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,23"
-        ],
-        [
-          "60",
-          "970",
-          "4,1",
-          "275",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,285"
-        ],
-        [
-          "63",
-          "1040",
-          "4,2",
-          "290",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,285"
-        ],
-        [
-          "65",
-          "1100",
-          "4,2",
-          "300",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,3"
-        ],
-        [
-          "70",
-          "1200",
-          "4,5",
-          "320",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,339"
-        ],
-        [
-          "75",
-          "1250",
-          "4,5",
-          "335",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,402"
-        ],
-        [
-          "76",
-          "1300",
-          "4,7",
-          "340",
-          "5",
-          "15",
-          "7",
-          "30",
-          "0,406"
-        ],
-        [
-          "80",
-          "1550",
-          "5,2",
-          "365",
-          "5",
-          "12",
-          "7",
-          "30",
-          "0,442"
-        ],
-        [
-          "90",
-          "1850",
-          "6",
-          "420",
-          "4",
-          "12",
-          "7",
-          "30",
-          "0,63"
-        ],
-        [
-          "100",
-          "2200",
-          "6",
-          "470",
-          "4",
-          "12",
-          "7",
-          "30",
-          "0,765"
-        ],
-        [
-          "102",
-          "2280",
-          "6",
-          "500",
-          "4",
-          "12",
-          "7",
-          "30",
-          "0,765"
-        ],
-        [
-          "110",
-          "2550",
-          "6",
-          "520",
-          "4",
-          "12",
-          "6",
-          "30",
-          "0,865"
-        ],
-        [
-          "120",
-          "2800",
-          "6,2",
-          "650",
-          "3",
-          "9",
-          "6",
-          "30",
-          "1,024"
-        ],
-        [
-          "125",
-          "2900",
-          "6,2",
-          "670",
-          "3",
-          "9",
-          "6",
-          "30",
-          "1,1"
-        ],
-        [
-          "127",
-          "3000",
-          "6,2",
-          "680",
-          "3",
-          "9",
-          "5,5",
-          "30",
-          "1,2"
-        ],
-        [
-          "130",
-          "3200",
-          "6,2",
-          "710",
-          "3",
-          "9",
-          "5",
-          "30",
-          "1,21"
-        ],
-        [
-          "140",
-          "3700",
-          "6,2",
-          "750",
-          "3",
-          "9",
-          "5",
-          "30",
-          "1,22"
-        ],
-        [
-          "150",
-          "4300",
-          "6,2",
-          "780",
-          "3",
-          "9",
-          "5",
-          "20",
-          "1,255"
-        ],
-        [
-          "200",
-          "6500",
-          "8,2",
-          "890",
-          "2",
-          "6",
-          "4,5",
-          "10",
-          "0,5"
-        ]
-      ]
-    }
-  },
-  {
-    "slug": "kopiyarukav-pvh-vent-2",
-    "name": "PVC žarna „Agrochem“",
-    "category": "rukava-z-polihlorvinilu",
-    "categories": [
-      "armovani-pvh-stallyu-ua",
-      "rukava-z-polihlorvinilu"
-    ],
-    "subcategory": "Armuotos PVC spirale",
-    "industries": [
-      "agri"
-    ],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/1586939665588.png",
-    "shortNote": "Naudojimo sritys: slėginė-siurbimo žarna techniniam vandeniui transpor",
-    "description": "Naudojimo sritys: slėginė-siurbimo žarna techniniam vandeniui transportuoti, nuotekų duobėms, kanalizacijoms ir t. t. išsiurbti. Naudojama siurblinėje, priešgaisrinėje technikoje, pramoniniuose lietinimo įrenginiuose, fekalinėms masėms ir kitoms atliekoms išsiurbti. Plačiai naudojama pesticidams ir įvairioms trąšoms, KAS (karbamido-amoniako mišiniui), įsk. sausas birias, perpumpuoti, taip pat grūdų kultūroms transportuoti. Naudojama kaip sėklų tiekimo žarna grūdams iš bunkerio tiekti sėjamosiose ir grūdų smulkintuvuose.\nSavybės: žarna iš plastifikuoto PVC, armuota stiprinančia spirale iš smūgiams atsparaus PVC. Lygus vidinis žarnos paviršius padeda išvengti nuosėdų kaupimosi, išorinis paviršius – šiek tiek briaunotas. Dėl didelio sienelės storio pasižymi geru atsparumu vakuumui, slėgio impulsui, dilimui, atmosferos poveikiui ir įvairiems cheminiams reagentams.\nMedžiaga: minkštas PVC.\nSutvirtinimas: kietas, smūgiams atsparus PVC.\nSpalva juoda. Galimi variantai: pilka, mėlyna.\nDarbinė temperatūra: nuo −10 °C iki +60 °C",
-    "descLines": [
-      {
-        "text": "Naudojimo sritys: slėginė-siurbimo žarna techniniam vandeniui transportuoti, nuotekų duobėms, kanalizacijoms ir t. t. išsiurbti. Naudojama siurblinėje, priešgaisrinėje technikoje, pramoniniuose lietinimo įrenginiuose, fekalinėms masėms ir kitoms atliekoms išsiurbti. Plačiai naudojama pesticidams ir įvairioms trąšoms, KAS (karbamido-amoniako mišiniui), įsk. sausas birias, perpumpuoti, taip pat grūdų kultūroms transportuoti. Naudojama kaip sėklų tiekimo žarna grūdams iš bunkerio tiekti sėjamosiose ir grūdų smulkintuvuose.",
-        "heading": false
-      },
-      {
-        "text": "Savybės: žarna iš plastifikuoto PVC, armuota stiprinančia spirale iš smūgiams atsparaus PVC. Lygus vidinis žarnos paviršius padeda išvengti nuosėdų kaupimosi, išorinis paviršius – šiek tiek briaunotas. Dėl didelio sienelės storio pasižymi geru atsparumu vakuumui, slėgio impulsui, dilimui, atmosferos poveikiui ir įvairiems cheminiams reagentams.",
-        "heading": false
-      },
-      {
-        "text": "Medžiaga: minkštas PVC.",
-        "heading": false
-      },
-      {
-        "text": "Sutvirtinimas: kietas, smūgiams atsparus PVC.",
-        "heading": false
-      },
-      {
-        "text": "Spalva juoda. Galimi variantai: pilka, mėlyna.",
-        "heading": false
-      },
-      {
-        "text": "Darbinė temperatūra: nuo −10 °C iki +60 °C",
-        "heading": false
-      }
-    ],
-    "dn": "",
-    "temp": "nuo −10 °C iki +60 °C",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [
-      "20",
-      "25",
-      "30",
-      "32",
-      "35",
-      "38",
-      "40",
-      "50",
-      "55",
-      "60",
-      "63",
-      "65",
-      "70",
-      "76",
-      "80",
-      "90",
-      "100",
-      "102",
-      "110",
-      "120",
-      "127"
-    ],
-    "specTable": {
-      "headers": [
-        "Vid. diametras (mm)",
-        "Svoris (g/m)",
-        "Sienelės storis (mm)",
-        "Lenkimo spindulys (mm)",
-        "Darb. slėgis (bar)",
-        "Maks. slėgis (bar)",
-        "Vakuumas (m/H₂O)",
-        "Pakuotė (m)",
-        "Pakuotės tūris (m³)"
-      ],
-      "rows": [
-        [
-          "20",
-          "370",
-          "3,7",
-          "100",
-          "7",
-          "21",
-          "10",
-          "30",
-          "0,055"
-        ],
-        [
-          "25",
-          "390",
-          "3,9",
-          "100",
-          "7",
-          "21",
-          "10",
-          "30",
-          "0,059"
-        ],
-        [
-          "30",
-          "560",
-          "4,2",
-          "130",
-          "6",
-          "18",
-          "10",
-          "30",
-          "0,128"
-        ],
-        [
-          "32",
-          "570",
-          "4,4",
-          "130",
-          "6",
-          "18",
-          "10",
-          "30",
-          "0,129"
-        ],
-        [
-          "35",
-          "620",
-          "4,5",
-          "140",
-          "5",
-          "15",
-          "10",
-          "30",
-          "0,18"
-        ],
-        [
-          "38",
-          "670",
-          "4,6",
-          "155",
-          "5",
-          "15",
-          "10",
-          "30",
-          "0,21"
-        ],
-        [
-          "40",
-          "700",
-          "4,6",
-          "160",
-          "5",
-          "15",
-          "10",
-          "30",
-          "0,219"
-        ],
-        [
-          "50",
-          "950",
-          "5,2",
-          "200",
-          "4",
-          "12",
-          "10",
-          "30",
-          "0,343"
-        ],
-        [
-          "55",
-          "1050",
-          "5,4",
-          "220",
-          "4",
-          "12",
-          "10",
-          "30",
-          "0,38"
-        ],
-        [
-          "60",
-          "1250",
-          "5,6",
-          "250",
-          "4",
-          "12",
-          "10",
-          "30",
-          "0,62"
-        ],
-        [
-          "63",
-          "1370",
-          "5,7",
-          "260",
-          "4",
-          "12",
-          "9",
-          "30",
-          "0,535"
-        ],
-        [
-          "65",
-          "1450",
-          "5,8",
-          "280",
-          "4",
-          "12",
-          "9",
-          "30",
-          "0,62"
-        ],
-        [
-          "70",
-          "1560",
-          "6",
-          "290",
-          "3",
-          "9",
-          "9",
-          "30",
-          "0,72"
-        ],
-        [
-          "76",
-          "1750",
-          "6,2",
-          "310",
-          "3",
-          "9",
-          "9",
-          "30",
-          "0,764"
-        ],
-        [
-          "80",
-          "1860",
-          "6,6",
-          "320",
-          "3",
-          "9",
-          "9",
-          "30",
-          "0,8"
-        ],
-        [
-          "90",
-          "2340",
-          "7,2",
-          "370",
-          "3",
-          "9",
-          "8,5",
-          "30",
-          "0,86"
-        ],
-        [
-          "100",
-          "2830",
-          "7,6",
-          "410",
-          "3",
-          "9",
-          "8,5",
-          "30",
-          "0,885"
-        ],
-        [
-          "102",
-          "2880",
-          "7,6",
-          "410",
-          "3",
-          "9",
-          "8,5",
-          "30",
-          "0,9"
-        ],
-        [
-          "110",
-          "3200",
-          "8,2",
-          "450",
-          "3",
-          "9",
-          "8,5",
-          "30",
-          "0,99"
-        ],
-        [
-          "120",
-          "3400",
-          "9",
-          "490",
-          "3",
-          "9",
-          "8",
-          "30",
-          "1,065"
-        ],
-        [
-          "127",
-          "3560",
-          "9,5",
-          "520",
-          "3",
-          "9",
-          "8",
-          "30",
-          "1,11"
-        ]
-      ]
-    }
-  },
-  {
-    "slug": "kopiyarukav-pvh-agrohim",
-    "name": "PVC žarna „Vakuum“",
-    "category": "rukava-z-polihlorvinilu",
-    "categories": [
-      "armovani-pvh-stallyu-ua",
-      "rukava-z-polihlorvinilu"
-    ],
-    "subcategory": "Armuotos PVC spirale",
-    "industries": [
-      "spec",
-      "agri"
-    ],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/1586939757392.png",
-    "shortNote": "Naudojimo sritys: universali, šalčiui atspari slėginė-siurbimo žarna n",
-    "description": "Naudojimo sritys: universali, šalčiui atspari slėginė-siurbimo žarna nuotekų duobėms, kanalizacijoms ir t. t. išsiurbti. Naudojama siurblinėje, priešgaisrinėje technikoje, pramoniniuose lietinimo įrenginiuose, fekalinėms masėms ir kitoms atliekoms išsiurbti. Miltelių, granulių ir kitų abrazyvų transportavimas, taip pat kaip pneumotransportas sėkloms ir grūdams. Plačiai naudojama KAS (karbamido-amoniako mišiniui) perpumpuoti. Naudojama kaip sėklų tiekimo žarna grūdams iš bunkerio tiekti sėjamosiose ir grūdų smulkintuvuose.\nSavybės: labai elastinga, šalčiui atspari, universali PVC žarna su beveik nesideformuojančia kieto PVC spirale, suteikiančia jai didelį atsparumą dilimui. Lygus vidinis žarnos paviršius padeda išvengti nuosėdų kaupimosi. Dėl didelio sienelės storio pasižymi geru atsparumu vakuumui, slėgio impulsui, dilimui, atmosferos poveikiui ir įvairiems cheminiams reagentams.\nMedžiaga: dilimui atsparus PVC.\nSutvirtinimas: kietas, smūgiams atsparus PVC.\nSpalva juoda. Galimi variantai: pilka, mėlyna.\nDarbinė temperatūra: nuo −30 °C iki +60 °C.",
-    "descLines": [
-      {
-        "text": "Naudojimo sritys: universali, šalčiui atspari slėginė-siurbimo žarna nuotekų duobėms, kanalizacijoms ir t. t. išsiurbti. Naudojama siurblinėje, priešgaisrinėje technikoje, pramoniniuose lietinimo įrenginiuose, fekalinėms masėms ir kitoms atliekoms išsiurbti. Miltelių, granulių ir kitų abrazyvų transportavimas, taip pat kaip pneumotransportas sėkloms ir grūdams. Plačiai naudojama KAS (karbamido-amoniako mišiniui) perpumpuoti. Naudojama kaip sėklų tiekimo žarna grūdams iš bunkerio tiekti sėjamosiose ir grūdų smulkintuvuose.",
-        "heading": false
-      },
-      {
-        "text": "Savybės: labai elastinga, šalčiui atspari, universali PVC žarna su beveik nesideformuojančia kieto PVC spirale, suteikiančia jai didelį atsparumą dilimui. Lygus vidinis žarnos paviršius padeda išvengti nuosėdų kaupimosi. Dėl didelio sienelės storio pasižymi geru atsparumu vakuumui, slėgio impulsui, dilimui, atmosferos poveikiui ir įvairiems cheminiams reagentams.",
-        "heading": false
-      },
-      {
-        "text": "Medžiaga: dilimui atsparus PVC.",
-        "heading": false
-      },
-      {
-        "text": "Sutvirtinimas: kietas, smūgiams atsparus PVC.",
-        "heading": false
-      },
-      {
-        "text": "Spalva juoda. Galimi variantai: pilka, mėlyna.",
-        "heading": false
-      },
-      {
-        "text": "Darbinė temperatūra: nuo −30 °C iki +60 °C.",
-        "heading": false
-      }
-    ],
-    "dn": "",
-    "temp": "nuo −30 °C iki +60 °C.",
-    "pressure": "",
-    "wallThickness": "",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [
-      "20",
-      "25",
-      "30",
-      "32",
-      "35",
-      "38",
-      "40",
-      "50",
-      "51",
-      "55",
-      "60",
-      "63",
-      "65",
-      "70",
-      "75",
-      "76",
-      "80",
-      "102",
-      "110",
-      "120",
-      "125",
-      "127",
-      "150"
-    ],
-    "specTable": {
-      "headers": [
-        "Vid. diametras (mm)",
-        "Svoris (g/m)",
-        "Sienelės storis (mm)",
-        "Lenkimo spindulys (mm)",
-        "Darb. slėgis (bar)",
-        "Maks. slėgis (bar)",
-        "Vakuumas (m/H₂O)",
-        "Pakuotė (m)",
-        "Pakuotės tūris (m³)"
-      ],
-      "rows": [
-        [
-          "20",
-          "370",
-          "3,7",
-          "90",
-          "7",
-          "21",
-          "10",
-          "30",
-          "0,045"
-        ],
-        [
-          "25",
-          "390",
-          "3,9",
-          "100",
-          "7",
-          "21",
-          "10",
-          "30",
-          "0,059"
-        ],
-        [
-          "30",
-          "560",
-          "4,2",
-          "120",
-          "6",
-          "18",
-          "10",
-          "30",
-          "0,125"
-        ],
-        [
-          "32",
-          "570",
-          "4,4",
-          "130",
-          "6",
-          "18",
-          "10",
-          "30",
-          "0,129"
-        ],
-        [
-          "35",
-          "620",
-          "4,5",
-          "140",
-          "5",
-          "15",
-          "10",
-          "30",
-          "0,2"
-        ],
-        [
-          "38",
-          "670",
-          "4,6",
-          "155",
-          "5",
-          "15",
-          "10",
-          "30",
-          "0,21"
-        ],
-        [
-          "40",
-          "700",
-          "4,6",
-          "160",
-          "5",
-          "15",
-          "10",
-          "30",
-          "0,219"
-        ],
-        [
-          "50",
-          "950",
-          "5,2",
-          "200",
-          "4",
-          "12",
-          "10",
-          "30",
-          "0,343"
-        ],
-        [
-          "51",
-          "950",
-          "5,2",
-          "200",
-          "4",
-          "12",
-          "10",
-          "30",
-          "0,349"
-        ],
-        [
-          "55",
-          "1080",
-          "5,4",
-          "220",
-          "4",
-          "12",
-          "10",
-          "30",
-          "0,374"
-        ],
-        [
-          "60",
-          "1225",
-          "5,5",
-          "240",
-          "4",
-          "12",
-          "9",
-          "30",
-          "0,52"
-        ],
-        [
-          "63",
-          "1370",
-          "5,7",
-          "260",
-          "4",
-          "12",
-          "9",
-          "30",
-          "0,535"
-        ],
-        [
-          "65",
-          "1420",
-          "5,8",
-          "270",
-          "4",
-          "12",
-          "9",
-          "30",
-          "0,62"
-        ],
-        [
-          "70",
-          "1560",
-          "6",
-          "290",
-          "3",
-          "9",
-          "9",
-          "30",
-          "0,68"
-        ],
-        [
-          "75",
-          "1750",
-          "6,2",
-          "310",
-          "3",
-          "9",
-          "9",
-          "30",
-          "0,764"
-        ],
-        [
-          "76",
-          "1860",
-          "6,6",
-          "320",
-          "3",
-          "9",
-          "9",
-          "30",
-          "0,8"
-        ],
-        [
-          "80",
-          "2830",
-          "7,6",
-          "410",
-          "3",
-          "9",
-          "8,5",
-          "30",
-          "0,885"
-        ],
-        [
-          "102",
-          "2880",
-          "7,6",
-          "410",
-          "3",
-          "9",
-          "8,5",
-          "30",
-          "0,9"
-        ],
-        [
-          "110",
-          "3090",
-          "7,9",
-          "450",
-          "3",
-          "9",
-          "8,5",
-          "30",
-          "0,963"
-        ],
-        [
-          "120",
-          "3400",
-          "8",
-          "480",
-          "2,5",
-          "7,5",
-          "8",
-          "30",
-          "1,35"
-        ],
-        [
-          "125",
-          "3620",
-          "8,2",
-          "490",
-          "2,5",
-          "7,5",
-          "8",
-          "30",
-          "1,442"
-        ],
-        [
-          "127",
-          "3700",
-          "8,2",
-          "500",
-          "2,5",
-          "7,5",
-          "8",
-          "30",
-          "1,47"
-        ],
-        [
-          "150",
-          "4990",
-          "9,4",
-          "610",
-          "2",
-          "6",
-          "8",
-          "20",
-          "1,501"
-        ]
-      ]
-    }
-  },
-  {
     "slug": "pur-mb-ruchnaya-plenka-2",
     "name": "Tipas Flat B1",
     "category": "rukava-z-poliuretanu",
@@ -17376,81 +15461,6 @@
     }
   },
   {
-    "slug": "tpr",
-    "name": "TPR",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/tpr.jpg",
-    "shortNote": "Sienelė iš termoplastinės gumos EPDM / PP (sienelės storis tarp spiral",
-    "description": "Struktūra:\nSienelė iš termoplastinės gumos EPDM / PP (sienelės storis tarp spiralių apie 0,6 mm), spiralė iš spyruoklinio plieno su variniu sluoksniu, įmontuota sienelėje.\nCharakteristikos:\nLengva ir labai lanksti žarna, atspari žemai ir aukštai temperatūrai, be plastifikatorių, halogenų ir kadmio.\nPritaikymas:\nUniversali žarna vėdinimui ir šalto ar šilto oro bei dūmų transportavimui.\nTemperatūrų diapazonas:\nNuo −40 °C iki +135 °C (laikinai iki +150 °C)\nSpalva: juoda\nSpecialus pasiūlymas:\nTaip pat galimas ugniai atsparus variantas; pagal pageidavimą galimas pakuotės fiksavimas.",
-    "descLines": [
-      {
-        "text": "Struktūra:",
-        "heading": true
-      },
-      {
-        "text": "Sienelė iš termoplastinės gumos EPDM / PP (sienelės storis tarp spiralių apie 0,6 mm), spiralė iš spyruoklinio plieno su variniu sluoksniu, įmontuota sienelėje.",
-        "heading": false
-      },
-      {
-        "text": "Charakteristikos:",
-        "heading": true
-      },
-      {
-        "text": "Lengva ir labai lanksti žarna, atspari žemai ir aukštai temperatūrai, be plastifikatorių, halogenų ir kadmio.",
-        "heading": false
-      },
-      {
-        "text": "Pritaikymas:",
-        "heading": true
-      },
-      {
-        "text": "Universali žarna vėdinimui ir šalto ar šilto oro bei dūmų transportavimui.",
-        "heading": false
-      },
-      {
-        "text": "Temperatūrų diapazonas:",
-        "heading": true
-      },
-      {
-        "text": "Nuo −40 °C iki +135 °C (laikinai iki +150 °C)",
-        "heading": false
-      },
-      {
-        "text": "Spalva: juoda",
-        "heading": false
-      },
-      {
-        "text": "Specialus pasiūlymas:",
-        "heading": true
-      },
-      {
-        "text": "Taip pat galimas ugniai atsparus variantas; pagal pageidavimą galimas pakuotės fiksavimas.",
-        "heading": false
-      }
-    ],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "Sienelė iš termoplastinės gumos EPDM / PP (sienelės storis tarp spiralių apie 0,6 mm), spiralė iš spyruoklinio plieno su variniu sluoksniu, įmontuota sienelėje.",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [],
-    "specTable": null
-  },
-  {
     "slug": "rukav-deptak",
     "name": "Žarna išmetamosioms dujoms šalinti, tipas DEPTAK",
     "category": "rukava-z-poliuretanu",
@@ -17624,433 +15634,6 @@
           "185",
           "215",
           "2,35"
-        ]
-      ]
-    }
-  },
-  {
-    "slug": "tpr-600",
-    "name": "Aukštatemperatūrinė žarna TPR 600",
-    "category": "rukava-typu-klyn",
-    "categories": [
-      "rukava-typu-klyn"
-    ],
-    "subcategory": "",
-    "industries": [
-      "exhaust"
-    ],
-    "color": "navy",
-    "featured": false,
-    "image": "/products/orig/vysokotemperaturnyj-shlang-tpr-600-1-600x600.jpg",
-    "shortNote": "Lengva ir lanksti žarna, atspari žemai ir aukštai temperatūrai",
-    "description": "Ypatybės\nLengva ir lanksti žarna, atspari žemai ir aukštai temperatūrai\nGaminama iš termoplastinės gumos EPDM/PP (be plastifikatorių, halogenų ir kadmio)\nSienelės storis 0,6 mm\nArmuota spirale iš spyruoklinio plieno su variniu sluoksniu\nDarbinė temperatūra:\n−40 °C iki +135 °C, trumpalaikiai iki +150 °C\nPritaikymas\nKaršto ir šalto oro, dūmų, dujų ir cheminių garų ištraukimas vėdinimo sistemose\nVisa produkcija sertifikuota",
-    "descLines": [
-      {
-        "text": "Ypatybės",
-        "heading": true
-      },
-      {
-        "text": "Lengva ir lanksti žarna, atspari žemai ir aukštai temperatūrai",
-        "heading": false
-      },
-      {
-        "text": "Gaminama iš termoplastinės gumos EPDM/PP (be plastifikatorių, halogenų ir kadmio)",
-        "heading": false
-      },
-      {
-        "text": "Sienelės storis 0,6 mm",
-        "heading": false
-      },
-      {
-        "text": "Armuota spirale iš spyruoklinio plieno su variniu sluoksniu",
-        "heading": false
-      },
-      {
-        "text": "Darbinė temperatūra:",
-        "heading": true
-      },
-      {
-        "text": "−40 °C iki +135 °C, trumpalaikiai iki +150 °C",
-        "heading": false
-      },
-      {
-        "text": "Pritaikymas",
-        "heading": true
-      },
-      {
-        "text": "Karšto ir šalto oro, dūmų, dujų ir cheminių garų ištraukimas vėdinimo sistemose",
-        "heading": false
-      },
-      {
-        "text": "Visa produkcija sertifikuota",
-        "heading": false
-      }
-    ],
-    "dn": "",
-    "temp": "",
-    "pressure": "",
-    "wallThickness": "Sienelės storis 0,6 mm",
-    "standardLength": "",
-    "vacuum": "",
-    "bendRadius": "",
-    "material": "",
-    "reinforcement": "",
-    "colorsAvailable": "",
-    "certifications": "",
-    "origin": "",
-    "sizes": [
-      "32",
-      "35",
-      "38",
-      "40",
-      "42",
-      "45",
-      "48",
-      "50",
-      "51",
-      "55",
-      "60",
-      "65",
-      "70",
-      "75",
-      "76",
-      "80",
-      "83",
-      "90",
-      "100",
-      "102",
-      "110",
-      "120",
-      "125",
-      "127",
-      "130",
-      "140",
-      "150",
-      "152",
-      "160",
-      "175",
-      "180",
-      "200",
-      "203",
-      "225",
-      "250",
-      "280",
-      "300",
-      "350"
-    ],
-    "specTable": {
-      "headers": [
-        "Vidinis diametras, mm",
-        "Зовнішний диаметр, мм",
-        "Sienelės storis, mm",
-        "Masė, kg/m",
-        "Vakuumas, m/H₂O",
-        "Darbinis slėgis, bar"
-      ],
-      "rows": [
-        [
-          "32",
-          "36",
-          "0,6",
-          "0,16",
-          "3,57",
-          "0,7"
-        ],
-        [
-          "35",
-          "39",
-          "0,6",
-          "0,18",
-          "3,57",
-          "0,7"
-        ],
-        [
-          "38",
-          "42",
-          "0,6",
-          "0,19",
-          "3,57",
-          "0,7"
-        ],
-        [
-          "40",
-          "45",
-          "0,6",
-          "0,23",
-          "3,57",
-          "0,7"
-        ],
-        [
-          "42",
-          "47",
-          "0,6",
-          "0,24",
-          "3,57",
-          "0,7"
-        ],
-        [
-          "45",
-          "50",
-          "0,6",
-          "0,26",
-          "3,57",
-          "0,7"
-        ],
-        [
-          "48",
-          "53",
-          "0,6",
-          "0,26",
-          "3,57",
-          "0,7"
-        ],
-        [
-          "50",
-          "55",
-          "0,6",
-          "0,27",
-          "3,57",
-          "0,7"
-        ],
-        [
-          "51",
-          "56",
-          "0,6",
-          "0,27",
-          "2,55",
-          "0,6"
-        ],
-        [
-          "55",
-          "60",
-          "0,6",
-          "0,29",
-          "2,55",
-          "0,6"
-        ],
-        [
-          "60",
-          "65",
-          "0,6",
-          "0,31",
-          "2,55",
-          "0,6"
-        ],
-        [
-          "65",
-          "70",
-          "0,6",
-          "0,36",
-          "2,55",
-          "0,6"
-        ],
-        [
-          "70",
-          "75",
-          "0,6",
-          "0,43",
-          "2,55",
-          "0,6"
-        ],
-        [
-          "75",
-          "80",
-          "0,6",
-          "0,46",
-          "2,55",
-          "0,6"
-        ],
-        [
-          "76",
-          "81",
-          "0,6",
-          "0,47",
-          "2,55",
-          "0,6"
-        ],
-        [
-          "80",
-          "85",
-          "0,6",
-          "0,49",
-          "1,53",
-          "0,4"
-        ],
-        [
-          "83",
-          "88",
-          "0,6",
-          "0,51",
-          "1,53",
-          "0,4"
-        ],
-        [
-          "90",
-          "95",
-          "0,6",
-          "0,55",
-          "1,53",
-          "0,4"
-        ],
-        [
-          "100",
-          "106",
-          "0,6",
-          "0,57",
-          "1,53",
-          "0,4"
-        ],
-        [
-          "102",
-          "108",
-          "0,6",
-          "0,58",
-          "1,02",
-          "0,3"
-        ],
-        [
-          "110",
-          "116",
-          "0,6",
-          "0,63",
-          "1,02",
-          "0,3"
-        ],
-        [
-          "120",
-          "126",
-          "0,6",
-          "0,68",
-          "1,02",
-          "0,3"
-        ],
-        [
-          "125",
-          "131",
-          "0,6",
-          "0,71",
-          "1,02",
-          "0,3"
-        ],
-        [
-          "127",
-          "133",
-          "0,6",
-          "0,72",
-          "1,02",
-          "0,3"
-        ],
-        [
-          "130",
-          "136",
-          "0,6",
-          "0,74",
-          "1,02",
-          "0,3"
-        ],
-        [
-          "140",
-          "146",
-          "0,6",
-          "0,79",
-          "1,02",
-          "0,3"
-        ],
-        [
-          "150",
-          "156",
-          "0,6",
-          "0,85",
-          "1,02",
-          "0,3"
-        ],
-        [
-          "152",
-          "158",
-          "0,6",
-          "0,86",
-          "1,02",
-          "0,3"
-        ],
-        [
-          "160",
-          "166",
-          "0,6",
-          "0,9",
-          "0,51",
-          "0,2"
-        ],
-        [
-          "175",
-          "181",
-          "0,6",
-          "0,99",
-          "0,51",
-          "0,2"
-        ],
-        [
-          "180",
-          "186",
-          "0,6",
-          "1,02",
-          "0,51",
-          "0,2"
-        ],
-        [
-          "200",
-          "207",
-          "0,6",
-          "1,17",
-          "0,51",
-          "0,2"
-        ],
-        [
-          "203",
-          "210",
-          "0,6",
-          "1,19",
-          "0,51",
-          "0,2"
-        ],
-        [
-          "225",
-          "232",
-          "0,6",
-          "1,32",
-          "0,51",
-          "0,2"
-        ],
-        [
-          "250",
-          "257",
-          "0,6",
-          "1,46",
-          "0,2",
-          "0,1"
-        ],
-        [
-          "280",
-          "287",
-          "0,6",
-          "1,63",
-          "0,2",
-          "0,1"
-        ],
-        [
-          "300",
-          "307",
-          "0,6",
-          "1,86",
-          "0,2",
-          "0,1"
-        ],
-        [
-          "350",
-          "357",
-          "0,6",
-          "2,16",
-          "0,2",
-          "0,1"
         ]
       ]
     }
@@ -24646,6 +22229,3748 @@
         [
           "Apkabos medžiaga",
           "Nailonas (plastikas)"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "rukava-i-shlangi-gardenpress",
+    "name": "Žarna GARDENPRESS",
+    "category": "rukava-z-polihlorvinilu",
+    "categories": [
+      "armovani-pvh-stallyu-ua",
+      "rukava-z-polihlorvinilu"
+    ],
+    "subcategory": "Armuotos PVC spirale",
+    "industries": [
+      "agri"
+    ],
+    "color": "navy",
+    "featured": false,
+    "image": "/products/orig/poly-gardenpress-1.jpg",
+    "shortNote": "Trisluoksnė PVC žarna, armuota poliesterio siūlais",
+    "description": "Savybės\nTrisluoksnė PVC žarna, armuota poliesterio siūlais. Vidinis sluoksnis pagamintas iš juodo PVC, kuris neleidžia susidaryti apnašoms. Antrasis sluoksnis – armuojantis poliesterio siūlų pynimas. Išorinis sluoksnis iš skaidraus geltono PVC, atsparaus ultravioletiniam spinduliavimui ir cheminių medžiagų poveikiui. Labai lanksti žarna.\nNaudojimo sritys\nNaudojama daugiausia kaip laistymo žarna\nDarbinė temperatūra: nuo −10 °C iki +60 °C\nSpalva: geltona, juoda\nPagrindinės charakteristikos",
+    "descLines": [
+      {
+        "text": "Savybės",
+        "heading": true
+      },
+      {
+        "text": "Trisluoksnė PVC žarna, armuota poliesterio siūlais. Vidinis sluoksnis pagamintas iš juodo PVC, kuris neleidžia susidaryti apnašoms. Antrasis sluoksnis – armuojantis poliesterio siūlų pynimas. Išorinis sluoksnis iš skaidraus geltono PVC, atsparaus ultravioletiniam spinduliavimui ir cheminių medžiagų poveikiui. Labai lanksti žarna.",
+        "heading": false
+      },
+      {
+        "text": "Naudojimo sritys",
+        "heading": true
+      },
+      {
+        "text": "Naudojama daugiausia kaip laistymo žarna",
+        "heading": false
+      },
+      {
+        "text": "Darbinė temperatūra: nuo −10 °C iki +60 °C",
+        "heading": false
+      },
+      {
+        "text": "Spalva: geltona, juoda",
+        "heading": false
+      },
+      {
+        "text": "Pagrindinės charakteristikos",
+        "heading": false
+      }
+    ],
+    "dn": "",
+    "temp": "nuo −10 °C iki +60 °C",
+    "pressure": "",
+    "wallThickness": "",
+    "standardLength": "",
+    "vacuum": "",
+    "bendRadius": "",
+    "material": "",
+    "reinforcement": "",
+    "colorsAvailable": "",
+    "certifications": "",
+    "origin": "",
+    "sizes": [
+      "8",
+      "10",
+      "12,5",
+      "16",
+      "19",
+      "25"
+    ],
+    "specTable": {
+      "headers": [
+        "Vidinis diametras [mm]",
+        "Išorinis diametras [mm]",
+        "Masė [kg/m]",
+        "Darbinis slėgis [bar]",
+        "Trūkimo slėgis [bar]",
+        "Lenkimo spindulys [mm]",
+        "Rulono ilgis [m]"
+      ],
+      "rows": [
+        [
+          "8",
+          "13",
+          "0,7",
+          "8",
+          "24",
+          "40",
+          "50"
+        ],
+        [
+          "10",
+          "16",
+          "0,8",
+          "8",
+          "24",
+          "50",
+          "50"
+        ],
+        [
+          "12,5",
+          "18,5",
+          "0,11",
+          "8",
+          "24",
+          "70",
+          "50"
+        ],
+        [
+          "16",
+          "23",
+          "0,15",
+          "8",
+          "24",
+          "80",
+          "50"
+        ],
+        [
+          "19",
+          "26,5",
+          "0,2",
+          "8",
+          "24",
+          "100",
+          "50"
+        ],
+        [
+          "25",
+          "33,5",
+          "0,29",
+          "8",
+          "24",
+          "130",
+          "50"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "rukav-agrochem",
+    "name": "Žarna AGROCHEM",
+    "category": "rukava-z-polihlorvinilu",
+    "categories": [
+      "armovani-pvh-stallyu-ua",
+      "rukava-z-polihlorvinilu"
+    ],
+    "subcategory": "Armuotos PVC spirale",
+    "industries": [
+      "agri",
+      "chem"
+    ],
+    "color": "navy",
+    "featured": true,
+    "image": "/products/orig/poly-agrochem-1.jpg",
+    "shortNote": "Elastinga PVC žarna, armuota smūgiams ir slėgiui atsparaus PVC spirale",
+    "description": "Savybės\nElastinga PVC žarna, armuota smūgiams ir slėgiui atsparaus PVC spirale. Vidinis paviršius lygus, išorinis šiek tiek briaunotas. Žarna itin atspari dilimui ir lanksti. Atspari slėgiui ir abrazyviniam dilimui, ultravioletiniam spinduliavimui bei atmosferos reiškiniams, daugelio cheminių medžiagų poveikiui.\nNaudojimo sritys\nNaudojama drėkinimo sistemoms, kanalizacijos ir nuotekų duobių valymui. Žarna gaminama naudojant specialų PVC, kuris užtikrina didesnį lankstumą.\nMedžiaga: dilimui atsparus PVC\nSutvirtinimas: kietas, smūgiams atsparus PVC\nSpalva: mėlyna, pilka\nDarbinė temperatūra: nuo −15 °C iki +60 °C\nPagrindinės charakteristikos",
+    "descLines": [
+      {
+        "text": "Savybės",
+        "heading": true
+      },
+      {
+        "text": "Elastinga PVC žarna, armuota smūgiams ir slėgiui atsparaus PVC spirale. Vidinis paviršius lygus, išorinis šiek tiek briaunotas. Žarna itin atspari dilimui ir lanksti. Atspari slėgiui ir abrazyviniam dilimui, ultravioletiniam spinduliavimui bei atmosferos reiškiniams, daugelio cheminių medžiagų poveikiui.",
+        "heading": false
+      },
+      {
+        "text": "Naudojimo sritys",
+        "heading": true
+      },
+      {
+        "text": "Naudojama drėkinimo sistemoms, kanalizacijos ir nuotekų duobių valymui. Žarna gaminama naudojant specialų PVC, kuris užtikrina didesnį lankstumą.",
+        "heading": false
+      },
+      {
+        "text": "Medžiaga: dilimui atsparus PVC",
+        "heading": false
+      },
+      {
+        "text": "Sutvirtinimas: kietas, smūgiams atsparus PVC",
+        "heading": false
+      },
+      {
+        "text": "Spalva: mėlyna, pilka",
+        "heading": false
+      },
+      {
+        "text": "Darbinė temperatūra: nuo −15 °C iki +60 °C",
+        "heading": false
+      },
+      {
+        "text": "Pagrindinės charakteristikos",
+        "heading": false
+      }
+    ],
+    "dn": "",
+    "temp": "nuo −15 °C iki +60 °C",
+    "pressure": "",
+    "wallThickness": "",
+    "standardLength": "",
+    "vacuum": "",
+    "bendRadius": "",
+    "material": "",
+    "reinforcement": "",
+    "colorsAvailable": "",
+    "certifications": "",
+    "origin": "",
+    "sizes": [
+      "20",
+      "25",
+      "30",
+      "32",
+      "35",
+      "38",
+      "40",
+      "45",
+      "51",
+      "55",
+      "60",
+      "63",
+      "65",
+      "70",
+      "76",
+      "80",
+      "90",
+      "102",
+      "110",
+      "120",
+      "127",
+      "130",
+      "140",
+      "150"
+    ],
+    "specTable": {
+      "headers": [
+        "Vidinis diametras [mm]",
+        "Masė [kg/m]",
+        "Maksimalus sienelės storis [mm]",
+        "Lenkimo spindulys [mm]",
+        "Vakuumas [m/H₂O]",
+        "Darbinis slėgis [bar]",
+        "Rulono ilgis [m]"
+      ],
+      "rows": [
+        [
+          "20",
+          "0,270",
+          "2,90",
+          "110",
+          "7,0",
+          "7",
+          "30"
+        ],
+        [
+          "25",
+          "0,340",
+          "2,90",
+          "130",
+          "7,0",
+          "6",
+          "30"
+        ],
+        [
+          "30",
+          "0,400",
+          "2,90",
+          "150",
+          "7,0",
+          "5",
+          "30"
+        ],
+        [
+          "32",
+          "0,430",
+          "3,00",
+          "155",
+          "7,0",
+          "5",
+          "30"
+        ],
+        [
+          "35",
+          "0,500",
+          "3,30",
+          "170",
+          "7,0",
+          "4",
+          "30"
+        ],
+        [
+          "38",
+          "0,560",
+          "3,50",
+          "180",
+          "7,0",
+          "4",
+          "30"
+        ],
+        [
+          "40",
+          "0,600",
+          "3,80",
+          "195",
+          "7,0",
+          "4",
+          "30"
+        ],
+        [
+          "45",
+          "0,690",
+          "3,80",
+          "215",
+          "7,0",
+          "4",
+          "30"
+        ],
+        [
+          "51",
+          "0,860",
+          "4,00",
+          "235",
+          "7,0",
+          "4",
+          "30"
+        ],
+        [
+          "55",
+          "0,910",
+          "4,00",
+          "255",
+          "7,0",
+          "4",
+          "30"
+        ],
+        [
+          "60",
+          "1,010",
+          "4,50",
+          "275",
+          "7,0",
+          "4",
+          "30"
+        ],
+        [
+          "63",
+          "1,090",
+          "4,50",
+          "290",
+          "7,0",
+          "4",
+          "30"
+        ],
+        [
+          "65",
+          "1,110",
+          "4,50",
+          "300",
+          "7,0",
+          "4",
+          "30"
+        ],
+        [
+          "70",
+          "1,290",
+          "4,50",
+          "320",
+          "7,0",
+          "3",
+          "30"
+        ],
+        [
+          "76",
+          "1,400",
+          "4,50",
+          "340",
+          "7,0",
+          "3",
+          "30"
+        ],
+        [
+          "80",
+          "1,610",
+          "5,00",
+          "365",
+          "7,0",
+          "3",
+          "30"
+        ],
+        [
+          "90",
+          "1,870",
+          "5,00",
+          "420",
+          "7,0",
+          "3",
+          "30"
+        ],
+        [
+          "102",
+          "2,240",
+          "5,50",
+          "470",
+          "7,0",
+          "3",
+          "30"
+        ],
+        [
+          "110",
+          "2,520",
+          "6,00",
+          "520",
+          "6,0",
+          "3",
+          "30"
+        ],
+        [
+          "120",
+          "2,800",
+          "6,50",
+          "650",
+          "6,0",
+          "3",
+          "30"
+        ],
+        [
+          "127",
+          "3,020",
+          "6,50",
+          "680",
+          "5,5",
+          "3",
+          "30"
+        ],
+        [
+          "130",
+          "3,700",
+          "6,50",
+          "680",
+          "5,0",
+          "3",
+          "30"
+        ],
+        [
+          "140",
+          "4,030",
+          "7,00",
+          "750",
+          "5,0",
+          "3",
+          "20"
+        ],
+        [
+          "150",
+          "4,370",
+          "7,00",
+          "780",
+          "5,0",
+          "3",
+          "20"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "rukav-aquaflex",
+    "name": "Žarna Aquaflex",
+    "category": "rukava-z-polihlorvinilu",
+    "categories": [
+      "armovani-pvh-stallyu-ua",
+      "rukava-z-polihlorvinilu"
+    ],
+    "subcategory": "Armuotos PVC spirale",
+    "industries": [
+      "agri"
+    ],
+    "color": "navy",
+    "featured": false,
+    "image": "/products/orig/poly-aquaflex-1.jpg",
+    "shortNote": "Žarna iš plastiško PVC, armuota stiprinančia spirale iš smūgiams ir sl",
+    "description": "Savybės\nŽarna iš plastiško PVC, armuota stiprinančia spirale iš smūgiams ir slėgiui atsparaus PVC. Vidinis ir išorinis paviršiai lygūs.\nNaudojimo ypatybės\nBuitinė santechnika, baseinai, dušo kabinos, hidromasažinės vonios\nSpalva: pilka, balta\nDarbinė temperatūra: −10 °C … +60 °C\nPagrindinės charakteristikos",
+    "descLines": [
+      {
+        "text": "Savybės",
+        "heading": true
+      },
+      {
+        "text": "Žarna iš plastiško PVC, armuota stiprinančia spirale iš smūgiams ir slėgiui atsparaus PVC. Vidinis ir išorinis paviršiai lygūs.",
+        "heading": false
+      },
+      {
+        "text": "Naudojimo ypatybės",
+        "heading": true
+      },
+      {
+        "text": "Buitinė santechnika, baseinai, dušo kabinos, hidromasažinės vonios",
+        "heading": false
+      },
+      {
+        "text": "Spalva: pilka, balta",
+        "heading": false
+      },
+      {
+        "text": "Darbinė temperatūra: −10 °C … +60 °C",
+        "heading": false
+      },
+      {
+        "text": "Pagrindinės charakteristikos",
+        "heading": false
+      }
+    ],
+    "dn": "",
+    "temp": "−10 °C … +60 °C",
+    "pressure": "",
+    "wallThickness": "",
+    "standardLength": "",
+    "vacuum": "",
+    "bendRadius": "",
+    "material": "",
+    "reinforcement": "",
+    "colorsAvailable": "",
+    "certifications": "",
+    "origin": "",
+    "sizes": [],
+    "specTable": {
+      "headers": [
+        "Vidinis / išorinis diametras [mm]",
+        "Masė [kg/m]",
+        "Lenkimo spindulys [mm]",
+        "Darbinis slėgis [bar]",
+        "Maksimalus slėgis [bar]",
+        "Vakuumas [m/H₂O]",
+        "Rulono ilgis [m]"
+      ],
+      "rows": [
+        [
+          "16*20",
+          "0,19",
+          "80",
+          "7",
+          "21",
+          "7",
+          "30"
+        ],
+        [
+          "20*25",
+          "0,24",
+          "100",
+          "7",
+          "21",
+          "7",
+          "30"
+        ],
+        [
+          "25*32",
+          "0,42",
+          "140",
+          "7",
+          "21",
+          "7",
+          "30"
+        ],
+        [
+          "27*32",
+          "0,34",
+          "140",
+          "7",
+          "21",
+          "7",
+          "30"
+        ],
+        [
+          "35*40",
+          "0,40",
+          "150",
+          "7",
+          "21",
+          "7",
+          "30"
+        ],
+        [
+          "43*50",
+          "0,68",
+          "200",
+          "6",
+          "18",
+          "7",
+          "30"
+        ],
+        [
+          "45*50",
+          "0,60",
+          "200",
+          "4",
+          "12",
+          "7",
+          "30"
+        ],
+        [
+          "55*63",
+          "1,100",
+          "290",
+          "5",
+          "15",
+          "7",
+          "30"
+        ],
+        [
+          "65*75",
+          "1,65",
+          "400",
+          "4",
+          "12",
+          "7",
+          "30"
+        ],
+        [
+          "80*90",
+          "1,90",
+          "500",
+          "4",
+          "12",
+          "7",
+          "30"
+        ],
+        [
+          "100*110",
+          "2,50",
+          "600",
+          "4",
+          "12",
+          "7",
+          "30"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "rukav-aspirato",
+    "name": "Žarna Aspirato",
+    "category": "rukava-z-polihlorvinilu",
+    "categories": [
+      "armovani-pvh-stallyu-ua",
+      "rukava-z-polihlorvinilu"
+    ],
+    "subcategory": "Armuotos PVC spirale",
+    "industries": [
+      "wood",
+      "vent"
+    ],
+    "color": "navy",
+    "featured": false,
+    "image": "/products/orig/poly-aspirato-1.jpg",
+    "shortNote": "Žarna iš plastifikuoto PVC, armuota kieto, smūgiams atsparaus PVC spir",
+    "description": "Savybės\nŽarna iš plastifikuoto PVC, armuota kieto, smūgiams atsparaus PVC spirale. Vidinis paviršius idealiai lygus, išorinis – gofruotas. Labai lengva ir lanksti, patogi naudoti. Atspari atmosferos poveikiui ir ultravioletiniams spinduliams.\nNaudojimo sritys\nAspiracijos žarna: oro, dūmų, dujų, dulkių, pjuvenų, drožlių ištraukimui. Naudojama kondicionavimo ir vėdinimo įrenginiuose, medienos apdirbimo staklėms, taip pat sėjamosiose.\nMedžiaga: PVC.\nSutvirtinimas: smūgiams atsparus PVC.\nSpalva: pilka. Galimi variantai: skaidri su balta PVC spirale, mėlyna\nDarbinė temperatūra: nuo −10 °C iki +60 °C\nPagrindinės charakteristikos",
+    "descLines": [
+      {
+        "text": "Savybės",
+        "heading": true
+      },
+      {
+        "text": "Žarna iš plastifikuoto PVC, armuota kieto, smūgiams atsparaus PVC spirale. Vidinis paviršius idealiai lygus, išorinis – gofruotas. Labai lengva ir lanksti, patogi naudoti. Atspari atmosferos poveikiui ir ultravioletiniams spinduliams.",
+        "heading": false
+      },
+      {
+        "text": "Naudojimo sritys",
+        "heading": true
+      },
+      {
+        "text": "Aspiracijos žarna: oro, dūmų, dujų, dulkių, pjuvenų, drožlių ištraukimui. Naudojama kondicionavimo ir vėdinimo įrenginiuose, medienos apdirbimo staklėms, taip pat sėjamosiose.",
+        "heading": false
+      },
+      {
+        "text": "Medžiaga: PVC.",
+        "heading": false
+      },
+      {
+        "text": "Sutvirtinimas: smūgiams atsparus PVC.",
+        "heading": false
+      },
+      {
+        "text": "Spalva: pilka. Galimi variantai: skaidri su balta PVC spirale, mėlyna",
+        "heading": false
+      },
+      {
+        "text": "Darbinė temperatūra: nuo −10 °C iki +60 °C",
+        "heading": false
+      },
+      {
+        "text": "Pagrindinės charakteristikos",
+        "heading": false
+      }
+    ],
+    "dn": "",
+    "temp": "nuo −10 °C iki +60 °C",
+    "pressure": "",
+    "wallThickness": "",
+    "standardLength": "",
+    "vacuum": "",
+    "bendRadius": "",
+    "material": "",
+    "reinforcement": "",
+    "colorsAvailable": "",
+    "certifications": "",
+    "origin": "",
+    "sizes": [
+      "16",
+      "20",
+      "25",
+      "30",
+      "32",
+      "35",
+      "38",
+      "40",
+      "45",
+      "51",
+      "55",
+      "60",
+      "63",
+      "70",
+      "76",
+      "80",
+      "90",
+      "102",
+      "110",
+      "120",
+      "127",
+      "130",
+      "140",
+      "150",
+      "160",
+      "180",
+      "200"
+    ],
+    "specTable": {
+      "headers": [
+        "Vidinis diametras [mm]",
+        "Masė [kg/m]",
+        "Sienelės storis ties spirale [mm]",
+        "Sienelės storis tarp spiralių [mm]",
+        "Lenkimo spindulys [mm]",
+        "Vakuumas [m/H₂O]",
+        "Rulono ilgis [m]"
+      ],
+      "rows": [
+        [
+          "16",
+          "0,100",
+          "2,5",
+          "0,8",
+          "20",
+          "4,5",
+          "30"
+        ],
+        [
+          "20",
+          "0,140",
+          "2,5",
+          "0,8",
+          "30",
+          "4,0",
+          "30"
+        ],
+        [
+          "25",
+          "0,155",
+          "2,7",
+          "0,8",
+          "40",
+          "4",
+          "30"
+        ],
+        [
+          "30",
+          "0,180",
+          "2,8",
+          "0,8",
+          "50",
+          "3,5",
+          "30"
+        ],
+        [
+          "32",
+          "0,200",
+          "2,8",
+          "0,8",
+          "50",
+          "3,5",
+          "30"
+        ],
+        [
+          "35",
+          "0,220",
+          "2,8",
+          "0,8",
+          "50",
+          "3,5",
+          "30"
+        ],
+        [
+          "38",
+          "0,260",
+          "3,0",
+          "0,8",
+          "60",
+          "3,0",
+          "30"
+        ],
+        [
+          "40",
+          "0,280",
+          "3,0",
+          "0,8",
+          "60",
+          "3,0",
+          "30"
+        ],
+        [
+          "45",
+          "0,350",
+          "3,3",
+          "0,8",
+          "70",
+          "3,0",
+          "30"
+        ],
+        [
+          "51",
+          "0,400",
+          "3,5",
+          "0,9",
+          "80",
+          "3,0",
+          "30"
+        ],
+        [
+          "55",
+          "0,450",
+          "3,6",
+          "0,9",
+          "80",
+          "3,0",
+          "30"
+        ],
+        [
+          "60",
+          "0,500",
+          "3,6",
+          "0,9",
+          "90",
+          "3,0",
+          "30"
+        ],
+        [
+          "63",
+          "0,520",
+          "3,6",
+          "0,9",
+          "100",
+          "3,0",
+          "30"
+        ],
+        [
+          "70",
+          "0,600",
+          "3,9",
+          "1,0",
+          "110",
+          "3,0",
+          "30"
+        ],
+        [
+          "76",
+          "0,640",
+          "4,2",
+          "1,0",
+          "110",
+          "2,5",
+          "30"
+        ],
+        [
+          "80",
+          "0,750",
+          "4,3",
+          "1,0",
+          "120",
+          "2,5",
+          "30"
+        ],
+        [
+          "90",
+          "0,900",
+          "4,5",
+          "1,0",
+          "140",
+          "2,5",
+          "30"
+        ],
+        [
+          "102",
+          "1,000",
+          "4,6",
+          "1,0",
+          "150",
+          "2,5",
+          "30"
+        ],
+        [
+          "110",
+          "1,100",
+          "4,8",
+          "1,0",
+          "160",
+          "2,5",
+          "30"
+        ],
+        [
+          "120",
+          "1,200",
+          "5,0",
+          "1,0",
+          "180",
+          "2,5",
+          "30"
+        ],
+        [
+          "127",
+          "1,300",
+          "5,0",
+          "1,0",
+          "190",
+          "2,5",
+          "30"
+        ],
+        [
+          "130",
+          "1,300",
+          "5,0",
+          "1,0",
+          "190",
+          "2,5",
+          "30"
+        ],
+        [
+          "140",
+          "1,500",
+          "5,2",
+          "1,0",
+          "200",
+          "2,0",
+          "20"
+        ],
+        [
+          "150",
+          "1,600",
+          "5,5",
+          "1,1",
+          "220",
+          "2,0",
+          "20"
+        ],
+        [
+          "160",
+          "1,800",
+          "6,0",
+          "1,1",
+          "230",
+          "1,5",
+          "20"
+        ],
+        [
+          "180",
+          "2,000",
+          "6,0",
+          "1,1",
+          "250",
+          "1,5",
+          "20"
+        ],
+        [
+          "200",
+          "2,200",
+          "6,5",
+          "1,1",
+          "280",
+          "2,5",
+          "20"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "rukav-aspirato-pu",
+    "name": "Žarna ASPIRATO PU",
+    "category": "rukava-z-polihlorvinilu",
+    "categories": [
+      "armovani-pvh-stallyu-ua",
+      "rukava-z-polihlorvinilu"
+    ],
+    "subcategory": "Armuotos PVC spirale",
+    "industries": [
+      "wood",
+      "vent"
+    ],
+    "color": "navy",
+    "featured": false,
+    "image": "/products/orig/poly-aspirato-pu-1.jpg",
+    "shortNote": "Poliuretano žarna, armuota kieta, smūgiams atsparia PVC spirale",
+    "description": "Savybės\nPoliuretano žarna, armuota kieta, smūgiams atsparia PVC spirale; vidinis paviršius lygus, išorinis – briaunotas. Mechaninės savybės – labai lengva ir lanksti, didelis atsparumas dilimui ir lankstumas dėl poliuretano naudojimo.\nNaudojimo sritys\nAbrazyvinių miltelių, granulių, garų, drožlių pūtimui ir siurbimui. Taip pat naudojama importinėse sėjamosiose kaip sėklų tiekimo žarna ir pramoniniam naudojimui sunkiomis sąlygomis.\nMedžiaga: poliuretanas\nArmavimas: smūgiams atsparus PVC\nSpalva: skaidri su pilkos arba baltos spalvos spirale.\nDarbinė temperatūra: −20 °C … +80 °C.\nPagrindinės charakteristikos",
+    "descLines": [
+      {
+        "text": "Savybės",
+        "heading": true
+      },
+      {
+        "text": "Poliuretano žarna, armuota kieta, smūgiams atsparia PVC spirale; vidinis paviršius lygus, išorinis – briaunotas. Mechaninės savybės – labai lengva ir lanksti, didelis atsparumas dilimui ir lankstumas dėl poliuretano naudojimo.",
+        "heading": false
+      },
+      {
+        "text": "Naudojimo sritys",
+        "heading": true
+      },
+      {
+        "text": "Abrazyvinių miltelių, granulių, garų, drožlių pūtimui ir siurbimui. Taip pat naudojama importinėse sėjamosiose kaip sėklų tiekimo žarna ir pramoniniam naudojimui sunkiomis sąlygomis.",
+        "heading": false
+      },
+      {
+        "text": "Medžiaga: poliuretanas",
+        "heading": false
+      },
+      {
+        "text": "Armavimas: smūgiams atsparus PVC",
+        "heading": false
+      },
+      {
+        "text": "Spalva: skaidri su pilkos arba baltos spalvos spirale.",
+        "heading": false
+      },
+      {
+        "text": "Darbinė temperatūra: −20 °C … +80 °C.",
+        "heading": false
+      },
+      {
+        "text": "Pagrindinės charakteristikos",
+        "heading": false
+      }
+    ],
+    "dn": "",
+    "temp": "−20 °C … +80 °C.",
+    "pressure": "",
+    "wallThickness": "",
+    "standardLength": "",
+    "vacuum": "",
+    "bendRadius": "",
+    "material": "",
+    "reinforcement": "",
+    "colorsAvailable": "",
+    "certifications": "",
+    "origin": "",
+    "sizes": [
+      "16",
+      "20",
+      "25",
+      "30",
+      "32",
+      "35",
+      "38",
+      "40",
+      "45",
+      "51",
+      "55",
+      "60",
+      "63",
+      "70",
+      "76",
+      "80",
+      "90",
+      "102",
+      "110",
+      "120",
+      "127",
+      "130",
+      "140",
+      "150",
+      "160",
+      "180",
+      "200"
+    ],
+    "specTable": {
+      "headers": [
+        "Vidinis diametras [mm]",
+        "Masė [kg/m]",
+        "Maksimalus sienelės storis [mm]",
+        "Sienelės storis tarp spiralių [mm]",
+        "Lenkimo spindulys [mm]",
+        "Vakuumas [m/H₂O]",
+        "Rulono ilgis [m]"
+      ],
+      "rows": [
+        [
+          "16",
+          "0,10",
+          "2,5",
+          "0,4",
+          "25",
+          "2,5",
+          "20"
+        ],
+        [
+          "20",
+          "0,14",
+          "2,5",
+          "0,4",
+          "25",
+          "2,5",
+          "20"
+        ],
+        [
+          "25",
+          "0,155",
+          "2,7",
+          "0,4",
+          "30",
+          "2,5",
+          "20"
+        ],
+        [
+          "30",
+          "0,18",
+          "2,8",
+          "0,4",
+          "35",
+          "2,5",
+          "20"
+        ],
+        [
+          "32",
+          "0,20",
+          "2,8",
+          "0,4",
+          "35",
+          "2,0",
+          "20"
+        ],
+        [
+          "35",
+          "0,22",
+          "2,8",
+          "0,5",
+          "45",
+          "2,0",
+          "20"
+        ],
+        [
+          "38",
+          "0,255",
+          "3,0",
+          "0,5",
+          "50",
+          "2,0",
+          "20"
+        ],
+        [
+          "40",
+          "0,26",
+          "3,0",
+          "0,5",
+          "60",
+          "2,0",
+          "20"
+        ],
+        [
+          "45",
+          "0,31",
+          "3,3",
+          "0,5",
+          "65",
+          "2,0",
+          "20"
+        ],
+        [
+          "51",
+          "0,36",
+          "3,5",
+          "0,5",
+          "70",
+          "2,0",
+          "20"
+        ],
+        [
+          "55",
+          "0,42",
+          "3,6",
+          "0,5",
+          "75",
+          "2,0",
+          "20"
+        ],
+        [
+          "60",
+          "0,5",
+          "3,8",
+          "0,5",
+          "80",
+          "1,6",
+          "20"
+        ],
+        [
+          "63",
+          "0,55",
+          "3,9",
+          "0,5",
+          "80",
+          "1,6",
+          "20"
+        ],
+        [
+          "70",
+          "0,6",
+          "4,2",
+          "0,6",
+          "95",
+          "1,6",
+          "20"
+        ],
+        [
+          "76",
+          "0,65",
+          "4,2",
+          "0,6",
+          "100",
+          "1,6",
+          "20"
+        ],
+        [
+          "80",
+          "0,7",
+          "4,5",
+          "0,6",
+          "110",
+          "1,6",
+          "20"
+        ],
+        [
+          "90",
+          "0,82",
+          "4,6",
+          "0,6",
+          "125",
+          "1,4",
+          "20"
+        ],
+        [
+          "102",
+          "0,88",
+          "4,8",
+          "0,6",
+          "140",
+          "1,3",
+          "20"
+        ],
+        [
+          "110",
+          "1,05",
+          "5,1",
+          "0,6",
+          "150",
+          "1,2",
+          "20"
+        ],
+        [
+          "120",
+          "1,24",
+          "5,4",
+          "0,6",
+          "160",
+          "1,0",
+          "20"
+        ],
+        [
+          "127",
+          "1,30",
+          "5,4",
+          "0,6",
+          "170",
+          "1,0",
+          "20"
+        ],
+        [
+          "130",
+          "1,50",
+          "5,7",
+          "0,7",
+          "170",
+          "0,9",
+          "20"
+        ],
+        [
+          "140",
+          "1,60",
+          "5,7",
+          "0,7",
+          "180",
+          "0,9",
+          "20"
+        ],
+        [
+          "150",
+          "1,65",
+          "5,8",
+          "0,7",
+          "200",
+          "0,8",
+          "20"
+        ],
+        [
+          "160",
+          "2,15",
+          "7,2",
+          "0,7",
+          "220",
+          "0,7",
+          "20"
+        ],
+        [
+          "180",
+          "2,38",
+          "7,2",
+          "0,7",
+          "250",
+          "0,4",
+          "20"
+        ],
+        [
+          "200",
+          "2,40",
+          "7,2",
+          "0,7",
+          "260",
+          "0,4",
+          "20"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "crystal-x",
+    "name": "Žarna CRISTALIX",
+    "category": "rukava-z-polihlorvinilu",
+    "categories": [
+      "armovani-pvh-stallyu-ua",
+      "rukava-z-polihlorvinilu"
+    ],
+    "subcategory": "Armuotos PVC spirale",
+    "industries": [
+      "food"
+    ],
+    "color": "navy",
+    "featured": false,
+    "image": "/products/orig/poly-cristalix.jpg",
+    "shortNote": "Vamzdelis iš plastiško PVC",
+    "description": "Savybės\nVamzdelis iš plastiško PVC. Vidinis ir išorinis paviršiai lygūs. Labai lengvas, atsparus ultravioletinių spindulių poveikiui.\nNaudojimo sritys\nSkirta dujinėms, skystoms ir birioms medžiagoms transportuoti, įskaitant skystus maisto produktus.\nŽarnos tipas: slėginė\nMedžiaga: minkštas krištolo skaidrumo PVC\nDarbinė temperatūra: −10 °C … +60 °C\nMaistinis: taip\nPagrindinės charakteristikos",
+    "descLines": [
+      {
+        "text": "Savybės",
+        "heading": true
+      },
+      {
+        "text": "Vamzdelis iš plastiško PVC. Vidinis ir išorinis paviršiai lygūs. Labai lengvas, atsparus ultravioletinių spindulių poveikiui.",
+        "heading": false
+      },
+      {
+        "text": "Naudojimo sritys",
+        "heading": true
+      },
+      {
+        "text": "Skirta dujinėms, skystoms ir birioms medžiagoms transportuoti, įskaitant skystus maisto produktus.",
+        "heading": false
+      },
+      {
+        "text": "Žarnos tipas: slėginė",
+        "heading": false
+      },
+      {
+        "text": "Medžiaga: minkštas krištolo skaidrumo PVC",
+        "heading": false
+      },
+      {
+        "text": "Darbinė temperatūra: −10 °C … +60 °C",
+        "heading": false
+      },
+      {
+        "text": "Maistinis: taip",
+        "heading": false
+      },
+      {
+        "text": "Pagrindinės charakteristikos",
+        "heading": false
+      }
+    ],
+    "dn": "",
+    "temp": "−10 °C … +60 °C",
+    "pressure": "",
+    "wallThickness": "",
+    "standardLength": "",
+    "vacuum": "",
+    "bendRadius": "",
+    "material": "",
+    "reinforcement": "",
+    "colorsAvailable": "",
+    "certifications": "",
+    "origin": "",
+    "sizes": [],
+    "specTable": {
+      "headers": [
+        "Vidinis diametras / sienelės storis [mm]",
+        "Masė [kg/m]",
+        "Darbinis slėgis [bar]",
+        "Maksimalus slėgis [bar]",
+        "Vidinis diametras / sienelės storis [mm]",
+        "Masė [kg/m]",
+        "Darbinis slėgis [bar]",
+        "Maksimalus slėgis [bar]"
+      ],
+      "rows": [
+        [
+          "2х0,4",
+          "0,005",
+          "3",
+          "6",
+          "12х3",
+          "0,174",
+          "3",
+          "6"
+        ],
+        [
+          "2х0,7",
+          "0,0085",
+          "3",
+          "6",
+          "13х3",
+          "0,185",
+          "3",
+          "6"
+        ],
+        [
+          "2х1",
+          "0,012",
+          "3",
+          "6",
+          "13х2",
+          "0,116",
+          "3",
+          "6"
+        ],
+        [
+          "3х0,7",
+          "0,019",
+          "3",
+          "6",
+          "14х1,5",
+          "0,093",
+          "3",
+          "6"
+        ],
+        [
+          "3х1",
+          "0,014",
+          "3",
+          "6",
+          "14х2",
+          "0,124",
+          "3",
+          "6"
+        ],
+        [
+          "3х1,5",
+          "0,016",
+          "3",
+          "6",
+          "14х3",
+          "0,186",
+          "3",
+          "6"
+        ],
+        [
+          "4х0,7",
+          "0,015",
+          "3",
+          "6",
+          "15х2",
+          "0,139",
+          "3",
+          "6"
+        ],
+        [
+          "4х1",
+          "0,020",
+          "3",
+          "6",
+          "16х1,5",
+          "0,105",
+          "3",
+          "6"
+        ],
+        [
+          "4х1,5",
+          "0,032",
+          "3",
+          "6",
+          "16х2",
+          "0,139",
+          "3",
+          "6"
+        ],
+        [
+          "4х2",
+          "0,046",
+          "3",
+          "6",
+          "16х3",
+          "0,220",
+          "3",
+          "6"
+        ],
+        [
+          "5х0,8",
+          "0,019",
+          "3",
+          "6",
+          "18х2",
+          "0,155",
+          "3",
+          "6"
+        ],
+        [
+          "5х1",
+          "0,024",
+          "3",
+          "6",
+          "18х2,5",
+          "0,198",
+          "3",
+          "6"
+        ],
+        [
+          "5х1,5",
+          "0,039",
+          "3",
+          "6",
+          "18х3",
+          "0,245",
+          "3",
+          "6"
+        ],
+        [
+          "5х2",
+          "0,054",
+          "3",
+          "6",
+          "18х3,5",
+          "0,291",
+          "3",
+          "6"
+        ],
+        [
+          "5х3",
+          "0,085",
+          "3",
+          "6",
+          "18х4,5",
+          "0,3675",
+          "3",
+          "6"
+        ],
+        [
+          "6х1",
+          "0,028",
+          "3",
+          "6",
+          "19х2",
+          "0,156",
+          "3",
+          "6"
+        ],
+        [
+          "6х1,5",
+          "0,045",
+          "3",
+          "6",
+          "19х2,5",
+          "0,205",
+          "3",
+          "6"
+        ],
+        [
+          "6х2",
+          "0,062",
+          "3",
+          "6",
+          "19х5",
+          "0,400",
+          "3",
+          "6"
+        ],
+        [
+          "7х1",
+          "0,032",
+          "3",
+          "6",
+          "20х2",
+          "0,170",
+          "3",
+          "6"
+        ],
+        [
+          "7х1,2",
+          "0,041",
+          "3",
+          "6",
+          "20х2,5",
+          "0,218",
+          "3",
+          "6"
+        ],
+        [
+          "7х1,5",
+          "0,049",
+          "3",
+          "6",
+          "20х3",
+          "0,267",
+          "3",
+          "6"
+        ],
+        [
+          "7х2",
+          "0,070",
+          "3",
+          "6",
+          "22х2,5",
+          "0,230",
+          "3",
+          "6"
+        ],
+        [
+          "7х2,5",
+          "0,092",
+          "3",
+          "6",
+          "22х3",
+          "0,290",
+          "3",
+          "6"
+        ],
+        [
+          "8х1",
+          "0,035",
+          "3",
+          "6",
+          "22х3,5",
+          "0,330",
+          "3",
+          "6"
+        ],
+        [
+          "8х1,3",
+          "0,450",
+          "3",
+          "6",
+          "24х3",
+          "0,314",
+          "3",
+          "6"
+        ],
+        [
+          "8х1,5",
+          "0,055",
+          "3",
+          "6",
+          "25х2",
+          "0,200",
+          "3",
+          "6"
+        ],
+        [
+          "8х1,7",
+          "0,670",
+          "3",
+          "6",
+          "25х3",
+          "0,325",
+          "3",
+          "6"
+        ],
+        [
+          "8х2",
+          "0,078",
+          "3",
+          "6",
+          "25х3,5",
+          "0,370",
+          "3",
+          "6"
+        ],
+        [
+          "8х2,5",
+          "0,103",
+          "3",
+          "6",
+          "25х4,5",
+          "0,514",
+          "3",
+          "6"
+        ],
+        [
+          "8х3",
+          "0,128",
+          "3",
+          "6",
+          "28х2,0",
+          "0,232",
+          "3",
+          "6"
+        ],
+        [
+          "9х1,2",
+          "0,051",
+          "3",
+          "6",
+          "28х4,0",
+          "0,500",
+          "3",
+          "6"
+        ],
+        [
+          "9х1,5",
+          "0,061",
+          "3",
+          "6",
+          "29х3,5",
+          "0,400",
+          "3",
+          "6"
+        ],
+        [
+          "9х2",
+          "0,085",
+          "3",
+          "6",
+          "30х3",
+          "0,590",
+          "3",
+          "6"
+        ],
+        [
+          "10х1",
+          "0,043",
+          "3",
+          "6",
+          "30х4",
+          "0,525",
+          "3",
+          "6"
+        ],
+        [
+          "10х1,3",
+          "0,055",
+          "3",
+          "6",
+          "30х4,5",
+          "0,590",
+          "3",
+          "6"
+        ],
+        [
+          "10х1,5",
+          "0,067",
+          "3",
+          "6",
+          "32х4",
+          "0,550",
+          "3",
+          "6"
+        ],
+        [
+          "10х2",
+          "0,093",
+          "3",
+          "6",
+          "32х5",
+          "0,715",
+          "3",
+          "6"
+        ],
+        [
+          "10х3",
+          "0,148",
+          "3",
+          "6",
+          "35х4",
+          "0,630",
+          "3",
+          "6"
+        ],
+        [
+          "10х1,5",
+          "0,073",
+          "3",
+          "6",
+          "38х5",
+          "0,800",
+          "3",
+          "6"
+        ],
+        [
+          "11х2",
+          "0,100",
+          "3",
+          "6",
+          "40х4,5",
+          "0,780",
+          "3",
+          "6"
+        ],
+        [
+          "12,5х1,75",
+          "0,091",
+          "3",
+          "6",
+          "40х5",
+          "0,870",
+          "3",
+          "6"
+        ],
+        [
+          "12х1,5",
+          "0,078",
+          "3",
+          "6",
+          "45х5",
+          "0,965",
+          "3",
+          "6"
+        ],
+        [
+          "12х2",
+          "0,108",
+          "3",
+          "6",
+          "50х5",
+          "1,065",
+          "3",
+          "6"
+        ],
+        [
+          "12х2,5",
+          "0,175",
+          "3",
+          "6",
+          "50х6",
+          "1,278",
+          "3",
+          "6"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "crystalline",
+    "name": "Žarna CRISTALIXPRESS",
+    "category": "rukava-z-polihlorvinilu",
+    "categories": [
+      "armovani-pvh-stallyu-ua",
+      "rukava-z-polihlorvinilu"
+    ],
+    "subcategory": "Armuotos PVC spirale",
+    "industries": [
+      "food"
+    ],
+    "color": "navy",
+    "featured": false,
+    "image": "/products/orig/poly-screenshot_2.png",
+    "shortNote": "Elastinga skaidri PVC žarna, armuota sintetiniu kordu",
+    "description": "Savybės\nElastinga skaidri PVC žarna, armuota sintetiniu kordu. Vidinis ir išorinis paviršiai lygūs. Atspari ultravioletiniam spinduliavimui ir daugelio cheminių medžiagų poveikiui. Elastinga, lengva, patogi naudoti.\nNaudojimo ypatybės\nNaudojama skysčiams, žemės ūkio chemijai, KAS (pesticidams, herbicidams), suslėgtam orui transportuoti, taip pat vandeniui, pienui, iki 20 % alkoholio turintiems gėrimams.\nDarbinė temperatūra: nuo −10 °C iki +60 °C\nSpalva: skaidri\nSutvirtinimas: sintetinis kordas\nPagrindinės charakteristikos",
+    "descLines": [
+      {
+        "text": "Savybės",
+        "heading": true
+      },
+      {
+        "text": "Elastinga skaidri PVC žarna, armuota sintetiniu kordu. Vidinis ir išorinis paviršiai lygūs. Atspari ultravioletiniam spinduliavimui ir daugelio cheminių medžiagų poveikiui. Elastinga, lengva, patogi naudoti.",
+        "heading": false
+      },
+      {
+        "text": "Naudojimo ypatybės",
+        "heading": true
+      },
+      {
+        "text": "Naudojama skysčiams, žemės ūkio chemijai, KAS (pesticidams, herbicidams), suslėgtam orui transportuoti, taip pat vandeniui, pienui, iki 20 % alkoholio turintiems gėrimams.",
+        "heading": false
+      },
+      {
+        "text": "Darbinė temperatūra: nuo −10 °C iki +60 °C",
+        "heading": false
+      },
+      {
+        "text": "Spalva: skaidri",
+        "heading": false
+      },
+      {
+        "text": "Sutvirtinimas: sintetinis kordas",
+        "heading": false
+      },
+      {
+        "text": "Pagrindinės charakteristikos",
+        "heading": false
+      }
+    ],
+    "dn": "",
+    "temp": "nuo −10 °C iki +60 °C",
+    "pressure": "",
+    "wallThickness": "",
+    "standardLength": "",
+    "vacuum": "",
+    "bendRadius": "",
+    "material": "",
+    "reinforcement": "",
+    "colorsAvailable": "",
+    "certifications": "",
+    "origin": "",
+    "sizes": [],
+    "specTable": {
+      "headers": [
+        "Vidinis diametras / sienelės storis [mm]",
+        "Masė [kg/m]",
+        "Darbinis slėgis [bar]",
+        "Maksimalus slėgis [bar]",
+        "Vidinis diametras / sienelės storis [mm]",
+        "Masė [kg/m]",
+        "Darbinis slėgis [bar]",
+        "Maksimalus slėgis [bar]"
+      ],
+      "rows": [
+        [
+          "4х2,0",
+          "0,05",
+          "10",
+          "25",
+          "15х3,5",
+          "0,260",
+          "10",
+          "25"
+        ],
+        [
+          "5х1,5",
+          "0,041",
+          "10",
+          "25",
+          "15х4",
+          "0,305",
+          "10",
+          "25"
+        ],
+        [
+          "6х2,5",
+          "0,083",
+          "10",
+          "25",
+          "16х2,5",
+          "0,180",
+          "10",
+          "25"
+        ],
+        [
+          "6х3",
+          "0,110",
+          "10",
+          "25",
+          "16х2",
+          "0,200",
+          "10",
+          "25"
+        ],
+        [
+          "7х2,5",
+          "0,100",
+          "10",
+          "25",
+          "16х3",
+          "0,225",
+          "10",
+          "25"
+        ],
+        [
+          "7х3",
+          "0,120",
+          "10",
+          "25",
+          "16х3,5",
+          "0,275",
+          "10",
+          "25"
+        ],
+        [
+          "8х1,5",
+          "0,055",
+          "10",
+          "25",
+          "16х4",
+          "0,310",
+          "10",
+          "25"
+        ],
+        [
+          "8х2",
+          "0,080",
+          "10",
+          "25",
+          "18х2,5",
+          "0,230",
+          "10",
+          "25"
+        ],
+        [
+          "8х2,25",
+          "0,095",
+          "10",
+          "25",
+          "19х3",
+          "0,260",
+          "10",
+          "25"
+        ],
+        [
+          "8х2,5",
+          "0,105",
+          "10",
+          "25",
+          "19х3,5",
+          "0,315",
+          "10",
+          "25"
+        ],
+        [
+          "8х3",
+          "0,130",
+          "10",
+          "25",
+          "19х4",
+          "0,360",
+          "10",
+          "25"
+        ],
+        [
+          "9х2",
+          "0,090",
+          "10",
+          "25",
+          "19х5",
+          "0,465",
+          "10",
+          "25"
+        ],
+        [
+          "9х2,5",
+          "0,115",
+          "10",
+          "25",
+          "20х3",
+          "0,275",
+          "10",
+          "25"
+        ],
+        [
+          "9х3",
+          "0,145",
+          "10",
+          "25",
+          "20х4",
+          "0,375",
+          "10",
+          "25"
+        ],
+        [
+          "10х2",
+          "0,093",
+          "10",
+          "25",
+          "22х3,5",
+          "0,350",
+          "10",
+          "25"
+        ],
+        [
+          "10х2,5",
+          "0,122",
+          "10",
+          "25",
+          "25х3",
+          "0,330",
+          "10",
+          "25"
+        ],
+        [
+          "10х3",
+          "0,155",
+          "10",
+          "25",
+          "25х3,5",
+          "0,390",
+          "10",
+          "25"
+        ],
+        [
+          "10х4",
+          "0,225",
+          "10",
+          "25",
+          "25х4",
+          "0,455",
+          "10",
+          "25"
+        ],
+        [
+          "12х1,5",
+          "0,080",
+          "10",
+          "25",
+          "25х4,5",
+          "0,515",
+          "10",
+          "25"
+        ],
+        [
+          "12х2,5",
+          "0,140",
+          "10",
+          "25",
+          "30х4",
+          "0,530",
+          "10",
+          "25"
+        ],
+        [
+          "12х3",
+          "0,180",
+          "10",
+          "25",
+          "30х5",
+          "0,680",
+          "10",
+          "25"
+        ],
+        [
+          "12х4",
+          "0,255",
+          "10",
+          "25",
+          "32х3",
+          "0,400",
+          "10",
+          "25"
+        ],
+        [
+          "12х3,5",
+          "0,210",
+          "10",
+          "25",
+          "32х4",
+          "0,575",
+          "10",
+          "25"
+        ],
+        [
+          "12х4,5",
+          "0,295",
+          "10",
+          "25",
+          "32х4,5",
+          "0,635",
+          "10",
+          "25"
+        ],
+        [
+          "12,5х2,25",
+          "0,135",
+          "10",
+          "25",
+          "32х5",
+          "0,725",
+          "10",
+          "25"
+        ],
+        [
+          "12,5х3",
+          "0,185",
+          "10",
+          "25",
+          "35х4,5",
+          "0,700",
+          "10",
+          "25"
+        ],
+        [
+          "13х2",
+          "0,120",
+          "10",
+          "25",
+          "35х5",
+          "0,775",
+          "10",
+          "25"
+        ],
+        [
+          "13х2,5",
+          "0,150",
+          "10",
+          "25",
+          "38х5",
+          "0,835",
+          "10",
+          "25"
+        ],
+        [
+          "13х3",
+          "0,200",
+          "10",
+          "25",
+          "40х5",
+          "0,870",
+          "10",
+          "25"
+        ],
+        [
+          "13х3,5",
+          "0,230",
+          "10",
+          "25",
+          "40х6",
+          "1,075",
+          "10",
+          "25"
+        ],
+        [
+          "14х1,5",
+          "–",
+          "10",
+          "25",
+          "45х5",
+          "1,000",
+          "10",
+          "25"
+        ],
+        [
+          "14х3",
+          "0,200",
+          "10",
+          "25",
+          "50х5",
+          "1,075",
+          "10",
+          "25"
+        ],
+        [
+          "15х3",
+          "0,215",
+          "10",
+          "25",
+          "50х6",
+          "1,300",
+          "10",
+          "25"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "rukav-elastic-super-nova",
+    "name": "Žarna ELASTIC SUPER NOVA",
+    "category": "rukava-z-polihlorvinilu",
+    "categories": [
+      "armovani-pvh-stallyu-ua",
+      "rukava-z-polihlorvinilu"
+    ],
+    "subcategory": "Armuotos PVC spirale",
+    "industries": [
+      "agri",
+      "spec"
+    ],
+    "color": "navy",
+    "featured": false,
+    "image": "/products/orig/poly-elastic-supernova.jpg",
+    "shortNote": "Labai elastinga, šalčiui atspari, universali PVC/NBR žarna su beveik n",
+    "description": "Savybės:\nLabai elastinga, šalčiui atspari, universali PVC/NBR žarna su beveik nesideformuojančia kieto PVC/NBR spirale, suteikiančia jai didelį atsparumą dilimui. Lygus vidinis žarnos paviršius padeda išvengti nuosėdų kaupimosi. Dėl didelio sienelės storio pasižymi geru atsparumu vakuumui, slėgio impulsui, dilimui, atmosferos poveikiui ir įvairiems cheminiams reagentams.\nNaudojimo sritys:\nUniversali, šalčiui atspari slėginė-siurbimo žarna nuotekų duobėms, kanalizacijoms ir pan. išsiurbti. Naudojama siurblinėje, priešgaisrinėje technikoje, pramoniniuose lietinimo įrenginiuose, fekalinėms masėms ir kitiems cheminiams produktams išsiurbti. Miltelių, granulių ir kitų abrazyvų transportavimas, taip pat kaip pneumotransportas sėkloms ir grūdams.\nMedžiaga: dilimui ir šalčiui atsparus PVC/NBR\nSutvirtinimas: kietas, smūgiams atsparus PVC/NBR\nSpalva: alyvuogių\nDarbinė temperatūra: nuo −40 °C iki +60 °C\nPagrindinės charakteristikos",
+    "descLines": [
+      {
+        "text": "Savybės:",
+        "heading": true
+      },
+      {
+        "text": "Labai elastinga, šalčiui atspari, universali PVC/NBR žarna su beveik nesideformuojančia kieto PVC/NBR spirale, suteikiančia jai didelį atsparumą dilimui. Lygus vidinis žarnos paviršius padeda išvengti nuosėdų kaupimosi. Dėl didelio sienelės storio pasižymi geru atsparumu vakuumui, slėgio impulsui, dilimui, atmosferos poveikiui ir įvairiems cheminiams reagentams.",
+        "heading": false
+      },
+      {
+        "text": "Naudojimo sritys:",
+        "heading": true
+      },
+      {
+        "text": "Universali, šalčiui atspari slėginė-siurbimo žarna nuotekų duobėms, kanalizacijoms ir pan. išsiurbti. Naudojama siurblinėje, priešgaisrinėje technikoje, pramoniniuose lietinimo įrenginiuose, fekalinėms masėms ir kitiems cheminiams produktams išsiurbti. Miltelių, granulių ir kitų abrazyvų transportavimas, taip pat kaip pneumotransportas sėkloms ir grūdams.",
+        "heading": false
+      },
+      {
+        "text": "Medžiaga: dilimui ir šalčiui atsparus PVC/NBR",
+        "heading": false
+      },
+      {
+        "text": "Sutvirtinimas: kietas, smūgiams atsparus PVC/NBR",
+        "heading": false
+      },
+      {
+        "text": "Spalva: alyvuogių",
+        "heading": false
+      },
+      {
+        "text": "Darbinė temperatūra: nuo −40 °C iki +60 °C",
+        "heading": false
+      },
+      {
+        "text": "Pagrindinės charakteristikos",
+        "heading": false
+      }
+    ],
+    "dn": "",
+    "temp": "nuo −40 °C iki +60 °C",
+    "pressure": "",
+    "wallThickness": "",
+    "standardLength": "",
+    "vacuum": "",
+    "bendRadius": "",
+    "material": "",
+    "reinforcement": "",
+    "colorsAvailable": "",
+    "certifications": "",
+    "origin": "",
+    "sizes": [
+      "19",
+      "25",
+      "30",
+      "32",
+      "35",
+      "38",
+      "40",
+      "45",
+      "51",
+      "55",
+      "60",
+      "63",
+      "65",
+      "70",
+      "76",
+      "80",
+      "90",
+      "102",
+      "110",
+      "120",
+      "127",
+      "140",
+      "150"
+    ],
+    "specTable": {
+      "headers": [
+        "Vidinis diametras [mm]",
+        "Masė [kg/m]",
+        "Maksimalus sienelės storis [mm]",
+        "Lenkimo spindulys [mm]",
+        "Vakuumas [m/H₂O]",
+        "Darbinis slėgis [bar]",
+        "Rulono ilgis [m]"
+      ],
+      "rows": [
+        [
+          "19",
+          "0,30",
+          "3,0",
+          "80",
+          "10",
+          "7,0",
+          "30"
+        ],
+        [
+          "25",
+          "0,40",
+          "3,3",
+          "100",
+          "10",
+          "6,0",
+          "30"
+        ],
+        [
+          "30",
+          "0,55",
+          "3,0",
+          "120",
+          "10",
+          "6,0",
+          "30"
+        ],
+        [
+          "32",
+          "0,57",
+          "3,5",
+          "130",
+          "10",
+          "6,0",
+          "30"
+        ],
+        [
+          "35",
+          "0,62",
+          "3,6",
+          "140",
+          "10",
+          "5,0",
+          "30"
+        ],
+        [
+          "38",
+          "0,67",
+          "3,8",
+          "155",
+          "10",
+          "5,0",
+          "30"
+        ],
+        [
+          "40",
+          "0,70",
+          "3,8",
+          "160",
+          "10",
+          "5,0",
+          "30"
+        ],
+        [
+          "45",
+          "0,83",
+          "3,9",
+          "180",
+          "10",
+          "4,0",
+          "30"
+        ],
+        [
+          "51",
+          "1,00",
+          "4,5",
+          "200",
+          "10",
+          "4,0",
+          "30"
+        ],
+        [
+          "55",
+          "1,10",
+          "4,7",
+          "220",
+          "9",
+          "4,0",
+          "30"
+        ],
+        [
+          "60",
+          "1,20",
+          "4,8",
+          "240",
+          "9",
+          "4,0",
+          "30"
+        ],
+        [
+          "63",
+          "1,30",
+          "5,0",
+          "260",
+          "9",
+          "4,0",
+          "30"
+        ],
+        [
+          "65",
+          "1,45",
+          "5,0",
+          "270",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "70",
+          "1,60",
+          "5,4",
+          "280",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "76",
+          "1,70",
+          "5,5",
+          "310",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "80",
+          "1,85",
+          "5,6",
+          "320",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "90",
+          "2,30",
+          "6,2",
+          "360",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "102",
+          "2,70",
+          "6,8",
+          "410",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "110",
+          "3,00",
+          "7,0",
+          "450",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "120",
+          "3,30",
+          "7,0",
+          "480",
+          "9",
+          "2,5",
+          "30"
+        ],
+        [
+          "127",
+          "3,50",
+          "7,5",
+          "510",
+          "9",
+          "2,5",
+          "30"
+        ],
+        [
+          "140",
+          "4,50",
+          "7,5",
+          "530",
+          "8",
+          "2,5",
+          "30"
+        ],
+        [
+          "150",
+          "5,00",
+          "9,0",
+          "610",
+          "8",
+          "2,0",
+          "30"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "rukav-grain-press",
+    "name": "Žarna GRAIN PRESS",
+    "category": "rukava-z-polihlorvinilu",
+    "categories": [
+      "armovani-pvh-stallyu-ua",
+      "rukava-z-polihlorvinilu"
+    ],
+    "subcategory": "Armuotos PVC spirale",
+    "industries": [
+      "agri",
+      "food"
+    ],
+    "color": "navy",
+    "featured": false,
+    "image": "/products/orig/poly-grain-press-1.jpg",
+    "shortNote": "Žarna iš plastiško PVC, armuota stiprinančia spirale iš smūgiams ir sl",
+    "description": "Savybės\nŽarna iš plastiško PVC, armuota stiprinančia spirale iš smūgiams ir slėgiui atsparaus PVC. Vidinis paviršius lygus, išorinis – briaunotas. Atspari slėgiui, abrazyviniam dilimui, ultravioletiniam spinduliavimui ir atmosferos reiškiniams.\nNaudojimo sritys\nSlėginė-siurbimo žarna vandeniui, iki 20 % alkoholio turintiems gėrimams, maisto produktams transportuoti. Plačiai naudojama žemės ūkyje kaip sėklų tiekimo žarna pneumatiniuose sėjos kompleksuose. Dažnai naudojama pesticidams ir įvairioms trąšoms, įsk. sausas birias, perpumpuoti, taip pat grūdų kultūroms transportuoti žemės ūkio technikoje (sėjamosiose, purkštuvuose ir kt.).\nMedžiaga: minkštas skaidrus maistinis PVC.\nSutvirtinimas: kietas, smūgiams atsparus PVC.\nSpalva: skaidri su balta PVC spirale. Galimi variantai: juoda, žalia, pilka, mėlyna.\nDarbinė temperatūra: nuo −10 °C iki +60 °C\nPagrindinės charakteristikos",
+    "descLines": [
+      {
+        "text": "Savybės",
+        "heading": true
+      },
+      {
+        "text": "Žarna iš plastiško PVC, armuota stiprinančia spirale iš smūgiams ir slėgiui atsparaus PVC. Vidinis paviršius lygus, išorinis – briaunotas. Atspari slėgiui, abrazyviniam dilimui, ultravioletiniam spinduliavimui ir atmosferos reiškiniams.",
+        "heading": false
+      },
+      {
+        "text": "Naudojimo sritys",
+        "heading": true
+      },
+      {
+        "text": "Slėginė-siurbimo žarna vandeniui, iki 20 % alkoholio turintiems gėrimams, maisto produktams transportuoti. Plačiai naudojama žemės ūkyje kaip sėklų tiekimo žarna pneumatiniuose sėjos kompleksuose. Dažnai naudojama pesticidams ir įvairioms trąšoms, įsk. sausas birias, perpumpuoti, taip pat grūdų kultūroms transportuoti žemės ūkio technikoje (sėjamosiose, purkštuvuose ir kt.).",
+        "heading": false
+      },
+      {
+        "text": "Medžiaga: minkštas skaidrus maistinis PVC.",
+        "heading": false
+      },
+      {
+        "text": "Sutvirtinimas: kietas, smūgiams atsparus PVC.",
+        "heading": false
+      },
+      {
+        "text": "Spalva: skaidri su balta PVC spirale. Galimi variantai: juoda, žalia, pilka, mėlyna.",
+        "heading": false
+      },
+      {
+        "text": "Darbinė temperatūra: nuo −10 °C iki +60 °C",
+        "heading": false
+      },
+      {
+        "text": "Pagrindinės charakteristikos",
+        "heading": false
+      }
+    ],
+    "dn": "",
+    "temp": "nuo −10 °C iki +60 °C",
+    "pressure": "",
+    "wallThickness": "",
+    "standardLength": "",
+    "vacuum": "",
+    "bendRadius": "",
+    "material": "",
+    "reinforcement": "",
+    "colorsAvailable": "",
+    "certifications": "",
+    "origin": "",
+    "sizes": [
+      "16",
+      "20",
+      "25",
+      "30",
+      "32",
+      "35",
+      "38",
+      "40",
+      "45",
+      "51",
+      "55",
+      "60",
+      "63",
+      "65",
+      "70",
+      "76",
+      "80",
+      "90",
+      "102",
+      "110",
+      "120",
+      "127",
+      "130",
+      "140",
+      "150",
+      "160"
+    ],
+    "specTable": {
+      "headers": [
+        "Vidinis diametras [mm]",
+        "Masė [kg/m]",
+        "Maksimalus sienelės storis [mm]",
+        "Darbinis slėgis [bar]",
+        "Lenkimo spindulys [mm]",
+        "Vakuumas [m/H₂O]",
+        "Rulono ilgis [m]"
+      ],
+      "rows": [
+        [
+          "16",
+          "0,190",
+          "2,9",
+          "8",
+          "90",
+          "7",
+          "30"
+        ],
+        [
+          "20",
+          "0,270",
+          "2,9",
+          "7",
+          "110",
+          "7",
+          "30"
+        ],
+        [
+          "25",
+          "0,340",
+          "2,9",
+          "6",
+          "130",
+          "7",
+          "30"
+        ],
+        [
+          "30",
+          "0,400",
+          "2,9",
+          "5",
+          "150",
+          "7",
+          "30"
+        ],
+        [
+          "32",
+          "0,430",
+          "3,0",
+          "5",
+          "155",
+          "7",
+          "30"
+        ],
+        [
+          "35",
+          "0,500",
+          "3,3",
+          "4",
+          "170",
+          "7",
+          "30"
+        ],
+        [
+          "38",
+          "0,560",
+          "3,5",
+          "4",
+          "180",
+          "7",
+          "30"
+        ],
+        [
+          "40",
+          "0,600",
+          "3,8",
+          "4",
+          "195",
+          "7",
+          "30"
+        ],
+        [
+          "45",
+          "0,690",
+          "3,8",
+          "4",
+          "215",
+          "7",
+          "30"
+        ],
+        [
+          "51",
+          "0,860",
+          "4,0",
+          "4",
+          "235",
+          "7",
+          "30"
+        ],
+        [
+          "55",
+          "0,910",
+          "4,0",
+          "4",
+          "255",
+          "7",
+          "30"
+        ],
+        [
+          "60",
+          "1,010",
+          "4,5",
+          "4",
+          "275",
+          "7",
+          "30"
+        ],
+        [
+          "63",
+          "1,090",
+          "4,5",
+          "4",
+          "290",
+          "7",
+          "30"
+        ],
+        [
+          "65",
+          "1,110",
+          "4,5",
+          "4",
+          "300",
+          "7",
+          "30"
+        ],
+        [
+          "70",
+          "1,290",
+          "4,5",
+          "3",
+          "320",
+          "7",
+          "30"
+        ],
+        [
+          "76",
+          "1,400",
+          "4,5",
+          "3",
+          "340",
+          "7",
+          "30"
+        ],
+        [
+          "80",
+          "1,61",
+          "5,0",
+          "3",
+          "365",
+          "7",
+          "30"
+        ],
+        [
+          "90",
+          "1,870",
+          "5,0",
+          "3",
+          "420",
+          "7",
+          "30"
+        ],
+        [
+          "102",
+          "2,240",
+          "5,5",
+          "3",
+          "470",
+          "7",
+          "30"
+        ],
+        [
+          "110",
+          "2,520",
+          "6,0",
+          "3",
+          "520",
+          "6",
+          "30"
+        ],
+        [
+          "120",
+          "2,800",
+          "6,5",
+          "3",
+          "650",
+          "6",
+          "30"
+        ],
+        [
+          "127",
+          "3,020",
+          "6,5",
+          "3",
+          "680",
+          "5,5",
+          "30"
+        ],
+        [
+          "130",
+          "3,700",
+          "6,5",
+          "3",
+          "680",
+          "5",
+          "30"
+        ],
+        [
+          "140",
+          "4,030",
+          "7,0",
+          "3",
+          "740",
+          "5",
+          "30"
+        ],
+        [
+          "150",
+          "4,370",
+          "7,0",
+          "3",
+          "780",
+          "5",
+          "20"
+        ],
+        [
+          "160",
+          "5,380",
+          "7,0",
+          "2",
+          "850",
+          "4,5",
+          "20"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "rukav-grain-press-s",
+    "name": "Žarna GRAIN PRESS PU",
+    "category": "rukava-z-polihlorvinilu",
+    "categories": [
+      "armovani-pvh-stallyu-ua",
+      "rukava-z-polihlorvinilu"
+    ],
+    "subcategory": "Armuotos PVC spirale",
+    "industries": [
+      "agri",
+      "food"
+    ],
+    "color": "navy",
+    "featured": false,
+    "image": "/products/orig/poly-screenshot_3.png",
+    "shortNote": "Ištisinis poliesterio pagrindo poliuretano sluoksnis, armuotas kieto P",
+    "description": "Savybės\nIštisinis poliesterio pagrindo poliuretano sluoksnis, armuotas kieto PVC spirale. Visiškai lygus viduje, su nedideliu gofravimu išorėje. Atsparus hidrolizei.\nNaudojimo sritys\nSlėginė-siurbimo žarna abrazyvinėms skystoms ir birioms medžiagoms (smėliui, cementui, grūdams, smulkiai skaldai). Rekomenduojama tais atvejais, kai reikalingas didelis atsparumas abrazyviniam dilimui. Tinka maisto produktams. Taip pat naudojama cheminėms medžiagoms.\nMedžiaga: poliuretanas\nSutvirtinimas: kietas, smūgiams atsparus PVC\nSpalva: skaidri su balta PVC spirale\nDarbinė temperatūra: −20 °C … +80 °C\nPagrindinės charakteristikos",
+    "descLines": [
+      {
+        "text": "Savybės",
+        "heading": true
+      },
+      {
+        "text": "Ištisinis poliesterio pagrindo poliuretano sluoksnis, armuotas kieto PVC spirale. Visiškai lygus viduje, su nedideliu gofravimu išorėje. Atsparus hidrolizei.",
+        "heading": false
+      },
+      {
+        "text": "Naudojimo sritys",
+        "heading": true
+      },
+      {
+        "text": "Slėginė-siurbimo žarna abrazyvinėms skystoms ir birioms medžiagoms (smėliui, cementui, grūdams, smulkiai skaldai). Rekomenduojama tais atvejais, kai reikalingas didelis atsparumas abrazyviniam dilimui. Tinka maisto produktams. Taip pat naudojama cheminėms medžiagoms.",
+        "heading": false
+      },
+      {
+        "text": "Medžiaga: poliuretanas",
+        "heading": false
+      },
+      {
+        "text": "Sutvirtinimas: kietas, smūgiams atsparus PVC",
+        "heading": false
+      },
+      {
+        "text": "Spalva: skaidri su balta PVC spirale",
+        "heading": false
+      },
+      {
+        "text": "Darbinė temperatūra: −20 °C … +80 °C",
+        "heading": false
+      },
+      {
+        "text": "Pagrindinės charakteristikos",
+        "heading": false
+      }
+    ],
+    "dn": "",
+    "temp": "−20 °C … +80 °C",
+    "pressure": "",
+    "wallThickness": "",
+    "standardLength": "",
+    "vacuum": "",
+    "bendRadius": "",
+    "material": "",
+    "reinforcement": "",
+    "colorsAvailable": "",
+    "certifications": "",
+    "origin": "",
+    "sizes": [
+      "16",
+      "20",
+      "25",
+      "30",
+      "32",
+      "35",
+      "38",
+      "40",
+      "45",
+      "51",
+      "55",
+      "60",
+      "63",
+      "70",
+      "76",
+      "80",
+      "90",
+      "102",
+      "110",
+      "120",
+      "127",
+      "130",
+      "140",
+      "150",
+      "160",
+      "180",
+      "200"
+    ],
+    "specTable": {
+      "headers": [
+        "Vidinis diametras [mm]",
+        "Masė [kg/m]",
+        "Maksimalus sienelės storis [mm]",
+        "Minimalus sienelės storis [mm]",
+        "Lenkimo spindulys [mm]",
+        "Vakuumas [m/H₂O]",
+        "Rulono ilgis [m]"
+      ],
+      "rows": [
+        [
+          "16",
+          "0,100",
+          "2,5",
+          "0,8",
+          "20",
+          "4,5",
+          "30"
+        ],
+        [
+          "20",
+          "0,140",
+          "2,5",
+          "0,8",
+          "30",
+          "4,0",
+          "30"
+        ],
+        [
+          "25",
+          "0,155",
+          "2,7",
+          "0,8",
+          "40",
+          "4,0",
+          "30"
+        ],
+        [
+          "30",
+          "0,180",
+          "2,8",
+          "0,8",
+          "50",
+          "3,5",
+          "30"
+        ],
+        [
+          "32",
+          "0,200",
+          "2,8",
+          "0,8",
+          "50",
+          "3,5",
+          "30"
+        ],
+        [
+          "35",
+          "0,220",
+          "2,8",
+          "0,8",
+          "50",
+          "3,5",
+          "30"
+        ],
+        [
+          "38",
+          "0,260",
+          "3,0",
+          "0,8",
+          "60",
+          "3,0",
+          "30"
+        ],
+        [
+          "40",
+          "0,280",
+          "3,0",
+          "0,8",
+          "60",
+          "3,0",
+          "30"
+        ],
+        [
+          "45",
+          "0,350",
+          "3,3",
+          "0,8",
+          "70",
+          "3,0",
+          "30"
+        ],
+        [
+          "51",
+          "0,400",
+          "3,5",
+          "0,9",
+          "80",
+          "3,0",
+          "30"
+        ],
+        [
+          "55",
+          "0,450",
+          "3,6",
+          "0,9",
+          "80",
+          "3,0",
+          "30"
+        ],
+        [
+          "60",
+          "0,500",
+          "3,6",
+          "0,9",
+          "90",
+          "3,0",
+          "30"
+        ],
+        [
+          "63",
+          "0,520",
+          "3,6",
+          "0,9",
+          "100",
+          "3,0",
+          "30"
+        ],
+        [
+          "70",
+          "0,600",
+          "3,9",
+          "1,0",
+          "110",
+          "3,0",
+          "30"
+        ],
+        [
+          "76",
+          "0,640",
+          "4,2",
+          "1,0",
+          "110",
+          "2,5",
+          "30"
+        ],
+        [
+          "80",
+          "0,750",
+          "4,3",
+          "1,0",
+          "120",
+          "2,5",
+          "30"
+        ],
+        [
+          "90",
+          "0,900",
+          "4,5",
+          "1,0",
+          "140",
+          "2,5",
+          "30"
+        ],
+        [
+          "102",
+          "1,000",
+          "4,6",
+          "1,0",
+          "150",
+          "2,5",
+          "30"
+        ],
+        [
+          "110",
+          "1,100",
+          "4,8",
+          "1,0",
+          "160",
+          "2,5",
+          "30"
+        ],
+        [
+          "120",
+          "1,200",
+          "5,0",
+          "1,0",
+          "180",
+          "2,5",
+          "30"
+        ],
+        [
+          "127",
+          "1,300",
+          "5,0",
+          "1,0",
+          "190",
+          "2,5",
+          "30"
+        ],
+        [
+          "130",
+          "1,300",
+          "5,0",
+          "1,0",
+          "190",
+          "2,5",
+          "30"
+        ],
+        [
+          "140",
+          "1,500",
+          "5,2",
+          "1,0",
+          "200",
+          "2,0",
+          "20"
+        ],
+        [
+          "150",
+          "1,600",
+          "5,5",
+          "1,1",
+          "220",
+          "2,0",
+          "20"
+        ],
+        [
+          "160",
+          "1,800",
+          "6,0",
+          "1,1",
+          "230",
+          "1,5",
+          "20"
+        ],
+        [
+          "180",
+          "2,000",
+          "6,0",
+          "1,1",
+          "250",
+          "1,5",
+          "20"
+        ],
+        [
+          "200",
+          "2,200",
+          "6,5",
+          "1,1",
+          "280",
+          "1,5",
+          "20"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "rukav-terraspray-20-bar-60-bar",
+    "name": "Žarna TERRASPRAY 20 bar/60 bar",
+    "category": "rukava-z-polihlorvinilu",
+    "categories": [
+      "armovani-pvh-stallyu-ua",
+      "rukava-z-polihlorvinilu"
+    ],
+    "subcategory": "Armuotos PVC spirale",
+    "industries": [
+      "agri",
+      "chem"
+    ],
+    "color": "navy",
+    "featured": false,
+    "image": "/products/orig/poly-terraspray-20-60.jpg",
+    "shortNote": "Labai lanksti ir paprasta naudoti",
+    "description": "Savybės\nLabai lanksti ir paprasta naudoti. Žarna armuota poliesterio siūlu, kuris užtikrina didelį atsparumą trūkimui tempiant ir minimalią suplojimo riziką. Atspari atmosferos poveikiui ir cheminiams produktams. Didelis cheminis atsparumas trąšoms ir herbicidams.\nNaudojimo sritys\nSlėginė žarna purkštuvams. Kompresorinė žarna. Naudojama vandeniui, orui, dujoms, chemikalams transportuoti esant iki 20 bar slėgiui. Plačiai naudojama žemės ūkio fumigacijoje.\nMedžiaga: PVC.\nSutvirtinimas: tekstilinis pynimas.\nSpalva: juoda.\nDarbinė temperatūra: nuo −10 °C iki +60 °C.\nPagrindinės charakteristikos",
+    "descLines": [
+      {
+        "text": "Savybės",
+        "heading": true
+      },
+      {
+        "text": "Labai lanksti ir paprasta naudoti. Žarna armuota poliesterio siūlu, kuris užtikrina didelį atsparumą trūkimui tempiant ir minimalią suplojimo riziką. Atspari atmosferos poveikiui ir cheminiams produktams. Didelis cheminis atsparumas trąšoms ir herbicidams.",
+        "heading": false
+      },
+      {
+        "text": "Naudojimo sritys",
+        "heading": true
+      },
+      {
+        "text": "Slėginė žarna purkštuvams. Kompresorinė žarna. Naudojama vandeniui, orui, dujoms, chemikalams transportuoti esant iki 20 bar slėgiui. Plačiai naudojama žemės ūkio fumigacijoje.",
+        "heading": false
+      },
+      {
+        "text": "Medžiaga: PVC.",
+        "heading": false
+      },
+      {
+        "text": "Sutvirtinimas: tekstilinis pynimas.",
+        "heading": false
+      },
+      {
+        "text": "Spalva: juoda.",
+        "heading": false
+      },
+      {
+        "text": "Darbinė temperatūra: nuo −10 °C iki +60 °C.",
+        "heading": false
+      },
+      {
+        "text": "Pagrindinės charakteristikos",
+        "heading": false
+      }
+    ],
+    "dn": "",
+    "temp": "nuo −10 °C iki +60 °C.",
+    "pressure": "",
+    "wallThickness": "",
+    "standardLength": "",
+    "vacuum": "",
+    "bendRadius": "",
+    "material": "",
+    "reinforcement": "",
+    "colorsAvailable": "",
+    "certifications": "",
+    "origin": "",
+    "sizes": [
+      "8",
+      "10",
+      "12,5",
+      "16",
+      "19",
+      "25"
+    ],
+    "specTable": {
+      "headers": [
+        "Vidinis diametras [mm]",
+        "Išorinis diametras [mm]",
+        "Masė [kg/m]",
+        "Lenkimo spindulys [mm]",
+        "Darbinis slėgis [bar]",
+        "Trūkimo slėgis [bar]",
+        "Rulono ilgis [m]"
+      ],
+      "rows": [
+        [
+          "8",
+          "13",
+          "0,12",
+          "40",
+          "20",
+          "60",
+          "50"
+        ],
+        [
+          "10",
+          "16",
+          "0,16",
+          "50",
+          "20",
+          "60",
+          "50"
+        ],
+        [
+          "12,5",
+          "18,5",
+          "0,18",
+          "70",
+          "20",
+          "60",
+          "50"
+        ],
+        [
+          "16",
+          "23",
+          "0,30",
+          "80",
+          "20",
+          "60",
+          "50"
+        ],
+        [
+          "19",
+          "26,5",
+          "0,36",
+          "100",
+          "20",
+          "60",
+          "50"
+        ],
+        [
+          "25",
+          "33,5",
+          "0,56",
+          "130",
+          "20",
+          "60",
+          "50"
+        ]
+      ]
+    }
+  },
+  {
+    "slug": "rukav-vacuum-fr",
+    "name": "Žarna Vacuum FR",
+    "category": "rukava-z-polihlorvinilu",
+    "categories": [
+      "armovani-pvh-stallyu-ua",
+      "rukava-z-polihlorvinilu"
+    ],
+    "subcategory": "Armuotos PVC spirale",
+    "industries": [
+      "agri",
+      "spec"
+    ],
+    "color": "navy",
+    "featured": false,
+    "image": "/products/orig/poly-vacuum.jpg",
+    "shortNote": "Labai elastinga, šalčiui atspari, universali PVC žarna su beveik nesid",
+    "description": "Savybės\nLabai elastinga, šalčiui atspari, universali PVC žarna su beveik nesideformuojančia kieto PVC spirale, suteikiančia jai didelį atsparumą dilimui. Lygus vidinis žarnos paviršius padeda išvengti nuosėdų kaupimosi. Dėl didelio sienelės storio pasižymi geru atsparumu vakuumui, slėgio impulsui, dilimui, atmosferos poveikiui ir įvairiems cheminiams reagentams.\nNaudojimo sritys\nUniversali, šalčiui atspari slėginė-siurbimo žarna nuotekų duobėms, kanalizacijoms ir pan. išsiurbti. Naudojama siurblinėje, priešgaisrinėje technikoje, pramoniniuose lietinimo įrenginiuose, fekalinėms masėms ir kitoms atliekoms išsiurbti. Miltelių, granulių ir kitų abrazyvų transportavimas, taip pat kaip pneumotransportas sėkloms ir grūdams. Plačiai naudojama KAS (karbamido-amoniako mišiniui) perpumpuoti. Naudojama kaip sėklų tiekimo žarna grūdams iš bunkerio tiekti sėjamosiose ir grūdų smulkintuvuose.\nMedžiaga: dilimui atsparus PVC\nSutvirtinimas: kietas, smūgiams atsparus PVC\nSpalva: juoda\nDarbinė temperatūra: −30 °C … +60 °C\nPagrindinės charakteristikos",
+    "descLines": [
+      {
+        "text": "Savybės",
+        "heading": true
+      },
+      {
+        "text": "Labai elastinga, šalčiui atspari, universali PVC žarna su beveik nesideformuojančia kieto PVC spirale, suteikiančia jai didelį atsparumą dilimui. Lygus vidinis žarnos paviršius padeda išvengti nuosėdų kaupimosi. Dėl didelio sienelės storio pasižymi geru atsparumu vakuumui, slėgio impulsui, dilimui, atmosferos poveikiui ir įvairiems cheminiams reagentams.",
+        "heading": false
+      },
+      {
+        "text": "Naudojimo sritys",
+        "heading": true
+      },
+      {
+        "text": "Universali, šalčiui atspari slėginė-siurbimo žarna nuotekų duobėms, kanalizacijoms ir pan. išsiurbti. Naudojama siurblinėje, priešgaisrinėje technikoje, pramoniniuose lietinimo įrenginiuose, fekalinėms masėms ir kitoms atliekoms išsiurbti. Miltelių, granulių ir kitų abrazyvų transportavimas, taip pat kaip pneumotransportas sėkloms ir grūdams. Plačiai naudojama KAS (karbamido-amoniako mišiniui) perpumpuoti. Naudojama kaip sėklų tiekimo žarna grūdams iš bunkerio tiekti sėjamosiose ir grūdų smulkintuvuose.",
+        "heading": false
+      },
+      {
+        "text": "Medžiaga: dilimui atsparus PVC",
+        "heading": false
+      },
+      {
+        "text": "Sutvirtinimas: kietas, smūgiams atsparus PVC",
+        "heading": false
+      },
+      {
+        "text": "Spalva: juoda",
+        "heading": false
+      },
+      {
+        "text": "Darbinė temperatūra: −30 °C … +60 °C",
+        "heading": false
+      },
+      {
+        "text": "Pagrindinės charakteristikos",
+        "heading": false
+      }
+    ],
+    "dn": "",
+    "temp": "−30 °C … +60 °C",
+    "pressure": "",
+    "wallThickness": "",
+    "standardLength": "",
+    "vacuum": "",
+    "bendRadius": "",
+    "material": "",
+    "reinforcement": "",
+    "colorsAvailable": "",
+    "certifications": "",
+    "origin": "",
+    "sizes": [
+      "19",
+      "25",
+      "30",
+      "32",
+      "35",
+      "38",
+      "40",
+      "45",
+      "51",
+      "55",
+      "60",
+      "63",
+      "65",
+      "70",
+      "76",
+      "80",
+      "90",
+      "102",
+      "110",
+      "120",
+      "127",
+      "140",
+      "150"
+    ],
+    "specTable": {
+      "headers": [
+        "Vidinis diametras [mm]",
+        "Masė [kg/m]",
+        "Maksimalus sienelės storis [mm]",
+        "Lenkimo spindulys [mm]",
+        "Vakuumas [m/H₂O]",
+        "Darbinis slėgis [bar]",
+        "Rulono ilgis [m]"
+      ],
+      "rows": [
+        [
+          "19",
+          "0,30",
+          "3,0",
+          "80",
+          "10",
+          "7,0",
+          "30"
+        ],
+        [
+          "25",
+          "0,40",
+          "3,3",
+          "100",
+          "10",
+          "6,0",
+          "30"
+        ],
+        [
+          "30",
+          "0,55",
+          "3,3",
+          "120",
+          "10",
+          "6,0",
+          "30"
+        ],
+        [
+          "32",
+          "0,57",
+          "3,5",
+          "130",
+          "10",
+          "6,0",
+          "30"
+        ],
+        [
+          "35",
+          "0,62",
+          "3,6",
+          "140",
+          "10",
+          "5,0",
+          "30"
+        ],
+        [
+          "38",
+          "0,68",
+          "3,8",
+          "155",
+          "10",
+          "5,0",
+          "30"
+        ],
+        [
+          "40",
+          "0,7",
+          "3,8",
+          "160",
+          "10",
+          "5,0",
+          "30"
+        ],
+        [
+          "45",
+          "0,83",
+          "3,9",
+          "180",
+          "10",
+          "4,0",
+          "30"
+        ],
+        [
+          "51",
+          "0,98",
+          "4,5",
+          "200",
+          "10",
+          "4,0",
+          "30"
+        ],
+        [
+          "55",
+          "1,08",
+          "4,7",
+          "220",
+          "9",
+          "4,0",
+          "30"
+        ],
+        [
+          "60",
+          "1,2",
+          "4,8",
+          "240",
+          "9",
+          "4,0",
+          "30"
+        ],
+        [
+          "63",
+          "1,3",
+          "5,0",
+          "260",
+          "9",
+          "4,0",
+          "30"
+        ],
+        [
+          "65",
+          "1,45",
+          "5,0",
+          "270",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "70",
+          "1,6",
+          "5,4",
+          "280",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "76",
+          "1,7",
+          "5,5",
+          "310",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "80",
+          "1,85",
+          "5,6",
+          "320",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "90",
+          "2,3",
+          "6,2",
+          "360",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "102",
+          "2,7",
+          "6,8",
+          "410",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "110",
+          "3,0",
+          "7,0",
+          "450",
+          "9",
+          "3,0",
+          "30"
+        ],
+        [
+          "120",
+          "3,3",
+          "7,0",
+          "480",
+          "9",
+          "2,5",
+          "30"
+        ],
+        [
+          "127",
+          "3,5",
+          "7,5",
+          "510",
+          "9",
+          "2,5",
+          "30"
+        ],
+        [
+          "140",
+          "4,5",
+          "7,5",
+          "580",
+          "8",
+          "2,0",
+          "20"
+        ],
+        [
+          "150",
+          "5,0",
+          "9,0",
+          "610",
+          "8",
+          "2,0",
+          "20"
         ]
       ]
     }
