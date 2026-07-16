@@ -28,6 +28,8 @@ const dict = {
 // 1. KLIN must mirror the original /product-category/rukava-typu-klyn/ exactly —
 //    everything else previously folded into KLIN is dropped.
 // 2. The old "Armuotos PVC spirale" products are replaced by the polynect import.
+// 3. Empty application landing pages that sat directly on PVC/PUR with no
+//    sub-category (client: parent should show only its sub-category contents).
 const DELETE = new Set([
   // not in the original KLIN category
   "dlya-vysokyh-temperatur", "dlya-vysokyh-temperatur-2", "dlya-nyzkyh-temperatur",
@@ -38,6 +40,19 @@ const DELETE = new Set([
   "dlya-vyhlopnyh-gaziv-7", "tpr", "tpr-600",
   // replaced by the polynect products
   "rukav-pvh-vent", "kopiyarukav-pvh-vent", "kopiyarukav-pvh-vent-2", "kopiyarukav-pvh-agrohim",
+  // empty PVC-direct application landing pages
+  "dlya-ruchnogo-zastosuvannya", "dlya-vyrobnycztva-mebliv", "dlya-alkogolyu",
+  "dlya-zernovyh", "dlya-molochnyh-produktiv", "dlya-sokiv", "dlya-galvaniky",
+  "dlya-zemsnaryadiv-i-motopomp", "dlya-siyalok", "dlya-opryskuvachiv-ta-himichnyh-dobryv",
+  "dlya-transportuvannya-zernovyh", "dlya-galvaniky-2", "gnuchki-rukavy",
+  "dlya-vodopostachannya-1", "dlya-vodopostachannya-2", "dlya-vodopostachannya-3",
+  "dlya-vodopostachannya-4", "dlya-vodopostachannya-5", "dlya-vodopostachannya-6",
+  "dlya-vodopostachannya-7", "dlya-vodopostachannya-8", "dlya-vodopostachannya",
+  "dlya-komunalnoyi-tehniky", "dlya-dorozhnyh-vakuumnyh-pylotyagiv", "dlya-motopomp",
+  "dlya-promyvky", "dlya-asenizacziyi", "zagalni-harakterystyky-7",
+  // empty PUR-direct application landing pages
+  "dlya-verstativ-chpu", "dlya-obrobky-masyviv", "dlya-pelet", "dlya-struzhkopylotyagiv",
+  "dlya-granulyatoriv", "dlya-pnevmotransportu", "dlya-betonu-ta-czementu",
 ]);
 
 // Fold quote / dash / whitespace variants so hand-typed keys match the source.
@@ -111,7 +126,10 @@ const FOLD = {
   "dlya-vyhlopnyh-gaziv-5": KLIN, "dlya-vyhlopnyh-gaziv-6": KLIN, "dlya-vyhlopnyh-gaziv-7": KLIN,
   "dlya-betonu-ta-czementu": PUR, "dlya-komunalnoyi-tehniky": PVC,
   "dlya-dorozhnyh-vakuumnyh-pylotyagiv": PVC, "dlya-motopomp": PVC, "dlya-promyvky": PVC,
-  "dlya-asenizacziyi": PVC, "z-oczynkovanoyi-stali": METAL, "z-nerzhaviyuchoyi-stali": METAL,
+  "dlya-asenizacziyi": PVC,
+  // These two fold straight into their metal sub-categories (names match exactly).
+  "z-oczynkovanoyi-stali": "metalorukavy-z-oczynkovanoyi-stali",
+  "z-nerzhaviyuchoyi-stali": "metalorukavy-z-nerzhaviyuchoyi-stali-ua",
   "dlya-naftopererobnoyi-promyslovosti": FIT, "zagalni-harakterystyky-7": PVC,
   "tpr": KLIN, "tpr-600": KLIN,
 };
@@ -172,14 +190,23 @@ const products = rawProducts.filter((p) => !DELETE.has(p.slug)).map((p) => {
     const child = cats.find((c) => catMap.get(c)?.parent); // a sub-category
     subcategory = child ? catMap.get(child).name : "";
   } else {
-    // orphan application page → fold into a material family
-    primaryTop = FOLD[p.slug];
-    if (!primaryTop) {
+    // orphan application page → fold into a material family (or sub-category)
+    let target = FOLD[p.slug];
+    if (!target) {
       console.warn("UNMAPPED orphan, defaulting to PVC:", p.slug);
-      primaryTop = PVC;
+      target = PVC;
     }
-    cats = [primaryTop];
-    subcategory = "";
+    const targetCat = catMap.get(target);
+    if (targetCat?.parent) {
+      // folds straight into a sub-category
+      primaryTop = topAncestor(target);
+      subcategory = targetCat.name;
+      cats = [target, primaryTop];
+    } else {
+      primaryTop = target;
+      subcategory = "";
+      cats = [target];
+    }
   }
 
   const descLines = (p.lines || [])

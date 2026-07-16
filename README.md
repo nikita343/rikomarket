@@ -40,6 +40,25 @@ Step 5 applies the `scripts/translations-*.json` dictionaries (UA → LT) by exa
 match and prints any untranslated strings. `lib/products.ts` reads the generated
 JSON; `lib/categories.ts` is generated and should not be hand-edited.
 
+## Tests
+
+Jest + React Testing Library (configured via `next/jest`). Tests live in `__tests__/`.
+
+```bash
+npm test              # run the suite
+npm run test:watch    # watch mode
+npm run test:coverage # coverage report (thresholds enforced in jest.config.js)
+```
+
+- `__tests__/lib/` — unit tests for the data layer (categories, products, industries,
+  reference tables, chem data, site config).
+- `__tests__/components/` — component tests (unit conversion math, product cards,
+  category tabs, chem-table search, header/footer, icons, ui primitives).
+- `__tests__/integration/` — the full category-first ProductsBrowser flow and a
+  catalog data-integrity check (products ↔ categories ↔ image assets on disk).
+
+Coverage sits around **94% lines / 91% functions** (the `lib/` data layer is 100%).
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
