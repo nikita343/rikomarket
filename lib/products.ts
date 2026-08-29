@@ -12,6 +12,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { childrenOf, categoryById } from "@/lib/categories";
+import { defaultLocale, type Locale } from "@/lib/i18n";
 
 export type DescLine = { text: string; heading: boolean };
 export type SpecTable = { headers: string[]; rows: string[][] };
@@ -46,18 +47,25 @@ export type Product = {
   specTable: SpecTable | null; // original dimensions table, if present
 };
 
-const DATA_PATH = path.join(process.cwd(), "data", "products.json");
+// One file per locale; data/products.ru.json is generated from the Lithuanian
+// catalogue by scripts/translate-ru.mjs and keeps the same slugs and shape.
+const DATA_PATH: Record<Locale, string> = {
+  lt: path.join(process.cwd(), "data", "products.json"),
+  ru: path.join(process.cwd(), "data", "products.ru.json"),
+};
 
-let cache: Product[] | null = null;
+const cache: Partial<Record<Locale, Product[]>> = {};
 
-export function getAllProducts(): Product[] {
-  if (cache) return cache;
-  cache = JSON.parse(fs.readFileSync(DATA_PATH, "utf8")) as Product[];
-  return cache;
+export function getAllProducts(locale: Locale = defaultLocale): Product[] {
+  const hit = cache[locale];
+  if (hit) return hit;
+  const list = JSON.parse(fs.readFileSync(DATA_PATH[locale], "utf8")) as Product[];
+  cache[locale] = list;
+  return list;
 }
 
-export function getProductBySlug(slug: string): Product | undefined {
-  return getAllProducts().find((p) => p.slug === slug);
+export function getProductBySlug(slug: string, locale: Locale = defaultLocale): Product | undefined {
+  return getAllProducts(locale).find((p) => p.slug === slug);
 }
 
 // All category ids in the subtree rooted at `categoryId` (inclusive).
@@ -76,9 +84,12 @@ function subtreeIds(categoryId: string): Set<string> {
 }
 
 // Products belonging to a category or any of its descendants.
-export function getProductsByCategory(categoryId: string): Product[] {
+export function getProductsByCategory(
+  categoryId: string,
+  locale: Locale = defaultLocale,
+): Product[] {
   const ids = subtreeIds(categoryId);
-  return getAllProducts().filter(
+  return getAllProducts(locale).filter(
     (p) => p.category === categoryId || p.categories.some((c) => ids.has(c)),
   );
 }

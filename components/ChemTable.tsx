@@ -2,14 +2,10 @@
 
 import { useMemo, useState } from "react";
 import { chemData, chemMaterials } from "@/lib/chem-data";
+import { chemMaterialsRu, chemNameRu } from "@/lib/chem-ru";
+import { getDict } from "@/lib/dictionary";
+import { defaultLocale, type Locale } from "@/lib/i18n";
 import { Icon } from "@/components/icons";
-
-const LEGEND = [
-  { sym: "+", label: "Atsparus", cls: "text-ok" },
-  { sym: "+-", label: "Sąlyginai atsparus", cls: "text-warn" },
-  { sym: "−", label: "Neatsparus", cls: "text-red" },
-  { sym: "o", label: "Tirpus", cls: "text-blue-accent" },
-];
 
 function Sym({ v }: { v: string }) {
   if (!v) return <span className="text-line">·</span>;
@@ -20,21 +16,41 @@ function Sym({ v }: { v: string }) {
   return <span>{v}</span>;
 }
 
-export function ChemTable() {
+export function ChemTable({ locale = defaultLocale }: { locale?: Locale }) {
   const [query, setQuery] = useState("");
+  const t = getDict(locale).chemPage;
+  const LEGEND = [
+    { sym: "+", label: t.resistant, cls: "text-ok" },
+    { sym: "+-", label: t.conditional, cls: "text-warn" },
+    { sym: "−", label: t.notResistant, cls: "text-red" },
+    { sym: "o", label: t.soluble, cls: "text-blue-accent" },
+  ];
+  const materials = locale === "ru" ? chemMaterialsRu : [...chemMaterials];
+
+  // Rows carry the Lithuanian key plus the label shown for this locale.
+  const localized = useMemo(
+    () =>
+      chemData.map((r) => ({
+        ...r,
+        label: locale === "ru" ? chemNameRu[r.name] ?? r.name : r.name,
+      })),
+    [locale],
+  );
 
   const rows = useMemo(() => {
     const q = query.trim().toLowerCase();
-    if (!q) return chemData;
-    return chemData.filter((r) => r.name.toLowerCase().includes(q));
-  }, [query]);
+    if (!q) return localized;
+    return localized.filter(
+      (r) => r.label.toLowerCase().includes(q) || r.name.toLowerCase().includes(q),
+    );
+  }, [query, localized]);
 
   return (
     <>
       {/* Legend */}
       <div className="mb-5 flex flex-wrap items-center gap-5 border border-line bg-bg-alt p-4">
         <span className="text-[11px] font-bold uppercase tracking-[0.08em] text-mute">
-          Paaiškinimas
+          {t.legend}
         </span>
         {LEGEND.map((k) => (
           <span key={k.sym} className="flex items-center gap-2 text-[13px]">
@@ -42,7 +58,7 @@ export function ChemTable() {
             {k.label}
           </span>
         ))}
-        <span className="ml-auto text-xs text-mute">Duomenys atnaujinti: 2026 / 05</span>
+        <span className="ml-auto text-xs text-mute">{t.updated}</span>
       </div>
 
       {/* Search */}
@@ -53,7 +69,7 @@ export function ChemTable() {
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Ieškoti chemikalo…"
+          placeholder={t.search}
           className="flex-1 border-none bg-transparent py-3 text-sm text-ink outline-none"
         />
         <span className="px-3.5 text-[13px] text-mute">
@@ -67,9 +83,9 @@ export function ChemTable() {
           <thead>
             <tr className="bg-navy text-white">
               <th className="sticky left-0 z-10 bg-navy text-left text-xs font-bold uppercase tracking-[0.08em]">
-                Chemikalas
+                {t.chemical}
               </th>
-              {chemMaterials.map((m) => (
+              {materials.map((m) => (
                 <th key={m} className="text-center text-xs font-bold uppercase tracking-[0.06em]">
                   {m}
                 </th>
@@ -85,7 +101,7 @@ export function ChemTable() {
                     i % 2 ? "bg-bg-warm" : "bg-white"
                   }`}
                 >
-                  {r.name}
+                  {r.label}
                 </th>
                 {r.vals.map((v, j) => (
                   <td key={j} className="text-center text-sm">
@@ -96,8 +112,8 @@ export function ChemTable() {
             ))}
             {rows.length === 0 && (
               <tr>
-                <td colSpan={chemMaterials.length + 1} className="text-center text-mute">
-                  Chemikalų nerasta.
+                <td colSpan={materials.length + 1} className="text-center text-mute">
+                  {t.nothing}
                 </td>
               </tr>
             )}
@@ -106,10 +122,7 @@ export function ChemTable() {
       </div>
 
       <p className="mt-[18px] max-w-[900px] text-[12.5px] leading-relaxed text-mute">
-        * Lentelė pateikiama informaciniais tikslais (esant 20 °C, normalios ar didelės
-        koncentracijos reagentams). Konkrečios darbo sąlygos — temperatūra, koncentracija,
-        kontakto trukmė — gali smarkiai pakeisti rezultatą. Dėl detalių rekomendacijų
-        kreipkitės į mūsų techninį skyrių.
+        {t.footnote}
       </p>
     </>
   );

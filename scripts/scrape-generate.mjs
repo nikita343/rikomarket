@@ -15,6 +15,10 @@ const rawCats = JSON.parse(fs.readFileSync(path.join(CACHE, "categories-raw.json
 // Products imported from polynect.com.ua that replace the "Armuotos PVC spirale"
 // subcategory contents (see scripts/scrape-polynect.mjs).
 const polyRaw = JSON.parse(fs.readFileSync(path.join(CACHE, "polynect-raw.json"), "utf8"));
+// Metal hoses transferred from https://rondo2.pl/katalog-produktow/weze-metalowe/
+// and translated to Lithuanian — already final LT strings, so no dictionary pass
+// (regenerate with `node scripts/metal-rondo.mjs`).
+const metalRaw = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts", "metal-rondo.json"), "utf8"));
 
 const dict = {
   ...JSON.parse(fs.readFileSync(path.join(ROOT, "scripts", "translations-cats.json"), "utf8")),
@@ -53,6 +57,16 @@ const DELETE = new Set([
   // empty PUR-direct application landing pages
   "dlya-verstativ-chpu", "dlya-obrobky-masyviv", "dlya-pelet", "dlya-struzhkopylotyagiv",
   "dlya-granulyatoriv", "dlya-pnevmotransportu", "dlya-betonu-ta-czementu",
+  // 4. client review (2026-08): the VC1 0,4 mm variant is dropped and the
+  //    duplicated "Tipas Flat B2" entry under Be spiralės (FLAT) is removed.
+  "typ-vs1-polyuretan-06-mm", "kopiyapur-mb-ruchnaya-plenka",
+  // 5. the whole metal-hose category is replaced by the rondo2.pl import below
+  //    (scripts/metal-rondo.json) — the old landing pages and type A/B/E/F/C/D
+  //    entries go away.
+  "z-oczynkovanoyi-stali", "z-nerzhaviyuchoyi-stali",
+  "poligonalna-oczynkovana-stalna-truba-a", "kopiyapoligonalna-oczynkovana-stalna-truba-a",
+  "kopiyapoligonalna-oczynkovana-stalna-truba-a-2", "kopiyapoligonalna-oczynkovana-stalna-truba-v",
+  "poligonalna-oczynkovana-stalna-truba-s", "kopiyapoligonalna-oczynkovana-stalna-truba-s",
 ]);
 
 // Fold quote / dash / whitespace variants so hand-typed keys match the source.
@@ -282,6 +296,12 @@ const POLY_INDUSTRIES = {
   "rukav-vacuum-fr": ["agri", "spec"],
 };
 
+// Client review (2026-08): ASPIRATO PU is a polyurethane hose and belongs under
+// PUR → "Armuotos PVC spirale", not under PVC.
+const POLY_OVERRIDE = {
+  "rukav-aspirato-pu": { top: "rukava-z-poliuretanu", sub: "armovani-pvh-stallyu" },
+};
+
 const existingSlugs = new Set(products.map((p) => p.slug));
 for (const p of polyRaw) {
   if (existingSlugs.has(p.slug)) {
@@ -313,14 +333,18 @@ for (const p of polyRaw) {
   const noteSrc = descLines.find((l) => !l.heading && /[a-ząčęėįšųūž]/i.test(l.text));
   const shortNote = noteSrc ? noteSrc.text.split(/[.;]/)[0].slice(0, 70).trim() : "";
 
+  const ov = POLY_OVERRIDE[p.slug];
+  const top = ov?.top ?? "rukava-z-polihlorvinilu";
+  const sub = ov?.sub ?? PVC_SPIRAL;
+
   products.push({
     slug: p.slug,
     name: tr(p.nameUA),
-    category: "rukava-z-polihlorvinilu",
-    categories: [PVC_SPIRAL, "rukava-z-polihlorvinilu"],
-    subcategory: catMap.get(PVC_SPIRAL)?.name ?? "",
+    category: top,
+    categories: [sub, top],
+    subcategory: catMap.get(sub)?.name ?? "",
     industries: POLY_INDUSTRIES[p.slug] ?? ["agri"],
-    color: "navy",
+    color: COLOR_BY_TOP[top] ?? "navy",
     featured: false,
     image,
     shortNote,
@@ -339,12 +363,64 @@ for (const p of polyRaw) {
   });
 }
 
+// ── rondo2.pl import → "Metalinės žarnos" ───────────────────────────
+const METAL_GAL = "metalorukavy-z-oczynkovanoyi-stali";
+const METAL_INOX = "metalorukavy-z-nerzhaviyuchoyi-stali-ua";
+for (const m of metalRaw) {
+  const sub = m.steel === "inox" ? METAL_INOX : METAL_GAL;
+  const description = m.lines.map((l) => l.text).join("\n");
+  const noteSrc = m.lines.find((l) => !l.heading);
+  products.push({
+    slug: m.slug,
+    name: m.name,
+    category: METAL,
+    categories: [sub, METAL],
+    subcategory: catMap.get(sub)?.name ?? "",
+    industries: m.industries,
+    color: COLOR_BY_TOP[METAL] ?? "silver",
+    featured: false,
+    image: m.image,
+    shortNote: noteSrc ? noteSrc.text.split(/[.;]/)[0].slice(0, 70).trim() : "",
+    description,
+    descLines: m.lines,
+    dn: m.dn,
+    temp: m.temp,
+    pressure: "",
+    wallThickness: "",
+    standardLength: m.standardLength,
+    vacuum: "",
+    bendRadius: "",
+    material: m.material,
+    reinforcement: m.reinforcement,
+    colorsAvailable: "",
+    certifications: m.certifications,
+    origin: m.origin,
+    sizes: m.specTable.rows.map((r) => r[1]),
+    specTable: m.specTable,
+  });
+}
+
 // Feature a handful of flagship products on the homepage.
 const FEATURED = new Set([
   "rukav-agrochem", "typ-a1-polyhlorvynyl-legkaya-konstrukczyya", "klyn-k1-d-teflon-steklovolokno",
-  "z-nerzhaviyuchoyi-stali", "brs-kamlok-camlock-tip-a-aljuminiievij", "typ-v1-poliuretan-legka-konstrukcziya",
+  "metalhex-inox-c", "brs-kamlok-camlock-tip-a-aljuminiievij", "typ-v1-poliuretan-legka-konstrukcziya",
 ]);
 for (const p of products) if (FEATURED.has(p.slug)) p.featured = true;
+
+// Russian names for the 12 kept categories (the site's second locale — see
+// lib/i18n.ts; product-level Russian text is generated by scripts/translate-ru.mjs).
+const CAT_RU = {
+  "PVC žarnos": "Рукава ПВХ",
+  "PUR žarnos": "Рукава ПУ",
+  "KLIN tipo žarnos": "Рукава типа KLIN",
+  "Metalinės žarnos": "Металлорукава",
+  "Sujungimo elementai": "Соединительные элементы",
+  "Armuotos metalo spirale": "Армированные металлической спиралью",
+  "Armuotos PVC spirale": "Армированные спиралью ПВХ",
+  "Be spiralės (FLAT)": "Без спирали (FLAT)",
+  "Iš cinkuoto plieno": "Из оцинкованной стали",
+  "Iš nerūdijančio plieno": "Из нержавеющей стали",
+};
 
 // ── Emit categories.ts (only the kept 5 trees) ──────────────────────
 // Stable display order for the 5 top-level material families.
@@ -361,16 +437,23 @@ const orderedCats = [...catMap.values()]
     return a.name.localeCompare(b.name, "lt");
   });
 const catsLiteral = orderedCats
-  .map((c) => `  { id: ${JSON.stringify(c.id)}, name: ${JSON.stringify(c.name)}, slug: ${JSON.stringify(c.slug)}, parent: ${JSON.stringify(c.parent)} },`)
+  .map((c) => {
+    const ru = CAT_RU[c.name];
+    if (!ru) console.warn("category without a Russian name:", c.name);
+    return `  { id: ${JSON.stringify(c.id)}, name: ${JSON.stringify(c.name)}, nameRu: ${JSON.stringify(ru ?? c.name)}, slug: ${JSON.stringify(c.slug)}, parent: ${JSON.stringify(c.parent)} },`;
+  })
   .join("\n");
 const categoriesTs = `// Product categories — the 5 material families kept per client request
 // (PVC / PUR / KLIN / metal / sujungimo elementai), names translated to
 // Lithuanian. Generated by scripts/scrape-generate.mjs — do not edit by hand.
 // \`parent\` is the parent category id, or null for a top-level category.
 
+import type { Locale } from "@/lib/i18n";
+
 export type Category = {
   id: string;
-  name: string;
+  name: string; // Lithuanian
+  nameRu: string; // Russian
   slug: string;
   parent: string | null;
 };
@@ -384,6 +467,10 @@ export const categoryById = (id: string): Category | undefined => byId.get(id);
 export const childrenOf = (parentId: string): Category[] =>
   categories.filter((c) => c.parent === parentId);
 export const topCategories = (): Category[] => categories.filter((c) => !c.parent);
+
+// Display name for a category in the given locale.
+export const categoryName = (c: Category, locale: Locale): string =>
+  locale === "ru" ? c.nameRu : c.name;
 
 // Walk to the top-level ancestor of a category.
 export function topAncestor(id: string): Category | undefined {

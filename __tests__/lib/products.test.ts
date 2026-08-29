@@ -10,7 +10,7 @@ describe("lib/products", () => {
   const all = getAllProducts();
 
   it("loads the catalog from data/products.json", () => {
-    expect(all.length).toBeGreaterThan(100);
+    expect(all.length).toBeGreaterThan(90);
     expect(all[0]).toHaveProperty("slug");
     expect(all[0]).toHaveProperty("descLines");
   });

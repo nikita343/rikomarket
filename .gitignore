@@ -42,3 +42,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# i18n extraction workspace (intermediate chunks; the dictionary itself is tracked)
+scripts/i18n/

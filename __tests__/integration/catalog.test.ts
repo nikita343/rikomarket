@@ -27,10 +27,40 @@ describe("catalog integration", () => {
     expect(getProductsByCategory("rukava-typu-klyn")).toHaveLength(17);
   });
 
-  it("PVC 'Armuotos PVC spirale' holds the 12 imported polynect hoses", () => {
+  it("PVC 'Armuotos PVC spirale' holds the 11 imported polynect hoses", () => {
+    // 12 were imported; ASPIRATO PU moved to PUR (client review 2026-08).
     const inSub = products.filter((p) => p.categories.includes("armovani-pvh-stallyu-ua"));
-    expect(inSub).toHaveLength(12);
+    expect(inSub).toHaveLength(11);
     expect(inSub.some((p) => p.name.includes("Vacuum FR"))).toBe(true);
+    expect(inSub.some((p) => p.slug === "rukav-aspirato-pu")).toBe(false);
+  });
+
+  it("ASPIRATO PU sits under PUR → Armuotos PVC spirale", () => {
+    const pu = getProductBySlug("rukav-aspirato-pu");
+    expect(pu?.category).toBe("rukava-z-poliuretanu");
+    expect(pu?.categories).toContain("armovani-pvh-stallyu");
+  });
+
+  it("metal hoses are the six Metalhex types transferred from the supplier", () => {
+    const metal = getProductsByCategory("metalorukavy");
+    expect(metal.map((p) => p.slug).sort()).toEqual([
+      "metalhex-a", "metalhex-b", "metalhex-b1",
+      "metalhex-inox-c", "metalhex-inox-d", "metalhex-inox-d1",
+    ]);
+    // galvanized: 18–337 mm (44 sizes); stainless: 50–337 mm (32 sizes)
+    expect(getProductBySlug("metalhex-a")?.specTable?.rows).toHaveLength(44);
+    expect(getProductBySlug("metalhex-inox-c")?.specTable?.rows).toHaveLength(32);
+  });
+
+  it("no two products share a display name inside the same sub-category", () => {
+    const seen = new Map<string, string>();
+    const dupes: string[] = [];
+    for (const p of products) {
+      const key = `${p.category}/${p.subcategory}/${p.name}`;
+      if (seen.has(key)) dupes.push(`${p.slug} == ${seen.get(key)} (${p.name})`);
+      else seen.set(key, p.slug);
+    }
+    expect(dupes).toEqual([]);
   });
 
   it("no product is left in a removed category (Kita / application areas)", () => {

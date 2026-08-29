@@ -1,22 +1,21 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { getDict } from "@/lib/dictionary";
+import { defaultLocale, type Locale } from "@/lib/i18n";
 
 // Factor-based quantities (value × factor = base unit).
 const FACTOR_QUANTITIES = {
   pressure: {
-    label: "Slėgis",
     units: {
       bar: 100000, kPa: 1000, MPa: 1_000_000, psi: 6894.757,
       atm: 101325, "mm Hg": 133.322, "mm H₂O": 9.80665,
     } as Record<string, number>,
   },
   length: {
-    label: "Ilgis",
     units: { mm: 1, cm: 10, m: 1000, in: 25.4, ft: 304.8, yd: 914.4 } as Record<string, number>,
   },
   flow: {
-    label: "Srautas",
     units: { "m³/h": 1, "l/min": 0.06, "l/s": 3.6, "gal/min": 0.2271247 } as Record<string, number>,
   },
 };
@@ -37,20 +36,24 @@ function tempFromC(c: number, u: TempUnit): number {
 
 type Quantity = keyof typeof FACTOR_QUANTITIES | "temperature";
 
-const QUANTITY_LABELS: Record<Quantity, string> = {
-  pressure: "Slėgis",
-  length: "Ilgis",
-  flow: "Srautas",
-  temperature: "Temperatūra",
-};
+const QUANTITY_ORDER: Quantity[] = ["pressure", "length", "flow", "temperature"];
 
 function unitsFor(q: Quantity): string[] {
   return q === "temperature" ? [...TEMP_UNITS] : Object.keys(FACTOR_QUANTITIES[q].units);
 }
 
-const fmt = new Intl.NumberFormat("lt-LT", { maximumSignificantDigits: 6 });
-
-export function UnitConverter() {
+export function UnitConverter({ locale = defaultLocale }: { locale?: Locale }) {
+  const t = getDict(locale).unitsPage;
+  const fmt = useMemo(
+    () => new Intl.NumberFormat(locale === "ru" ? "ru-RU" : "lt-LT", { maximumSignificantDigits: 6 }),
+    [locale],
+  );
+  const labels: Record<Quantity, string> = {
+    pressure: t.pressure,
+    length: t.length,
+    flow: t.flow,
+    temperature: t.temperature,
+  };
   const [quantity, setQuantity] = useState<Quantity>("pressure");
   const [value, setValue] = useState("1,5");
   const units = unitsFor(quantity);
@@ -75,7 +78,7 @@ export function UnitConverter() {
       out = (n * f[from]) / f[to];
     }
     return fmt.format(out);
-  }, [value, from, to, quantity]);
+  }, [value, from, to, quantity, fmt]);
 
   const selCls =
     "border border-white/[0.18] bg-white/[0.08] px-4 py-3.5 text-sm font-bold text-white outline-none";
@@ -84,7 +87,7 @@ export function UnitConverter() {
     <div className="bg-navy p-[26px] text-white">
       {/* Quantity tabs */}
       <div className="mb-5 flex flex-wrap gap-2">
-        {(Object.keys(QUANTITY_LABELS) as Quantity[]).map((q) => (
+        {QUANTITY_ORDER.map((q) => (
           <button
             key={q}
             type="button"
@@ -93,7 +96,7 @@ export function UnitConverter() {
               quantity === q ? "bg-red text-white" : "bg-white/[0.08] text-white/70 hover:text-white"
             }`}
           >
-            {QUANTITY_LABELS[q]}
+            {labels[q]}
           </button>
         ))}
       </div>
@@ -101,7 +104,7 @@ export function UnitConverter() {
       <div className="grid items-end gap-3.5 lg:grid-cols-[1fr_auto_1fr_auto]">
         <div>
           <div className="mb-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-white/70">
-            Įveskite reikšmę
+            {t.enterValue}
           </div>
           <input
             value={value}
@@ -119,7 +122,7 @@ export function UnitConverter() {
         </select>
         <div>
           <div className="mb-1.5 text-[11px] font-bold uppercase tracking-[0.1em] text-white/70">
-            Rezultatas
+            {t.result}
           </div>
           <div className="w-full border border-white/[0.18] bg-white/[0.08] px-4 py-3.5 text-[22px] font-bold text-red">
             {result}

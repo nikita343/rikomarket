@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { company } from "@/lib/site";
-import { topCategories } from "@/lib/categories";
-import { industries } from "@/lib/industries";
+import { company, getSite } from "@/lib/site";
+import { getDict } from "@/lib/dictionary";
+import { localeHref, type Locale } from "@/lib/i18n";
+import { topCategories, categoryName } from "@/lib/categories";
+import { industries, industryText } from "@/lib/industries";
 import { Container, Logo, Button } from "@/components/ui";
 import { Icon } from "@/components/icons";
 
@@ -13,7 +15,10 @@ function ColHead({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function Footer() {
+export function Footer({ locale }: { locale: Locale }) {
+  const t = getDict(locale);
+  const s = getSite(locale);
+
   return (
     <footer className="bg-navy-deep text-white">
       {/* Brand color strip */}
@@ -27,50 +32,48 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr] lg:gap-14">
           {/* Brand */}
           <div>
-            <Logo size={56} dark />
+            <Logo size={56} dark locale={locale} />
             <p className="mt-[18px] max-w-[320px] text-[13.5px] leading-relaxed text-white/65">
-              {company.descShort}
+              {s.descShort}
             </p>
-            <div className="mt-3.5 text-xs font-medium text-white/65">
-              {company.foundedNote}
-            </div>
+            <div className="mt-3.5 text-xs font-medium text-white/65">{s.foundedNote}</div>
           </div>
 
           {/* Products */}
           <div>
-            <ColHead>Produktai</ColHead>
+            <ColHead>{t.footer.products}</ColHead>
             {topCategories().map((c) => (
               <Link
                 key={c.id}
-                href={`/products?category=${c.id}`}
+                href={localeHref(locale, `/products?category=${c.id}`)}
                 className="nav-link block py-[5px] text-sm text-white/65 hover:text-white"
               >
-                {c.name}
+                {categoryName(c, locale)}
               </Link>
             ))}
           </div>
 
           {/* Industries */}
           <div>
-            <ColHead>Pritaikymas</ColHead>
+            <ColHead>{t.footer.application}</ColHead>
             {industries.slice(0, 7).map((i) => (
               <Link
                 key={i.id}
-                href="/industries"
+                href={localeHref(locale, "/industries")}
                 className="nav-link block py-[5px] text-sm text-white/65 hover:text-white"
               >
-                {i.name}
+                {industryText(i, locale).name}
               </Link>
             ))}
           </div>
 
           {/* Contacts */}
           <div>
-            <ColHead>Kontaktai</ColHead>
+            <ColHead>{t.footer.contacts}</ColHead>
             <div className="grid gap-3 text-sm text-white/65">
               <div className="flex gap-2.5">
                 <Icon name="pin" size={16} className="shrink-0 text-white/85" />
-                <span>{company.address}</span>
+                <span>{s.address}</span>
               </div>
               <a href={company.phoneHref} className="flex gap-2.5">
                 <Icon name="phone" size={16} className="shrink-0 text-white/85" />
@@ -82,22 +85,26 @@ export function Footer() {
               </a>
               <div className="flex gap-2.5">
                 <Icon name="clock" size={16} className="shrink-0 text-white/85" />
-                <span>{company.hours}</span>
+                <span>{s.hours}</span>
               </div>
             </div>
             <div className="mt-[22px]">
-              <Button href="/contacts" kind="primary">
-                Susisiekti
+              <Button href={localeHref(locale, "/contacts")} kind="primary">
+                {t.common.contactUs}
               </Button>
             </div>
           </div>
         </div>
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-[22px] text-[12.5px] text-white/65 sm:flex-row sm:justify-between">
-          <span>{company.legalLine}</span>
+          <span>{s.legalLine}</span>
           <span className="flex gap-[18px]">
-            <Link href="/contacts" className="nav-link hover:text-white">Privatumo politika</Link>
-            <Link href="/contacts" className="nav-link hover:text-white">Naudojimosi sąlygos</Link>
+            <Link href={localeHref(locale, "/contacts")} className="nav-link hover:text-white">
+              {t.footer.privacy}
+            </Link>
+            <Link href={localeHref(locale, "/contacts")} className="nav-link hover:text-white">
+              {t.footer.terms}
+            </Link>
           </span>
         </div>
       </Container>

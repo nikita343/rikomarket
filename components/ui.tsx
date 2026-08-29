@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { Icon } from "@/components/icons";
 import { company } from "@/lib/site";
+import { getDict } from "@/lib/dictionary";
+import { defaultLocale, localeHref, type Locale } from "@/lib/i18n";
 
 /* ── Container ─────────────────────────────────────────────────────── */
 export function Container({
@@ -135,17 +137,19 @@ export function PageHero({
   eyebrow,
   title,
   sub,
+  locale = defaultLocale,
 }: {
   breadcrumb?: Crumb[];
   eyebrow: string;
   title: string;
   sub?: string;
+  locale?: Locale;
 }) {
   return (
     <section className="border-b border-line bg-bg-alt">
       <Container className="py-11">
         {breadcrumb && (
-          <nav aria-label="Naršymo kelias" className="mb-4 text-xs tracking-[0.04em] text-mute">
+          <nav aria-label={getDict(locale).common.breadcrumbLabel} className="mb-4 text-xs tracking-[0.04em] text-mute">
             <ol className="flex flex-wrap items-center gap-2">
               {breadcrumb.map((b, i) => {
                 const last = i === breadcrumb.length - 1;
@@ -182,9 +186,17 @@ export function PageHero({
 }
 
 /* ── Logo (round brand badge) ────────────────────────────────────── */
-export function Logo({ size = 56, dark = false }: { size?: number; dark?: boolean }) {
+export function Logo({
+  size = 56,
+  dark = false,
+  locale = defaultLocale,
+}: {
+  size?: number;
+  dark?: boolean;
+  locale?: Locale;
+}) {
   return (
-    <Link href="/" aria-label={company.nameShort} className="inline-flex shrink-0">
+    <Link href={localeHref(locale, "/")} aria-label={company.nameShort} className="inline-flex shrink-0">
       <Image
         src="/brand/logo-v2.jpg"
         alt={company.nameShort}

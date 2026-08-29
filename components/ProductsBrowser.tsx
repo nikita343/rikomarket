@@ -4,6 +4,8 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { ProductCard, type ProductCardData } from "@/components/ProductCard";
+import { getDict, plural } from "@/lib/dictionary";
+import { collatorFor, defaultLocale, localeHref, type Locale } from "@/lib/i18n";
 
 export type BrowserCat = { id: string; name: string; parent: string | null; count: number };
 export type BrowserProduct = ProductCardData & { categories: string[] };
@@ -22,23 +24,14 @@ function maxTemp(temp: string): number | null {
   return nums.length ? Math.max(...nums) : null;
 }
 
-const DIAMETER_BUCKETS: { label: string; test: (min: number) => boolean }[] = [
-  { label: "10–50 mm", test: (n) => n >= 10 && n < 50 },
-  { label: "50–150 mm", test: (n) => n >= 50 && n < 150 },
-  { label: "150–500 mm", test: (n) => n >= 150 && n < 500 },
-  { label: "500+ mm", test: (n) => n >= 500 },
+const DIAMETER_TESTS: ((min: number) => boolean)[] = [
+  (n) => n >= 10 && n < 50,
+  (n) => n >= 50 && n < 150,
+  (n) => n >= 150 && n < 500,
+  (n) => n >= 500,
 ];
-const TEMP_BUCKETS: { label: string; max: number }[] = [
-  { label: "Iki +90 °C", max: 90 },
-  { label: "Iki +260 °C", max: 260 },
-  { label: "Iki +650 °C", max: 650 },
-  { label: "Iki +1100 °C", max: 1100 },
-];
-const SORTS = [
-  { value: "name", label: "Pagal pavadinimą" },
-  { value: "dn", label: "Pagal diametrą" },
-  { value: "temp", label: "Pagal temperatūrą" },
-];
+const TEMP_MAX = [90, 260, 650, 1100];
+const SORT_VALUES = ["name", "dn", "temp"] as const;
 
 function toggle(set: Set<string>, value: string): Set<string> {
   const next = new Set(set);
@@ -47,21 +40,22 @@ function toggle(set: Set<string>, value: string): Set<string> {
   return next;
 }
 
-function plural(n: number): string {
-  const m10 = n % 10;
-  const m100 = n % 100;
-  if (m10 === 1 && m100 !== 11) return "pozicija";
-  if (m10 >= 2 && m10 <= 9 && (m100 < 10 || m100 >= 20)) return "pozicijos";
-  return "pozicijų";
-}
-
 export function ProductsBrowser({
   products,
   categories,
+  locale = defaultLocale,
 }: {
   products: BrowserProduct[];
   categories: BrowserCat[];
+  locale?: Locale;
 }) {
+  const t = getDict(locale).browser;
+  const items = (n: number) => plural(n, t.items);
+  const sorts = [
+    { value: SORT_VALUES[0], label: t.sortName },
+    { value: SORT_VALUES[1], label: t.sortDn },
+    { value: SORT_VALUES[2], label: t.sortTemp },
+  ];
   // Selected category comes from the URL (?category=) so the page can stay static.
   const params = useSearchParams();
   const [category, setCategory] = useState<string | null>(params.get("category"));
@@ -120,7 +114,7 @@ export function ProductsBrowser({
     setDiameters(new Set());
     setTemps(new Set());
     setPage(1);
-    const url = id ? `/products?category=${id}` : "/products";
+    const url = localeHref(locale, id ? `/products?category=${id}` : "/products");
     window.history.replaceState(null, "", url);
   }
 
@@ -132,28 +126,33 @@ export function ProductsBrowser({
         (p) => p.category === category || p.categories.some((c) => ids.has(c)),
       );
     }
+    const labels = getDict(locale).browser;
     if (diameters.size) {
       list = list.filter((p) => {
         const min = minDiameter(p.dn);
         if (min == null) return false;
-        return DIAMETER_BUCKETS.some((b) => diameters.has(b.label) && b.test(min));
+        return labels.diameterBuckets.some(
+          (label: string, i: number) => diameters.has(label) && DIAMETER_TESTS[i](min),
+        );
       });
     }
     if (temps.size) {
       list = list.filter((p) => {
         const mx = maxTemp(p.temp);
         if (mx == null) return false;
-        return TEMP_BUCKETS.some((b) => temps.has(b.label) && mx <= b.max);
+        return labels.tempBuckets.some(
+          (label: string, i: number) => temps.has(label) && mx <= TEMP_MAX[i],
+        );
       });
     }
     const sorted = [...list];
     sorted.sort((a, b) => {
       if (sort === "dn") return (minDiameter(a.dn) ?? 1e9) - (minDiameter(b.dn) ?? 1e9);
       if (sort === "temp") return (maxTemp(a.temp) ?? 1e9) - (maxTemp(b.temp) ?? 1e9);
-      return a.name.localeCompare(b.name, "lt");
+      return a.name.localeCompare(b.name, collatorFor(locale));
     });
     return sorted;
-  }, [products, category, diameters, temps, sort, tree]);
+  }, [products, category, diameters, temps, sort, tree, locale]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
@@ -190,7 +189,7 @@ export function ProductsBrowser({
               <div>
                 <div className="text-base font-bold text-navy group-hover:text-red">{top.name}</div>
                 <div className="mt-0.5 text-[12.5px] text-mute">
-                  {top.count} {plural(top.count)}
+                  {top.count} {items(top.count)}
                 </div>
               </div>
               <span className="text-red transition-transform group-hover:translate-x-0.5">→</span>
@@ -207,7 +206,7 @@ export function ProductsBrowser({
       <aside>
         <div className="border border-line bg-white">
           <div className="bg-navy px-[18px] py-3.5 text-[13px] font-bold uppercase tracking-[0.08em] text-white">
-            Kategorijos
+            {t.categories}
           </div>
           <button
             type="button"
@@ -215,7 +214,7 @@ export function ProductsBrowser({
             className="flex w-full items-center gap-2 px-[18px] py-[13px] text-left text-sm font-semibold text-navy transition-colors hover:bg-bg-warm"
           >
             <span aria-hidden>←</span>
-            <span>Visos kategorijos</span>
+            <span>{t.allCategories}</span>
           </button>
           {tops.map((top) => {
             const active = category === top.id;
@@ -254,23 +253,23 @@ export function ProductsBrowser({
           })}
         </div>
 
-        <FilterBlock label="Vidinis diametras">
-          {DIAMETER_BUCKETS.map((b) => (
+        <FilterBlock label={t.diameter}>
+          {t.diameterBuckets.map((label: string) => (
             <FilterCheck
-              key={b.label}
-              label={b.label}
-              checked={diameters.has(b.label)}
-              onChange={() => onFilterChange(() => setDiameters((v) => toggle(v, b.label)))}
+              key={label}
+              label={label}
+              checked={diameters.has(label)}
+              onChange={() => onFilterChange(() => setDiameters((v) => toggle(v, label)))}
             />
           ))}
         </FilterBlock>
-        <FilterBlock label="Darbinė temperatūra">
-          {TEMP_BUCKETS.map((b) => (
+        <FilterBlock label={t.temperature}>
+          {t.tempBuckets.map((label: string) => (
             <FilterCheck
-              key={b.label}
-              label={b.label}
-              checked={temps.has(b.label)}
-              onChange={() => onFilterChange(() => setTemps((v) => toggle(v, b.label)))}
+              key={label}
+              label={label}
+              checked={temps.has(label)}
+              onChange={() => onFilterChange(() => setTemps((v) => toggle(v, label)))}
             />
           ))}
         </FilterBlock>
@@ -280,23 +279,27 @@ export function ProductsBrowser({
       <div>
         <div className="mb-[18px] flex flex-wrap items-center justify-between gap-3 border border-line bg-white px-[18px] py-3.5">
           <div className="text-[13.5px] text-ink">
-            Rasta <strong className="text-navy">{filtered.length}</strong> {plural(filtered.length)}
+            {t.found} <strong className="text-navy">{filtered.length}</strong>{" "}
+            {items(filtered.length)}
             {activeCat && (
               <>
-                {" "}· <span className="text-mute">kategorija „{activeCat.name}“</span>
+                {" "}·{" "}
+                <span className="text-mute">
+                  {t.category} {locale === "ru" ? `«${activeCat.name}»` : `„${activeCat.name}“`}
+                </span>
               </>
             )}
           </div>
           <div className="flex items-center gap-2.5">
             <span className="text-xs font-semibold uppercase tracking-[0.08em] text-mute">
-              Rūšiavimas
+              {t.sorting}
             </span>
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value)}
               className="border border-line bg-white px-3 py-2 text-[13px] font-semibold text-ink"
             >
-              {SORTS.map((s) => (
+              {sorts.map((s) => (
                 <option key={s.value} value={s.value}>
                   {s.label}
                 </option>
@@ -307,12 +310,12 @@ export function ProductsBrowser({
 
         {pageItems.length === 0 ? (
           <p className="py-10 text-center text-mute">
-            Pagal pasirinktus filtrus produktų nerasta.
+            {t.empty}
           </p>
         ) : (
           <div className="grid gap-3">
             {pageItems.map((p) => (
-              <ProductCard key={p.slug} product={p} />
+              <ProductCard key={p.slug} product={p} locale={locale} />
             ))}
           </div>
         )}

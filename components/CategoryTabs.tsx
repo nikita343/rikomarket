@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import type { Product } from "@/lib/products";
+import { getDict } from "@/lib/dictionary";
+import { defaultLocale, localeHref, type Locale } from "@/lib/i18n";
 import { ProductCard } from "@/components/ProductCard";
 import { Button } from "@/components/ui";
 
@@ -10,10 +12,13 @@ export type TabCat = { id: string; name: string; count: number };
 export function CategoryTabs({
   cats,
   productsByCat,
+  locale = defaultLocale,
 }: {
   cats: TabCat[];
   productsByCat: Record<string, Product[]>;
+  locale?: Locale;
 }) {
+  const t = getDict(locale).tabs;
   const [active, setActive] = useState(cats[0]?.id);
   const activeCat = cats.find((c) => c.id === active);
   const products = productsByCat[active] ?? [];
@@ -47,16 +52,20 @@ export function CategoryTabs({
       {products.length > 0 ? (
         <div className="grid gap-3 lg:grid-cols-2">
           {products.map((p) => (
-            <ProductCard key={p.slug} product={p} />
+            <ProductCard key={p.slug} product={p} locale={locale} />
           ))}
         </div>
       ) : (
-        <p className="text-mute">Šioje kategorijoje produktų kol kas nėra.</p>
+        <p className="text-mute">{t.empty}</p>
       )}
 
       <div className="mt-8 text-center">
-        <Button href={`/products?category=${active}`} kind="primaryDark" size="lg">
-          Visi „{activeCat?.name}“ produktai
+        <Button
+          href={localeHref(locale, `/products?category=${active}`)}
+          kind="primaryDark"
+          size="lg"
+        >
+          {t.allOf(activeCat?.name ?? "")}
         </Button>
       </div>
     </div>
