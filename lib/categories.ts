@@ -14,18 +14,18 @@ export type Category = {
 };
 
 export const categories: Category[] = [
-  { id: "rukava-z-polihlorvinilu", name: "PVC žarnos", nameRu: "Рукава ПВХ", slug: "rukava-z-polihlorvinilu", parent: null },
-  { id: "armovani-metallospiralyu-ua", name: "Armuotos metalo spirale", nameRu: "Армированные металлической спиралью", slug: "armovani-metallospiralyu-ua", parent: "rukava-z-polihlorvinilu" },
-  { id: "armovani-pvh-stallyu-ua", name: "Armuotos PVC spirale", nameRu: "Армированные спиралью ПВХ", slug: "armovani-pvh-stallyu-ua", parent: "rukava-z-polihlorvinilu" },
-  { id: "rukava-z-poliuretanu", name: "PUR žarnos", nameRu: "Рукава ПУ", slug: "rukava-z-poliuretanu", parent: null },
-  { id: "armovani-metallospiralyu", name: "Armuotos metalo spirale", nameRu: "Армированные металлической спиралью", slug: "armovani-metallospiralyu", parent: "rukava-z-poliuretanu" },
-  { id: "armovani-pvh-stallyu", name: "Armuotos PVC spirale", nameRu: "Армированные спиралью ПВХ", slug: "armovani-pvh-stallyu", parent: "rukava-z-poliuretanu" },
-  { id: "bez-spirali", name: "Be spiralės (FLAT)", nameRu: "Без спирали (FLAT)", slug: "bez-spirali", parent: "rukava-z-poliuretanu" },
-  { id: "rukava-typu-klyn", name: "KLIN tipo žarnos", nameRu: "Рукава типа KLIN", slug: "rukava-typu-klyn", parent: null },
+  { id: "rukava-z-polihlorvinilu", name: "PVC žarnos", nameRu: "Рукава из полихлорвинила", slug: "rukava-z-polihlorvinilu", parent: null },
+  { id: "armovani-metallospiralyu-ua", name: "Armuotos metalo spirale", nameRu: "Армированные металлоспиралью", slug: "armovani-metallospiralyu-ua", parent: "rukava-z-polihlorvinilu" },
+  { id: "armovani-pvh-stallyu-ua", name: "Armuotos PVC spirale", nameRu: "Армированные ПВХ спиралью", slug: "armovani-pvh-stallyu-ua", parent: "rukava-z-polihlorvinilu" },
+  { id: "rukava-z-poliuretanu", name: "PUR žarnos", nameRu: "Рукава из полиуретана", slug: "rukava-z-poliuretanu", parent: null },
+  { id: "armovani-metallospiralyu", name: "Armuotos metalo spirale", nameRu: "Армированные металлоспиралью", slug: "armovani-metallospiralyu", parent: "rukava-z-poliuretanu" },
+  { id: "armovani-pvh-stallyu", name: "Armuotos PVC spirale", nameRu: "Армированные ПВХ спиралью", slug: "armovani-pvh-stallyu", parent: "rukava-z-poliuretanu" },
+  { id: "bez-spirali", name: "Be spiralės (FLAT)", nameRu: "Без спирали (плоский)", slug: "bez-spirali", parent: "rukava-z-poliuretanu" },
+  { id: "rukava-typu-klyn", name: "KLIN tipo žarnos", nameRu: "Рукава типа КЛИН", slug: "rukava-typu-klyn", parent: null },
   { id: "metalorukavy", name: "Metalinės žarnos", nameRu: "Металлорукава", slug: "metalorukavy", parent: null },
   { id: "metalorukavy-z-oczynkovanoyi-stali", name: "Iš cinkuoto plieno", nameRu: "Из оцинкованной стали", slug: "metalorukavy-z-oczynkovanoyi-stali", parent: "metalorukavy" },
   { id: "metalorukavy-z-nerzhaviyuchoyi-stali-ua", name: "Iš nerūdijančio plieno", nameRu: "Из нержавеющей стали", slug: "metalorukavy-z-nerzhaviyuchoyi-stali-ua", parent: "metalorukavy" },
-  { id: "elementi-ziednannya", name: "Sujungimo elementai", nameRu: "Соединительные элементы", slug: "elementi-ziednannya", parent: null },
+  { id: "elementi-ziednannya", name: "Sujungimo elementai", nameRu: "Элементы соединений", slug: "elementi-ziednannya", parent: null },
 ];
 
 const byId = new Map(categories.map((c) => [c.id, c]));
