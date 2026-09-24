@@ -14,7 +14,7 @@ export function IndustryTile({
   const { name, desc } = industryText(industry, locale);
   return (
     <Link
-      href={localeHref(locale, "/industries")}
+      href={localeHref(locale, `/industries#${industry.id}`)}
       className="group flex items-center gap-[18px] rounded-[4px] border border-line bg-white px-5 py-[18px] transition-colors hover:border-navy"
     >
       <div className="flex h-14 w-14 shrink-0 items-center justify-center bg-navy text-white">

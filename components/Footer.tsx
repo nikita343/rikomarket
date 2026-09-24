@@ -42,29 +42,34 @@ export function Footer({ locale }: { locale: Locale }) {
           {/* Products */}
           <div>
             <ColHead>{t.footer.products}</ColHead>
-            {topCategories().map((c) => (
-              <Link
-                key={c.id}
-                href={localeHref(locale, `/products?category=${c.id}`)}
-                className="nav-link block py-[5px] text-sm text-white/65 hover:text-white"
-              >
-                {categoryName(c, locale)}
-              </Link>
-            ))}
+            {/* flex column: .nav-link is inline-flex, which beat `block` and ran links together */}
+            <div className="flex flex-col items-start">
+              {topCategories().map((c) => (
+                <Link
+                  key={c.id}
+                  href={localeHref(locale, `/products?category=${c.id}`)}
+                  className="nav-link block py-[5px] text-sm text-white/65 hover:text-white"
+                >
+                  {categoryName(c, locale)}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Industries */}
           <div>
             <ColHead>{t.footer.application}</ColHead>
-            {industries.slice(0, 7).map((i) => (
-              <Link
-                key={i.id}
-                href={localeHref(locale, "/industries")}
-                className="nav-link block py-[5px] text-sm text-white/65 hover:text-white"
-              >
-                {industryText(i, locale).name}
-              </Link>
-            ))}
+            <div className="flex flex-col items-start">
+              {industries.slice(0, 7).map((i) => (
+                <Link
+                  key={i.id}
+                  href={localeHref(locale, `/industries#${i.id}`)}
+                  className="nav-link block py-[5px] text-sm text-white/65 hover:text-white"
+                >
+                  {industryText(i, locale).name}
+                </Link>
+              ))}
+            </div>
           </div>
 
           {/* Contacts */}

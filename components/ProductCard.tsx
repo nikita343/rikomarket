@@ -50,7 +50,7 @@ export function ProductCard({
           {product.name}
         </div>
         {product.shortNote && (
-          <div className="mt-1.5 text-[12.5px] text-mute">{product.shortNote}</div>
+          <div className="mt-1.5 line-clamp-2 text-[12.5px] leading-snug text-mute">{product.shortNote}</div>
         )}
       </div>
 

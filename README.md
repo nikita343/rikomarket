@@ -54,6 +54,25 @@ Two product groups do not come from the Ukrainian scrape:
   one shared size list); the generator appends it and drops the old metal
   entries.
 
+### Client review 2026-09 — rules the pipeline now enforces
+
+- **Teasers** (`shortNote`, shown on cards and at the top of a product page) are
+  the whole first sentence of the description (`scripts/note.mjs`) — no more
+  70-character cuts. The Russian teaser is derived from the Russian description,
+  not translated from the Lithuanian one.
+- **Size tables** keep merged cells: `scripts/table-grid.mjs` expands
+  rowspan/colspan, and `lib/spec-table.ts` rebuilds two-level headers
+  ("Vakuuminis atsparumas" → mm H2O / bar) for display.
+- **DN** falls back to the size table's inner-diameter column (or Min D / Max D
+  for clamps), so the polynect hoses, clamps and Camlock parts show up in the
+  diameter filter. The filter matches every bucket a DN range overlaps.
+- **Russian wording**: the material is always "ПВХ" (`pvh()` in
+  `translate-ru.mjs`); approved category names live in `CAT_RU_FIXED` in
+  `scrape-generate.mjs` and win over the old site.
+- **Application areas** (`lib/industries.ts`) carry photo galleries
+  (`public/industries/<id>/`). The rikomarket.com.ua tiles are 300×300 — the
+  largest the old site has; the food-industry photos are generated.
+
 ## Languages (LT + RU)
 
 Lithuanian is the default locale and keeps the plain URLs (`/`, `/products`,

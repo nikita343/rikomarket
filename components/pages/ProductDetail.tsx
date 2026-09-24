@@ -10,6 +10,7 @@ import { localeHref, type Locale } from "@/lib/i18n";
 import { ProductCard } from "@/components/ProductCard";
 import { Container, Button, SectionHead } from "@/components/ui";
 import { Icon } from "@/components/icons";
+import { toDisplayTable } from "@/lib/spec-table";
 
 // Key chips at a glance — only those with values, capped at 6.
 function keyChips(p: Product, t: Dict): { l: string; v: string }[] {
@@ -57,6 +58,8 @@ export function ProductDetailPage({ slug, locale }: { slug: string; locale: Loca
   const t = getDict(locale);
   const category = categoryById(product.category);
   const chips = keyChips(product, t);
+  // Size table with its merged (two-level) headers rebuilt — see lib/spec-table.ts.
+  const table = product.specTable ? toDisplayTable(product.specTable) : null;
   const rows = specRows(product, t);
   const leadText =
     product.shortNote ||
@@ -259,7 +262,7 @@ export function ProductDetailPage({ slug, locale }: { slug: string; locale: Loca
       )}
 
       {/* Dimensions table (sourced 1:1 from the original product page) */}
-      {product.specTable && product.specTable.rows.length > 0 && (
+      {table && table.body.length > 0 && (
         <section className="border-t border-line bg-bg py-12 pb-14">
           <Container>
             <SectionHead
@@ -270,19 +273,25 @@ export function ProductDetailPage({ slug, locale }: { slug: string; locale: Loca
             <div className="max-w-full overflow-x-auto border border-line">
               <table className="w-full min-w-[480px] border-collapse bg-white text-sm">
                 <thead>
-                  <tr className="bg-navy text-white">
-                    {product.specTable.headers.map((h, i) => (
-                      <th
-                        key={i}
-                        className="border-r border-white/15 px-3 py-2.5 text-left text-xs font-bold uppercase tracking-[0.04em] last:border-r-0"
-                      >
-                        {h}
-                      </th>
-                    ))}
-                  </tr>
+                  {table.head.map((row, hi) => (
+                    <tr key={hi} className={`bg-navy text-white ${hi ? "border-t border-white/15" : ""}`}>
+                      {row.map((h, i) => (
+                        <th
+                          key={i}
+                          colSpan={h.colSpan}
+                          rowSpan={h.rowSpan}
+                          className={`border-r border-white/15 px-3 py-2.5 text-xs font-bold uppercase tracking-[0.04em] last:border-r-0 ${
+                            h.colSpan > 1 ? "text-center" : "text-left"
+                          }`}
+                        >
+                          {h.text}
+                        </th>
+                      ))}
+                    </tr>
+                  ))}
                 </thead>
                 <tbody>
-                  {product.specTable.rows.map((r, ri) => (
+                  {table.body.map((r, ri) => (
                     <tr key={ri} className={`border-t border-line ${ri % 2 ? "bg-bg-warm" : "bg-white"}`}>
                       {r.map((c, ci) => (
                         <td

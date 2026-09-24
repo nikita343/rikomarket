@@ -2,6 +2,7 @@
 //   node scripts/scrape-parse-products.mjs [slug ...]   (no args = all)
 import fs from "node:fs";
 import path from "node:path";
+import { parseTableGrid } from "./table-grid.mjs";
 
 const CACHE = path.join(process.cwd(), "scripts", ".scrape-cache");
 const PROD_DIR = path.join(CACHE, "product");
@@ -29,12 +30,8 @@ const collapse = (s) => unescape(s.replace(/<[^>]+>/g, " ")).replace(/\s+/g, " "
 
 const slugOf = (url) => url.replace(/\/$/, "").split("/").pop();
 
-function parseTable(tableHtml) {
-  const rows = [...tableHtml.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)].map((r) =>
-    [...r[1].matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi)].map((c) => collapse(c[1])),
-  );
-  return rows.filter((r) => r.some((c) => c));
-}
+// rowspan / colspan are expanded so every row lines up with the header.
+const parseTable = (tableHtml) => parseTableGrid(tableHtml, collapse);
 
 // Standalone section labels (a whole line equal to one of these is a heading).
 const HEADING_EXACT = new Set(

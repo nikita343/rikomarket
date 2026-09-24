@@ -12,6 +12,7 @@
 //   node scripts/scrape-ru.mjs
 import fs from "node:fs";
 import path from "node:path";
+import { parseTableGrid } from "./table-grid.mjs";
 
 const ROOT = process.cwd();
 const CACHE = path.join(ROOT, "scripts", ".scrape-cache");
@@ -86,12 +87,8 @@ const HEADING_EXACT = new Set(
   ].map((s) => s.toLowerCase()),
 );
 
-function parseTable(tableHtml) {
-  const rows = [...tableHtml.matchAll(/<tr[^>]*>([\s\S]*?)<\/tr>/gi)].map((r) =>
-    [...r[1].matchAll(/<t[dh][^>]*>([\s\S]*?)<\/t[dh]>/gi)].map((c) => collapse(c[1])),
-  );
-  return rows.filter((r) => r.some((c) => c));
-}
+// rowspan / colspan are expanded so every row lines up with the header.
+const parseTable = (tableHtml) => parseTableGrid(tableHtml, collapse);
 
 function parseDescription(html) {
   const anchor = html.indexOf('id="tab-description"');

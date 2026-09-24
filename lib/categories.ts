@@ -14,7 +14,7 @@ export type Category = {
 };
 
 export const categories: Category[] = [
-  { id: "rukava-z-polihlorvinilu", name: "PVC žarnos", nameRu: "Рукава из полихлорвинила", slug: "rukava-z-polihlorvinilu", parent: null },
+  { id: "rukava-z-polihlorvinilu", name: "PVC žarnos", nameRu: "Рукава из ПВХ", slug: "rukava-z-polihlorvinilu", parent: null },
   { id: "armovani-metallospiralyu-ua", name: "Armuotos metalo spirale", nameRu: "Армированные металлоспиралью", slug: "armovani-metallospiralyu-ua", parent: "rukava-z-polihlorvinilu" },
   { id: "armovani-pvh-stallyu-ua", name: "Armuotos PVC spirale", nameRu: "Армированные ПВХ спиралью", slug: "armovani-pvh-stallyu-ua", parent: "rukava-z-polihlorvinilu" },
   { id: "rukava-z-poliuretanu", name: "PUR žarnos", nameRu: "Рукава из полиуретана", slug: "rukava-z-poliuretanu", parent: null },

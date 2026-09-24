@@ -16,7 +16,7 @@
     "color": "red",
     "featured": true,
     "image": "/products/orig/1-600x480.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.\nVielos storis: 1,0–2,5 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: apie 0,7 mm.\nSavybės\nPoliuretanas yra labai patvari medžiaga, puikiai atspari dilimui (maždaug 100 kartų labiau nei PVC).\nIš poliuretano pagaminta žarna yra kur kas atsparesnė dilimui nei žarna iš atspariausios gumos. Ji yra elektrostatiškai antistatinė, nedega ir išlaiko savo savybes net esant labai žemai temperatūrai.\nPoliuretanas nepritaikytas tiesti po žeme.\nTemperatūrų diapazonas: −40 °C – +150 °C.\nSpalva: pusiau permatomas su matoma spirale, spalvotas variantas pagal užsakymą.\nMatmenys\nDiametrų diapazonas: 20–650 mm.\nIlgis: 10 m, suderinus su užsakovu gali būti padidintas iki 20 m.\nPritaikymas\nDujinių ir skystų medžiagų transportavimas (oras, pramoninės dujos, tepalų garai, vanduo, vandeniniai skysčiai, mineraliniai tepalai, šlamas ir kt.).\nDulkių ir granulių transportavimas (dūmai, drožlės, pjuvenos, cheminės medžiagos).\nAštrių stiklo ir keramikos dalelių, smėlio ir žvyro transportavimas.\nVėdinimo žarnos vidaus klimato sistemose.\nKabelių kanalų apsauga.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -180,12 +180,19 @@
         "Masė [kg/m]",
         "Darbinis slėgis [bar]",
         "Atsparumas vakuumui",
+        "Atsparumas vakuumui",
         "Vakuumas [bar]"
       ],
       "rows": [
         [
+          "Vidinis diametras [mm]",
+          "Išorinis diametras [mm]",
+          "Lenkimo spindulys [mm]",
+          "Masė [kg/m]",
+          "Darbinis slėgis [bar]",
           "[mm H₂O]",
-          "[bar]"
+          "[bar]",
+          "Vakuumas [bar]"
         ],
         [
           "20",
@@ -746,7 +753,7 @@
     "color": "red",
     "featured": false,
     "image": "/products/orig/b2-1-600x480.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.\nVielos storis: 1,0–2,5 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: apie 1,4 mm.\nSavybės\nPoliuretanas yra labai patvari medžiaga, puikiai atspari dilimui (maždaug 100 kartų labiau nei PVC). Iš poliuretano pagaminta žarna yra kur kas atsparesnė dilimui nei žarna iš atspariausios gumos.\nJi yra elektrostatiškai antistatinė, nedega ir išlaiko savo savybes net esant labai žemai temperatūrai. Sunkusis tipas pasižymi padidintu atsparumu vakuumui.\nPoliuretanas nepritaikytas tiesti po žeme.\nTemperatūrų diapazonas: −40 °C – +150 °C.\nSpalva: pusiau permatomas su matoma spirale, spalvotas variantas pagal užsakymą.\nMatmenys\nDiametrų diapazonas: 20–650 mm.\nIlgis: 10 m, suderinus su užsakovu gali būti padidintas iki 20 m.\nPritaikymas\nDujinių ir skystų medžiagų transportavimas (oras, pramoninės dujos, tepalų garai, vanduo, vandeniniai skysčiai, mineraliniai tepalai, šlamas ir kt.).\nDulkių ir granulių transportavimas (dūmai, drožlės, pjuvenos, cheminės medžiagos).\nAštrių stiklo ir keramikos dalelių, smėlio ir žvyro transportavimas.\nVėdinimo žarnos vidaus klimato sistemose.\nKabelių kanalų apsauga.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -910,12 +917,19 @@
         "Masė [kg/m]",
         "Darbinis slėgis [bar]",
         "Atsparumas vakuumui",
+        "Atsparumas vakuumui",
         "Vakuumas [bar]"
       ],
       "rows": [
         [
+          "Vidinis diametras [mm]",
+          "Išorinis diametras [mm]",
+          "Lenkimo spindulys [mm]",
+          "Masė [kg/m]",
+          "Darbinis slėgis [bar]",
           "[mm H₂O]",
-          "[bar]"
+          "[bar]",
+          "Vakuumas [bar]"
         ],
         [
           "20",
@@ -1475,7 +1489,7 @@
     "color": "red",
     "featured": false,
     "image": "/products/orig/b3-600x480.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.\nVielos storis: 1,6–2,5 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: apie 2,1 mm.\nSavybės\nPoliuretanas yra labai patvari medžiaga, puikiai atspari dilimui (maždaug 100 kartų labiau nei PVC).\nIš poliuretano pagaminta žarna yra kur kas atsparesnė dilimui nei žarna iš atspariausios gumos. Ji yra elektrostatiškai antistatinė, nedega ir išlaiko savo savybes net esant labai žemai temperatūrai.\nSupersunkusis tipas pasižymi ilgaamžiškumu ir dideliu atsparumu vakuumui.\nPoliuretanas nepritaikytas tiesti po žeme.\nTemperatūrų diapazonas: −40 °C – +150 °C.\nSpalva: pusiau permatomas su matoma spirale, spalvotas variantas pagal užsakymą.\nMatmenys\nDiametrų diapazonas: 20–650 mm.\nIlgis: 10 m, suderinus su užsakovu gali būti padidintas iki 20 m.\nPritaikymas\nDujinių ir skystų medžiagų transportavimas (oras, pramoninės dujos, tepalų garai, vanduo, vandeniniai skysčiai, mineraliniai tepalai, šlamas ir kt.).\nDulkių ir granulių transportavimas (dūmai, drožlės, pjuvenos, cheminės medžiagos).\nAštrių stiklo ir keramikos dalelių, smėlio ir žvyro transportavimas.\nVėdinimo žarnos vidaus klimato sistemose.\nKabelių kanalų apsauga.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -1642,12 +1656,19 @@
         "Masė [kg/m]",
         "Darbinis slėgis [bar]",
         "Atsparumas vakuumui",
+        "Atsparumas vakuumui",
         "Vakuumas [bar]"
       ],
       "rows": [
         [
+          "Vidinis diametras [mm]",
+          "Išorinis diametras [mm]",
+          "Lenkimo spindulys [mm]",
+          "Masė [kg/m]",
+          "Darbinis slėgis [bar]",
           "[mm H₂O]",
-          "[bar]"
+          "[bar]",
+          "Vakuumas [bar]"
         ],
         [
           "25",
@@ -1664,203 +1685,290 @@
           "40",
           "250",
           "0,71",
-          "4"
+          "4",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "38",
           "46",
           "380",
           "0,81",
-          "4"
+          "4",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "40",
           "48",
           "400",
           "0,85",
-          "4"
+          "4",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "42",
           "50",
           "450",
           "0,92",
-          "4"
+          "4",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "45",
           "53",
           "500",
           "1",
-          "4"
+          "4",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "50",
           "58",
           "600",
           "1,08",
-          "4"
+          "4",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "55",
           "63",
           "800",
           "1,19",
-          "3,7"
+          "3,7",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "60",
           "68",
           "1000",
           "1,29",
-          "3,5"
+          "3,5",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "63",
           "71",
           "1200",
           "1,32",
-          "3,2"
+          "3,2",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "65",
           "75",
           "1200",
           "1,35",
-          "3,2"
+          "3,2",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "70",
           "80",
           "1400",
           "1,45",
-          "3,1"
+          "3,1",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "75",
           "85",
           "1600",
           "1,55",
-          "2,9"
+          "2,9",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "80",
           "90",
           "2100",
           "1,71",
-          "2,7"
+          "2,7",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "82",
           "92",
           "2150",
           "1,75",
-          "2,5"
+          "2,5",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "85",
           "95",
           "2200",
           "1,81",
-          "2,5"
+          "2,5",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "90",
           "100",
           "2250",
           "1,91",
-          "2,3"
+          "2,3",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "95",
           "105",
           "2400",
           "1,98",
-          "2,1"
+          "2,1",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "100",
           "110",
           "2600",
           "2,11",
-          "1,9"
+          "1,9",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "105",
           "115",
           "2700",
           "2,2",
-          "1,8"
+          "1,8",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "110",
           "120",
           "2800",
           "2,29",
-          "1,8"
+          "1,8",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "115",
           "125",
           "2900",
           "2,39",
-          "1,6"
+          "1,6",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "120",
           "130",
           "3000",
           "2,49",
-          "1,6"
+          "1,6",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "125",
           "135",
           "3150",
           "2,59",
-          "1,6"
+          "1,6",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "127",
           "137",
           "3225",
           "2,64",
-          "1,6"
+          "1,6",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "130",
           "140",
           "3300",
           "2,71",
-          "1,6"
+          "1,6",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "135",
           "145",
           "3400",
           "2,81",
-          "1,5"
+          "1,5",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "140",
           "150",
           "3500",
           "2,91",
-          "1,5"
+          "1,5",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "145",
           "155",
           "3625",
           "3,01",
-          "1,4"
+          "1,4",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "150",
           "160",
           "3750",
           "3,11",
-          "1,4"
+          "1,4",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "160",
@@ -1887,14 +1995,20 @@
           "180",
           "4500",
           "4",
-          "1,1"
+          "1,1",
+          "apie 65 %",
+          "0,65",
+          "0,35"
         ],
         [
           "180",
           "190",
           "4500",
           "4,34",
-          "1,1"
+          "1,1",
+          "apie 65 %",
+          "0,65",
+          "0,35"
         ],
         [
           "185",
@@ -1911,7 +2025,10 @@
           "200",
           "4750",
           "4,62",
-          "1"
+          "1",
+          "apie 50 %",
+          "0,5",
+          "0,5"
         ],
         [
           "200",
@@ -1938,98 +2055,140 @@
           "220",
           "5330",
           "5,28",
-          "0,9"
+          "0,9",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "220",
           "230",
           "5650",
           "5,58",
-          "0,9"
+          "0,9",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "226",
           "236",
           "6000",
           "5,64",
-          "0,8"
+          "0,8",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "240",
           "250",
           "6280",
           "5,83",
-          "0,8"
+          "0,8",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "250",
           "260",
           "6600",
           "6,01",
-          "0,8"
+          "0,8",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "275",
           "285",
           "6950",
           "6,2",
-          "0,6"
+          "0,6",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "280",
           "290",
           "7300",
           "6,4",
-          "0,6"
+          "0,6",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "300",
           "310",
           "7300",
           "6,71",
-          "0,6"
+          "0,6",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "315",
           "325",
           "7500",
           "6,95",
-          "0,6"
+          "0,6",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "320",
           "330",
           "7580",
           "6,99",
-          "0,5"
+          "0,5",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "350",
           "360",
           "8000",
           "7,41",
-          "0,5"
+          "0,5",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "355",
           "365",
           "8050",
           "7,46",
-          "0,5"
+          "0,5",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "400",
           "410",
           "8500",
           "7,95",
-          "0,5"
+          "0,5",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "450",
           "460",
           "9500",
           "9,1",
-          "0,5"
+          "0,5",
+          "apie 30 %",
+          "0,3",
+          "0,7"
         ],
         [
           "500",
@@ -2059,7 +2218,7 @@
     "color": "red",
     "featured": false,
     "image": "/products/orig/b4-600x480.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.\nVielos storis: 1,6–2,5 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: apie 2,1 mm.\nSavybės\nPoliuretanas yra labai patvari medžiaga, puikiai atspari dilimui (maždaug 100 kartų labiau nei PVC).\nIš poliuretano pagaminta žarna yra kur kas atsparesnė dilimui nei žarna iš atspariausios gumos.\nJi yra elektrostatiškai antistatinė, nedega ir išlaiko savo savybes net esant labai žemai temperatūrai. Vakuuminis tipas pasižymi suspaustos (dėl minimalaus vyniojimo žingsnio) vielos spiralės naudojimu ir visišku atsparumu vakuumui.\nPoliuretanas nepritaikytas tiesti po žeme.\nTemperatūrų diapazonas: −40 °C – +150 °C.\nSpalva: pusiau permatomas su matoma spirale, spalvotas variantas pagal užsakymą.\nMatmenys\nDiametrų diapazonas: 20–650 mm.\nIlgis: 10 m, suderinus su užsakovu gali būti padidintas iki 20 m.\nPritaikymas\nDujinių ir skystų medžiagų transportavimas (oras, pramoninės dujos, tepalų garai, vanduo, vandeniniai skysčiai, mineraliniai tepalai, šlamas ir kt.).\nDulkių ir granulių transportavimas (dūmai, drožlės, pjuvenos, cheminės medžiagos), aštrių stiklo ir keramikos dalelių, smėlio ir žvyro transportavimas.\nVėdinimo žarnos vidaus klimato sistemose.\nKabelių kanalų apsauga.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -2222,12 +2381,19 @@
         "Masė [kg/m]",
         "Darbinis slėgis [bar]",
         "Atsparumas vakuumui",
+        "Atsparumas vakuumui",
         "Vakuumas [bar]"
       ],
       "rows": [
         [
+          "Vidinis diametras [mm]",
+          "Išorinis diametras [mm]",
+          "Lenkimo spindulys [mm]",
+          "Masė [kg/m]",
+          "Darbinis slėgis [bar]",
           "[mm H₂O]",
-          "[bar]"
+          "[bar]",
+          "Vakuumas [bar]"
         ],
         [
           "25",
@@ -2244,182 +2410,260 @@
           "40",
           "250",
           "0,71",
-          "4,9"
+          "4,9",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "38",
           "46",
           "380",
           "0,81",
-          "4,3"
+          "4,3",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "40",
           "48",
           "400",
           "0,85",
-          "4,2"
+          "4,2",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "42",
           "50",
           "450",
           "0,92",
-          "4,1"
+          "4,1",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "45",
           "53",
           "500",
           "1",
-          "4,1"
+          "4,1",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "50",
           "58",
           "600",
           "1,08",
-          "4"
+          "4",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "55",
           "63",
           "800",
           "1,18",
-          "3,7"
+          "3,7",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "60",
           "68",
           "1000",
           "1,29",
-          "3,5"
+          "3,5",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "63",
           "71",
           "1300",
           "1,32",
-          "3,2"
+          "3,2",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "65",
           "74",
           "1300",
           "1,35",
-          "3,2"
+          "3,2",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "70",
           "79",
           "1500",
           "1,45",
-          "3,1"
+          "3,1",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "75",
           "84",
           "1900",
           "1,55",
-          "2,9"
+          "2,9",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "80",
           "90",
           "2100",
           "1,71",
-          "2,7"
+          "2,7",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "82",
           "82",
           "2150",
           "1,75",
-          "2,5"
+          "2,5",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "85",
           "95",
           "2200",
           "1,81",
-          "2,5"
+          "2,5",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "90",
           "100",
           "2250",
           "1,91",
-          "2,4"
+          "2,4",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "95",
           "105",
           "2400",
           "1,98",
-          "2,2"
+          "2,2",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "100",
           "110",
           "2600",
           "2,11",
-          "2"
+          "2",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "105",
           "115",
           "2700",
           "2,2",
-          "1,9"
+          "1,9",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "110",
           "120",
           "2800",
           "2,29",
-          "1,9"
+          "1,9",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "115",
           "125",
           "2900",
           "2,39",
-          "1,6"
+          "1,6",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "120",
           "130",
           "3000",
           "2,49",
-          "1,6"
+          "1,6",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "125",
           "135",
           "3150",
           "2,59",
-          "1,6"
+          "1,6",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "127",
           "137",
           "3225",
           "2,64",
-          "1,6"
+          "1,6",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "130",
           "140",
           "3300",
           "2,71",
-          "1,6"
+          "1,6",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "135",
           "145",
           "3400",
           "2,81",
-          "1,5"
+          "1,5",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "140",
@@ -2446,7 +2690,10 @@
           "160",
           "3750",
           "3,11",
-          "1,4"
+          "1,4",
+          "apie 70 %",
+          "0,7",
+          "0,3"
         ],
         [
           "160",
@@ -2473,14 +2720,20 @@
           "180",
           "4500",
           "4",
-          "1,1"
+          "1,1",
+          "apie 50 %",
+          "0,5",
+          "0,5"
         ],
         [
           "180",
           "190",
           "4500",
           "4,34",
-          "1,1"
+          "1,1",
+          "apie 50 %",
+          "0,5",
+          "0,5"
         ],
         [
           "185",
@@ -2497,7 +2750,10 @@
           "200",
           "4750",
           "4,66",
-          "1"
+          "1",
+          "apie 40 %",
+          "0,4",
+          "0,6"
         ],
         [
           "200",
@@ -2514,105 +2770,150 @@
           "213",
           "5100",
           "5,07",
-          "0,9"
+          "0,9",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "210",
           "220",
           "5330",
           "5,28",
-          "0,9"
+          "0,9",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "220",
           "230",
           "5650",
           "5,58",
-          "0,9"
+          "0,9",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "226",
           "236",
           "6000",
           "5,65",
-          "0,8"
+          "0,8",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "240",
           "250",
           "6280",
           "5,83",
-          "0,8"
+          "0,8",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "250",
           "260",
           "6600",
           "6,01",
-          "0,8"
+          "0,8",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "275",
           "285",
           "6950",
           "6,31",
-          "0,8"
+          "0,8",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "280",
           "290",
           "7300",
           "6,37",
-          "0,6"
+          "0,6",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "300",
           "310",
           "7300",
           "6,61",
-          "0,6"
+          "0,6",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "315",
           "325",
           "7500",
           "6,85",
-          "0,6"
+          "0,6",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "320",
           "330",
           "7580",
           "6,93",
-          "0,5"
+          "0,5",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "350",
           "360",
           "8000",
           "7,41",
-          "0,5"
+          "0,5",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "355",
           "365",
           "8050",
           "7,47",
-          "0,5"
+          "0,5",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "400",
           "410",
           "8500",
           "7,98",
-          "0,5"
+          "0,5",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "450",
           "460",
           "9500",
           "9,1",
-          "0,5"
+          "0,5",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "500",
@@ -2644,7 +2945,7 @@
     "color": "red",
     "featured": false,
     "image": "/products/orig/b6.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.\nVielos storis: 1,2–3,5 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: apie 0,9 mm.\nSavybės\nPoliuretanas yra labai patvari medžiaga, puikiai atspari dilimui (maždaug 100 kartų labiau nei PVC).\nIš poliuretano pagaminta žarna yra kur kas atsparesnė dilimui nei žarna iš atspariausios gumos.\nJi yra elektrostatiškai antistatinė, nedega ir išlaiko savo savybes net esant labai žemai temperatūrai. Vakuuminis tipas pasižymi suspaustos (dėl minimalaus vyniojimo žingsnio) vielos spiralės naudojimu ir visišku atsparumu vakuumui.\nPoliuretanas nepritaikytas tiesti po žeme.\nTemperatūrų diapazonas: −40 °C – +75 °C.\nMatmenys\nDiametrų diapazonas: 20–650 mm.\nIlgis: 10 m, suderinus su užsakovu gali būti padidintas iki 20 m.\nPritaikymas\nDujinių ir skystų medžiagų transportavimas (oras, pramoninės dujos, tepalų garai, vanduo, vandeniniai skysčiai, mineraliniai tepalai, šlamas ir kt.).\nDulkių ir granulių transportavimas (dūmai, drožlės, pjuvenos, cheminės medžiagos), aštrių stiklo ir keramikos dalelių, smėlio ir žvyro transportavimas.\nVėdinimo žarnos vidaus klimato sistemose.\nKabelių kanalų apsauga.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -2804,12 +3105,19 @@
         "Masė [kg/m]",
         "Darbinis slėgis [bar]",
         "Atsparumas vakuumui",
+        "Atsparumas vakuumui",
         "Vakuumas [bar]"
       ],
       "rows": [
         [
+          "Vidinis diametras [mm]",
+          "Išorinis diametras [mm]",
+          "Lenkimo spindulys [mm]",
+          "Masė [kg/m]",
+          "Darbinis slėgis [bar]",
           "[mm H₂O]",
-          "[bar]"
+          "[bar]",
+          "Vakuumas [bar]"
         ],
         [
           "20",
@@ -3371,7 +3679,7 @@
     "color": "red",
     "featured": false,
     "image": "/products/orig/c1-600x480.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastinga poliuretano plėvele.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastinga poliuretano plėvele.\nVielos storis: 1,6–2,0 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: apie 0,5 mm.\nSavybės\nPoliuretano plėvelė yra patvari medžiaga, atspari dilimui (maždaug 100 kartų labiau nei PVC).\nIš poliuretano pagaminta žarna yra kur kas atsparesnė dilimui nei žarna iš atspariausios gumos. Ji yra elektrostatiškai antistatinė ir išlaiko savo savybes net esant labai žemai temperatūrai. Poliuretano plėvelės žarna yra atspari ugniai.\nPoliuretanas nepritaikytas tiesti po žeme.\nTemperatūrų diapazonas: −40 °C – +150 °C.\nSpalva: pusiau permatomas su matoma spirale, spalvotas variantas pagal užsakymą.\nMatmenys\nDiametrų diapazonas: 32–650 mm.\nIlgis: maksimalus 6 m, standartinis 6 m.\nPritaikymas\nDujinių medžiagų transportavimas (oras, pramoninės dujos, tepalų garai ir kt.).\nDulkių transportavimas (dūmai, drožlės, pjuvenos, stiklo ir keramikos dulkės).\nVėdinimo žarnos vidaus klimato sistemose.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -3717,7 +4025,7 @@
     "color": "navy",
     "featured": true,
     "image": "/products/orig/a1-600x480.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu polivinilchlorido sluoksniu.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu polivinilchlorido sluoksniu.\nVielos storis: 1,0–2,5 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: apie 0,7 mm.\nSavybės\nPolivinilchloridas yra patvari, nerūdijanti medžiaga. Pasižymi gebėjimu slopinti vibracijas. Vidinė vamzdyno sienelė lygi, todėl sumažėja trinties jėga. Esminė žarnos savybė – mažas svoris ir puikus lankstumas.\nPolivinilchloridas nepritaikytas vartojimo medžiagoms transportuoti.\nTemperatūrų diapazonas: 0 °C – +70 °C.\nSpalva: pusiau permatomas su matoma spirale, spalvotas variantas pagal užsakymą.\nMatmenys\nDiametrų diapazonas: 20–650 mm.\nIlgis: 10 m, suderinus su užsakovu gali būti padidintas iki 20 m.\nPritaikymas\nDujinių ir skystų medžiagų transportavimas (oras, pramoninės dujos, vanduo, vandeniniai skysčiai, šlamas ir kt.).\nDulkių ir granulių transportavimas (dūmai, drožlės, pjuvenos, cheminės medžiagos).\nVėdinimo žarnos vidaus klimato sistemose.\nKabelių kanalų apsauga.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -3873,12 +4181,19 @@
         "Masė [kg/m]",
         "Darbinis slėgis [bar]",
         "Atsparumas vakuumui",
+        "Atsparumas vakuumui",
         "Vakuumas [bar]"
       ],
       "rows": [
         [
+          "Vidinis diametras [mm]",
+          "Išorinis diametras [mm]",
+          "Lenkimo spindulys [mm]",
+          "Masė [kg/m]",
+          "Darbinis slėgis [bar]",
           "[mm H₂O]",
-          "[bar]"
+          "[bar]",
+          "Vakuumas [bar]"
         ],
         [
           "20",
@@ -4439,7 +4754,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/413-600x399.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu polivinilchlorido sluoksniu.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu polivinilchlorido sluoksniu.\nVielos storis: 1,0–2,5 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: apie 1,4 mm\nSavybės\nPolivinilchloridas yra patvari, nerūdijanti medžiaga. Pasižymi gebėjimu slopinti vibracijas. Vidinė žarnos sienelė lygi, todėl sumažėja trinties jėga. Esminė žarnos savybė – santykinai mažas svoris ir puikus lankstumas.\nPolivinilchloridas nepritaikytas maisto produktams transportuoti. Sunkusis tipas pasižymi atsparumu dilimui. Tinka naudoti nuo aukšto darbinio slėgio iki vakuumo.\nTemperatūrų diapazonas: 0 °C – +70 °C.\nSpalva: pusiau permatomas su matoma spirale, spalvotas variantas pagal užsakymą.\nMatmenys\nDiametrų diapazonas: 20–650 mm.\nIlgis: 10 m, suderinus su užsakovu gali būti padidintas iki 20 m.\nPritaikymas\nDujinių ir skystų medžiagų transportavimas (oras, pramoninės dujos, vanduo, vandeniniai skysčiai, šlamas ir kt.).\nDulkių ir granulių transportavimas (dūmai, drožlės, pjuvenos, cheminės medžiagos).\nVėdinimo žarnos vidaus klimato sistemose.\nKabelių kanalų apsauga.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -4594,12 +4909,19 @@
         "Masė [kg/m]",
         "Darbinis slėgis [bar]",
         "Atsparumas vakuumui",
+        "Atsparumas vakuumui",
         "Vakuumas [bar]"
       ],
       "rows": [
         [
+          "Vidinis diametras [mm]",
+          "Išorinis diametras [mm]",
+          "Lenkimo spindulys [mm]",
+          "Masė [kg/m]",
+          "Darbinis slėgis [bar]",
           "[mm H₂O]",
-          "[bar]"
+          "[bar]",
+          "Vakuumas [bar]"
         ],
         [
           "25",
@@ -5150,7 +5472,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/a1-600x480.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu polivinilchlorido sluoksniu.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu polivinilchlorido sluoksniu.\nVielos storis: 1,2–3,5 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: apie 0,9 mm.\nSavybės\nPolivinilchloridas yra patvari, nerūdijanti medžiaga. Pasižymi gebėjimu slopinti vibracijas. Vidinė žarnos sienelė lygi, todėl sumažėja trinties jėga. Esminė žarnos savybė – santykinai mažas svoris ir puikus lankstumas.\nTemperatūrų diapazonas: 0 °C – +70 °C.\nMatmenys\nDiametrų diapazonas: 20–650 mm.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -5274,12 +5596,19 @@
         "Masė [kg/m]",
         "Darbinis slėgis [bar]",
         "Atsparumas vakuumui",
+        "Atsparumas vakuumui",
         "Vakuumas [bar]"
       ],
       "rows": [
         [
+          "Vidinis diametras [mm]",
+          "Išorinis diametras [mm]",
+          "Lenkimo spindulys [mm]",
+          "Masė [kg/m]",
+          "Darbinis slėgis [bar]",
           "[mm H₂O]",
-          "[bar]"
+          "[bar]",
+          "Vakuumas [bar]"
         ],
         [
           "20",
@@ -5841,7 +6170,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/414.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastinga polivinilchlorido plėvele.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastinga polivinilchlorido plėvele.\nVielos storis: 1,0–2,0 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: apie 0,5 mm.\nSavybės\nPolivinilchloridas yra patvari, nerūdijanti medžiaga. Pasižymi gebėjimu slopinti vibracijas. Vidinė žarnos sienelė lygi, todėl sumažėja trinties jėga. Esminė žarnos savybė – mažas svoris ir puikus lankstumas.\nPolivinilchloridas nepritaikytas vartojimo medžiagoms transportuoti.\nTemperatūrų diapazonas: 0 °C – +70 °C.\nSpalva: pusiau permatomas su matoma spirale, spalvotas variantas pagal užsakymą.\nMatmenys\nDiametrų diapazonas: 20–650 mm.\nIlgis: maksimalus 6 m, standartinis 6 m.\nPritaikymas\nDujinių medžiagų transportavimas (oras, pramoninės dujos, tepalų garai ir kt.).\nDulkių transportavimas (dūmai, drožlės, stiklo ir keramikos dulkės).\nVėdinimo žarnos vidaus klimato sistemose.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -6151,7 +6480,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/vacuum.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu polivinilchlorido sluoksniu.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu polivinilchlorido sluoksniu.\nElastingos sienelės storis: 3–9,5 mm.\nSlėgis: 3–8 bar\nSavybės\nPolivinilchloridas yra patvari, nerūdijanti medžiaga. Pasižymi gebėjimu slopinti vibracijas. Vidinė žarnos sienelė lygi, todėl sumažėja trinties jėga. Esminė žarnos savybė – mažas svoris ir puikus lankstumas.\nTemperatūrų diapazonas: nuo −35 °C iki +65 °C.\nMatmenys\nDiametrų diapazonas: 12–110 mm.\nIlgis: iki 60 m.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -6398,7 +6727,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/lutnio.jpg",
-    "shortNote": "Vielos storis: 1,2–3,5 mm priklausomai nuo žarnos diametro",
+    "shortNote": "Vielos storis: 1,2–3,5 mm priklausomai nuo žarnos diametro.",
     "description": "Konstrukcija\nVielos storis: 1,2–3,5 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: apie 0,55 mm.\nSavybės\nTemperatūrų diapazonas: −10 °C – +70 °C.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -6430,7 +6759,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "80–400 mm",
     "temp": "−10 °C – +70 °C.",
     "pressure": "",
     "wallThickness": "apie 0,55 mm.",
@@ -6630,7 +6959,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/clin-a.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios, gerai susilanksto ir užima mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: nuo −40 °C iki +80 °C.\nCheminis atsparumas:\nVisiškai atsparus visoms rūgštims, šarmams (bazėms), druskoms, tirpikliams, išskyrus skystus šarminius metalus (litį, natrį ir kalį, taip pat rubidį ir cezį).\nAtsparus šviesos poveikiui, nesensta.\nTinkamas kontaktui su maisto produktais.\nPritaikymas\nKaip vėdinimo žarna agresyvioms medžiagoms ištraukti (dažų, lakų, tirpiklių garams, šaltoms ir karštoms dujinėms medžiagoms) chemijos, popieriaus, farmacijos, dažų ir lakų pramonėje ir kt.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -6986,7 +7315,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/clin-b.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios, gerai susilanksto ir užima mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: nuo −70 °C iki +260 °C.\nCheminis atsparumas:\nVisiškai atsparus visoms rūgštims, šarmams (bazėms), druskoms, tirpikliams, išskyrus skystus šarminius metalus (litį, natrį ir kalį, taip pat rubidį ir cezį).\nAtsparus šviesos poveikiui, nesensta.\nTinkamas kontaktui su maisto produktais.\nPritaikymas\nKaip vėdinimo žarna agresyvioms medžiagoms ištraukti (dažų, lakų, tirpiklių garams, šaltoms ir karštoms dujinėms medžiagoms) chemijos, popieriaus, farmacijos, dažų ir lakų pramonėje ir kt.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -7345,7 +7674,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/clin-c.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios, gerai susilanksto ir užima mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: nuo −70 °C iki +260 °C.\nCheminis atsparumas:\nVisiškai atsparus visoms rūgštims, šarmams (bazėms), druskoms, tirpikliams, išskyrus skystus šarminius metalus (litį, natrį ir kalį, taip pat rubidį ir cezį).\nAtsparus šviesos poveikiui, nesensta.\nTinkamas kontaktui su maisto produktais.\nPritaikymas\nKaip vėdinimo žarna agresyvioms medžiagoms ištraukti (dažų, lakų, tirpiklių garams, šaltoms ir karštoms dujinėms medžiagoms) chemijos, popieriaus, farmacijos, dažų ir lakų pramonėje ir kt.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -7701,7 +8030,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/clin-sv.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios ir gerai susilanksto, užimdamos mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: iki +230 °C.\nPritaikymas\nKaip vėdinimo žarna aukštos temperatūros orui.\nVisa produkcija sertifikuota\nPapildoma informacija",
     "descLines": [
       {
@@ -8044,7 +8373,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/clin-pur.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios ir gerai susilanksto, užimdamos mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: nuo −40 °C iki +110 °C.\nAntistatinis.\nNepalaiko degimo (savaime gęstantis).\nPritaikymas\nKaip vėdinimo žarna klimato sistemose.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -8392,7 +8721,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/clin-pvc.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios ir gerai susilanksto, užimdamos mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: nuo −5 °C iki +70 °C.\nPritaikymas\nKaip vėdinimo žarna klimato sistemose.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -8732,7 +9061,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/728-600x399.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios ir gerai susilanksto, užimdamos mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: iki +1100 °C.\nPritaikymas\nKaip vėdinimo žarna klimato sistemose.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -9075,7 +9404,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/clin-silikon.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios, gerai susilanksto ir užima mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: nuo −70 °C iki +260 °C.\nPritaikymas\nKaip vėdinimo žarna aukštos temperatūros orui.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -9418,7 +9747,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/clin-nitril.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios, gerai susilanksto ir užima mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: nuo −50 °C iki +100 °C.\nPritaikymas\nKaip vėdinimo žarna aukštos temperatūros orui.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -9761,7 +10090,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/clin-pa.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios ir gerai susilanksto, užimdamos mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: nuo −5 °C iki +70 °C.\nAntistatinis.\nPritaikymas\nKaip vėdinimo žarna klimato sistemose.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -10104,7 +10433,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/clin-lutnio.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios, gerai susilanksto ir užima mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 90–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: nuo −10 °C iki +80 °C.\nPritaikymas\nKaip vėdinimo žarna aukštos temperatūros orui.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -10411,7 +10740,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/clin-vt.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios, gerai susilanksto ir užima mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: iki +500 °C.\nPritaikymas\nKaip vėdinimo žarna aukštos temperatūros orui.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -10844,7 +11173,7 @@
     "color": "navy",
     "featured": true,
     "image": "/products/orig/900.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios ir gerai susilanksto, užimdamos mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: nuo −70 °C iki +260 °C.\nPritaikymas\nKaip vėdinimo žarna aukštos temperatūros orui.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -11151,7 +11480,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/photo_2020-04-27_13-52-14-600x825.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios ir gerai susilanksto, užimdamos mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nSavybės\nDarbinė temperatūra: iki +400 °C.\nPritaikymas\nKaip vėdinimo žarna aukštos temperatūros orui.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -11491,7 +11820,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/448-1.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios, gerai susilanksto ir užima mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nDarbinė temperatūra: nuo −35 °C iki +100 °C.\nSavybės\nCheminis atsparumas:\nVisiškai atsparus visoms rūgštims, šarmams (bazėms), druskoms, tirpikliams, išskyrus skystus šarminius metalus (litį, natrį ir kalį, taip pat rubidį ir cezį).\nAtsparus šviesos poveikiui, nesensta.\nTinkamas kontaktui su maisto produktais.\nPritaikymas\nKaip vėdinimo žarna agresyvioms medžiagoms ištraukti (dažų, lakų, tirpiklių garams, šaltoms ir karštoms dujinėms medžiagoms) chemijos, popieriaus, farmacijos, dažų ir lakų pramonėje ir kt.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -11850,7 +12179,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/449.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios, gerai susilanksto ir užima mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 50–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nDarbinė temperatūra: nuo −50 °C iki +120 °C.\nSavybės\nCheminis atsparumas:\nVisiškai atsparus visoms rūgštims, šarmams (bazėms), druskoms, tirpikliams, išskyrus skystus šarminius metalus (litį, natrį ir kalį, taip pat rubidį ir cezį).\nAtsparus šviesos poveikiui, nesensta.\nTinkamas kontaktui su maisto produktais.\nPritaikymas\nKaip vėdinimo žarna agresyvioms medžiagoms ištraukti (dažų, lakų, tirpiklių garams, šaltoms ir karštoms dujinėms medžiagoms) chemijos, popieriaus, farmacijos, dažų ir lakų pramonėje ir kt.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -12210,7 +12539,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/photo_2020-04-27_13-51-47-1-600x1067.jpg",
-    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos",
+    "shortNote": "KLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.",
     "description": "Konstrukcija\nKLIN tipo žarnų konstrukcijos pagrindą sudaro spiralė iš profiliuotos cinkuotos arba nerūdijančio plieno juostos.\nKLIN tipo žarnos labai lanksčios, gerai susilanksto ir užima mažai vietos transportuojant.\nKLIN tipo žarnos tinka dujoms transportuoti.\nMatmenys\nDiametrų diapazonas: 80–1150 mm.\nStandartinis atkarpų ilgis: 50–350 mm diametrams – 6 m, 400–1000 mm diametrams – 4 m.\nDarbinė temperatūra: +120 °C.\nSavybės\nCheminis atsparumas:\nVisiškai atsparus visoms rūgštims, šarmams (bazėms), druskoms, tirpikliams, išskyrus skystus šarminius metalus (litį, natrį ir kalį, taip pat rubidį ir cezį).\nAtsparus šviesos poveikiui, nesensta.\nTinkamas kontaktui su maisto produktais.\nPritaikymas\nKaip vėdinimo žarna agresyvioms medžiagoms ištraukti (dažų, lakų, tirpiklių garams, šaltoms ir karštoms dujinėms medžiagoms) chemijos, popieriaus, farmacijos, dažų ir lakų pramonėje ir kt.\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -12536,7 +12865,7 @@
     "color": "red",
     "featured": false,
     "image": "/products/orig/b4-600x480.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.\nVielos storis: 1,6–2,5 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: apie 2,5 mm.\nSavybės\nPoliuretanas yra labai patvari medžiaga, puikiai atspari dilimui (maždaug 100 kartų labiau nei PVC).\nIš poliuretano pagaminta žarna yra kur kas atsparesnė dilimui nei žarna iš atspariausios gumos.\nJi yra elektrostatiškai antistatinė, nedega ir išlaiko savo savybes net esant labai žemai temperatūrai. Vakuuminis tipas pasižymi suspaustos (dėl minimalaus vyniojimo žingsnio) vielos spiralės naudojimu ir visišku atsparumu vakuumui.\nPoliuretanas nepritaikytas tiesti po žeme.\nTemperatūrų diapazonas: −40 °C – +150 °C.\nSpalva: pusiau permatomas su matoma spirale, spalvotas variantas pagal užsakymą.\nMatmenys\nDiametrų diapazonas: 100–500 mm.\nIlgis: 10 m, suderinus su užsakovu gali būti padidintas iki 20 m.\nPritaikymas\nDujinių ir skystų medžiagų transportavimas (oras, pramoninės dujos, tepalų garai, vanduo, vandeniniai skysčiai, mineraliniai tepalai, šlamas ir kt.).\nDulkių ir granulių transportavimas (dūmai, drožlės, pjuvenos, cheminės medžiagos), aštrių stiklo ir keramikos dalelių, smėlio ir žvyro transportavimas.\nVėdinimo žarnos vidaus klimato sistemose.\nKabelių kanalų apsauga.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -12681,12 +13010,19 @@
         "Masė [kg/m]",
         "Darbinis slėgis [bar]",
         "Atsparumas vakuumui",
+        "Atsparumas vakuumui",
         "Vakuumas [bar]"
       ],
       "rows": [
         [
+          "Vidinis diametras [mm]",
+          "Išorinis diametras [mm]",
+          "Lenkimo spindulys [mm]",
+          "Masė [kg/m]",
+          "Darbinis slėgis [bar]",
           "[mm H₂O]",
-          "[bar]"
+          "[bar]",
+          "Vakuumas [bar]"
         ],
         [
           "100",
@@ -12703,56 +13039,80 @@
           "115",
           "2700",
           "2,41",
-          "2"
+          "2",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "110",
           "120",
           "2800",
           "2,51",
-          "2"
+          "2",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "115",
           "125",
           "2900",
           "2,62",
-          "1,8"
+          "1,8",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "120",
           "130",
           "3000",
           "2,73",
-          "1,8"
+          "1,8",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "125",
           "135",
           "3150",
           "2,85",
-          "1,7"
+          "1,7",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "127",
           "137",
           "3225",
           "2,91",
-          "1,7"
+          "1,7",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "130",
           "140",
           "3300",
           "2,98",
-          "1,7"
+          "1,7",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "135",
           "145",
           "3400",
           "3,09",
-          "1,6"
+          "1,6",
+          "Visiškas atsparumas vakuumui",
+          "1",
+          "0"
         ],
         [
           "140",
@@ -12779,7 +13139,10 @@
           "160",
           "3750",
           "3,42",
-          "1,5"
+          "1,5",
+          "apie 70 %",
+          "0,7",
+          "0,3"
         ],
         [
           "160",
@@ -12806,14 +13169,20 @@
           "180",
           "4500",
           "4,4",
-          "1,3"
+          "1,3",
+          "apie 50 %",
+          "0,5",
+          "0,5"
         ],
         [
           "180",
           "190",
           "4500",
           "4,79",
-          "1,3"
+          "1,3",
+          "apie 50 %",
+          "0,5",
+          "0,5"
         ],
         [
           "185",
@@ -12830,7 +13199,10 @@
           "200",
           "4750",
           "5,12",
-          "1,2"
+          "1,2",
+          "apie 40 %",
+          "0,4",
+          "0,6"
         ],
         [
           "200",
@@ -12847,105 +13219,150 @@
           "213",
           "5100",
           "5,57",
-          "1"
+          "1",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "210",
           "220",
           "5330",
           "5,78",
-          "1"
+          "1",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "220",
           "230",
           "5650",
           "6,08",
-          "1"
+          "1",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "226",
           "236",
           "5800",
           "6,21",
-          "0,9"
+          "0,9",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "240",
           "250",
           "6200",
           "6,37",
-          "0,8"
+          "0,8",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "250",
           "260",
           "6600",
           "6,6",
-          "0,8"
+          "0,8",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "275",
           "285",
           "6900",
           "6,76",
-          "0,7"
+          "0,7",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "280",
           "290",
           "7200",
           "6,92",
-          "0,7"
+          "0,7",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "300",
           "310",
           "7200",
           "7,27",
-          "0,7"
+          "0,7",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "315",
           "325",
           "7440",
           "7,53",
-          "0,7"
+          "0,7",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "320",
           "330",
           "7520",
           "7,62",
-          "0,6"
+          "0,6",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "350",
           "360",
           "8000",
           "8,15",
-          "0,6"
+          "0,6",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "355",
           "365",
           "8050",
           "8,21",
-          "0,5"
+          "0,5",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "400",
           "410",
           "8500",
           "8,77",
-          "0,5"
+          "0,5",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "450",
           "460",
           "9500",
           "9,6",
-          "0,5"
+          "0,5",
+          "apie 35 %",
+          "0,35",
+          "0,65"
         ],
         [
           "500",
@@ -12975,7 +13392,7 @@
     "color": "red",
     "featured": false,
     "image": "/products/orig/117.jpg",
-    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, s",
+    "shortNote": "Žarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.",
     "description": "Konstrukcija\nŽarnos konstrukcijos pagrindą sudaro spiralė iš spyruoklinės vielos, sujungta elastingu poliuretano sluoksniu.\nVielos storis: 4–4,6 mm priklausomai nuo žarnos diametro.\nElastingos sienelės storis: 5–7 mm.\nSavybės\nPoliuretanas yra labai patvari medžiaga, puikiai atspari dilimui (maždaug 100 kartų labiau nei PVC).\nIš poliuretano pagaminta žarna yra kur kas atsparesnė dilimui nei žarna iš atspariausios gumos.\nJi yra elektrostatiškai antistatinė, nedega ir išlaiko savo savybes net esant labai žemai temperatūrai. Vakuuminis tipas pasižymi suspaustos (dėl minimalaus vyniojimo žingsnio) vielos spiralės naudojimu ir visišku atsparumu vakuumui.\nPoliuretanas nepritaikytas tiesti po žeme.\nTemperatūrų diapazonas: −40 °C – +150 °C.\nSpalva: pusiau permatomas su matoma spirale, spalvotas variantas pagal užsakymą.\nMatmenys\nDiametrų diapazonas: 200–400 mm.\nIlgis: 10 m, suderinus su užsakovu gali būti padidintas iki 20 m.\nPritaikymas\nDujinių ir skystų medžiagų transportavimas (oras, pramoninės dujos, tepalų garai, vanduo, vandeniniai skysčiai, mineraliniai tepalai, šlamas ir kt.).\nDulkių ir granulių transportavimas (dūmai, drožlės, pjuvenos, cheminės medžiagos), aštrių stiklo ir keramikos dalelių, smėlio ir žvyro transportavimas.\nVėdinimo žarnos vidaus klimato sistemose.\nKabelių kanalų apsauga.\nTechniniai parametrai\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -13089,12 +13506,18 @@
         "Masė [kg/m]",
         "Darbinis slėgis [bar]",
         "Atsparumas vakuumui",
+        "Atsparumas vakuumui",
         "Vakuumas [bar]"
       ],
       "rows": [
         [
+          "Vidinis diametras [mm]",
+          "Išorinis diametras [mm]",
+          "Masė [kg/m]",
+          "Darbinis slėgis [bar]",
           "[mm H₂O]",
-          "[bar]"
+          "[bar]",
+          "Vakuumas [bar]"
         ],
         [
           "200",
@@ -13109,25 +13532,37 @@
           "250",
           "270",
           "15",
-          "3,9"
+          "3,9",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "300",
           "320",
           "18",
-          "3,5"
+          "3,5",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "350",
           "370",
           "21",
-          "3"
+          "3",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ],
         [
           "400",
           "420",
           "24",
-          "2,5"
+          "2,5",
+          "apie 80 %",
+          "0,8",
+          "0,2"
         ]
       ]
     }
@@ -13210,6 +13645,7 @@
           "dulkėms, drožlėms ir pjuvenoms perduoti kaip ištraukimo ir dulkių surinkimo įrenginių antgaliai, kaip išleidimo žarnos"
         ],
         [
+          "Pritaikymas",
           "rezervuaruose ir bunkeriuose, kaip judančių mašinos dalių danga, kaip kompensatoriai, kaip mašinų ir sijojimo, rūšiavimo įrangos detalės"
         ]
       ]
@@ -13293,6 +13729,7 @@
           "dulkėms, drožlėms ir pjuvenoms perduoti kaip ištraukimo ir dulkių surinkimo įrenginių antgaliai, kaip išleidimo žarnos"
         ],
         [
+          "Pritaikymas",
           "rezervuaruose ir bunkeriuose, kaip judančių mašinos dalių danga, kaip kompensatoriai, kaip mašinų ir sijojimo, rūšiavimo įrangos detalės"
         ]
       ]
@@ -13376,6 +13813,7 @@
           "dulkėms, drožlėms ir pjuvenoms perduoti kaip ištraukimo ir dulkių surinkimo įrenginių antgaliai, kaip išleidimo žarnos"
         ],
         [
+          "Pritaikymas",
           "rezervuaruose ir bunkeriuose, kaip judančių mašinos dalių danga, kaip kompensatoriai, kaip mašinų ir sijojimo, rūšiavimo įrangos detalės"
         ]
       ]
@@ -13399,7 +13837,7 @@
     "shortNote": "",
     "description": "",
     "descLines": [],
-    "dn": "",
+    "dn": "100–200 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -13663,7 +14101,7 @@
     "color": "red",
     "featured": false,
     "image": "/products/orig/24.jpg",
-    "shortNote": "DEPTAK tipo išmetamųjų dujų šalinimo žarnos savybės",
+    "shortNote": "DEPTAK tipo išmetamųjų dujų šalinimo žarnos savybės.",
     "description": "Konstrukcija\nDEPTAK tipo išmetamųjų dujų šalinimo žarnos savybės.\nAtsparios dilimui ir nebijo deformacijos.\nNaudojamos išmetamosioms dujoms šalinti autoservisuose.\nDarbinė temperatūra:\ntipas Deptak: iki +90 °C\ntipas Deptak: iki +105 °C\nSavybės\nPoliuretanas antistatinis;\nDidelis atsparumas dilimui;\nChemiškai atsparios;\nSienelės storis 0,7 mm;\nArmavimas – poliuretano gysla, suteikianti žarnai elastingumą ir maksimalų lankstumą;\nGyslos storis 8–10 mm priklausomai nuo žarnos diametro.\nPritaikymas\nVisa produkcija sertifikuota",
     "descLines": [
       {
@@ -13731,7 +14169,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "75–160 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "Sienelės storis 0,7 mm;",
@@ -13758,7 +14196,7 @@
     "specTable": {
       "headers": [
         "Vidinis diametras [mm]",
-        "Vidinis diametras [mm]",
+        "Išorinis diametras [mm]",
         "Lenkimo spindulys [mm]",
         "Masė [kg/m]"
       ],
@@ -13894,7 +14332,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "17–265 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -14385,7 +14823,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "17–265 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -14921,7 +15359,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "8–260 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -15247,7 +15685,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "8–260 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -15573,7 +16011,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "8–260 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -15843,7 +16281,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/khomuty-plastikovye-600x600.jpg",
-    "shortNote": "Plastikinė apkaba gaminama iš aukštos kokybės nailono 6",
+    "shortNote": "Plastikinė apkaba gaminama iš aukštos kokybės nailono 6.6",
     "description": "Ypatybės\nPlastikinė apkaba gaminama iš aukštos kokybės nailono 6.6\nPlotis nuo 3 iki 9 mm\nIlgis nuo 80 iki 900 mm\nSpalva balta arba juoda\nAtsparus alyvoms, tepalams ir tirpikliams\nAtsparus atmosferos poveikiui, ugniai atsparus\nJuodi kabelių dirželiai atsparesni UV spinduliams dėl pridėtos „techninės anglies“\nKaina nurodyta už pakuotę\nPritaikymas\nVienkartinis dirželis naudojamas žarnoms, oro kanalams, kabeliams tvirtinti ir pan.\nUniversali plastikinė apkaba įvairiems montavimo darbams",
     "descLines": [
       {
@@ -16101,7 +16539,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/khomuty-plastikovye-2-600x600.jpg",
-    "shortNote": "Gaminama iš aukštos kokybės nailono 6",
+    "shortNote": "Gaminama iš aukštos kokybės nailono 6.6",
     "description": "Ypatybės\nGaminama iš aukštos kokybės nailono 6.6\nPlotis nuo 3 iki 9 mm\nIlgis nuo 80 iki 900 mm\nSpalva balta arba juoda\nAtsparus alyvoms, tepalams ir tirpikliams\nAtsparus atmosferos poveikiui, ugniai atsparus\nJuodi kabelių dirželiai atsparesni UV spinduliams dėl pridėtos „techninės anglies“\nKaina nurodyta už pakuotę\nPritaikymas\nVienkartinis dirželis naudojamas žarnoms, oro kanalams, kabeliams tvirtinti ir pan.\nUniversali plastikinė apkaba įvairiems montavimo darbams",
     "descLines": [
       {
@@ -16359,7 +16797,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/pruzhinnye-khomuty-600x600.jpg",
-    "shortNote": "Spyruoklinė apkaba skirta tolygiai paskirstyti slėgį per darbinės zono",
+    "shortNote": "Spyruoklinė apkaba skirta tolygiai paskirstyti slėgį per darbinės zonos perimetrą",
     "description": "Ypatybės:\nSpyruoklinė apkaba skirta tolygiai paskirstyti slėgį per darbinės zonos perimetrą\nSpyruoklinė konstrukcija užtikrina vienodą radialinę jėgą kintant temperatūrai, todėl apsaugo nuo žarnos nuslydimo nuo atvamzdžio ar žarnos pažeidimo\nNedeformuoja, nepalieka neigiamų pėdsakų ir įpjovų ant žarnų\nApkabos diametras žymi išorinį žarnos diametrą apkabos montavimo vietoje\nPritaikymas:\nApkabos dujų, aušinimo skysčio, benzino žarnoms tvirtinti\nŽarnoms fiksuoti automobilio aušinimo sistemose, kur jos veikiamos įvairių temperatūrų\nSpyruoklinės apkabos montuojamos specialiomis replėmis spyruoklinėms apkaboms montuoti",
     "descLines": [
       {
@@ -16485,7 +16923,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/khomut-ocinkovannyj-mini-600x600.jpg",
-    "shortNote": "Apkaba Mini pagaminta iš cinkuoto plieno (W1)",
+    "shortNote": "Apkaba Mini pagaminta iš cinkuoto plieno (W1).",
     "description": "Ypatybės:\nApkaba Mini pagaminta iš cinkuoto plieno (W1).\nTuri užlenktais kraštais juostą dideliam priveržimo momentui nepažeidžiant žarnos paviršiaus.\nTvirtinimo veržlė fiksuota griovelyje ir neiškrenta net išėmus varžtą.\nVaržtas turi šešiabriaunę galvutę su grioveliu, leidžiančiu veržti apkabą veržliarakčiu arba atsuktuvu.\nPritaikymas:\nApkaba plačiai naudojama kuro filtrams, kuro ir drenažo vamzdeliams, taip pat laistymo žarnoms tvirtinti.\nRekomenduojama žarnoms ir atvamzdžiams su nedideliu sienelės storiu arba mažu vidiniu diametru veržti",
     "descLines": [
       {
@@ -16521,7 +16959,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "6–22 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -16558,18 +16996,27 @@
           "7-9",
           "7",
           "9,3",
+          "13",
+          "9",
+          "1,5",
           "W1"
         ],
         [
           "8-10",
           "8",
           "10,3",
+          "13",
+          "9",
+          "1,5",
           "W1"
         ],
         [
           "9-11",
           "9",
           "11,3",
+          "13",
+          "9",
+          "1,5",
           "W1"
         ],
         [
@@ -16577,66 +17024,98 @@
           "10",
           "12,3",
           "16",
+          "9",
+          "1,5",
           "W1"
         ],
         [
           "11-13",
           "11",
           "13,3",
+          "16",
+          "9",
+          "1,5",
           "W1"
         ],
         [
           "12-14",
           "12",
           "14,3",
+          "16",
+          "9",
+          "1,5",
           "W1"
         ],
         [
           "13-15",
           "13",
           "15,3",
+          "16",
+          "9",
+          "1,5",
           "W1"
         ],
         [
           "14-16",
           "14",
           "16,3",
+          "16",
+          "9",
+          "1,5",
           "W1"
         ],
         [
           "15-17",
           "15",
           "17,3",
+          "16",
+          "9",
+          "1,5",
           "W1"
         ],
         [
           "16-18",
           "16",
           "18,3",
+          "16",
+          "9",
+          "1,5",
           "W1"
         ],
         [
           "17-19",
           "17",
           "19,3",
+          "16",
+          "9",
+          "1,5",
           "W1"
         ],
         [
           "18-20",
           "18",
           "20,3",
+          "16",
+          "9",
+          "1,5",
           "W1"
         ],
         [
           "19-21",
           "19",
           "21,3",
+          "16",
+          "9",
+          "1,5",
           "W1"
         ],
         [
           "20-22",
           "20",
           "22",
+          "16",
+          "9",
+          "1,5",
           "W1"
         ]
       ]
@@ -16710,7 +17189,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "13–150 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -16736,6 +17215,7 @@
     ],
     "specTable": {
       "headers": [
+        "Vidinis žarnos diametras",
         "Vidinis žarnos diametras",
         "Sriegis, BSP",
         "Medžiaga",
@@ -16890,7 +17370,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "13–150 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -16916,6 +17396,7 @@
     ],
     "specTable": {
       "headers": [
+        "Vidinis žarnos diametras",
         "Vidinis žarnos diametras",
         "Sriegis, BSP",
         "Medžiaga",
@@ -17070,7 +17551,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "13–150 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -17096,6 +17577,7 @@
     ],
     "specTable": {
       "headers": [
+        "Vidinis žarnos diametras",
         "Vidinis žarnos diametras",
         "Sriegis, BSP",
         "Medžiaga",
@@ -17250,7 +17732,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "13–150 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -17276,6 +17758,7 @@
     ],
     "specTable": {
       "headers": [
+        "Vidinis žarnos diametras",
         "Vidinis žarnos diametras",
         "Sriegis, BSP",
         "Medžiaga",
@@ -17434,7 +17917,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "13–125 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -17459,6 +17942,7 @@
     ],
     "specTable": {
       "headers": [
+        "Vidinis žarnos diametras",
         "Vidinis žarnos diametras",
         "Medžiaga",
         "Darbinis slėgis"
@@ -17587,7 +18071,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "13–125 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -17612,6 +18096,7 @@
     ],
     "specTable": {
       "headers": [
+        "Vidinis žarnos diametras",
         "Vidinis žarnos diametras",
         "Medžiaga",
         "Darbinis slėgis"
@@ -17692,7 +18177,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/polipropilenovyj-camlock-tip-e-600x600.jpg",
-    "shortNote": "Adapteris žarninei jungčiai",
+    "shortNote": "Adapteris žarninei jungčiai.",
     "description": "Ypatybės:\nAdapteris žarninei jungčiai.\nGreitojo atjungimo jungtis Camlock (Cam and Groove)\nGreitoji jungtis sudaryta iš dviejų Camlock dalių – movos su kumšteliais ir atitinkamo adapterio su specialiu žiediniu grioveliu jungčiai fiksuoti\nCamlock leidžia greitai ir patikimai sukurti vibracijai atsparią ir hermetišką jungtį žarnoms sujungti tarpusavyje arba žarnai prijungti prie įvairios įrangos, cisternų ir rezervuarų\nDydžių diapazonas nuo 1/2″ iki 6″\nPolipropileninį Camlock galima termiškai apdoroti – virinti, sterilizuoti garais\nPritaikymas\nŽemės ūkis – lengvi cheminiai junginiai, skystos trąšos\nAsenizacinės mašinos\nTechninis vanduo",
     "descLines": [
       {
@@ -17740,7 +18225,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "13–125 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -17765,6 +18250,7 @@
     ],
     "specTable": {
       "headers": [
+        "Vidinis žarnos diametras",
         "Vidinis žarnos diametras",
         "Medžiaga",
         "Darbinis slėgis"
@@ -17893,7 +18379,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "13–125 mm",
     "temp": "",
     "pressure": "",
     "wallThickness": "",
@@ -17918,6 +18404,7 @@
     ],
     "specTable": {
       "headers": [
+        "Vidinis žarnos diametras",
         "Vidinis žarnos diametras",
         "Medžiaga",
         "Darbinis slėgis"
@@ -18518,7 +19005,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/vibroustojchivyj-chervyachnyj-khomut-600x600.jpg",
-    "shortNote": "Užtikrina pastovų priveržimo momentą esant stipriai vibracijai ir temp",
+    "shortNote": "Užtikrina pastovų priveržimo momentą esant stipriai vibracijai ir temperatūros pokyčiams.",
     "description": "Ypatybės:\nUžtikrina pastovų priveržimo momentą esant stipriai vibracijai ir temperatūros pokyčiams.\nJuostos plotis 14,2 mm. Medžiaga – nerūdijantis plienas.\nTuri praplatintą vidinį įdėklą, kuris apsaugo žarną nuo pažeidimo ir padeda palaikyti pastovų priveržimo momentą\nStandartas SAE J 1508, tipas SLF\nDiametrų diapazonas: 15 mm – 228 mm (1″ – 9 1/8″)",
     "descLines": [
       {
@@ -19012,7 +19499,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/kamlok-camlock-tip-af-600x600.jpg",
-    "shortNote": "„Tėvinė“ dalis – 4 coliai (100 mm)",
+    "shortNote": "„Tėvinė“ dalis – 4 coliai (100 mm).",
     "description": "Ypatybės\nCamlock perėjiklis AF-4″:\n„Tėvinė“ dalis – 4 coliai (100 mm);\nFlanšas (4 varžtai).\nGreitojo atjungimo jungtis Camlock (Cam and Groove)\nGreitoji jungtis sudaryta iš dviejų Camlock dalių – movos su kumšteliais ir atitinkamo adapterio su specialiu žiediniu grioveliu jungčiai fiksuoti\nCamlock medžiaga pasirinktinai: AL – aliuminis, SS – nerūdijantis plienas\nCamlock leidžia greitai ir patikimai sukurti vibracijai atsparią ir hermetišką jungtį žarnoms sujungti tarpusavyje arba žarnai prijungti prie įvairios įrangos, cisternų ir rezervuarų\nDydžių diapazonas nuo 1/2″ iki 6″\nPritaikymas\nVandens perpumpavimas\nNaftos perdirbimo pramonė, kuro cisternos\nŽemės ūkis – sausų maisto produktų, biriųjų abrazyvinių trąšų tiekimas, taip pat įvairioms skystoms trąšoms, įsk. KAS\nStatybose – smėlis, cementas, statybiniai mišiniai\nMaisto pramonėje alkoholiniams ir nealkoholiniams gėrimams transportuoti rekomenduojami Camlock iš nerūdijančio plieno",
     "descLines": [
       {
@@ -19908,7 +20395,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/koltso-uplotnitelnoe-epdm-prokladka-dlya-kamloka-600x600.jpg",
-    "shortNote": "Tarpiklis iš natūralios, karščiui, šalčiui, rūgštims ir šarmams atspar",
+    "shortNote": "Tarpiklis iš natūralios, karščiui, šalčiui, rūgštims ir šarmams atsparios gumos (TMKŠ).",
     "description": "Tarpiklis iš natūralios, karščiui, šalčiui, rūgštims ir šarmams atsparios gumos (TMKŠ).\nEPDM žiedai Camlock jungtims atsparūs:\nPraskiestoms neorganinėms ir organinėms rūgštims\nOrganinei ir oksiduojančiai aplinkai\nŠarmai\nKarštas vanduo\nEPDM gumos tarpiklių nerekomenduojame naudoti su:\nTirpikliais\nNaftos produktų pagrindu pagamintomis alyvomis\nMineralinėmis alyvomis\nBenzinu\nŽibalu\nSandarinimo žiedas skirtas hermetiškai jungčiai sukurti visų tipų CamLock jungtyse",
     "descLines": [
       {
@@ -20002,7 +20489,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/koltso-uplotnitelnoe-nbr-prokladka-dlya-kamloka-600x600.jpg",
-    "shortNote": "Stačiakampio skerspjūvio guminis sandarinimo žiedas Camlock jungtims –",
+    "shortNote": "Stačiakampio skerspjūvio guminis sandarinimo žiedas Camlock jungtims – medžiaga NBR (nitrilo butadieno kaučiukas, atitinka GOST 7338-90 I tipo lakštinės guminės plokštės tarpikliams.)",
     "description": "Stačiakampio skerspjūvio guminis sandarinimo žiedas Camlock jungtims – medžiaga NBR (nitrilo butadieno kaučiukas, atitinka GOST 7338-90 I tipo lakštinės guminės plokštės tarpikliams.)\nDirbant aukštesnėje temperatūroje naudojimo trukmė sutrumpės, nes sandarinimo žiedas pradeda kietėti ir tampa trapus. Naudojimas be deguonies, priešingai, kelis kartus pailgina tarnavimo laiką.\nRekomenduojame naudoti su:\nalifatiniais junginiais (propanu, butanu, benzinais)\nmineralinėmis alyvomis ir jų pagrindu pagamintais tepalais\nspiritu\ndruskos tirpalais esant nedidelei temperatūrai\npraskiestomis rūgštimis\ngyvūniniais ir augaliniais aliejais\nbenzinu, dyzelinu ir mazutu\nhidrauliniais skysčiais\naromatinėmis medžiagomis, kurių koncentracija mažesnė nei 40 %\nkarštu vandeniu",
     "descLines": [
       {
@@ -20436,7 +20923,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/poly-gardenpress-1.jpg",
-    "shortNote": "Trisluoksnė PVC žarna, armuota poliesterio siūlais",
+    "shortNote": "Trisluoksnė PVC žarna, armuota poliesterio siūlais.",
     "description": "Savybės\nTrisluoksnė PVC žarna, armuota poliesterio siūlais. Vidinis sluoksnis pagamintas iš juodo PVC, kuris neleidžia susidaryti apnašoms. Antrasis sluoksnis – armuojantis poliesterio siūlų pynimas. Išorinis sluoksnis iš skaidraus geltono PVC, atsparaus ultravioletiniam spinduliavimui ir cheminių medžiagų poveikiui. Labai lanksti žarna.\nNaudojimo sritys\nNaudojama daugiausia kaip laistymo žarna\nDarbinė temperatūra: nuo −10 °C iki +60 °C\nSpalva: geltona, juoda\nPagrindinės charakteristikos",
     "descLines": [
       {
@@ -20468,7 +20955,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "8–25 mm",
     "temp": "nuo −10 °C iki +60 °C",
     "pressure": "",
     "wallThickness": "",
@@ -20572,7 +21059,7 @@
     "color": "navy",
     "featured": true,
     "image": "/products/orig/poly-agrochem-1.jpg",
-    "shortNote": "Elastinga PVC žarna, armuota smūgiams ir slėgiui atsparaus PVC spirale",
+    "shortNote": "Elastinga PVC žarna, armuota smūgiams ir slėgiui atsparaus PVC spirale.",
     "description": "Savybės\nElastinga PVC žarna, armuota smūgiams ir slėgiui atsparaus PVC spirale. Vidinis paviršius lygus, išorinis šiek tiek briaunotas. Žarna itin atspari dilimui ir lanksti. Atspari slėgiui ir abrazyviniam dilimui, ultravioletiniam spinduliavimui bei atmosferos reiškiniams, daugelio cheminių medžiagų poveikiui.\nNaudojimo sritys\nNaudojama drėkinimo sistemoms, kanalizacijos ir nuotekų duobių valymui. Žarna gaminama naudojant specialų PVC, kuris užtikrina didesnį lankstumą.\nMedžiaga: dilimui atsparus PVC\nSutvirtinimas: kietas, smūgiams atsparus PVC\nSpalva: mėlyna, pilka\nDarbinė temperatūra: nuo −15 °C iki +60 °C\nPagrindinės charakteristikos",
     "descLines": [
       {
@@ -20612,7 +21099,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "20–150 mm",
     "temp": "nuo −15 °C iki +60 °C",
     "pressure": "",
     "wallThickness": "",
@@ -20895,7 +21382,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/poly-aquaflex-1.jpg",
-    "shortNote": "Žarna iš plastiško PVC, armuota stiprinančia spirale iš smūgiams ir sl",
+    "shortNote": "Žarna iš plastiško PVC, armuota stiprinančia spirale iš smūgiams ir slėgiui atsparaus PVC.",
     "description": "Savybės\nŽarna iš plastiško PVC, armuota stiprinančia spirale iš smūgiams ir slėgiui atsparaus PVC. Vidinis ir išorinis paviršiai lygūs.\nNaudojimo ypatybės\nBuitinė santechnika, baseinai, dušo kabinos, hidromasažinės vonios\nSpalva: pilka, balta\nDarbinė temperatūra: −10 °C … +60 °C\nPagrindinės charakteristikos",
     "descLines": [
       {
@@ -20927,7 +21414,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "16–100 mm",
     "temp": "−10 °C … +60 °C",
     "pressure": "",
     "wallThickness": "",
@@ -21069,7 +21556,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/poly-aspirato-1.jpg",
-    "shortNote": "Žarna iš plastifikuoto PVC, armuota kieto, smūgiams atsparaus PVC spir",
+    "shortNote": "Žarna iš plastifikuoto PVC, armuota kieto, smūgiams atsparaus PVC spirale.",
     "description": "Savybės\nŽarna iš plastifikuoto PVC, armuota kieto, smūgiams atsparaus PVC spirale. Vidinis paviršius idealiai lygus, išorinis – gofruotas. Labai lengva ir lanksti, patogi naudoti. Atspari atmosferos poveikiui ir ultravioletiniams spinduliams.\nNaudojimo sritys\nAspiracijos žarna: oro, dūmų, dujų, dulkių, pjuvenų, drožlių ištraukimui. Naudojama kondicionavimo ir vėdinimo įrenginiuose, medienos apdirbimo staklėms, taip pat sėjamosiose.\nMedžiaga: PVC.\nSutvirtinimas: smūgiams atsparus PVC.\nSpalva: pilka. Galimi variantai: skaidri su balta PVC spirale, mėlyna\nDarbinė temperatūra: nuo −10 °C iki +60 °C\nPagrindinės charakteristikos",
     "descLines": [
       {
@@ -21109,7 +21596,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "16–200 mm",
     "temp": "nuo −10 °C iki +60 °C",
     "pressure": "",
     "wallThickness": "",
@@ -21423,7 +21910,7 @@
     "color": "red",
     "featured": false,
     "image": "/products/orig/poly-aspirato-pu-1.jpg",
-    "shortNote": "Poliuretano žarna, armuota kieta, smūgiams atsparia PVC spirale",
+    "shortNote": "Poliuretano žarna, armuota kieta, smūgiams atsparia PVC spirale; vidinis paviršius lygus, išorinis – briaunotas.",
     "description": "Savybės\nPoliuretano žarna, armuota kieta, smūgiams atsparia PVC spirale; vidinis paviršius lygus, išorinis – briaunotas. Mechaninės savybės – labai lengva ir lanksti, didelis atsparumas dilimui ir lankstumas dėl poliuretano naudojimo.\nNaudojimo sritys\nAbrazyvinių miltelių, granulių, garų, drožlių pūtimui ir siurbimui. Taip pat naudojama importinėse sėjamosiose kaip sėklų tiekimo žarna ir pramoniniam naudojimui sunkiomis sąlygomis.\nMedžiaga: poliuretanas\nArmavimas: smūgiams atsparus PVC\nSpalva: skaidri su pilkos arba baltos spalvos spirale.\nDarbinė temperatūra: −20 °C … +80 °C.\nPagrindinės charakteristikos",
     "descLines": [
       {
@@ -21463,7 +21950,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "16–200 mm",
     "temp": "−20 °C … +80 °C.",
     "pressure": "",
     "wallThickness": "",
@@ -21776,7 +22263,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/poly-cristalix.jpg",
-    "shortNote": "Vamzdelis iš plastiško PVC",
+    "shortNote": "Vamzdelis iš plastiško PVC.",
     "description": "Savybės\nVamzdelis iš plastiško PVC. Vidinis ir išorinis paviršiai lygūs. Labai lengvas, atsparus ultravioletinių spindulių poveikiui.\nNaudojimo sritys\nSkirta dujinėms, skystoms ir birioms medžiagoms transportuoti, įskaitant skystus maisto produktus.\nŽarnos tipas: slėginė\nMedžiaga: minkštas krištolo skaidrumo PVC\nDarbinė temperatūra: −10 °C … +60 °C\nMaistinis: taip\nPagrindinės charakteristikos",
     "descLines": [
       {
@@ -21816,7 +22303,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "2–12,5 mm",
     "temp": "−10 °C … +60 °C",
     "pressure": "",
     "wallThickness": "",
@@ -22299,7 +22786,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/poly-screenshot_2.png",
-    "shortNote": "Elastinga skaidri PVC žarna, armuota sintetiniu kordu",
+    "shortNote": "Elastinga skaidri PVC žarna, armuota sintetiniu kordu.",
     "description": "Savybės\nElastinga skaidri PVC žarna, armuota sintetiniu kordu. Vidinis ir išorinis paviršiai lygūs. Atspari ultravioletiniam spinduliavimui ir daugelio cheminių medžiagų poveikiui. Elastinga, lengva, patogi naudoti.\nNaudojimo ypatybės\nNaudojama skysčiams, žemės ūkio chemijai, KAS (pesticidams, herbicidams), suslėgtam orui transportuoti, taip pat vandeniui, pienui, iki 20 % alkoholio turintiems gėrimams.\nDarbinė temperatūra: nuo −10 °C iki +60 °C\nSpalva: skaidri\nSutvirtinimas: sintetinis kordas\nPagrindinės charakteristikos",
     "descLines": [
       {
@@ -22335,7 +22822,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "4–15 mm",
     "temp": "nuo −10 °C iki +60 °C",
     "pressure": "",
     "wallThickness": "",
@@ -22709,7 +23196,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/poly-elastic-supernova.jpg",
-    "shortNote": "Labai elastinga, šalčiui atspari, universali PVC/NBR žarna su beveik n",
+    "shortNote": "Labai elastinga, šalčiui atspari, universali PVC/NBR žarna su beveik nesideformuojančia kieto PVC/NBR spirale, suteikiančia jai didelį atsparumą dilimui.",
     "description": "Savybės:\nLabai elastinga, šalčiui atspari, universali PVC/NBR žarna su beveik nesideformuojančia kieto PVC/NBR spirale, suteikiančia jai didelį atsparumą dilimui. Lygus vidinis žarnos paviršius padeda išvengti nuosėdų kaupimosi. Dėl didelio sienelės storio pasižymi geru atsparumu vakuumui, slėgio impulsui, dilimui, atmosferos poveikiui ir įvairiems cheminiams reagentams.\nNaudojimo sritys:\nUniversali, šalčiui atspari slėginė-siurbimo žarna nuotekų duobėms, kanalizacijoms ir pan. išsiurbti. Naudojama siurblinėje, priešgaisrinėje technikoje, pramoniniuose lietinimo įrenginiuose, fekalinėms masėms ir kitiems cheminiams produktams išsiurbti. Miltelių, granulių ir kitų abrazyvų transportavimas, taip pat kaip pneumotransportas sėkloms ir grūdams.\nMedžiaga: dilimui ir šalčiui atsparus PVC/NBR\nSutvirtinimas: kietas, smūgiams atsparus PVC/NBR\nSpalva: alyvuogių\nDarbinė temperatūra: nuo −40 °C iki +60 °C\nPagrindinės charakteristikos",
     "descLines": [
       {
@@ -22749,7 +23236,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "19–150 mm",
     "temp": "nuo −40 °C iki +60 °C",
     "pressure": "",
     "wallThickness": "",
@@ -23023,7 +23510,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/poly-grain-press-1.jpg",
-    "shortNote": "Žarna iš plastiško PVC, armuota stiprinančia spirale iš smūgiams ir sl",
+    "shortNote": "Žarna iš plastiško PVC, armuota stiprinančia spirale iš smūgiams ir slėgiui atsparaus PVC.",
     "description": "Savybės\nŽarna iš plastiško PVC, armuota stiprinančia spirale iš smūgiams ir slėgiui atsparaus PVC. Vidinis paviršius lygus, išorinis – briaunotas. Atspari slėgiui, abrazyviniam dilimui, ultravioletiniam spinduliavimui ir atmosferos reiškiniams.\nNaudojimo sritys\nSlėginė-siurbimo žarna vandeniui, iki 20 % alkoholio turintiems gėrimams, maisto produktams transportuoti. Plačiai naudojama žemės ūkyje kaip sėklų tiekimo žarna pneumatiniuose sėjos kompleksuose. Dažnai naudojama pesticidams ir įvairioms trąšoms, įsk. sausas birias, perpumpuoti, taip pat grūdų kultūroms transportuoti žemės ūkio technikoje (sėjamosiose, purkštuvuose ir kt.).\nMedžiaga: minkštas skaidrus maistinis PVC.\nSutvirtinimas: kietas, smūgiams atsparus PVC.\nSpalva: skaidri su balta PVC spirale. Galimi variantai: juoda, žalia, pilka, mėlyna.\nDarbinė temperatūra: nuo −10 °C iki +60 °C\nPagrindinės charakteristikos",
     "descLines": [
       {
@@ -23063,7 +23550,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "16–160 mm",
     "temp": "nuo −10 °C iki +60 °C",
     "pressure": "",
     "wallThickness": "",
@@ -23367,7 +23854,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/poly-screenshot_3.png",
-    "shortNote": "Ištisinis poliesterio pagrindo poliuretano sluoksnis, armuotas kieto P",
+    "shortNote": "Ištisinis poliesterio pagrindo poliuretano sluoksnis, armuotas kieto PVC spirale.",
     "description": "Savybės\nIštisinis poliesterio pagrindo poliuretano sluoksnis, armuotas kieto PVC spirale. Visiškai lygus viduje, su nedideliu gofravimu išorėje. Atsparus hidrolizei.\nNaudojimo sritys\nSlėginė-siurbimo žarna abrazyvinėms skystoms ir birioms medžiagoms (smėliui, cementui, grūdams, smulkiai skaldai). Rekomenduojama tais atvejais, kai reikalingas didelis atsparumas abrazyviniam dilimui. Tinka maisto produktams. Taip pat naudojama cheminėms medžiagoms.\nMedžiaga: poliuretanas\nSutvirtinimas: kietas, smūgiams atsparus PVC\nSpalva: skaidri su balta PVC spirale\nDarbinė temperatūra: −20 °C … +80 °C\nPagrindinės charakteristikos",
     "descLines": [
       {
@@ -23407,7 +23894,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "16–200 mm",
     "temp": "−20 °C … +80 °C",
     "pressure": "",
     "wallThickness": "",
@@ -23721,7 +24208,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/poly-terraspray-20-60.jpg",
-    "shortNote": "Labai lanksti ir paprasta naudoti",
+    "shortNote": "Labai lanksti ir paprasta naudoti.",
     "description": "Savybės\nLabai lanksti ir paprasta naudoti. Žarna armuota poliesterio siūlu, kuris užtikrina didelį atsparumą trūkimui tempiant ir minimalią suplojimo riziką. Atspari atmosferos poveikiui ir cheminiams produktams. Didelis cheminis atsparumas trąšoms ir herbicidams.\nNaudojimo sritys\nSlėginė žarna purkštuvams. Kompresorinė žarna. Naudojama vandeniui, orui, dujoms, chemikalams transportuoti esant iki 20 bar slėgiui. Plačiai naudojama žemės ūkio fumigacijoje.\nMedžiaga: PVC.\nSutvirtinimas: tekstilinis pynimas.\nSpalva: juoda.\nDarbinė temperatūra: nuo −10 °C iki +60 °C.\nPagrindinės charakteristikos",
     "descLines": [
       {
@@ -23761,7 +24248,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "8–25 mm",
     "temp": "nuo −10 °C iki +60 °C.",
     "pressure": "",
     "wallThickness": "",
@@ -23865,7 +24352,7 @@
     "color": "navy",
     "featured": false,
     "image": "/products/orig/poly-vacuum.jpg",
-    "shortNote": "Labai elastinga, šalčiui atspari, universali PVC žarna su beveik nesid",
+    "shortNote": "Labai elastinga, šalčiui atspari, universali PVC žarna su beveik nesideformuojančia kieto PVC spirale, suteikiančia jai didelį atsparumą dilimui.",
     "description": "Savybės\nLabai elastinga, šalčiui atspari, universali PVC žarna su beveik nesideformuojančia kieto PVC spirale, suteikiančia jai didelį atsparumą dilimui. Lygus vidinis žarnos paviršius padeda išvengti nuosėdų kaupimosi. Dėl didelio sienelės storio pasižymi geru atsparumu vakuumui, slėgio impulsui, dilimui, atmosferos poveikiui ir įvairiems cheminiams reagentams.\nNaudojimo sritys\nUniversali, šalčiui atspari slėginė-siurbimo žarna nuotekų duobėms, kanalizacijoms ir pan. išsiurbti. Naudojama siurblinėje, priešgaisrinėje technikoje, pramoniniuose lietinimo įrenginiuose, fekalinėms masėms ir kitoms atliekoms išsiurbti. Miltelių, granulių ir kitų abrazyvų transportavimas, taip pat kaip pneumotransportas sėkloms ir grūdams. Plačiai naudojama KAS (karbamido-amoniako mišiniui) perpumpuoti. Naudojama kaip sėklų tiekimo žarna grūdams iš bunkerio tiekti sėjamosiose ir grūdų smulkintuvuose.\nMedžiaga: dilimui atsparus PVC\nSutvirtinimas: kietas, smūgiams atsparus PVC\nSpalva: juoda\nDarbinė temperatūra: −30 °C … +60 °C\nPagrindinės charakteristikos",
     "descLines": [
       {
@@ -23905,7 +24392,7 @@
         "heading": false
       }
     ],
-    "dn": "",
+    "dn": "19–150 mm",
     "temp": "−30 °C … +60 °C",
     "pressure": "",
     "wallThickness": "",
@@ -24181,7 +24668,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/galvanized.jpg",
-    "shortNote": "Lankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto cink",
+    "shortNote": "Lankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto cinkuoto plieno.",
     "description": "Konstrukcija\nLankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto cinkuoto plieno.\nSandarinimas: profilis be sandariklio.\nProfilis suformuotas taip, kad žarna išlaikytų formą ir būtų atspari mechaniniams pažeidimams.\nSavybės\nŠiluminis atsparumas: iki +500 °C.\nDidelis mechaninis atsparumas ir atsparumas dilimui, ypač transportuojant abrazyvines medžiagas.\nAtitinka ATEX direktyvos reikalavimus – tinka sprogioje aplinkoje.\nMatmenys\nDiametrų diapazonas: 18–337 mm.\nIlgis: 5 m, 10 m; kai kuriems diametrams, iš anksto susitarus, galimi didesni ilgiai.\nPritaikymas\nKaršto oro ir dūmų šalinimas.\nAbrazyvinių birių medžiagų gravitacinis transportavimas.\nDarbas sprogioje aplinkoje ir aukštoje temperatūroje.\nApsauginės žarnos plastikinėms žarnoms ir kabeliams.\nTechniniai parametrai\nVisų parametrų tolerancija – 5 %.\nDėl savo konstrukcijos metalinės žarnos neužtikrina 100 % sandarumo; šalinant dūmus rekomenduojama rinktis dvigubą diametrą.\nElektrostatiniams krūviams nuvesti rekomenduojama įžeminti žarnos spiralę.",
     "descLines": [
       {
@@ -24706,7 +25193,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/galvanized-1.jpg",
-    "shortNote": "Lankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto cink",
+    "shortNote": "Lankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto cinkuoto plieno.",
     "description": "Konstrukcija\nLankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto cinkuoto plieno.\nSandarinimas: silikoninis sandariklis.\nProfilis suformuotas taip, kad žarna išlaikytų formą ir būtų atspari mechaniniams pažeidimams.\nSavybės\nŠiluminis atsparumas: iki +300 °C.\nDidelis mechaninis atsparumas ir atsparumas dilimui, ypač transportuojant abrazyvines medžiagas.\nAtitinka ATEX direktyvos reikalavimus – tinka sprogioje aplinkoje.\nMatmenys\nDiametrų diapazonas: 18–337 mm.\nIlgis: 5 m, 10 m; kai kuriems diametrams, iš anksto susitarus, galimi didesni ilgiai.\nPritaikymas\nVėdinimo sistemos ir pramoniniai dulkių siurbliai.\nIšmetamųjų dujų ir dūmų šalinimas.\nAbrazyvinių birių medžiagų transportavimas.\nMedienos apdirbimo pramonė.\nTechniniai parametrai\nVisų parametrų tolerancija – 5 %.\nDėl savo konstrukcijos metalinės žarnos neužtikrina 100 % sandarumo; šalinant dūmus rekomenduojama rinktis dvigubą diametrą.\nElektrostatiniams krūviams nuvesti rekomenduojama įžeminti žarnos spiralę.",
     "descLines": [
       {
@@ -25231,7 +25718,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/galvanized.jpg",
-    "shortNote": "Lankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto cink",
+    "shortNote": "Lankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto cinkuoto plieno.",
     "description": "Konstrukcija\nLankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto cinkuoto plieno.\nSandarinimas: stiklo pluošto sandariklis.\nProfilis suformuotas taip, kad žarna išlaikytų formą ir būtų atspari mechaniniams pažeidimams.\nSavybės\nŠiluminis atsparumas: iki +500 °C.\nDidelis mechaninis atsparumas ir atsparumas dilimui, ypač transportuojant abrazyvines medžiagas.\nAtitinka ATEX direktyvos reikalavimus – tinka sprogioje aplinkoje.\nMatmenys\nDiametrų diapazonas: 18–337 mm.\nIlgis: 5 m, 10 m; kai kuriems diametrams, iš anksto susitarus, galimi didesni ilgiai.\nPritaikymas\nKaršto oro ir dūmų šalinimas.\nAbrazyvinių birių medžiagų gravitacinis transportavimas.\nDarbas sprogioje aplinkoje ir aukštoje temperatūroje.\nApsauginės žarnos plastikinėms žarnoms ir kabeliams.\nTechniniai parametrai\nVisų parametrų tolerancija – 5 %.\nDėl savo konstrukcijos metalinės žarnos neužtikrina 100 % sandarumo; šalinant dūmus rekomenduojama rinktis dvigubą diametrą.\nElektrostatiniams krūviams nuvesti rekomenduojama įžeminti žarnos spiralę.",
     "descLines": [
       {
@@ -25756,7 +26243,7 @@
     "color": "silver",
     "featured": true,
     "image": "/products/orig/stainless-steel.jpg",
-    "shortNote": "Lankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto nerū",
+    "shortNote": "Lankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto nerūdijančio plieno.",
     "description": "Konstrukcija\nLankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto nerūdijančio plieno.\nSandarinimas: profilis be sandariklio.\nProfilis suformuotas taip, kad žarna išlaikytų formą ir būtų atspari mechaniniams pažeidimams.\nSavybės\nŠiluminis atsparumas: iki +650 °C.\nDidelis mechaninis atsparumas ir atsparumas dilimui, ypač transportuojant abrazyvines medžiagas.\nAtitinka ATEX direktyvos reikalavimus – tinka sprogioje aplinkoje.\nMatmenys\nDiametrų diapazonas: 50–337 mm.\nIlgis: 5 m, 10 m; kai kuriems diametrams, iš anksto susitarus, galimi didesni ilgiai.\nPritaikymas\nKaršto oro ir dūmų šalinimas.\nAbrazyvinių birių medžiagų gravitacinis transportavimas.\nDarbas sprogioje aplinkoje ir aukštoje temperatūroje.\nApsauginės žarnos plastikinėms žarnoms ir kabeliams.\nTechniniai parametrai\nVisų parametrų tolerancija – 5 %.\nDėl savo konstrukcijos metalinės žarnos neužtikrina 100 % sandarumo; šalinant dūmus rekomenduojama rinktis dvigubą diametrą.\nElektrostatiniams krūviams nuvesti rekomenduojama įžeminti žarnos spiralę.",
     "descLines": [
       {
@@ -26140,7 +26627,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/stainless-steel-1.jpg",
-    "shortNote": "Lankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto nerū",
+    "shortNote": "Lankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto nerūdijančio plieno.",
     "description": "Konstrukcija\nLankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto nerūdijančio plieno.\nSandarinimas: silikoninis sandariklis.\nProfilis suformuotas taip, kad žarna išlaikytų formą ir būtų atspari mechaniniams pažeidimams.\nSavybės\nŠiluminis atsparumas: iki +300 °C.\nDidelis mechaninis atsparumas ir atsparumas dilimui, ypač transportuojant abrazyvines medžiagas.\nAtitinka ATEX direktyvos reikalavimus – tinka sprogioje aplinkoje.\nMatmenys\nDiametrų diapazonas: 50–337 mm.\nIlgis: 5 m, 10 m; kai kuriems diametrams, iš anksto susitarus, galimi didesni ilgiai.\nPritaikymas\nVėdinimo sistemos ir pramoniniai dulkių siurbliai.\nIšmetamųjų dujų ir dūmų šalinimas.\nAbrazyvinių birių medžiagų transportavimas.\nMedienos apdirbimo pramonė.\nTechniniai parametrai\nVisų parametrų tolerancija – 5 %.\nDėl savo konstrukcijos metalinės žarnos neužtikrina 100 % sandarumo; šalinant dūmus rekomenduojama rinktis dvigubą diametrą.\nElektrostatiniams krūviams nuvesti rekomenduojama įžeminti žarnos spiralę.",
     "descLines": [
       {
@@ -26524,7 +27011,7 @@
     "color": "silver",
     "featured": false,
     "image": "/products/orig/stainless-steel.jpg",
-    "shortNote": "Lankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto nerū",
+    "shortNote": "Lankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto nerūdijančio plieno.",
     "description": "Konstrukcija\nLankstūs daugiakampio profilio metaliniai rankovai iš profiliuoto nerūdijančio plieno.\nSandarinimas: stiklo pluošto sandariklis.\nProfilis suformuotas taip, kad žarna išlaikytų formą ir būtų atspari mechaniniams pažeidimams.\nSavybės\nŠiluminis atsparumas: iki +650 °C.\nDidelis mechaninis atsparumas ir atsparumas dilimui, ypač transportuojant abrazyvines medžiagas.\nAtitinka ATEX direktyvos reikalavimus – tinka sprogioje aplinkoje.\nMatmenys\nDiametrų diapazonas: 50–337 mm.\nIlgis: 5 m, 10 m; kai kuriems diametrams, iš anksto susitarus, galimi didesni ilgiai.\nPritaikymas\nKaršto oro ir dūmų šalinimas.\nAbrazyvinių birių medžiagų gravitacinis transportavimas.\nDarbas sprogioje aplinkoje ir aukštoje temperatūroje.\nApsauginės žarnos plastikinėms žarnoms ir kabeliams.\nTechniniai parametrai\nVisų parametrų tolerancija – 5 %.\nDėl savo konstrukcijos metalinės žarnos neužtikrina 100 % sandarumo; šalinant dūmus rekomenduojama rinktis dvigubą diametrą.\nElektrostatiniams krūviams nuvesti rekomenduojama įžeminti žarnos spiralę.",
     "descLines": [
       {

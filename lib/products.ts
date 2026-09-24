@@ -12,7 +12,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { childrenOf, categoryById } from "@/lib/categories";
-import { defaultLocale, type Locale } from "@/lib/i18n";
+import { collatorFor, defaultLocale, type Locale } from "@/lib/i18n";
 
 export type DescLine = { text: string; heading: boolean };
 export type SpecTable = { headers: string[]; rows: string[][] };
@@ -89,9 +89,11 @@ export function getProductsByCategory(
   locale: Locale = defaultLocale,
 ): Product[] {
   const ids = subtreeIds(categoryId);
-  return getAllProducts(locale).filter(
-    (p) => p.category === categoryId || p.categories.some((c) => ids.has(c)),
-  );
+  // Natural name order, so KLIN K1 … K9 come before K10 … K13.
+  const byName = new Intl.Collator(collatorFor(locale), { numeric: true }).compare;
+  return getAllProducts(locale)
+    .filter((p) => p.category === categoryId || p.categories.some((c) => ids.has(c)))
+    .sort((a, b) => byName(a.name, b.name));
 }
 
 // Every ancestor of a category (inclusive), walking up `parent` links.

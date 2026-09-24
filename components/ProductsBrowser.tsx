@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { ProductCard, type ProductCardData } from "@/components/ProductCard";
 import { getDict, plural } from "@/lib/dictionary";
 import { collatorFor, defaultLocale, localeHref, type Locale } from "@/lib/i18n";
@@ -13,9 +13,17 @@ export type BrowserProduct = ProductCardData & { categories: string[] };
 const PAGE_SIZE = 12;
 
 // ── Parse helpers (pure, client-safe) ───────────────────────────────
+// Diameter range of a product, from strings like "20–650 mm.", "16–100 мм" or
+// "15 mm – 228 mm (1″ – 9 1/8″)". A single value gives min === max.
+export function diameterRange(dn: string): [number, number] | null {
+  const nums = [...dn.matchAll(/\d+(?:[.,]\d+)?/g)]
+    .slice(0, 2)
+    .map((m) => parseFloat(m[0].replace(",", ".")));
+  if (!nums.length) return null;
+  return [nums[0], nums[1] ?? nums[0]];
+}
 function minDiameter(dn: string): number | null {
-  const m = dn.match(/\d+/);
-  return m ? parseInt(m[0], 10) : null;
+  return diameterRange(dn)?.[0] ?? null;
 }
 function maxTemp(temp: string): number | null {
   const nums = [...temp.matchAll(/([+\-−]?)\s*(\d+)/g)].map(
@@ -24,14 +32,29 @@ function maxTemp(temp: string): number | null {
   return nums.length ? Math.max(...nums) : null;
 }
 
-const DIAMETER_TESTS: ((min: number) => boolean)[] = [
-  (n) => n >= 10 && n < 50,
-  (n) => n >= 50 && n < 150,
-  (n) => n >= 150 && n < 500,
-  (n) => n >= 500,
+// Diameter buckets as [from, to) — a product matches every bucket its DN range
+// overlaps (a 20–650 mm hose is offered in all four), not just its smallest size.
+const DIAMETER_BUCKETS: [number, number][] = [
+  [10, 50],
+  [50, 150],
+  [150, 500],
+  [500, Infinity],
 ];
+export const inDiameterBucket = (range: [number, number], bucket: number) => {
+  const [from, to] = DIAMETER_BUCKETS[bucket];
+  return range[0] < to && range[1] >= from;
+};
 const TEMP_MAX = [90, 260, 650, 1100];
 const SORT_VALUES = ["name", "dn", "temp"] as const;
+
+type Filters = { category: string | null; diameters: Set<string>; temps: Set<string>; page: number };
+const NO_SELECTION: ReadonlySet<string> = new Set();
+const clearFilters = (category: string | null): Filters => ({
+  category,
+  diameters: NO_SELECTION as Set<string>,
+  temps: NO_SELECTION as Set<string>,
+  page: 1,
+});
 
 function toggle(set: Set<string>, value: string): Set<string> {
   const next = new Set(set);
@@ -56,13 +79,19 @@ export function ProductsBrowser({
     { value: SORT_VALUES[1], label: t.sortDn },
     { value: SORT_VALUES[2], label: t.sortTemp },
   ];
-  // Selected category comes from the URL (?category=) so the page can stay static.
+  // Selected category lives in the URL (?category=) so the page can stay static.
+  // It is read on every render, so links to /products?category=… (footer,
+  // breadcrumbs) work while already on this page, and Back steps through them.
   const params = useSearchParams();
-  const [category, setCategory] = useState<string | null>(params.get("category"));
-  const [diameters, setDiameters] = useState<Set<string>>(new Set());
-  const [temps, setTemps] = useState<Set<string>>(new Set());
+  const router = useRouter();
+  const category = params.get("category");
+  // Filters belong to the category they were set in: switching category
+  // (sidebar, footer link, Back button) starts again from clear filters.
+  const [filters, setFilters] = useState<Filters>(() => clearFilters(category));
+  const active = filters.category === category ? filters : clearFilters(category);
+  const { diameters, temps, page } = active;
+  const setPage = (n: number) => setFilters({ ...active, page: n });
   const [sort, setSort] = useState("name");
-  const [page, setPage] = useState(1);
 
   // ── Category tree helpers (derived once) ──────────────────────────
   const tree = useMemo(() => {
@@ -110,12 +139,9 @@ export function ProductsBrowser({
   }, [products, categories, tree]);
 
   function chooseCategory(id: string | null) {
-    setCategory(id);
-    setDiameters(new Set());
-    setTemps(new Set());
-    setPage(1);
-    const url = localeHref(locale, id ? `/products?category=${id}` : "/products");
-    window.history.replaceState(null, "", url);
+    router.push(localeHref(locale, id ? `/products?category=${id}` : "/products"), {
+      scroll: false,
+    });
   }
 
   const filtered = useMemo(() => {
@@ -129,10 +155,10 @@ export function ProductsBrowser({
     const labels = getDict(locale).browser;
     if (diameters.size) {
       list = list.filter((p) => {
-        const min = minDiameter(p.dn);
-        if (min == null) return false;
+        const range = diameterRange(p.dn);
+        if (range == null) return false;
         return labels.diameterBuckets.some(
-          (label: string, i: number) => diameters.has(label) && DIAMETER_TESTS[i](min),
+          (label: string, i: number) => diameters.has(label) && inDiameterBucket(range, i),
         );
       });
     }
@@ -145,11 +171,13 @@ export function ProductsBrowser({
         );
       });
     }
+    // Natural order, so KLIN K1 … K9 come before K10 … K13 (and Tipas A2 < A10).
+    const byName = new Intl.Collator(collatorFor(locale), { numeric: true }).compare;
     const sorted = [...list];
     sorted.sort((a, b) => {
       if (sort === "dn") return (minDiameter(a.dn) ?? 1e9) - (minDiameter(b.dn) ?? 1e9);
       if (sort === "temp") return (maxTemp(a.temp) ?? 1e9) - (maxTemp(b.temp) ?? 1e9);
-      return a.name.localeCompare(b.name, collatorFor(locale));
+      return byName(a.name, b.name);
     });
     return sorted;
   }, [products, category, diameters, temps, sort, tree, locale]);
@@ -158,10 +186,8 @@ export function ProductsBrowser({
   const safePage = Math.min(page, totalPages);
   const pageItems = filtered.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
 
-  const onFilterChange = (fn: () => void) => {
-    fn();
-    setPage(1);
-  };
+  const toggleFilter = (key: "diameters" | "temps", label: string) =>
+    setFilters({ ...active, [key]: toggle(active[key], label), page: 1 });
 
   // ── Default view: category cards (products are browsed per category) ──
   if (!category) {
@@ -259,7 +285,7 @@ export function ProductsBrowser({
               key={label}
               label={label}
               checked={diameters.has(label)}
-              onChange={() => onFilterChange(() => setDiameters((v) => toggle(v, label)))}
+              onChange={() => toggleFilter("diameters", label)}
             />
           ))}
         </FilterBlock>
@@ -269,7 +295,7 @@ export function ProductsBrowser({
               key={label}
               label={label}
               checked={temps.has(label)}
-              onChange={() => onFilterChange(() => setTemps((v) => toggle(v, label)))}
+              onChange={() => toggleFilter("temps", label)}
             />
           ))}
         </FilterBlock>

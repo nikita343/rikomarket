@@ -3,6 +3,7 @@ import { getDict } from "@/lib/dictionary";
 import { localeHref, type Locale } from "@/lib/i18n";
 import { Container, PageHero, Button } from "@/components/ui";
 import { Icon, type IconName } from "@/components/icons";
+import { CopyEmail } from "@/components/CopyEmail";
 
 export function ContactsPage({ locale }: { locale: Locale }) {
   const t = getDict(locale);
@@ -51,7 +52,16 @@ export function ContactsPage({ locale }: { locale: Locale }) {
                       <div className="text-[11px] font-bold uppercase tracking-[0.1em] text-mute">
                         {r.label}
                       </div>
-                      <div className="mt-1 text-[22px] font-bold text-navy">{r.value}</div>
+                      <div className="mt-1 flex flex-wrap items-center gap-3">
+                        <span className="select-all text-[22px] font-bold text-navy">{r.value}</span>
+                        {r.ic === "mail" && (
+                          <CopyEmail
+                            email={company.email}
+                            label={t.contactsPage.copyEmail}
+                            copiedLabel={t.contactsPage.copied}
+                          />
+                        )}
+                      </div>
                       <div className="mt-1 text-[13px] text-mute">{r.sub}</div>
                     </div>
                   </div>

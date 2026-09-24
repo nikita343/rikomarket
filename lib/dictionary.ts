@@ -83,10 +83,13 @@ const lt = {
     metaDesc:
       "Techninių žarnų pritaikymas pramonės šakose: mediena, vėdinimas, žemės ūkis, chemija, specialioji technika ir kt.",
     eyebrow: "Pritaikymo sritys",
-    title: "Šešios pramonės šakos.",
+    title: "Pramonės šakos.",
     sub: "Tiekiame techninių žarnų asortimentą medienos apdirbimo, vėdinimo, žemės ūkio, chemijos, maisto ir specialiosios technikos sektoriams.",
-    tags: ["Aukšta temperatūra", "Abrazyvinė aplinka", "Lankstumas", "Antistatinis"],
-    viewHoses: "Žiūrėti žarnas",
+    // Photo gallery (click a photo to enlarge it)
+    enlarge: "Padidinti nuotrauką",
+    close: "Uždaryti",
+    prev: "Ankstesnė nuotrauka",
+    next: "Kita nuotrauka",
   },
   chemPage: {
     metaTitle: "Cheminis atsparumas",
@@ -134,6 +137,8 @@ const lt = {
     hoursSub: "Šeštadieniais — pagal susitarimą",
     companyPrefix: "Lietuvos",
     historyTitle: "Įmonės istorija",
+    copyEmail: "Kopijuoti",
+    copied: "Nukopijuota",
     offerTitle: "Reikia pasiūlymo?",
     offerText:
       "Paskambinkite arba parašykite — nurodykite žarnos tipą, kiekį, diametrą ir darbinę temperatūrą, ir paruošime pasiūlymą.",
@@ -264,10 +269,12 @@ const ru: Dict = {
     metaDesc:
       "Применение технических рукавов в промышленности: деревообработка, вентиляция, сельское хозяйство, химия, спецтехника и др.",
     eyebrow: "Области применения",
-    title: "Шесть отраслей промышленности.",
+    title: "Отрасли промышленности.",
     sub: "Поставляем технические рукава для деревообработки, вентиляции, сельского хозяйства, химической и пищевой промышленности, а также спецтехники.",
-    tags: ["Высокая температура", "Абразивная среда", "Гибкость", "Антистатичность"],
-    viewHoses: "Смотреть рукава",
+    enlarge: "Увеличить фото",
+    close: "Закрыть",
+    prev: "Предыдущее фото",
+    next: "Следующее фото",
   },
   chemPage: {
     metaTitle: "Химическая стойкость",
@@ -315,6 +322,8 @@ const ru: Dict = {
     hoursSub: "По субботам — по договорённости",
     companyPrefix: "Литва ·",
     historyTitle: "О компании",
+    copyEmail: "Скопировать",
+    copied: "Скопировано",
     offerTitle: "Нужно коммерческое предложение?",
     offerText:
       "Позвоните или напишите — укажите тип рукава, количество, диаметр и рабочую температуру, и мы подготовим предложение.",

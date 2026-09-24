@@ -7,6 +7,7 @@
 //   node scripts/scrape-generate.mjs
 import fs from "node:fs";
 import path from "node:path";
+import { makeNote } from "./note.mjs";
 
 const ROOT = process.cwd();
 const CACHE = path.join(ROOT, "scripts", ".scrape-cache");
@@ -190,6 +191,45 @@ function deriveSpecs(descLines) {
   return out;
 }
 
+// Diameter range read from a product's size table, for products whose prose
+// has no "Diametrų diapazonas" line (the polynect hoses, clamps, Camlock …).
+// Without it they had an empty DN and vanished from every diameter filter.
+// Uses the inner-diameter column, or Min D / Max D for clamps.
+function dnFromTable(t) {
+  if (!t) return "";
+  const num = (c) => {
+    const m = String(c ?? "").match(/\d+(?:[.,]\d+)?/);
+    return m ? parseFloat(m[0].replace(",", ".")) : NaN;
+  };
+  const h = t.headers;
+  const iMin = h.findIndex((x) => /^Min D\b/i.test(x));
+  const iMax = h.findIndex((x) => /^Max D\b/i.test(x));
+  let lo, hi;
+  if (iMin >= 0 && iMax >= 0) {
+    lo = t.rows.map((r) => num(r[iMin]));
+    hi = t.rows.map((r) => num(r[iMax]));
+  } else if (/^Vidinis\b.*diametras/i.test(h[0] ?? "")) {
+    lo = hi = t.rows.map((r) => num(r[0]));
+  } else return "";
+  const L = lo.filter((n) => n >= 1);
+  const H = hi.filter((n) => n >= 1);
+  if (!L.length || !H.length) return "";
+  const fmt = (n) => String(n).replace(".", ",");
+  const a = Math.min(...L);
+  const b = Math.max(...H);
+  return a === b ? `${fmt(a)} mm` : `${fmt(a)}–${fmt(b)} mm`;
+}
+
+// The source tables of a few products repeat a header by mistake
+// (DEPTAK: "Vidinis diametras" twice — the second column is the outer one).
+function fixHeaders(headers) {
+  const out = [...headers];
+  if (/^Vidinis diametras/i.test(out[0] ?? "") && out[1] === out[0]) {
+    out[1] = "Išorinis diametras [mm]";
+  }
+  return out;
+}
+
 // ── Products ────────────────────────────────────────────────────────
 const imageManifest = {};
 const products = rawProducts.filter((p) => !DELETE.has(p.slug)).map((p) => {
@@ -233,7 +273,7 @@ const products = rawProducts.filter((p) => !DELETE.has(p.slug)).map((p) => {
   let sizes = [];
   if (p.tables && p.tables[0] && p.tables[0].length > 1) {
     const [header, ...rows] = p.tables[0];
-    const trHeader = header.map(tr);
+    const trHeader = fixHeaders(header.map(tr));
     specTable = { headers: trHeader, rows: rows.map((r) => r.map(tr)) };
     if (/diametr/i.test(trHeader[0] || "")) {
       sizes = rows.map((r) => r[0]).filter((v) => /^\d+([.,]\d+)?$/.test((v || "").trim()));
@@ -241,6 +281,7 @@ const products = rawProducts.filter((p) => !DELETE.has(p.slug)).map((p) => {
   }
 
   const specs = deriveSpecs(descLines);
+  if (!specs.dn) specs.dn = dnFromTable(specTable);
 
   let image = "";
   if (p.image) {
@@ -249,9 +290,8 @@ const products = rawProducts.filter((p) => !DELETE.has(p.slug)).map((p) => {
     imageManifest[image] = p.image;
   }
 
-  // a concise note: first non-heading application/usage line, trimmed
-  const noteSrc = descLines.find((l) => !l.heading && /[a-ząčęėįšųūž]/i.test(l.text));
-  const shortNote = noteSrc ? noteSrc.text.split(/[.;]/)[0].slice(0, 70).trim() : "";
+  // a concise note: first sentence of the first descriptive line (scripts/note.mjs)
+  const shortNote = makeNote(descLines);
 
   return {
     slug: p.slug,
@@ -317,7 +357,7 @@ for (const p of polyRaw) {
   let sizes = [];
   if (p.tables && p.tables[0] && p.tables[0].length > 1) {
     const [header, ...rows] = p.tables[0];
-    const trHeader = header.map(tr);
+    const trHeader = fixHeaders(header.map(tr));
     specTable = { headers: trHeader, rows: rows.map((r) => r.map(tr)) };
     if (/diametr/i.test(trHeader[0] || "")) {
       sizes = rows.map((r) => r[0]).filter((v) => /^\d+([.,]\d+)?$/.test((v || "").trim()));
@@ -330,8 +370,7 @@ for (const p of polyRaw) {
     image = `/products/orig/poly-${base}`; // prefixed: avoids clashing with rikomarket files
     imageManifest[image] = p.image;
   }
-  const noteSrc = descLines.find((l) => !l.heading && /[a-ząčęėįšųūž]/i.test(l.text));
-  const shortNote = noteSrc ? noteSrc.text.split(/[.;]/)[0].slice(0, 70).trim() : "";
+  const shortNote = makeNote(descLines);
 
   const ov = POLY_OVERRIDE[p.slug];
   const top = ov?.top ?? "rukava-z-polihlorvinilu";
@@ -350,7 +389,11 @@ for (const p of polyRaw) {
     shortNote,
     description,
     descLines,
-    ...deriveSpecs(descLines),
+    ...(() => {
+      const specs = deriveSpecs(descLines);
+      if (!specs.dn) specs.dn = dnFromTable(specTable);
+      return specs;
+    })(),
     vacuum: "",
     bendRadius: "",
     material: "",
@@ -369,7 +412,6 @@ const METAL_INOX = "metalorukavy-z-nerzhaviyuchoyi-stali-ua";
 for (const m of metalRaw) {
   const sub = m.steel === "inox" ? METAL_INOX : METAL_GAL;
   const description = m.lines.map((l) => l.text).join("\n");
-  const noteSrc = m.lines.find((l) => !l.heading);
   products.push({
     slug: m.slug,
     name: m.name,
@@ -380,7 +422,7 @@ for (const m of metalRaw) {
     color: COLOR_BY_TOP[METAL] ?? "silver",
     featured: false,
     image: m.image,
-    shortNote: noteSrc ? noteSrc.text.split(/[.;]/)[0].slice(0, 70).trim() : "",
+    shortNote: makeNote(m.lines),
     description,
     descLines: m.lines,
     dn: m.dn,
@@ -412,7 +454,7 @@ for (const p of products) if (FEATURED.has(p.slug)) p.featured = true;
 // those win; the map below is the fallback and covers anything the old site has
 // no page for. Product-level Russian text is generated by scripts/translate-ru.mjs.
 const CAT_RU = {
-  "PVC žarnos": "Рукава из полихлорвинила",
+  "PVC žarnos": "Рукава из ПВХ",
   "PUR žarnos": "Рукава из полиуретана",
   "KLIN tipo žarnos": "Рукава типа КЛИН",
   "Metalinės žarnos": "Металлорукава",
@@ -422,6 +464,16 @@ const CAT_RU = {
   "Be spiralės (FLAT)": "Без спирали (плоский)",
   "Iš cinkuoto plieno": "Из оцинкованной стали",
   "Iš nerūdijančio plieno": "Из нержавеющей стали",
+};
+
+// Names the client has approved on the new site. These win over the old site's
+// wording (client review 2026-09: "Рукава из ПВХ" — never "полихлорвинил").
+const CAT_RU_FIXED = {
+  "rukava-z-polihlorvinilu": "Рукава из ПВХ",
+  "bez-spirali": "Без спирали (плоский)",
+  "metalorukavy-z-oczynkovanoyi-stali": "Из оцинкованной стали",
+  "metalorukavy-z-nerzhaviyuchoyi-stali-ua": "Из нержавеющей стали",
+  "elementi-ziednannya": "Элементы соединений",
 };
 
 // Cached old-site names, keyed by the category slug (the last path segment of
@@ -454,7 +506,7 @@ const orderedCats = [...catMap.values()]
   });
 const catsLiteral = orderedCats
   .map((c) => {
-    const ru = siteCatRu[c.id] ?? CAT_RU[c.name];
+    const ru = CAT_RU_FIXED[c.id] ?? siteCatRu[c.id] ?? CAT_RU[c.name];
     if (!ru) console.warn("category without a Russian name:", c.name);
     return `  { id: ${JSON.stringify(c.id)}, name: ${JSON.stringify(c.name)}, nameRu: ${JSON.stringify(ru ?? c.name)}, slug: ${JSON.stringify(c.slug)}, parent: ${JSON.stringify(c.parent)} },`;
   })

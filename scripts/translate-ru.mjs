@@ -20,6 +20,7 @@
 //   node scripts/translate-ru.mjs      # then the RU overlay
 import fs from "node:fs";
 import path from "node:path";
+import { makeNote } from "./note.mjs";
 
 const ROOT = process.cwd();
 const CACHE = path.join(ROOT, "scripts", ".scrape-cache");
@@ -115,8 +116,15 @@ if (rawRU) {
   }
 }
 
-// Site wording wins over the hand dictionary.
-const dict = { ...hand, ...site };
+// Wording fixed by hand where the old site is ambiguous: it writes "Диаметр вн."
+// for both the inner and the outer diameter, so the two columns read the same.
+const FIXED = {
+  "Vidinis diametras [mm]": "Внутренний диаметр [мм]",
+  "Išorinis diametras [mm]": "Наружный диаметр [мм]",
+};
+
+// Site wording wins over the hand dictionary; FIXED wins over both.
+const dict = { ...hand, ...site, ...FIXED };
 
 const misses = new Map();
 const tr = (s) => {
@@ -129,21 +137,50 @@ const tr = (s) => {
   return hit;
 };
 
+// ── ПВХ wording (client review 2026-09) ─────────────────────────────────────
+// The client wants the material called "ПВХ" everywhere in Russian — never
+// "полихлорвинил" / "поливинилхлорид", in names, categories or descriptions.
+// Applied last, so it holds whatever the old site or the dictionary says.
+function pvh(s) {
+  if (typeof s !== "string") return s;
+  return s
+    .replace(/Поливинилхлорид \(PVC\)/g, "ПВХ")
+    .replace(/(эластичн[а-яё]*) полихлорвинилов[а-яё]* (?:фольг|плёнк|пленк)[а-яё]*/gi, "$1 ПВХ-плёнкой")
+    .replace(/полихлорвинилов(?:ый|ая|ое|ой|ого|ому|ым|ую|ые|ых|ыми)/gi, "ПВХ")
+    .replace(/(?:полихлорвинил|поливинилхлорид)(?:ом|ам|ами|ах|а|у|е|ы)?(?![а-яё])/gi, "ПВХ");
+}
+const deepPvh = (v) =>
+  typeof v === "string" ? pvh(v)
+    : Array.isArray(v) ? v.map(deepPvh)
+    : v && typeof v === "object" ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, deepPvh(x)]))
+    : v;
+
 // ── 2. Emit the Russian catalogue ───────────────────────────────────────────
-const TEXT_FIELDS = ["name", "subcategory", "shortNote", "dn", "temp", "pressure",
+// shortNote is not translated: it is re-derived from the Russian description
+// below (scripts/note.mjs), so it is always a whole sentence.
+const TEXT_FIELDS = ["name", "subcategory", "dn", "temp", "pressure",
   "wallThickness", "standardLength", "vacuum", "bendRadius", "material",
   "reinforcement", "colorsAvailable", "certifications", "origin"];
 
 const ru = products.map((p) => {
   const out = { ...p };
-  for (const f of TEXT_FIELDS) out[f] = tr(p[f]);
+  for (const f of TEXT_FIELDS) {
+    // Diameter ranges derived from size tables ("16–100 mm") only need the unit.
+    if (f === "dn" && p.dn && dict[p.dn.trim()] === undefined && /^[\d\s,.–-]+mm$/.test(p.dn.trim())) {
+      out.dn = p.dn.replace(/mm$/, "мм");
+      continue;
+    }
+    out[f] = tr(p[f]);
+  }
   out.descLines = (p.descLines ?? []).map((l) => ({ text: tr(l.text), heading: l.heading }));
   out.description = out.descLines.map((l) => l.text).join("\n");
   out.sizes = (p.sizes ?? []).map(tr);
   out.specTable = p.specTable
     ? { headers: p.specTable.headers.map(tr), rows: p.specTable.rows.map((r) => r.map(tr)) }
     : null;
-  return out;
+  const final = deepPvh(out);
+  final.shortNote = makeNote(final.descLines);
+  return final;
 });
 
 fs.writeFileSync(path.join(ROOT, "data", "products.ru.json"), JSON.stringify(ru, null, 2) + "\n");
