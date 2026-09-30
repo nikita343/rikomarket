@@ -92,6 +92,22 @@ function tr(s) {
   return hit;
 }
 
+// Size-table cells come through untranslated when they are "just numbers", but
+// the old site typed several with Cyrillic letters: "17 х 19" (Cyrillic х, not
+// x), "мм", "бар", "кг". Lithuanian pages must not show Cyrillic, so swap them
+// for the Latin units / a real multiplication sign.
+const latinUnits = (s) =>
+  typeof s !== "string"
+    ? s
+    : s
+        .replace(/(\d)(\s?)х(\s?)(?=\d)/g, "$1$2×$3")
+        .replace(/мм3/g, "mm³")
+        .replace(/мм/g, "mm")
+        .replace(/бар/g, "bar")
+        .replace(/кг/g, "kg")
+        .replace(/° ?С/g, "°C");
+const trCell = (s) => latinUnits(tr(s));
+
 // ── Categories ──────────────────────────────────────────────────────
 const MERGE = {
   "elementy-zyednan": "elementi-ziednannya", // dedupe connection-element twins
@@ -273,8 +289,8 @@ const products = rawProducts.filter((p) => !DELETE.has(p.slug)).map((p) => {
   let sizes = [];
   if (p.tables && p.tables[0] && p.tables[0].length > 1) {
     const [header, ...rows] = p.tables[0];
-    const trHeader = fixHeaders(header.map(tr));
-    specTable = { headers: trHeader, rows: rows.map((r) => r.map(tr)) };
+    const trHeader = fixHeaders(header.map(trCell));
+    specTable = { headers: trHeader, rows: rows.map((r) => r.map(trCell)) };
     if (/diametr/i.test(trHeader[0] || "")) {
       sizes = rows.map((r) => r[0]).filter((v) => /^\d+([.,]\d+)?$/.test((v || "").trim()));
     }
@@ -357,8 +373,8 @@ for (const p of polyRaw) {
   let sizes = [];
   if (p.tables && p.tables[0] && p.tables[0].length > 1) {
     const [header, ...rows] = p.tables[0];
-    const trHeader = fixHeaders(header.map(tr));
-    specTable = { headers: trHeader, rows: rows.map((r) => r.map(tr)) };
+    const trHeader = fixHeaders(header.map(trCell));
+    specTable = { headers: trHeader, rows: rows.map((r) => r.map(trCell)) };
     if (/diametr/i.test(trHeader[0] || "")) {
       sizes = rows.map((r) => r[0]).filter((v) => /^\d+([.,]\d+)?$/.test((v || "").trim()));
     }

@@ -103,14 +103,6 @@ export function Footer({ locale }: { locale: Locale }) {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-[22px] text-[12.5px] text-white/65 sm:flex-row sm:justify-between">
           <span>{s.legalLine}</span>
-          <span className="flex gap-[18px]">
-            <Link href={localeHref(locale, "/contacts")} className="nav-link hover:text-white">
-              {t.footer.privacy}
-            </Link>
-            <Link href={localeHref(locale, "/contacts")} className="nav-link hover:text-white">
-              {t.footer.terms}
-            </Link>
-          </span>
         </div>
       </Container>
     </footer>

@@ -131,30 +131,17 @@ export function ProductDetailPage({ slug, locale }: { slug: string; locale: Loca
                     className="object-contain p-6"
                   />
                 )}
-                <span className="absolute left-[18px] top-[18px] bg-red px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white">
-                  {t.product.inStock}
-                </span>
-                {product.subcategory && (
-                  <span className="absolute right-[18px] top-[18px] border border-line bg-white px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.06em] text-navy">
-                    {product.subcategory}
+                {/* Badges share one wrapping row so a long subcategory never covers "in stock" on phones. */}
+                <div className="absolute left-[18px] right-[18px] top-[18px] flex flex-wrap items-start justify-between gap-2">
+                  <span className="bg-red px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.08em] text-white">
+                    {t.product.inStock}
                   </span>
-                )}
-              </div>
-              <div className="mt-3 grid grid-cols-5 gap-2">
-                <div className="flex h-20 items-center justify-center border-2 border-red bg-bg-warm p-1.5">
-                  {product.image && (
-                    <Image
-                      src={product.image}
-                      alt=""
-                      width={80}
-                      height={50}
-                      className="h-full w-full object-contain"
-                    />
+                  {product.subcategory && (
+                    <span className="border border-line bg-white px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.06em] text-navy">
+                      {product.subcategory}
+                    </span>
                   )}
                 </div>
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="flex h-20 items-center justify-center border border-line bg-bg-warm/60" />
-                ))}
               </div>
             </div>
 
@@ -164,7 +151,7 @@ export function ProductDetailPage({ slug, locale }: { slug: string; locale: Loca
                 {category ? categoryName(category, locale) : ""}
                 {product.subcategory ? ` · ${product.subcategory}` : ""}
               </span>
-              <h1 className="heading mt-3 text-3xl sm:text-4xl">{product.name}</h1>
+              <h1 className="heading mt-3 text-3xl hyphens-auto [overflow-wrap:anywhere] sm:text-4xl">{product.name}</h1>
               <p className="mt-4 max-w-[540px] text-[15.5px] leading-relaxed text-ink">
                 {leadText}
               </p>

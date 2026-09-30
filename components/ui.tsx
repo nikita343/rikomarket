@@ -172,7 +172,7 @@ export function PageHero({
           </nav>
         )}
         <Eyebrow>{eyebrow}</Eyebrow>
-        <h1 className="heading mt-3 max-w-[1100px] text-4xl leading-[1.05] sm:text-5xl md:text-[52px]">
+        <h1 className="heading mt-3 max-w-[1100px] text-4xl leading-[1.05] hyphens-auto [overflow-wrap:anywhere] sm:text-5xl md:text-[52px]">
           {title}
         </h1>
         {sub && (

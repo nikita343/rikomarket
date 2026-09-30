@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { chemData, chemMaterials } from "@/lib/chem-data";
 import { chemMaterialsRu, chemNameRu } from "@/lib/chem-ru";
 import { getDict } from "@/lib/dictionary";
-import { defaultLocale, type Locale } from "@/lib/i18n";
+import { collatorFor, defaultLocale, type Locale } from "@/lib/i18n";
 import { Icon } from "@/components/icons";
 
 function Sym({ v }: { v: string }) {
@@ -27,15 +27,18 @@ export function ChemTable({ locale = defaultLocale }: { locale?: Locale }) {
   ];
   const materials = locale === "ru" ? chemMaterialsRu : [...chemMaterials];
 
-  // Rows carry the Lithuanian key plus the label shown for this locale.
-  const localized = useMemo(
-    () =>
-      chemData.map((r) => ({
+  // Rows carry the Lithuanian key plus the label shown for this locale,
+  // sorted alphabetically in that language (the source list follows the old
+  // Ukrainian site's order, which reads as random once translated).
+  const localized = useMemo(() => {
+    const collator = new Intl.Collator(collatorFor(locale), { sensitivity: "base", numeric: true });
+    return chemData
+      .map((r) => ({
         ...r,
         label: locale === "ru" ? chemNameRu[r.name] ?? r.name : r.name,
-      })),
-    [locale],
-  );
+      }))
+      .sort((a, b) => collator.compare(a.label, b.label));
+  }, [locale]);
 
   const rows = useMemo(() => {
     const q = query.trim().toLowerCase();

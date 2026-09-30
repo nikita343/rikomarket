@@ -31,7 +31,7 @@ export function ContactsPage({ locale }: { locale: Locale }) {
 
       <section className="bg-bg py-[60px]">
         <Container>
-          <div className="grid gap-14 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-2">
             {/* Contact details */}
             <div className="border border-line bg-white p-8">
               <h2 className="heading text-[22px] font-bold">{s.nameFull}</h2>
@@ -39,7 +39,7 @@ export function ContactsPage({ locale }: { locale: Locale }) {
                 {t.contactsPage.companyPrefix} {s.foundedNote}
               </div>
 
-              <div className="mt-[26px] grid gap-[22px]">
+              <div className="mt-[26px] grid grid-cols-1 gap-[22px]">
                 {details.map((r, i) => (
                   <div
                     key={r.label}
@@ -48,12 +48,12 @@ export function ContactsPage({ locale }: { locale: Locale }) {
                     <div className="flex h-11 w-11 shrink-0 items-center justify-center bg-red text-white">
                       <Icon name={r.ic} size={22} className="text-white" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <div className="text-[11px] font-bold uppercase tracking-[0.1em] text-mute">
                         {r.label}
                       </div>
                       <div className="mt-1 flex flex-wrap items-center gap-3">
-                        <span className="select-all text-[22px] font-bold text-navy">{r.value}</span>
+                        <span className="min-w-0 max-w-full select-all break-words text-[19px] font-bold text-navy [overflow-wrap:anywhere] sm:text-[22px]">{r.value}</span>
                         {r.ic === "mail" && (
                           <CopyEmail
                             email={company.email}

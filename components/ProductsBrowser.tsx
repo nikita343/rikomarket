@@ -7,6 +7,13 @@ import { ProductCard, type ProductCardData } from "@/components/ProductCard";
 import { getDict, plural } from "@/lib/dictionary";
 import { collatorFor, defaultLocale, localeHref, type Locale } from "@/lib/i18n";
 
+// Category-card covers chosen by the client (client review 2026-09-30).
+const CATEGORY_COVERS: Record<string, string> = {
+  "rukava-z-polihlorvinilu": "/categories/pvc.jpg",
+  "rukava-typu-klyn": "/categories/klin.jpg",
+  // "metalorukavy": "/categories/metal.jpg", — enable once the picked image is saved there
+};
+
 export type BrowserCat = { id: string; name: string; parent: string | null; count: number };
 export type BrowserProduct = ProductCardData & { categories: string[] };
 
@@ -125,10 +132,15 @@ export function ProductsBrowser({
   const tops = tree.childrenOf(null);
   const activeCat = category ? tree.byId.get(category) ?? null : null;
 
-  // A representative image for each top-level category (first product in it).
+  // A representative image for each top-level category: a hand-picked cover
+  // where the client supplied one, otherwise the first product in it.
   const catImage = useMemo(() => {
     const m: Record<string, string> = {};
     for (const top of categories.filter((c) => !c.parent)) {
+      if (CATEGORY_COVERS[top.id]) {
+        m[top.id] = CATEGORY_COVERS[top.id];
+        continue;
+      }
       const ids = tree.subtree(top.id);
       const p = products.find(
         (pr) => pr.image && (pr.category === top.id || pr.categories.some((c) => ids.has(c))),

@@ -42,14 +42,36 @@ function readJson(file) {
 const site = {};
 const report = { aligned: [], skipped: [], noTwin: [], conflicts: [] };
 
+// Every aligned pair is a vote; the most common Russian wording per LT string
+// wins (ties: first seen). A single mis-scraped page can then no longer
+// overwrite a string every other product agrees on.
+const votes = new Map();
 function learn(lt, ru) {
   if (typeof lt !== "string" || typeof ru !== "string") return;
   const k = lt.trim();
   const v = ru.trim();
   if (!k || !v) return;
-  if (site[k] && site[k] !== v) report.conflicts.push([k, site[k], v]);
-  site[k] = v;
+  if (!votes.has(k)) votes.set(k, new Map());
+  const m = votes.get(k);
+  m.set(v, (m.get(v) ?? 0) + 1);
 }
+function settleVotes() {
+  report.conflicts.length = 0;
+  for (const [k, m] of votes) {
+    const ranked = [...m.entries()].sort((a, b) => b[1] - a[1]);
+    site[k] = ranked[0][0];
+    if (ranked.length > 1) report.conflicts.push([k, ranked[0][0], ranked[1][0]]);
+  }
+}
+
+// Line counts alone are not proof two pages line up: the old RU pages sometimes
+// drop one line and repeat another, which keeps the count but shifts every line
+// after it (that is how "Matmenys" once became "Диапазон диаметров: 200-400 мм.").
+// A pair only counts as aligned when both sides are the same kind of line
+// (heading or not) and carry the same numbers.
+const numbers = (s) => (String(s).match(/\d+(?:[.,]\d+)?/g) ?? []).map((n) => n.replace(",", ".")).join("|");
+const lineFits = (lt, ru) =>
+  !!lt.heading === !!ru.heading && numbers(lt.text) === numbers(ru.text);
 
 if (rawRU) {
   const uaBySlug = new Map((rawUA ?? []).map((p) => [p.slug, p]));
@@ -68,7 +90,8 @@ if (rawRU) {
     const linesFit =
       p.descLines.length > 0 &&
       ruLines.length === p.descLines.length &&
-      (!uaLines.length || uaLines.length === p.descLines.length);
+      (!uaLines.length || uaLines.length === p.descLines.length) &&
+      p.descLines.every((l, i) => lineFits(l, ruLines[i]));
 
     const ruTable = ru.tables?.[0] ?? null;
     const tableFit =
@@ -101,6 +124,7 @@ if (rawRU) {
     JSON.stringify(catNames, null, 1),
   );
 
+  settleVotes();
   fs.writeFileSync(
     path.join(ROOT, "scripts", "translations-ru-site.json"),
     JSON.stringify(site, null, 1) + "\n",
@@ -114,21 +138,33 @@ if (rawRU) {
   for (const m of catSrc.matchAll(/name: "((?:[^"\\]|\\.)*)", nameRu: "((?:[^"\\]|\\.)*)"/g)) {
     learn(JSON.parse(`"${m[1]}"`), JSON.parse(`"${m[2]}"`));
   }
-}
+}settleVotes();
+
 
 // Wording fixed by hand where the old site is ambiguous: it writes "Диаметр вн."
 // for both the inner and the outer diameter, so the two columns read the same.
 const FIXED = {
   "Vidinis diametras [mm]": "Внутренний диаметр [мм]",
   "Išorinis diametras [mm]": "Наружный диаметр [мм]",
+  // The old site has both; only this one is grammatical.
+  "Visa produkcija sertifikuota": "Вся продукция сертифицирована",
 };
 
 // Site wording wins over the hand dictionary; FIXED wins over both.
 const dict = { ...hand, ...site, ...FIXED };
 
+// Bare "number + unit" cells ("0,8 mm", "30 mm³", "10 bar") only need the unit
+// in Russian; the LT generator writes them with Latin units.
+const RU_UNITS = { mm: "мм", "mm³": "мм³", bar: "бар", kg: "кг" };
+const unitCell = (s) => {
+  const m = s.trim().match(/^([\d\s,.×x–-]+)\s?(mm³|mm|bar|kg)$/);
+  return m ? `${m[1].trim()} ${RU_UNITS[m[2]]}` : null;
+};
+
 const misses = new Map();
 const tr = (s) => {
   if (typeof s !== "string" || !s.trim()) return s;
+  if (dict[s.trim()] === undefined && unitCell(s)) return unitCell(s);
   const hit = dict[s.trim()];
   if (hit === undefined) {
     if (/[A-Za-zĄČĘĖĮŠŲŪŽąčęėįšųūž]/.test(s)) misses.set(s, (misses.get(s) ?? 0) + 1);
@@ -147,7 +183,11 @@ function pvh(s) {
     .replace(/Поливинилхлорид \(PVC\)/g, "ПВХ")
     .replace(/(эластичн[а-яё]*) полихлорвинилов[а-яё]* (?:фольг|плёнк|пленк)[а-яё]*/gi, "$1 ПВХ-плёнкой")
     .replace(/полихлорвинилов(?:ый|ая|ое|ой|ого|ому|ым|ую|ые|ых|ыми)/gi, "ПВХ")
-    .replace(/(?:полихлорвинил|поливинилхлорид)(?:ом|ам|ами|ах|а|у|е|ы)?(?![а-яё])/gi, "ПВХ");
+    .replace(/(?:полихлорвинил|поливинилхлорид)(?:ом|ам|ами|ах|а|у|е|ы)?(?![а-яё])/gi, "ПВХ")
+    // Typos carried over from the old site's Russian pages.
+    .replace(/(?<![А-ЯЁа-яё])ПХВ(?![А-ЯЁа-яё])/g, "ПВХ")
+    .replace(/спираль их /g, "спираль из ")
+    .replace(/([а-яё]) :/gi, "$1:");
 }
 const deepPvh = (v) =>
   typeof v === "string" ? pvh(v)

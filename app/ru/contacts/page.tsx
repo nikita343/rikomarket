@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import { ContactsPage } from "@/components/pages/Contacts";
 import { getDict } from "@/lib/dictionary";
+import { pageMetadata } from "@/lib/seo";
 
-const t = getDict("ru").contactsPage;
-export const metadata: Metadata = { title: t.metaTitle, description: t.metaDesc };
+const locale = "ru" as const;
+const t = getDict(locale).contactsPage;
+
+export const metadata: Metadata = pageMetadata({
+  locale,
+  path: "/contacts",
+  title: t.metaTitle,
+  description: t.metaDesc,
+});
 
 export default function Page() {
-  return <ContactsPage locale="ru" />;
+  return <ContactsPage locale={locale} />;
 }

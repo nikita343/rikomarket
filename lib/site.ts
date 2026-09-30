@@ -3,6 +3,14 @@
 // words in it lives in `site[locale]`.
 import type { Locale } from "@/lib/i18n";
 
+// Company registration code (įmonės kodas). Still missing from the client —
+// while it is empty the footer and contacts page simply leave it out, so no
+// placeholder ever ships.
+const companyCode = "";
+const vat = "LT100020123613";
+const legal = (codeLabel: string, vatLabel: string) =>
+  [companyCode && `${codeLabel} ${companyCode}`, `${vatLabel} ${vat}`].filter(Boolean).join(" · ");
+
 export const company = {
   nameShort: "Riko Market",
   phone: "+370 661 42272",
@@ -37,8 +45,8 @@ export const site: Record<Locale, SiteContent> = {
       "Tiekiame techninių žarnų ir sujungimo elementų asortimentą medienos apdirbimo, vėdinimo, žemės ūkio, chemijos ir specialiosios technikos sektoriams.",
     address: "Elektrėnai, Lietuva",
     hours: "I–V / 9:00–18:00",
-    foundedNote: "Įm. kodas 305XXXXXX · PVM LT100020123613",
-    legalLine: "© 2026 UAB „Riko Market“ · Įm. kodas 305XXXXXX · PVM LT100020123613",
+    foundedNote: legal("Įm. kodas", "PVM"),
+    legalLine: `© 2026 UAB „Riko Market“ · ${legal("Įm. kodas", "PVM")}`,
     nav: [
       { label: "Pagrindinis", href: "/" },
       { label: "Produktai", href: "/products" },
@@ -74,8 +82,8 @@ export const site: Record<Locale, SiteContent> = {
       "Поставляем технические рукава и соединительные элементы для деревообработки, вентиляции, сельского хозяйства, химической промышленности и спецтехники.",
     address: "Электренай, Литва",
     hours: "Пн–Пт / 9:00–18:00",
-    foundedNote: "Код предприятия 305XXXXXX · НДС LT100020123613",
-    legalLine: "© 2026 UAB «Riko Market» · Код предприятия 305XXXXXX · НДС LT100020123613",
+    foundedNote: legal("Код предприятия", "НДС"),
+    legalLine: `© 2026 UAB «Riko Market» · ${legal("Код предприятия", "НДС")}`,
     nav: [
       { label: "Главная", href: "/" },
       { label: "Продукция", href: "/products" },
