@@ -53,9 +53,9 @@ export function Header({ locale }: { locale: Locale }) {
             <LanguageSwitcher locale={locale} className="mr-1" />
             <a
               href={company.phoneHref}
-              className="inline-flex items-center gap-2 whitespace-nowrap text-base font-bold text-navy hover:text-red"
+              className="inline-flex items-center gap-2 whitespace-nowrap text-lg font-extrabold text-navy hover:text-red"
             >
-              <Icon name="phone" size={15} className="text-red" />
+              <Icon name="phone" size={17} className="text-red" />
               {company.phone}
             </a>
             <Button href={localeHref(locale, "/contacts")} kind="primary" icon={false}>
@@ -99,10 +99,15 @@ export function Header({ locale }: { locale: Locale }) {
                 </Link>
               ))}
               <div className="flex items-center justify-between py-4">
-                <a href={company.phoneHref} className="inline-flex items-center gap-2 font-bold text-navy">
-                  <Icon name="phone" size={15} className="text-red" />
-                  {company.phone}
-                </a>
+                <div className="grid gap-1">
+                  <a href={company.phoneHref} className="inline-flex items-center gap-2 text-lg font-extrabold text-navy">
+                    <Icon name="phone" size={16} className="text-red" />
+                    {company.phone}
+                  </a>
+                  <a href={company.phone2Href} className="pl-6 text-sm font-semibold text-mute">
+                    {company.phone2}
+                  </a>
+                </div>
                 <Button href={localeHref(locale, "/contacts")} kind="primary" icon={false}>
                   {t.common.inquiry}
                 </Button>

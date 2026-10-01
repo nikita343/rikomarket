@@ -9,9 +9,9 @@ export function ContactsPage({ locale }: { locale: Locale }) {
   const t = getDict(locale);
   const s = getSite(locale);
 
-  const details: { ic: IconName; label: string; value: string; sub: string }[] = [
+  const details: { ic: IconName; label: string; value: string; value2?: string; sub: string }[] = [
     { ic: "pin", label: t.common.address, value: s.address, sub: t.contactsPage.addressSub },
-    { ic: "phone", label: t.common.phone, value: company.phone, sub: s.hours },
+    { ic: "phone", label: t.common.phone, value: company.phone, value2: company.phone2, sub: s.hours },
     { ic: "mail", label: t.common.email, value: company.email, sub: t.contactsPage.emailSub },
     { ic: "clock", label: t.common.hours, value: s.hours, sub: t.contactsPage.hoursSub },
   ];
@@ -53,7 +53,7 @@ export function ContactsPage({ locale }: { locale: Locale }) {
                         {r.label}
                       </div>
                       <div className="mt-1 flex flex-wrap items-center gap-3">
-                        <span className="min-w-0 max-w-full select-all break-words text-[19px] font-bold text-navy [overflow-wrap:anywhere] sm:text-[22px]">{r.value}</span>
+                        <span className={`min-w-0 max-w-full select-all break-words font-bold text-navy [overflow-wrap:anywhere] ${r.ic === "phone" ? "text-[22px] sm:text-[28px]" : "text-[19px] sm:text-[22px]"}`}>{r.value}</span>
                         {r.ic === "mail" && (
                           <CopyEmail
                             email={company.email}
@@ -62,6 +62,9 @@ export function ContactsPage({ locale }: { locale: Locale }) {
                           />
                         )}
                       </div>
+                      {r.value2 && (
+                        <div className="mt-1 select-all text-base font-semibold text-navy/70">{r.value2}</div>
+                      )}
                       <div className="mt-1 text-[13px] text-mute">{r.sub}</div>
                     </div>
                   </div>

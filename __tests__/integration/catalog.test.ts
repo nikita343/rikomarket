@@ -116,3 +116,45 @@ describe("catalog integration", () => {
     }
   });
 });
+
+describe("catalog text quality (client review 2026-09)", () => {
+  const locales = ["lt", "ru"] as const;
+
+  it.each(locales)("every teaser (%s) is a whole sentence taken from the description", (locale) => {
+    for (const p of getAllProducts(locale)) {
+      if (!p.shortNote) continue;
+      // (a trailing ";" in the source becomes "." in the teaser)
+      const note = p.shortNote.replace(/[….]$/, "");
+      const source = p.descLines.find((l) => l.text.replace(/\s+/g, " ").startsWith(note));
+      expect({ slug: p.slug, found: Boolean(source) }).toEqual({ slug: p.slug, found: true });
+      // not cut mid-word: a shortened note ends with "…", a full one at a sentence/line end
+      if (!p.shortNote.endsWith("…")) {
+        const rest = source!.text.replace(/\s+/g, " ").slice(note.length);
+        expect({ slug: p.slug, rest: /^[.;!?]?(\s|$)/.test(rest) }).toEqual({ slug: p.slug, rest: true });
+      }
+    }
+  });
+
+  it("the Russian catalogue says ПВХ, never полихлорвинил / поливинилхлорид", () => {
+    const text = JSON.stringify(getAllProducts("ru"));
+    expect(text).not.toMatch(/полихлорвинил|поливинилхлорид/i);
+    expect(categoryById("rukava-z-polihlorvinilu")?.nameRu).toBe("Рукава из ПВХ");
+  });
+
+  it("every hose with a diameter column has a DN range (so diameter filters find it)", () => {
+    for (const p of getAllProducts()) {
+      const h = p.specTable?.headers[0] ?? "";
+      if (/^Vidinis\b.*diametras/i.test(h) && p.specTable!.rows.some((r) => parseFloat(r[0]) >= 1)) {
+        expect({ slug: p.slug, dn: Boolean(p.dn) }).toEqual({ slug: p.slug, dn: true });
+      }
+    }
+  });
+
+  it("size tables are rectangular (merged cells expanded)", () => {
+    for (const p of getAllProducts()) {
+      if (!p.specTable) continue;
+      for (const r of p.specTable.rows) expect(r).toHaveLength(p.specTable.headers.length);
+    }
+  });
+});
+

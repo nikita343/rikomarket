@@ -176,7 +176,7 @@ export function HomePage({ locale }: { locale: Locale }) {
           </div>
           <div className="border border-white/[0.18] bg-white/[0.06] p-8">
             <div className="grid gap-[18px] text-[15px]">
-              <ContactRow icon="phone" label={t.common.phone} value={company.phone} big />
+              <ContactRow icon="phone" label={t.common.phone} value={company.phone} sub={company.phone2} big />
               <ContactRow icon="mail" label={t.common.email} value={company.email} />
               <ContactRow icon="clock" label={t.common.hours} value={s.hours} />
             </div>
@@ -201,11 +201,13 @@ function ContactRow({
   icon,
   label,
   value,
+  sub,
   big = false,
 }: {
   icon: IconName;
   label: string;
   value: string;
+  sub?: string;
   big?: boolean;
 }) {
   return (
@@ -215,7 +217,8 @@ function ContactRow({
         <div className="text-[11px] font-semibold uppercase tracking-[0.1em] text-white/70">
           {label}
         </div>
-        <div className={`font-bold ${big ? "text-[22px]" : "text-base"}`}>{value}</div>
+        <div className={`font-bold ${big ? "text-[26px] leading-tight" : "text-base"}`}>{value}</div>
+        {sub && <div className="mt-0.5 text-sm font-semibold text-white/70">{sub}</div>}
       </div>
     </div>
   );

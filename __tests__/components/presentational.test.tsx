@@ -5,11 +5,11 @@ import { Button, Container, Eyebrow, SectionHead, PageHero, Logo } from "@/compo
 import { industries } from "@/lib/industries";
 
 describe("IndustryTile", () => {
-  it("renders the industry name + desc and links to /industries", () => {
+  it("renders the industry name + desc and links to its section on /industries", () => {
     render(<IndustryTile industry={industries[0]} />);
     expect(screen.getByText(industries[0].name)).toBeInTheDocument();
     expect(screen.getByText(industries[0].desc)).toBeInTheDocument();
-    expect(screen.getByRole("link")).toHaveAttribute("href", "/industries");
+    expect(screen.getByRole("link")).toHaveAttribute("href", `/industries#${industries[0].id}`);
   });
 });
 

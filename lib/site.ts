@@ -13,8 +13,12 @@ const legal = (codeLabel: string, vatLabel: string) =>
 
 export const company = {
   nameShort: "Riko Market",
-  phone: "+370 661 42272",
-  phoneHref: "tel:+37066142272",
+  // Main number (client, 2026-10-01: "must be first priority / the main one").
+  phone: "+370 60 70 40 30",
+  phoneHref: "tel:+37060704030",
+  // Secondary number — shown smaller, under the main one.
+  phone2: "+370 661 42272",
+  phone2Href: "tel:+37066142272",
   email: "rikomarket.lt@gmail.com",
   website: "www.rikomarket.lt",
 } as const;

@@ -1,4 +1,4 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import {
   ProductsBrowser,
@@ -67,6 +67,39 @@ describe("ProductsBrowser — category-first flow (real catalog)", () => {
     expect(screen.queryByText("Vidinis diametras")).not.toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Metalinės žarnos/ })).toBeInTheDocument();
   });
+  it("lists KLIN in natural order: K1/B … K9/B before K10 … K13", async () => {
+    const user = userEvent.setup();
+    const { products, categories } = realProps();
+    render(<ProductsBrowser products={products} categories={categories} />);
+    await user.click(screen.getByRole("button", { name: /KLIN tipo žarnos/ }));
+
+    const codes = () =>
+      screen.getAllByText(/^KLIN K\d+/).map((n) => n.textContent!.match(/^KLIN (K[\d/A-Z]+)/)![1]);
+    const page1 = codes();
+    expect(page1[0]).toBe("K1/B");
+    expect(page1).not.toContain("K10");
+    await user.click(screen.getByRole("button", { name: "2" }));
+    // 12 per page: K1/B … K9/A on page 1, the rest on page 2
+    expect(codes()).toEqual(["K9/B", "K10", "K11", "K12", "K13"]);
+  });
+
+  it("opens the category given in the URL (?category=) — e.g. from a footer link", () => {
+    (globalThis as unknown as { __nav: { set: (u: string) => void } }).__nav.set(
+      "/products?category=rukava-typu-klyn",
+    );
+    const { products, categories } = realProps();
+    render(<ProductsBrowser products={products} categories={categories} />);
+    expect(screen.getByText(/kategorija „KLIN tipo žarnos/)).toBeInTheDocument();
+  });
+
+  it("keeps hoses from the polynect import in diameter filters (DN from their size table)", async () => {
+    const user = userEvent.setup();
+    const { products, categories } = realProps();
+    render(<ProductsBrowser products={products} categories={categories} />);
+    await user.click(screen.getByRole("button", { name: /PVC žarnos/ }));
+    await user.click(screen.getByLabelText("50–150 mm"));
+    expect(screen.getByText(/Aquaflex/i)).toBeInTheDocument();
+  });
 });
 
 describe("ProductsBrowser — filtering & sorting (deterministic dataset)", () => {
@@ -126,6 +159,21 @@ describe("ProductsBrowser — filtering & sorting (deterministic dataset)", () =
     await user.click(screen.getByLabelText("500+ mm")); // only LARGE
     await user.click(screen.getByLabelText("Iki +90 °C")); // LARGE is +650 → excluded
     expect(screen.getByText("Pagal pasirinktus filtrus produktų nerasta.")).toBeInTheDocument();
+  });
+
+  it("matches every diameter bucket a DN range overlaps, not only the smallest size", async () => {
+    const user = userEvent.setup();
+    render(
+      <ProductsBrowser
+        products={[...products, mk("range", "20–650 mm.", "+70 °C")]}
+        categories={categories}
+      />,
+    );
+    await user.click(screen.getByRole("button", { name: /Cat A/ }));
+    await user.click(screen.getByLabelText("50–150 mm"));
+    expect(screen.getByText("RANGE")).toBeInTheDocument();
+    expect(screen.getByText("MEDIUM")).toBeInTheDocument();
+    expect(screen.queryByText("SMALL")).not.toBeInTheDocument();
   });
 
   it("sorts by diameter ascending", async () => {

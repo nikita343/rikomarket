@@ -80,10 +80,13 @@ export function Footer({ locale }: { locale: Locale }) {
                 <Icon name="pin" size={16} className="shrink-0 text-white/85" />
                 <span>{s.address}</span>
               </div>
-              <a href={company.phoneHref} className="flex gap-2.5">
-                <Icon name="phone" size={16} className="shrink-0 text-white/85" />
-                <span className="font-semibold text-white">{company.phone}</span>
-              </a>
+              <div className="flex gap-2.5">
+                <Icon name="phone" size={16} className="mt-0.5 shrink-0 text-white/85" />
+                <div className="grid gap-1">
+                  <a href={company.phoneHref} className="text-base font-bold text-white">{company.phone}</a>
+                  <a href={company.phone2Href}>{company.phone2}</a>
+                </div>
+              </div>
               <a href={`mailto:${company.email}`} className="flex gap-2.5">
                 <Icon name="mail" size={16} className="shrink-0 text-white/85" />
                 <span>{company.email}</span>
