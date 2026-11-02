@@ -6,7 +6,8 @@ import { categoryById, categoryName } from "@/lib/categories";
 import { getDict } from "@/lib/dictionary";
 import { getSite } from "@/lib/site";
 import { localeHref } from "@/lib/i18n";
-import { breadcrumbJsonLd, pageMetadata, productJsonLd } from "@/lib/seo";
+import { breadcrumbJsonLd, pageMetadata, productDescription, productJsonLd, productTitle } from "@/lib/seo";
+import { categoryPath } from "@/lib/landing";
 
 const locale = "lt" as const;
 type Params = Promise<{ slug: string }>;
@@ -22,8 +23,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return pageMetadata({
     locale,
     path: `/products/${product.slug}`,
-    title: product.name,
-    description: product.shortNote || product.description || getSite(locale).descShort,
+    title: productTitle(product, locale),
+    description: productDescription(product, locale),
     image: product.image ? { url: product.image, alt: product.name } : undefined,
   });
 }
@@ -44,7 +45,7 @@ export default async function Page({ params }: { params: Params }) {
               { name: nav[0].label, path: localeHref(locale, "/") },
               { name: nav[1].label, path: localeHref(locale, "/products") },
               ...(category && catLabel
-                ? [{ name: catLabel, path: localeHref(locale, `/products?category=${category.id}`) }]
+                ? [{ name: catLabel, path: localeHref(locale, categoryPath(category.id)) }]
                 : []),
               { name: product.name, path: localeHref(locale, `/products/${product.slug}`) },
             ]),

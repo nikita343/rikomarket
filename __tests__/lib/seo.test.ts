@@ -1,6 +1,7 @@
 import { languageAlternates, metaDescription, pageMetadata, SITE_URL } from "@/lib/seo";
 import sitemap from "@/app/sitemap";
 import { getAllProducts } from "@/lib/products";
+import { categoryLandings, cities } from "@/lib/landing";
 
 describe("lib/seo", () => {
   it("gives every page its own canonical URL and hreflang pair", () => {
@@ -35,7 +36,7 @@ describe("lib/seo", () => {
 
   it("lists every page in both languages in the sitemap", () => {
     const entries = sitemap();
-    const pages = 6 + getAllProducts("lt").length;
+    const pages = 6 + categoryLandings.length + cities.length + getAllProducts("lt").length;
     expect(entries).toHaveLength(pages * 2);
     expect(entries.every((e) => e.url.startsWith(SITE_URL))).toBe(true);
     expect(new Set(entries.map((e) => e.url)).size).toBe(entries.length);

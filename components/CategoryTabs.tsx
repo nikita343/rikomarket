@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { categoryPath } from "@/lib/category-paths";
 import type { Product } from "@/lib/products";
 import { getDict } from "@/lib/dictionary";
 import { defaultLocale, localeHref, type Locale } from "@/lib/i18n";
@@ -61,7 +62,7 @@ export function CategoryTabs({
 
       <div className="mt-8 text-center">
         <Button
-          href={localeHref(locale, `/products?category=${active}`)}
+          href={localeHref(locale, categoryPath(active))}
           kind="primaryDark"
           size="lg"
         >

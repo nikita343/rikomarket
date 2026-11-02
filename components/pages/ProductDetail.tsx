@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { categoryPath } from "@/lib/landing";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProductBySlug, getProductsByCategory, type Product } from "@/lib/products";
@@ -95,7 +96,7 @@ export function ProductDetailPage({ slug, locale }: { slug: string; locale: Loca
               <>
                 <span className="opacity-50">/</span>
                 <Link
-                  href={localeHref(locale, `/products?category=${category.id}`)}
+                  href={localeHref(locale, categoryPath(category.id))}
                   className="nav-link hover:text-red"
                 >
                   {categoryName(category, locale)}

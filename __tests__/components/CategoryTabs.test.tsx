@@ -49,15 +49,15 @@ describe("CategoryTabs", () => {
     expect(within(klinTab).getByText("2")).toBeInTheDocument();
   });
 
-  it("the CTA links to the active category's product listing", async () => {
+  it("the CTA links to the active category's landing page", async () => {
     const user = userEvent.setup();
     render(<CategoryTabs cats={cats} productsByCat={productsByCat} />);
     expect(
       screen.getByRole("link", { name: /Visi „KLIN tipo žarnos“ produktai/ }),
-    ).toHaveAttribute("href", "/products?category=rukava-typu-klyn");
+    ).toHaveAttribute("href", "/products/category/klin-zarnos");
     await user.click(screen.getByRole("button", { name: /Metalinės žarnos/ }));
     expect(
       screen.getByRole("link", { name: /Visi „Metalinės žarnos“ produktai/ }),
-    ).toHaveAttribute("href", "/products?category=metalorukavy");
+    ).toHaveAttribute("href", "/products/category/metalines-zarnos");
   });
 });

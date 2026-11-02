@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { HomePage } from "@/components/pages/Home";
 import { JsonLd } from "@/components/JsonLd";
 import { getDict } from "@/lib/dictionary";
-import { getSite } from "@/lib/site";
-import { organizationJsonLd, pageMetadata, websiteJsonLd } from "@/lib/seo";
+import { homeFaq } from "@/lib/landing";
+import { faqJsonLd, organizationJsonLd, pageMetadata, websiteJsonLd } from "@/lib/seo";
 
 const locale = "lt" as const;
 
@@ -12,13 +12,13 @@ export const metadata: Metadata = pageMetadata({
   path: "/",
   title: getDict(locale).home.metaTitle,
   absoluteTitle: true,
-  description: getSite(locale).descShort,
+  description: getDict(locale).home.metaDesc,
 });
 
 export default function Page() {
   return (
     <>
-      <JsonLd data={[organizationJsonLd(locale), websiteJsonLd(locale)]} />
+      <JsonLd data={[organizationJsonLd(locale), websiteJsonLd(locale), faqJsonLd(homeFaq[locale])]} />
       <HomePage locale={locale} />
     </>
   );

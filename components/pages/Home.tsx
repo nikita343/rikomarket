@@ -14,6 +14,8 @@ import { Container, Button, Eyebrow, SectionHead } from "@/components/ui";
 import { Icon, type IconName } from "@/components/icons";
 import { IndustryTile } from "@/components/IndustryTile";
 import { CategoryTabs, type TabCat } from "@/components/CategoryTabs";
+import { FaqSection } from "@/components/FaqSection";
+import { cities, cityPath, homeFaq } from "@/lib/landing";
 
 // The five material families shown on the homepage.
 const HOME_CATEGORIES = [
@@ -66,13 +68,16 @@ export function HomePage({ locale }: { locale: Locale }) {
 
         <Container className="relative z-10 py-14 lg:py-[100px] lg:pb-[120px]">
           <div className="max-w-[600px] text-white">
-            <Eyebrow tone="yellow">{t.home.heroEyebrow}</Eyebrow>
-            <h1 className="mt-5 text-[42px] font-extrabold leading-[1.0] tracking-[-0.02em] sm:text-6xl lg:text-[68px]">
+            {/* The H1 carries the search phrase; the slogan below is display copy. */}
+            <h1>
+              <Eyebrow tone="yellow">{t.home.heroEyebrow}</Eyebrow>
+            </h1>
+            <p className="mt-5 text-[42px] font-extrabold leading-[1.0] tracking-[-0.02em] sm:text-6xl lg:text-[68px]">
               {t.home.heroTitleA}
               <br />
               <span className="text-yellow">{t.home.heroTitleAccent}</span>{" "}
               {t.home.heroTitleB}
-            </h1>
+            </p>
             <p className="mt-6 max-w-[480px] text-[17px] leading-relaxed text-white/85">
               {t.home.heroSub}
             </p>
@@ -161,6 +166,37 @@ export function HomePage({ locale }: { locale: Locale }) {
             className="mb-7"
           />
           <CategoryTabs cats={tabCats} productsByCat={productsByCat} locale={locale} />
+        </Container>
+      </section>
+
+      {/* ── FAQ (visible answers + FAQPage JSON-LD on the route) ── */}
+      <FaqSection
+        eyebrow={t.landing.faqEyebrow}
+        title={t.landing.homeFaqTitle}
+        items={homeFaq[locale]}
+        className="bg-bg py-20"
+      />
+
+      {/* ── Delivery cities ───────────────────────────────── */}
+      <section className="border-t border-line bg-bg-alt py-14">
+        <Container>
+          <SectionHead
+            eyebrow={t.landing.deliveryEyebrow}
+            title={t.landing.deliveryTitle}
+            sub={t.landing.deliverySub}
+            className="mb-6"
+          />
+          <div className="flex flex-wrap gap-2">
+            {cities.map((c) => (
+              <a
+                key={c.slug}
+                href={localeHref(locale, cityPath(c.slug))}
+                className="rounded-[4px] border border-line bg-white px-4 py-2.5 text-sm font-bold text-navy hover:border-navy"
+              >
+                {c.names[locale].name}
+              </a>
+            ))}
+          </div>
         </Container>
       </section>
 

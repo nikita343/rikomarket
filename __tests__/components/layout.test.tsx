@@ -3,6 +3,8 @@ import userEvent from "@testing-library/user-event";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { getSite } from "@/lib/site";
+import { categoryPath } from "@/lib/category-paths";
+import { cities } from "@/lib/landing";
 import { topCategories, categoryName } from "@/lib/categories";
 
 describe("Header", () => {
@@ -32,14 +34,25 @@ describe("Footer", () => {
     for (const c of topCategories()) {
       expect(screen.getByRole("link", { name: c.name })).toHaveAttribute(
         "href",
-        `/products?category=${c.id}`,
+        categoryPath(c.id),
       );
+    }
+  });
+
+  it("links every top-level category to its landing page", () => {
+    for (const c of topCategories()) expect(categoryPath(c.id)).toMatch(/^\/products\/category\//);
+  });
+
+  it("links to every delivery-city page", () => {
+    render(<Footer locale="lt" />);
+    for (const c of cities) {
+      expect(screen.getByRole("link", { name: c.names.lt.name })).toHaveAttribute("href", `/technines-zarnos/${c.slug}`);
     }
   });
 
   it("shows company contact details", () => {
     render(<Footer locale="lt" />);
-    expect(screen.getByText(/Elektrėnai/)).toBeInTheDocument();
+    expect(screen.getByText("Elektrėnai, Lietuva")).toBeInTheDocument();
   });
 });
 
@@ -58,7 +71,7 @@ describe("Russian locale", () => {
     for (const c of topCategories()) {
       expect(screen.getByRole("link", { name: categoryName(c, "ru") })).toHaveAttribute(
         "href",
-        `/ru/products?category=${c.id}`,
+        `/ru${categoryPath(c.id)}`,
       );
     }
   });

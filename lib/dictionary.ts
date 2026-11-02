@@ -20,8 +20,10 @@ const lt = {
     heroAlt: "Pramoninės techninės žarnos",
   },
   home: {
-    metaTitle: "Riko Market — techninės žarnos ir sujungimo elementai",
-    heroEyebrow: "UAB RIKO MARKET",
+    metaTitle: "Techninės žarnos: PVC, PUR, metalinės, Camlock | Riko Market",
+    metaDesc:
+      "Techninės žarnos ir jungtys iš sandėlio Elektrėnuose: PVC, PUR, KLIN, metalinės žarnos, Camlock ir STORZ. Pristatymas visoje Lietuvoje per 1–3 d.d.",
+    heroEyebrow: "Techninės žarnos ir jungtys Lietuvoje",
     heroTitleA: "Lankstūs sprendimai –",
     heroTitleAccent: "patikimas",
     heroTitleB: "rezultatas",
@@ -49,9 +51,9 @@ const lt = {
     terms: "Naudojimosi sąlygos",
   },
   productsPage: {
-    metaTitle: "Produktai",
+    metaTitle: "Techninių žarnų katalogas: PVC, PUR, KLIN, metalinės",
     metaDesc:
-      "Visas techninių žarnų asortimentas: PVC, PUR, KLIN, metalo ir sujungimo elementai.",
+      "Techninių žarnų ir jungčių katalogas: PVC, PUR, KLIN tipo, metalinės žarnos, Camlock, STORZ jungtys ir apkabos. DN nuo 2 iki 1150 mm, iki +1100 °C.",
     eyebrow: "Produktai",
     title: "Produktų kategorijos.",
     sub: "Pasirinkite kategoriją. Diametrai 10–1200 mm, temperatūros nuo −150 iki +1100 °C.",
@@ -79,9 +81,9 @@ const lt = {
     allOf: (name: string) => `Visi „${name}“ produktai`,
   },
   industriesPage: {
-    metaTitle: "Pritaikymo sritys",
+    metaTitle: "Žarnos pramonei: mediena, vėdinimas, žemės ūkis, chemija",
     metaDesc:
-      "Techninių žarnų pritaikymas pramonės šakose: mediena, vėdinimas, žemės ūkis, chemija, specialioji technika ir kt.",
+      "Techninės žarnos medienos apdirbimui (drožlės, dulkės), vėdinimui, maisto ir chemijos pramonei, žemės ūkiui ir specialiajai technikai. Pagalba parenkant.",
     eyebrow: "Pritaikymo sritys",
     title: "Pramonės šakos.",
     sub: "Tiekiame techninių žarnų asortimentą medienos apdirbimo, vėdinimo, žemės ūkio, chemijos, maisto ir specialiosios technikos sektoriams.",
@@ -92,9 +94,9 @@ const lt = {
     next: "Kita nuotrauka",
   },
   chemPage: {
-    metaTitle: "Cheminis atsparumas",
+    metaTitle: "Žarnų cheminio atsparumo lentelė",
     metaDesc:
-      "Cheminio atsparumo lentelė: žarnų medžiagų (PVC, PUR, Santoprenas, Silikonas, Teflonas, Nitrilas, Chloroprenas, Hipalonas, Polietilenas) atsparumas chemikalams.",
+      "Žarnų medžiagų cheminio atsparumo lentelė: PVC, PUR, silikonas, teflonas (PTFE), nitrilas, neoprenas, hipalonas, polietilenas. Ieškokite pagal chemikalą.",
     eyebrow: "Informacinė lentelė",
     title: "Cheminio atsparumo lentelė.",
     sub: "Pagrindinių žarnų medžiagų atsparumas dažniausiai naudojamiems chemikalams. Rekomenduojame pasitarti su mūsų inžinieriais dėl konkretaus pritaikymo.",
@@ -111,9 +113,9 @@ const lt = {
       "* Lentelė pateikiama informaciniais tikslais (esant 20 °C, normalios ar didelės koncentracijos reagentams). Konkrečios darbo sąlygos — temperatūra, koncentracija, kontakto trukmė — gali smarkiai pakeisti rezultatą. Dėl detalių rekomendacijų kreipkitės į mūsų techninį skyrių.",
   },
   unitsPage: {
-    metaTitle: "Matavimo vienetai",
+    metaTitle: "Matavimo vienetų konverteris: slėgis, srautas, temperatūra",
     metaDesc:
-      "Slėgio, ilgio, temperatūros ir srauto matavimo vienetų konvertavimas ir formulės.",
+      "Konvertuokite slėgio (bar, kPa, psi, mm H2O), ilgio, temperatūros ir srauto vienetus. Formulės ir lentelės žarnų parinkimui.",
     eyebrow: "Informacinė lentelė",
     breadcrumb: "Matavimo vienetų konvertavimas",
     title: "Matavimo vienetų konvertavimas.",
@@ -127,8 +129,9 @@ const lt = {
     result: "Rezultatas",
   },
   contactsPage: {
-    metaTitle: "Kontaktai",
-    metaDesc: "Susisiekite su UAB „Riko Market“ — Elektrėnai, Lietuva.",
+    metaTitle: "Kontaktai — techninės žarnos Elektrėnuose",
+    metaDesc:
+      "UAB „Riko Market“: tel. +370 60 70 40 30, rikomarket.lt@gmail.com. Sandėlys Elektrėnuose, I–V 9:00–18:00. Pristatymas visoje Lietuvoje.",
     eyebrow: "Kontaktai",
     title: "Susisiekite su mumis.",
     sub: "Mūsų inžinieriai padės parinkti žarną, paskaičiuoti kiekį ir suderinti pristatymą.",
@@ -142,6 +145,27 @@ const lt = {
     offerTitle: "Reikia pasiūlymo?",
     offerText:
       "Paskambinkite arba parašykite — nurodykite žarnos tipą, kiekį, diametrą ir darbinę temperatūrą, ir paruošime pasiūlymą.",
+  },
+  landing: {
+    catEyebrow: "Produktų kategorija",
+    specDn: "Diametrai (DN)",
+    specTemp: "Darbinė temperatūra",
+    specCount: "Pozicijų kataloge",
+    productsTitle: "Visos pozicijos",
+    faqEyebrow: "D. U. K.",
+    faqTitle: "Dažniausi klausimai",
+    homeFaqTitle: "Dažniausi klausimai apie technines žarnas",
+    otherCats: "Kitos kategorijos",
+    deliveryEyebrow: "Pristatymas",
+    deliveryTitle: "Pristatome visoje Lietuvoje",
+    deliverySub: "Siunčiame iš sandėlio Elektrėnuose — pristatymas per 1–3 darbo dienas.",
+    cityEyebrow: "Pristatymas",
+    cityCatsTitle: "Ką tiekiame",
+    industriesTitle: "Kam tiekiame žarnas",
+    ctaTitle: "Reikia pasiūlymo?",
+    ctaText:
+      "Nurodykite žarnos tipą, diametrą, ilgį ir darbinę temperatūrą — inžinierius parinks sprendimą ir atsiųs kainą per 1 darbo dieną.",
+    ctaButton: "Parašyti užklausą",
   },
   product: {
     notFound: "Produktas nerastas",
@@ -207,8 +231,10 @@ const ru: Dict = {
     heroAlt: "Промышленные технические рукава",
   },
   home: {
-    metaTitle: "Riko Market — технические рукава и соединительные элементы",
-    heroEyebrow: "UAB RIKO MARKET",
+    metaTitle: "Технические рукава: ПВХ, ПУ, металлорукава, Camlock | Riko Market",
+    metaDesc:
+      "Технические рукава и соединения со склада в Электренае: ПВХ, ПУ, КЛИН, металлорукава, Camlock и STORZ. Доставка по всей Литве за 1–3 рабочих дня.",
+    heroEyebrow: "Технические рукава и соединения в Литве",
     heroTitleA: "Гибкие решения —",
     heroTitleAccent: "надёжный",
     heroTitleB: "результат",
@@ -236,9 +262,9 @@ const ru: Dict = {
     terms: "Условия использования",
   },
   productsPage: {
-    metaTitle: "Продукция",
+    metaTitle: "Каталог технических рукавов: ПВХ, ПУ, КЛИН, металлорукава",
     metaDesc:
-      "Полный ассортимент технических рукавов: ПВХ, ПУ, KLIN, металлорукава и соединительные элементы.",
+      "Каталог технических рукавов и соединений: ПВХ, ПУ, КЛИН, металлорукава, Camlock, STORZ и хомуты. DN от 2 до 1150 мм, до +1100 °C.",
     eyebrow: "Продукция",
     title: "Категории продукции.",
     sub: "Выберите категорию. Диаметры 10–1200 мм, температуры от −150 до +1100 °C.",
@@ -265,9 +291,9 @@ const ru: Dict = {
     allOf: (name: string) => `Вся продукция «${name}»`,
   },
   industriesPage: {
-    metaTitle: "Области применения",
+    metaTitle: "Рукава для промышленности: дерево, вентиляция, агро, химия",
     metaDesc:
-      "Применение технических рукавов в промышленности: деревообработка, вентиляция, сельское хозяйство, химия, спецтехника и др.",
+      "Технические рукава для деревообработки (стружка, пыль), вентиляции, пищевой и химической промышленности, сельского хозяйства и спецтехники. Помощь в подборе.",
     eyebrow: "Области применения",
     title: "Отрасли промышленности.",
     sub: "Поставляем технические рукава для деревообработки, вентиляции, сельского хозяйства, химической и пищевой промышленности, а также спецтехники.",
@@ -277,9 +303,9 @@ const ru: Dict = {
     next: "Следующее фото",
   },
   chemPage: {
-    metaTitle: "Химическая стойкость",
+    metaTitle: "Таблица химической стойкости рукавов",
     metaDesc:
-      "Таблица химической стойкости: стойкость материалов рукавов (ПВХ, ПУ, сантопрен, силикон, тефлон, нитрил, хлоропрен, гипалон, полиэтилен) к химикатам.",
+      "Таблица химической стойкости материалов рукавов: ПВХ, ПУ, силикон, тефлон (PTFE), нитрил, неопрен, хайпалон, полиэтилен. Поиск по химикату.",
     eyebrow: "Справочная таблица",
     title: "Таблица химической стойкости.",
     sub: "Стойкость основных материалов рукавов к наиболее распространённым химикатам. Для конкретного применения рекомендуем проконсультироваться с нашими инженерами.",
@@ -296,9 +322,9 @@ const ru: Dict = {
       "* Таблица носит справочный характер (при 20 °C, для реагентов нормальной или высокой концентрации). Конкретные условия работы — температура, концентрация, длительность контакта — могут существенно изменить результат. За подробными рекомендациями обращайтесь в наш технический отдел.",
   },
   unitsPage: {
-    metaTitle: "Единицы измерения",
+    metaTitle: "Конвертер единиц: давление, расход, температура",
     metaDesc:
-      "Перевод единиц давления, длины, температуры и расхода, а также справочные формулы.",
+      "Перевод единиц давления (бар, кПа, psi, мм вод. ст.), длины, температуры и расхода. Формулы и таблицы для подбора рукавов.",
     eyebrow: "Справочная таблица",
     breadcrumb: "Перевод единиц измерения",
     title: "Перевод единиц измерения.",
@@ -312,8 +338,9 @@ const ru: Dict = {
     result: "Результат",
   },
   contactsPage: {
-    metaTitle: "Контакты",
-    metaDesc: "Свяжитесь с UAB «Riko Market» — Электренай, Литва.",
+    metaTitle: "Контакты — технические рукава в Электренае",
+    metaDesc:
+      "UAB «Riko Market»: тел. +370 60 70 40 30, rikomarket.lt@gmail.com. Склад в Электренае, Пн–Пт 9:00–18:00. Доставка по всей Литве.",
     eyebrow: "Контакты",
     title: "Свяжитесь с нами.",
     sub: "Наши инженеры помогут подобрать рукав, рассчитать количество и согласовать доставку.",
@@ -327,6 +354,27 @@ const ru: Dict = {
     offerTitle: "Нужно коммерческое предложение?",
     offerText:
       "Позвоните или напишите — укажите тип рукава, количество, диаметр и рабочую температуру, и мы подготовим предложение.",
+  },
+  landing: {
+    catEyebrow: "Категория продукции",
+    specDn: "Диаметры (DN)",
+    specTemp: "Рабочая температура",
+    specCount: "Позиций в каталоге",
+    productsTitle: "Все позиции",
+    faqEyebrow: "FAQ",
+    faqTitle: "Частые вопросы",
+    homeFaqTitle: "Частые вопросы о технических рукавах",
+    otherCats: "Другие категории",
+    deliveryEyebrow: "Доставка",
+    deliveryTitle: "Доставляем по всей Литве",
+    deliverySub: "Отправляем со склада в Электренае — доставка за 1–3 рабочих дня.",
+    cityEyebrow: "Доставка",
+    cityCatsTitle: "Что мы поставляем",
+    industriesTitle: "Для каких отраслей",
+    ctaTitle: "Нужно предложение?",
+    ctaText:
+      "Укажите тип рукава, диаметр, длину и рабочую температуру — инженер подберёт решение и пришлёт цену в течение 1 рабочего дня.",
+    ctaButton: "Написать запрос",
   },
   product: {
     notFound: "Товар не найден",

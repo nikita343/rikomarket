@@ -1,0 +1,167 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { getDict } from "@/lib/dictionary";
+import { localeHref, type Locale } from "@/lib/i18n";
+import { getProductsByCategory } from "@/lib/products";
+import {
+  categoryLandingBySlug,
+  categoryLandings,
+  cities,
+  cityPath,
+  formatDn,
+  formatTemp,
+  specRange,
+} from "@/lib/landing";
+import {
+  breadcrumbJsonLd,
+  collectionJsonLd,
+  faqJsonLd,
+  pageMetadata,
+} from "@/lib/seo";
+import { Container, PageHero, Button, SectionHead } from "@/components/ui";
+import { ProductCard } from "@/components/ProductCard";
+import { FaqSection } from "@/components/FaqSection";
+import { JsonLd } from "@/components/JsonLd";
+
+export const categoryLandingParams = () => categoryLandings.map((c) => ({ slug: c.slug }));
+
+export function categoryLandingMetadata(slug: string, locale: Locale): Metadata {
+  const l = categoryLandingBySlug(slug);
+  if (!l) return { robots: { index: false } };
+  const c = l.copy[locale];
+  return pageMetadata({ locale, path: `/products/category/${l.slug}`, title: c.title, description: c.description });
+}
+
+// A real, indexable page per hose type — "PVC žarnos", "metalinės žarnos",
+// "Camlock jungtys" — with the intro, key specs, every product and a FAQ.
+export function CategoryLandingPage({ slug, locale }: { slug: string; locale: Locale }) {
+  const l = categoryLandingBySlug(slug);
+  if (!l) notFound();
+  const t = getDict(locale);
+  const c = l.copy[locale];
+  const path = `/products/category/${l.slug}`;
+  const products = getProductsByCategory(l.categoryId, locale);
+  const range = specRange(products);
+  const dn = formatDn(range, locale);
+  const temp = formatTemp(range, locale);
+
+  const facts = [
+    dn && { label: t.landing.specDn, value: dn },
+    temp && { label: t.landing.specTemp, value: temp },
+    { label: t.landing.specCount, value: String(products.length) },
+  ].filter(Boolean) as { label: string; value: string }[];
+
+  return (
+    <>
+      <JsonLd
+        data={[
+          collectionJsonLd({ locale, path, name: c.h1, description: c.description, products }),
+          breadcrumbJsonLd([
+            { name: t.common.home, path: localeHref(locale, "/") },
+            { name: t.common.products, path: localeHref(locale, "/products") },
+            { name: c.h1, path: localeHref(locale, path) },
+          ]),
+          faqJsonLd(c.faq),
+        ]}
+      />
+      <PageHero
+        locale={locale}
+        breadcrumb={[
+          { label: t.common.home, href: localeHref(locale, "/") },
+          { label: t.common.products, href: localeHref(locale, "/products") },
+          { label: c.h1 },
+        ]}
+        eyebrow={t.landing.catEyebrow}
+        title={c.h1}
+      />
+
+      <section className="bg-bg pt-10">
+        <Container className="grid gap-8 lg:grid-cols-[1.6fr_1fr]">
+          <div className="grid gap-4 text-[16px] leading-relaxed text-ink">
+            {c.intro.map((p) => (
+              <p key={p}>{p}</p>
+            ))}
+          </div>
+          <dl className="grid content-start gap-px self-start overflow-hidden rounded-[4px] border border-line bg-line">
+            {facts.map((f) => (
+              <div key={f.label} className="flex items-baseline justify-between gap-4 bg-white px-5 py-4">
+                <dt className="text-[12px] font-semibold uppercase tracking-[0.08em] text-mute">{f.label}</dt>
+                <dd className="text-right text-[17px] font-extrabold tabular-nums text-navy">{f.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </Container>
+      </section>
+
+      <section className="bg-bg py-12">
+        <Container>
+          <h2 className="heading mb-6 text-[28px]">
+            {t.landing.productsTitle} — {c.h1}
+          </h2>
+          <div className="grid gap-2.5">
+            {products.map((p) => (
+              <ProductCard key={p.slug} product={p} locale={locale} />
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <FaqSection eyebrow={t.landing.faqEyebrow} title={t.landing.faqTitle} items={c.faq} className="border-t border-line bg-bg-alt py-16" />
+
+      <section className="bg-bg py-14">
+        <Container className="grid gap-12 lg:grid-cols-2">
+          <div>
+            <SectionHead title={t.landing.otherCats} className="mb-5" />
+            <div className="flex flex-wrap gap-2">
+              {categoryLandings
+                .filter((o) => o.slug !== l.slug)
+                .map((o) => (
+                  <Link
+                    key={o.slug}
+                    href={localeHref(locale, `/products/category/${o.slug}`)}
+                    className="rounded-[4px] border border-line bg-white px-4 py-2.5 text-sm font-bold text-navy hover:border-navy"
+                  >
+                    {o.copy[locale].h1}
+                  </Link>
+                ))}
+            </div>
+          </div>
+          <div>
+            <SectionHead title={t.landing.deliveryTitle} sub={t.landing.deliverySub} className="mb-5" />
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              {cities.map((city) => (
+                <Link
+                  key={city.slug}
+                  href={localeHref(locale, cityPath(city.slug))}
+                  className="nav-link font-semibold text-navy hover:text-red"
+                >
+                  {city.names[locale].name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      <InquiryBand locale={locale} />
+    </>
+  );
+}
+
+export function InquiryBand({ locale }: { locale: Locale }) {
+  const t = getDict(locale).landing;
+  return (
+    <section className="bg-navy text-white">
+      <Container className="flex flex-col items-start justify-between gap-6 py-12 lg:flex-row lg:items-center">
+        <div>
+          <h2 className="text-[30px] font-extrabold leading-tight">{t.ctaTitle}</h2>
+          <p className="mt-3 max-w-[640px] text-white/85">{t.ctaText}</p>
+        </div>
+        <Button href={localeHref(locale, "/contacts")} kind="primary" size="lg">
+          {t.ctaButton}
+        </Button>
+      </Container>
+    </section>
+  );
+}

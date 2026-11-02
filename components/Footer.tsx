@@ -3,6 +3,7 @@ import { company, getSite } from "@/lib/site";
 import { getDict } from "@/lib/dictionary";
 import { localeHref, type Locale } from "@/lib/i18n";
 import { topCategories, categoryName } from "@/lib/categories";
+import { categoryPath, cities, cityPath } from "@/lib/landing";
 import { industries, industryText } from "@/lib/industries";
 import { Container, Logo, Button } from "@/components/ui";
 import { Icon } from "@/components/icons";
@@ -47,7 +48,7 @@ export function Footer({ locale }: { locale: Locale }) {
               {topCategories().map((c) => (
                 <Link
                   key={c.id}
-                  href={localeHref(locale, `/products?category=${c.id}`)}
+                  href={localeHref(locale, categoryPath(c.id))}
                   className="nav-link block py-[5px] text-sm text-white/65 hover:text-white"
                 >
                   {categoryName(c, locale)}
@@ -104,7 +105,17 @@ export function Footer({ locale }: { locale: Locale }) {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-[22px] text-[12.5px] text-white/65 sm:flex-row sm:justify-between">
+        {/* Delivery cities — one crawlable link to every city page, site-wide */}
+        <nav aria-label={t.landing.deliveryTitle} className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px] text-white/65">
+          <span className="font-bold uppercase tracking-[0.1em] text-white">{t.landing.deliveryEyebrow}:</span>
+          {cities.map((c) => (
+            <Link key={c.slug} href={localeHref(locale, cityPath(c.slug))} className="nav-link hover:text-white">
+              {c.names[locale].name}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="mt-6 flex flex-col gap-3 border-t border-white/10 pt-[22px] text-[12.5px] text-white/65 sm:flex-row sm:justify-between">
           <span>{s.legalLine}</span>
         </div>
       </Container>
