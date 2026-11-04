@@ -36,7 +36,7 @@ describe("lib/seo", () => {
 
   it("lists every page in both languages in the sitemap", () => {
     const entries = sitemap();
-    const pages = 6 + categoryLandings.length + cities.length + getAllProducts("lt").length;
+    const pages = 7 + categoryLandings.length + cities.length + getAllProducts("lt").length;
     expect(entries).toHaveLength(pages * 2);
     expect(entries.every((e) => e.url.startsWith(SITE_URL))).toBe(true);
     expect(new Set(entries.map((e) => e.url)).size).toBe(entries.length);

@@ -2,6 +2,8 @@ import { Manrope } from "next/font/google";
 import "@/app/globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { CookieBanner } from "@/components/CookieBanner";
+import { Analytics } from "@/components/Analytics";
 import { htmlLang, type Locale } from "@/lib/i18n";
 
 // Direction B typography: Manrope for both headings and body. latin-ext covers
@@ -27,6 +29,8 @@ export function SiteLayout({
         <Header locale={locale} />
         <main className="flex-1">{children}</main>
         <Footer locale={locale} />
+        <CookieBanner locale={locale} />
+        <Analytics />
       </body>
     </html>
   );

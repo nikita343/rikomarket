@@ -9,7 +9,7 @@ import { cities, cityPath } from "@/lib/landing";
 
 // Every page in both languages, each entry listing its translations so search
 // engines pair /products/x with /ru/products/x.
-const STATIC_PATHS = ["/", "/products", "/industries", "/chemical-resistance", "/units", "/contacts"];
+const STATIC_PATHS = ["/", "/products", "/industries", "/chemical-resistance", "/units", "/contacts", "/privacy"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const productPaths = (products as { slug: string }[]).map((p) => `/products/${p.slug}`);

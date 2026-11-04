@@ -7,6 +7,7 @@ import { categoryPath, cities, cityPath } from "@/lib/landing";
 import { industries, industryText } from "@/lib/industries";
 import { Container, Logo, Button } from "@/components/ui";
 import { Icon } from "@/components/icons";
+import { CookieSettingsLink } from "@/components/CookieBanner";
 
 function ColHead({ children }: { children: React.ReactNode }) {
   return (
@@ -117,6 +118,12 @@ export function Footer({ locale }: { locale: Locale }) {
 
         <div className="mt-6 flex flex-col gap-3 border-t border-white/10 pt-[22px] text-[12.5px] text-white/65 sm:flex-row sm:justify-between">
           <span>{s.legalLine}</span>
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            <Link href={localeHref(locale, "/privacy")} className="nav-link hover:text-white">
+              {t.footer.privacy}
+            </Link>
+            <CookieSettingsLink label={t.consent.footerLink} className="nav-link hover:text-white" />
+          </div>
         </div>
       </Container>
     </footer>
