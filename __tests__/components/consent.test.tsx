@@ -94,3 +94,18 @@ describe("cookie consent", () => {
     expect(screen.getByRole("checkbox", { name: /Analitika/ })).not.toBeChecked();
   });
 });
+
+describe("analytics host gate", () => {
+  it("does not fire the built-in GA ID off the live domain (previews, localhost)", async () => {
+    delete process.env.NEXT_PUBLIC_GA_ID;
+    render(
+      <>
+        <CookieBanner locale="lt" />
+        <Analytics />
+      </>,
+    );
+    await userEvent.setup().click(screen.getByRole("button", { name: "Sutinku" }));
+    expect(readConsent()?.analytics).toBe(true);
+    expect(screen.queryByTestId("script")).toBeNull(); // jsdom host is localhost
+  });
+});

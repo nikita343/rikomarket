@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { SiteLayout } from "@/components/SiteLayout";
 import { getDict } from "@/lib/dictionary";
 import { company, getSite } from "@/lib/site";
-import { SITE_URL, defaultOgImage, ogLocale } from "@/lib/seo";
+import { GOOGLE_SITE_VERIFICATION, SITE_URL, defaultOgImage, ogLocale } from "@/lib/seo";
 
 const locale = "lt" as const;
 const t = getDict(locale);
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
       ? { index: false, follow: false }
       : { index: true, follow: true },
   formatDetection: { telephone: false, email: false, address: false },
+  verification: { google: GOOGLE_SITE_VERIFICATION },
 };
 
 export const viewport: Viewport = {

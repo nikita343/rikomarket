@@ -14,6 +14,10 @@ export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || `https://${company.
 
 export const absoluteUrl = (path: string) => `${SITE_URL}${path === "/" ? "" : path}`;
 
+// Google Search Console ownership (URL-prefix property https://www.rikomarket.lt/,
+// HTML-tag method). Must stay on the home page for the site to stay verified.
+export const GOOGLE_SITE_VERIFICATION = "Oq9xgendtj9tgtvB54etVpseUmMdnhf4ys-BNnLINzs";
+
 export const ogLocale: Record<Locale, string> = { lt: "lt_LT", ru: "ru_RU" };
 
 // Default share image per locale (1200×630, public/og/). Pages without a

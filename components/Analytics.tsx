@@ -11,10 +11,18 @@ import {
   type Consent,
 } from "@/lib/consent";
 
-// GA4 measurement ID, set in Vercel → Settings → Environment Variables
-// (Production only, so previews never send data). Without it nothing loads.
+// GA4 property "rikomarket.lt" (account "Riko Market"). The built-in ID only
+// fires on the live domain, so Vercel previews and localhost never send data.
+// NEXT_PUBLIC_GA_ID overrides it and fires wherever it is set.
+const DEFAULT_GA_ID = "G-7HGXETF88X";
+const LIVE_HOSTS = ["www.rikomarket.lt", "rikomarket.lt"];
 // Read inside the component; Next inlines NEXT_PUBLIC_* at build time anyway.
-const gaId = () => process.env.NEXT_PUBLIC_GA_ID;
+const gaId = (): string | undefined => {
+  const fromEnv = process.env.NEXT_PUBLIC_GA_ID;
+  if (fromEnv) return fromEnv;
+  if (typeof window === "undefined") return undefined;
+  return LIVE_HOSTS.includes(window.location.hostname) ? DEFAULT_GA_ID : undefined;
+};
 
 type GtagWindow = Window & { gtag?: (...args: unknown[]) => void; [k: `ga-disable-${string}`]: boolean };
 
