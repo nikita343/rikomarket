@@ -4,25 +4,34 @@ import type { MetadataRoute } from "next";
 import products from "@/data/products.json";
 import { localeHref, locales } from "@/lib/i18n";
 import { absoluteUrl } from "@/lib/seo";
-import { CATEGORY_SLUGS } from "@/lib/category-paths";
-import { cities, cityPath } from "@/lib/landing";
+import { allCategoryLandings, cities, cityPath, DELIVERY_PATH, purposeLandings, purposePath } from "@/lib/landing";
 
 // Every page in both languages, each entry listing its translations so search
 // engines pair /products/x with /ru/products/x.
-const STATIC_PATHS = ["/", "/products", "/industries", "/chemical-resistance", "/units", "/contacts", "/privacy"];
+const STATIC_PATHS = [
+  "/",
+  "/products",
+  "/industries",
+  "/chemical-resistance",
+  "/units",
+  "/contacts",
+  "/privacy",
+  DELIVERY_PATH,
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const productPaths = (products as { slug: string }[]).map((p) => `/products/${p.slug}`);
-  const categoryPaths = Object.values(CATEGORY_SLUGS).map((s) => `/products/category/${s}`);
+  const categoryPaths = allCategoryLandings.map((l) => `/products/category/${l.slug}`);
+  const purposePaths = purposeLandings.map((u) => purposePath(u.slug));
   const cityPaths = cities.map((c) => cityPath(c.slug));
   const priority = (path: string) =>
     path === "/" ? 1
-    : path === "/products" || path.startsWith("/products/category/") ? 0.9
+    : path === "/products" || path.startsWith("/products/category/") || path.startsWith("/zarnos/") ? 0.9
     : path.startsWith("/technines-zarnos/") ? 0.8
     : path.startsWith("/products/") ? 0.7
     : 0.6;
   const entries: MetadataRoute.Sitemap = [];
-  for (const path of [...STATIC_PATHS, ...categoryPaths, ...cityPaths, ...productPaths]) {
+  for (const path of [...STATIC_PATHS, ...categoryPaths, ...purposePaths, ...cityPaths, ...productPaths]) {
     const languages = Object.fromEntries(locales.map((l) => [l, absoluteUrl(localeHref(l, path))]));
     for (const l of locales) {
       entries.push({

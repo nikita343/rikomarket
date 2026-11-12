@@ -63,6 +63,7 @@ const lt = {
     contacts: "Kontaktai",
     privacy: "Privatumo politika",
     terms: "Naudojimosi sąlygos",
+    allIndustries: "Visos pritaikymo sritys",
   },
   productsPage: {
     metaTitle: "Techninių žarnų katalogas: PVC, PUR, KLIN, metalinės",
@@ -180,6 +181,14 @@ const lt = {
     ctaText:
       "Nurodykite žarnos tipą, diametrą, ilgį ir darbinę temperatūrą — inžinierius parinks sprendimą ir atsiųs kainą per 1 darbo dieną.",
     ctaButton: "Parašyti užklausą",
+    deliveryLink: "Užsakymas ir pristatymas",
+    useEyebrow: "Pagal paskirtį",
+    useTitle: "Žarnos pagal paskirtį",
+    useSub: "Žarnos, sugrupuotos pagal tai, ką jos transportuoja ar ištraukia.",
+    chooseTitle: "Kaip pasirinkti",
+    fittingTypesTitle: "Jungtys ir apkabos pagal tipą",
+    allFittings: "Visi sujungimo elementai",
+    industryUseLink: "Žiūrėti žarnas",
   },
   product: {
     notFound: "Produktas nerastas",
@@ -199,6 +208,8 @@ const lt = {
     value: "Reikšmė",
     relatedEyebrow: "Panašios pozicijos",
     relatedTitle: "Susijusios prekės",
+    fittingsTitle: "Jungtys ir apkabos šiai žarnai",
+    fittingsText: "Jungtis ir apkabas galima užsisakyti kartu su žarnomis.",
     chips: {
       dn: "DN",
       temp: "Temp.",
@@ -288,6 +299,7 @@ const ru: Dict = {
     contacts: "Контакты",
     privacy: "Политика конфиденциальности",
     terms: "Условия использования",
+    allIndustries: "Все области применения",
   },
   productsPage: {
     metaTitle: "Каталог технических рукавов: ПВХ, ПУ, КЛИН, металлорукава",
@@ -403,6 +415,14 @@ const ru: Dict = {
     ctaText:
       "Укажите тип рукава, диаметр, длину и рабочую температуру — инженер подберёт решение и пришлёт цену в течение 1 рабочего дня.",
     ctaButton: "Написать запрос",
+    deliveryLink: "Заказ и доставка",
+    useEyebrow: "По назначению",
+    useTitle: "Рукава по назначению",
+    useSub: "Рукава, сгруппированные по тому, что они транспортируют или отводят.",
+    chooseTitle: "Как выбрать",
+    fittingTypesTitle: "Соединения и хомуты по типу",
+    allFittings: "Все соединительные элементы",
+    industryUseLink: "Смотреть рукава",
   },
   product: {
     notFound: "Товар не найден",
@@ -422,6 +442,8 @@ const ru: Dict = {
     value: "Значение",
     relatedEyebrow: "Похожие позиции",
     relatedTitle: "Сопутствующие товары",
+    fittingsTitle: "Соединения и хомуты для этого рукава",
+    fittingsText: "Соединения и хомуты можно заказать вместе с рукавами.",
     chips: {
       dn: "DN",
       temp: "Темп.",

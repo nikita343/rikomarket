@@ -12,9 +12,12 @@ import {
   cityBySlug,
   cityCopy,
   cityPath,
+  DELIVERY_PATH,
   formatDn,
   formatTemp,
   specRange,
+  purposeLandings,
+  purposePath,
 } from "@/lib/landing";
 import { breadcrumbJsonLd, cityServiceJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
 import { Container, PageHero, SectionHead } from "@/components/ui";
@@ -99,6 +102,24 @@ export function CityLandingPage({ slug, locale }: { slug: string; locale: Locale
         </Container>
       </section>
 
+      {/* Hoses by use */}
+      <section className="bg-bg pb-14">
+        <Container>
+          <SectionHead title={t.landing.useTitle} className="mb-5" />
+          <div className="flex flex-wrap gap-2">
+            {purposeLandings.map((u) => (
+              <Link
+                key={u.slug}
+                href={localeHref(locale, purposePath(u.slug))}
+                className="rounded-[4px] border border-line bg-white px-4 py-2.5 text-sm font-bold text-navy hover:border-navy"
+              >
+                {u.copy[locale].h1}
+              </Link>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* How to order */}
       <section className="border-y border-line bg-bg-alt py-14">
         <Container>
@@ -113,6 +134,12 @@ export function CityLandingPage({ slug, locale }: { slug: string; locale: Locale
               </li>
             ))}
           </ol>
+          <Link
+            href={localeHref(locale, DELIVERY_PATH)}
+            className="nav-link mt-6 inline-flex items-center gap-1.5 text-[13.5px] font-bold uppercase tracking-[0.08em] text-red"
+          >
+            {t.landing.deliveryLink} <Icon name="arrow" size={14} />
+          </Link>
         </Container>
       </section>
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { categoryPath } from "@/lib/landing";
+import { categoryPath, FITTINGS_CATEGORY, fittingLandings, purposeLandingForIndustry, purposePath } from "@/lib/landing";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProductBySlug, getProductsByCategory, type Product } from "@/lib/products";
@@ -66,12 +66,16 @@ export function ProductDetailPage({ slug, locale }: { slug: string; locale: Loca
     product.shortNote ||
     product.descLines.find((l) => !l.heading)?.text ||
     product.description;
-  const industryNames = product.industries
+  // Industry chips link to the matching "hoses by use" page where one exists.
+  const industryLinks = product.industries
     .map((id) => {
       const ind = industryById(id);
-      return ind ? industryText(ind, locale).name : undefined;
+      if (!ind) return undefined;
+      const use = purposeLandingForIndustry(id);
+      return { name: industryText(ind, locale).name, href: use ? purposePath(use.slug) : "/industries" };
     })
-    .filter((n): n is string => Boolean(n));
+    .filter((n): n is { name: string; href: string } => Boolean(n));
+  const isHose = product.category !== FITTINGS_CATEGORY;
   const related = getProductsByCategory(product.category, locale)
     .filter((p) => p.slug !== product.slug)
     .slice(0, 4);
@@ -174,22 +178,43 @@ export function ProductDetailPage({ slug, locale }: { slug: string; locale: Loca
               )}
 
               {/* Industries */}
-              {industryNames.length > 0 && (
+              {industryLinks.length > 0 && (
                 <div className="mt-[22px]">
                   <div className="mb-2.5 text-[11px] font-bold uppercase tracking-[0.1em] text-mute">
                     {t.product.applications}
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {industryNames.map((n) => (
+                    {industryLinks.map((n) => (
                       <Link
-                        key={n}
-                        href={localeHref(locale, "/industries")}
+                        key={n.name}
+                        href={localeHref(locale, n.href)}
                         className="nav-link border border-line bg-white px-3 py-1.5 text-[12.5px] font-semibold text-navy"
                       >
-                        {n}
+                        {n.name}
                       </Link>
                     ))}
                   </div>
+                </div>
+              )}
+
+              {/* Couplings and clamps — generic links, no per-hose compatibility claim */}
+              {isHose && (
+                <div className="mt-[22px]">
+                  <div className="mb-2.5 text-[11px] font-bold uppercase tracking-[0.1em] text-mute">
+                    {t.product.fittingsTitle}
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {fittingLandings.map((f) => (
+                      <Link
+                        key={f.slug}
+                        href={localeHref(locale, `/products/category/${f.slug}`)}
+                        className="nav-link border border-line bg-white px-3 py-1.5 text-[12.5px] font-semibold text-navy"
+                      >
+                        {f.copy[locale].h1}
+                      </Link>
+                    ))}
+                  </div>
+                  <p className="mt-2 text-[12.5px] text-mute">{t.product.fittingsText}</p>
                 </div>
               )}
 

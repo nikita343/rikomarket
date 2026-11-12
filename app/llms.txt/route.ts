@@ -3,19 +3,49 @@
 // pages, so it never goes stale. Written in English with LT/RU page links,
 // because answer engines translate freely but quote facts verbatim.
 import { company } from "@/lib/site";
-import { getProductsByCategory } from "@/lib/products";
-import { categoryLandings, cities, cityPath, formatDn, formatTemp, homeFaq, specRange } from "@/lib/landing";
+import { getProductsByCategory, type Product } from "@/lib/products";
+import {
+  categoryLandings,
+  cities,
+  cityPath,
+  DELIVERY_PATH,
+  deliveryCopy,
+  fittingLandings,
+  formatDn,
+  formatTemp,
+  homeFaq,
+  purposeLandings,
+  purposePath,
+  specRange,
+} from "@/lib/landing";
+import { categoryLandingProducts, purposeLandingProducts } from "@/lib/landing-products";
 import { absoluteUrl } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
+const specsOf = (products: Product[]) => {
+  const r = specRange(products);
+  return [formatDn(r, "lt") && `DN ${formatDn(r, "lt")}`, formatTemp(r, "lt")].filter(Boolean).join(", ");
+};
+
 export function GET() {
   const cats = categoryLandings.map((l) => {
     const products = getProductsByCategory(l.categoryId, "lt");
-    const r = specRange(products);
-    const specs = [formatDn(r, "lt") && `DN ${formatDn(r, "lt")}`, formatTemp(r, "lt")].filter(Boolean).join(", ");
+    const specs = specsOf(products);
     const items = products.map((p) => `  - [${p.name}](${absoluteUrl(`/products/${p.slug}`)})`).join("\n");
     return `### ${l.copy.lt.h1} (${l.copy.ru.h1})\n${l.copy.lt.description}${specs ? ` Range: ${specs}.` : ""}\n- Page (LT): ${absoluteUrl(`/products/category/${l.slug}`)}\n- Page (RU): ${absoluteUrl(`/ru/products/category/${l.slug}`)}\n${items}`;
+  });
+
+  // Sub-pages of the fittings category — product links are already listed above.
+  const fittings = fittingLandings.map((l) => {
+    const n = categoryLandingProducts(l, "lt").length;
+    return `- ${l.copy.lt.h1} (${l.copy.ru.h1}), ${n} items: ${absoluteUrl(`/products/category/${l.slug}`)} · RU ${absoluteUrl(`/ru/products/category/${l.slug}`)}`;
+  });
+
+  const uses = purposeLandings.map((u) => {
+    const products = purposeLandingProducts(u, "lt");
+    const specs = specsOf(products);
+    return `### ${u.copy.lt.h1} (${u.copy.ru.h1})\n${u.copy.lt.description}${specs ? ` Range: ${specs}.` : ""} ${products.length} items.\n- Page (LT): ${absoluteUrl(purposePath(u.slug))}\n- Page (RU): ${absoluteUrl(`/ru${purposePath(u.slug)}`)}`;
   });
 
   const body = `# ${company.nameShort} (UAB „Riko Market“)
@@ -35,6 +65,17 @@ export function GET() {
 
 ## Product categories
 ${cats.join("\n\n")}
+
+## Coupling systems and clamps
+${fittings.join("\n")}
+
+## Hoses by use
+${uses.join("\n\n")}
+
+## Ordering and delivery
+${deliveryCopy.lt.description}
+- Page (LT): ${absoluteUrl(DELIVERY_PATH)}
+- Page (RU): ${absoluteUrl(`/ru${DELIVERY_PATH}`)}
 
 ## City pages
 ${cities.map((c) => `- ${c.names.lt.name}: ${absoluteUrl(cityPath(c.slug))}`).join("\n")}

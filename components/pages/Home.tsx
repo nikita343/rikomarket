@@ -15,7 +15,7 @@ import { Icon, type IconName } from "@/components/icons";
 import { IndustryTile } from "@/components/IndustryTile";
 import { CategoryTabs, type TabCat } from "@/components/CategoryTabs";
 import { FaqSection } from "@/components/FaqSection";
-import { cities, cityPath, homeFaq } from "@/lib/landing";
+import { cities, cityPath, homeFaq, purposeLandings, purposePath } from "@/lib/landing";
 
 // The five material families shown on the homepage.
 const HOME_CATEGORIES = [
@@ -153,6 +153,19 @@ export function HomePage({ locale }: { locale: Locale }) {
               <IndustryTile key={ind.id} industry={ind} locale={locale} />
             ))}
           </div>
+          {/* Hoses by use — the search phrases people type */}
+          <nav aria-label={t.landing.useTitle} className="mt-8 flex flex-wrap items-center gap-2">
+            <span className="mr-2 text-[12px] font-bold uppercase tracking-[0.1em] text-mute">{t.landing.useTitle}:</span>
+            {purposeLandings.map((u) => (
+              <a
+                key={u.slug}
+                href={localeHref(locale, purposePath(u.slug))}
+                className="rounded-[4px] border border-line bg-white px-4 py-2.5 text-sm font-bold text-navy hover:border-navy"
+              >
+                {u.copy[locale].h1}
+              </a>
+            ))}
+          </nav>
         </Container>
       </section>
 

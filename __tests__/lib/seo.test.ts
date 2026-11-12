@@ -1,7 +1,7 @@
 import { languageAlternates, metaDescription, pageMetadata, SITE_URL } from "@/lib/seo";
 import sitemap from "@/app/sitemap";
 import { getAllProducts } from "@/lib/products";
-import { categoryLandings, cities } from "@/lib/landing";
+import { allCategoryLandings, cities, DELIVERY_PATH, purposeLandings } from "@/lib/landing";
 
 describe("lib/seo", () => {
   it("gives every page its own canonical URL and hreflang pair", () => {
@@ -36,8 +36,15 @@ describe("lib/seo", () => {
 
   it("lists every page in both languages in the sitemap", () => {
     const entries = sitemap();
-    const pages = 7 + categoryLandings.length + cities.length + getAllProducts("lt").length;
+    // 8 static pages (incl. /pristatymas), 5 categories + 3 fittings sub-pages,
+    // 6 "hoses by use" pages, the city pages and every product.
+    const pages =
+      8 + allCategoryLandings.length + purposeLandings.length + cities.length + getAllProducts("lt").length;
     expect(entries).toHaveLength(pages * 2);
+    const urls = entries.map((e) => e.url);
+    expect(urls).toContain(`${SITE_URL}${DELIVERY_PATH}`);
+    expect(urls).toContain(`${SITE_URL}/ru/zarnos/ventiliacijai`);
+    expect(urls).toContain(`${SITE_URL}/products/category/camlock-jungtys`);
     expect(entries.every((e) => e.url.startsWith(SITE_URL))).toBe(true);
     expect(new Set(entries.map((e) => e.url)).size).toBe(entries.length);
   });

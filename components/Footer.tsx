@@ -3,8 +3,15 @@ import { company, getSite } from "@/lib/site";
 import { getDict } from "@/lib/dictionary";
 import { localeHref, type Locale } from "@/lib/i18n";
 import { topCategories, categoryName } from "@/lib/categories";
-import { categoryPath, cities, cityPath } from "@/lib/landing";
-import { industries, industryText } from "@/lib/industries";
+import {
+  categoryPath,
+  cities,
+  cityPath,
+  DELIVERY_PATH,
+  fittingLandings,
+  purposeLandings,
+  purposePath,
+} from "@/lib/landing";
 import { Container, Logo, Button } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import { CookieSettingsLink } from "@/components/CookieBanner";
@@ -55,22 +62,37 @@ export function Footer({ locale }: { locale: Locale }) {
                   {categoryName(c, locale)}
                 </Link>
               ))}
+              {fittingLandings.map((f) => (
+                <Link
+                  key={f.slug}
+                  href={localeHref(locale, `/products/category/${f.slug}`)}
+                  className="nav-link block py-[5px] pl-3 text-sm text-white/65 hover:text-white"
+                >
+                  {f.copy[locale].h1}
+                </Link>
+              ))}
             </div>
           </div>
 
-          {/* Industries */}
+          {/* Hoses by use */}
           <div>
             <ColHead>{t.footer.application}</ColHead>
             <div className="flex flex-col items-start">
-              {industries.slice(0, 7).map((i) => (
+              {purposeLandings.map((u) => (
                 <Link
-                  key={i.id}
-                  href={localeHref(locale, `/industries#${i.id}`)}
+                  key={u.slug}
+                  href={localeHref(locale, purposePath(u.slug))}
                   className="nav-link block py-[5px] text-sm text-white/65 hover:text-white"
                 >
-                  {industryText(i, locale).name}
+                  {u.copy[locale].h1}
                 </Link>
               ))}
+              <Link
+                href={localeHref(locale, "/industries")}
+                className="nav-link block py-[5px] text-sm font-semibold text-white/85 hover:text-white"
+              >
+                {t.footer.allIndustries}
+              </Link>
             </div>
           </div>
 
@@ -109,6 +131,9 @@ export function Footer({ locale }: { locale: Locale }) {
         {/* Delivery cities — one crawlable link to every city page, site-wide */}
         <nav aria-label={t.landing.deliveryTitle} className="mt-12 flex flex-wrap items-center gap-x-4 gap-y-2 text-[13px] text-white/65">
           <span className="font-bold uppercase tracking-[0.1em] text-white">{t.landing.deliveryEyebrow}:</span>
+          <Link href={localeHref(locale, DELIVERY_PATH)} className="nav-link font-semibold text-white/85 hover:text-white">
+            {t.landing.deliveryLink}
+          </Link>
           {cities.map((c) => (
             <Link key={c.slug} href={localeHref(locale, cityPath(c.slug))} className="nav-link hover:text-white">
               {c.names[locale].name}

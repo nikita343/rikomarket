@@ -1,13 +1,16 @@
+import Link from "next/link";
 import { industries, industryText, photoCaption } from "@/lib/industries";
 import { getDict } from "@/lib/dictionary";
 import { localeHref, type Locale } from "@/lib/i18n";
+import { purposeLandingForIndustry, purposePath } from "@/lib/landing";
 import { Container, PageHero } from "@/components/ui";
 import { Icon } from "@/components/icons";
 import { IndustryGallery } from "@/components/IndustryGallery";
 
 // Application areas: each industry with its photo gallery. Per the client
 // (2026-09) there are no product links and no generic property tags here —
-// just the industry and pictures of hoses in use.
+// just the industry, pictures of hoses in use and one link to the matching
+// "hoses by use" page (/zarnos/…), where the products are.
 export function IndustriesPage({ locale }: { locale: Locale }) {
   const t = getDict(locale);
   const labels = {
@@ -34,6 +37,7 @@ export function IndustriesPage({ locale }: { locale: Locale }) {
         <Container className="grid gap-6">
           {industries.map((ind) => {
             const { name, desc } = industryText(ind, locale);
+            const use = purposeLandingForIndustry(ind.id);
             return (
               <article
                 key={ind.id}
@@ -46,6 +50,14 @@ export function IndustriesPage({ locale }: { locale: Locale }) {
                   </div>
                   <h2 className="heading text-xl">{name}</h2>
                   <p className="mt-2.5 text-[14px] leading-relaxed text-ink">{desc}</p>
+                  {use && (
+                    <Link
+                      href={localeHref(locale, purposePath(use.slug))}
+                      className="nav-link mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-bold text-red"
+                    >
+                      {use.copy[locale].h1} <Icon name="arrow" size={14} />
+                    </Link>
+                  )}
                 </div>
                 <IndustryGallery
                   photos={ind.photos.map((p) => ({ src: p.src, caption: photoCaption(p, locale) }))}
