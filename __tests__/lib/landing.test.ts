@@ -36,8 +36,8 @@ describe("lib/landing", () => {
   });
 
   it("treats a lone temperature as an upper bound", () => {
-    expect(formatTemp(specRange(getProductsByCategory("metalorukavy")), "lt")).toBe("iki +650 °C");
-    expect(formatTemp(specRange(getProductsByCategory("rukava-z-poliuretanu")), "lt")).toBe("−40 … +150 °C");
+    expect(formatTemp(specRange(getProductsByCategory("metalorukavy")), "lt")).toBe("iki +650 °C");
+    expect(formatTemp(specRange(getProductsByCategory("rukava-z-poliuretanu")), "lt")).toBe("−40 … +150 °C");
   });
 
   it("writes city copy with the right case forms", () => {

@@ -4,7 +4,7 @@
 // "techninės žarnos Vilniuje", "Camlock jungtys" — and before this the site had
 // no URL that matched any of those queries (categories were only a
 // ?category= filter on /products). Everything here is hand-written per locale;
-// spec ranges (DN, °C) are computed from the catalogue so they never drift.
+// spec ranges (DN, °C) are computed from the catalogue so they never drift.
 import type { Locale } from "@/lib/i18n";
 import type { Product } from "@/lib/products";
 
@@ -153,15 +153,15 @@ export const categoryLandings: CategoryLanding[] = [
         h1: "KLIN tipo žarnos",
         keyword: "KLIN žarna",
         description:
-          "KLIN tipo žarnos iš techninių audinių: teflono, silikono, stiklo pluošto, neopreno. Ventiliacijai ir karštiems garams iki +1100 °C. Pristatymas po Lietuvą.",
+          "KLIN tipo žarnos iš techninių audinių: teflono, silikono, stiklo pluošto, neopreno. Ventiliacijai ir karštiems garams iki +1100 °C. Pristatymas po Lietuvą.",
         intro: [
           "KLIN tipo žarnos gaminamos iš techninių audinių su plieno vielos spirale. Jos itin lanksčios, lengvai suspaudžiamos ir naudojamos vėdinimo sistemose, karštų dujų ir chemikalų garų ištraukimui.",
-          "Medžiaga parenkama pagal temperatūrą ir terpę: PVC ir poliuretanas — įprastai ventiliacijai, teflonas ir silikonas — chemijai ir iki +260 °C, stiklo pluoštas ir termoaudiniai — karštiems išmetimams iki +1100 °C.",
+          "Medžiaga parenkama pagal temperatūrą ir terpę: PVC ir poliuretanas — įprastai ventiliacijai, teflonas ir silikonas — chemijai ir iki +260 °C, stiklo pluoštas ir termoaudiniai — karštiems išmetimams iki +1100 °C.",
         ],
         faq: [
           {
             q: "Kokia žarna atlaiko aukščiausią temperatūrą?",
-            a: "KLIN K9/B (stiklo pluoštas + nerūdijančio metalo tinklas + termoaudinys) — iki +1100 °C. Iki +500 °C tinka K9/A, iki +260 °C — teflono ir silikono žarnos.",
+            a: "KLIN K9/B (stiklo pluoštas + nerūdijančio metalo tinklas + termoaudinys) — iki +1100 °C. Iki +500 °C tinka K9/A, iki +260 °C — teflono ir silikono žarnos.",
           },
           {
             q: "Kokią žarną rinktis chemikalų garams?",
@@ -174,15 +174,15 @@ export const categoryLandings: CategoryLanding[] = [
         h1: "Рукава типа КЛИН",
         keyword: "рукав КЛИН",
         description:
-          "Рукава типа КЛИН из технических тканей: тефлон, силикон, стекловолокно, неопрен. Для вентиляции и горячих газов до +1100 °C. Доставка по всей Литве.",
+          "Рукава типа КЛИН из технических тканей: тефлон, силикон, стекловолокно, неопрен. Для вентиляции и горячих газов до +1100 °C. Доставка по всей Литве.",
         intro: [
           "Рукава (шланги) типа КЛИН изготавливаются из технических тканей со спиралью из стальной проволоки. Они очень гибкие, легко сжимаются и применяются в вентиляции, для отвода горячих газов и паров химикатов.",
-          "Материал подбирается по температуре и среде: ПВХ и полиуретан — для обычной вентиляции, тефлон и силикон — для химии и до +260 °C, стекловолокно и термоткани — для горячих выбросов до +1100 °C.",
+          "Материал подбирается по температуре и среде: ПВХ и полиуретан — для обычной вентиляции, тефлон и силикон — для химии и до +260 °C, стекловолокно и термоткани — для горячих выбросов до +1100 °C.",
         ],
         faq: [
           {
             q: "Какой рукав выдерживает самую высокую температуру?",
-            a: "КЛИН K9/B (стекловолокно + сетка из нержавеющей стали + термоткань) — до +1100 °C. До +500 °C подходит K9/A, до +260 °C — тефлоновые и силиконовые рукава.",
+            a: "КЛИН K9/B (стекловолокно + сетка из нержавеющей стали + термоткань) — до +1100 °C. До +500 °C подходит K9/A, до +260 °C — тефлоновые и силиконовые рукава.",
           },
           {
             q: "Какой рукав выбрать для паров химикатов?",
@@ -201,15 +201,15 @@ export const categoryLandings: CategoryLanding[] = [
         h1: "Metalinės žarnos",
         keyword: "metalinė žarna",
         description:
-          "Metalinės žarnos Metalhex iš cinkuoto ir nerūdijančio plieno: išmetamosioms dujoms, karštam orui iki +650 °C. Pristatymas visoje Lietuvoje.",
+          "Metalinės žarnos Metalhex iš cinkuoto ir nerūdijančio plieno: išmetamosioms dujoms, karštam orui iki +650 °C. Pristatymas visoje Lietuvoje.",
         intro: [
           "Metalinės žarnos (metalorukavai) gaminamos iš cinkuoto arba nerūdijančio plieno juostos. Jos atlaiko aukštą temperatūrą ir mechaninį poveikį, todėl naudojamos variklių išmetamosioms dujoms, karštam orui ir dūmams šalinti.",
-          "Cinkuoto plieno Metalhex A / B / B1 tinka iki +300…+500 °C, nerūdijančio plieno Metalhex inox C / D / D1 — iki +650 °C. Sandarumui — silikono arba stiklo pluošto sandariklis.",
+          "Cinkuoto plieno Metalhex A / B / B1 tinka iki +300…+500 °C, nerūdijančio plieno Metalhex inox C / D / D1 — iki +650 °C. Sandarumui — silikono arba stiklo pluošto sandariklis.",
         ],
         faq: [
           {
             q: "Kada rinktis nerūdijančio plieno žarną?",
-            a: "Kai temperatūra viršija +500 °C arba aplinka drėgna ir korozinė — nerūdijančio plieno Metalhex inox žarnos atlaiko iki +650 °C.",
+            a: "Kai temperatūra viršija +500 °C arba aplinka drėgna ir korozinė — nerūdijančio plieno Metalhex inox žarnos atlaiko iki +650 °C.",
           },
           {
             q: "Ar metalinė žarna sandari?",
@@ -222,15 +222,15 @@ export const categoryLandings: CategoryLanding[] = [
         h1: "Металлорукава",
         keyword: "металлорукав",
         description:
-          "Металлорукава Metalhex из оцинкованной и нержавеющей стали: для выхлопных газов и горячего воздуха до +650 °C. Доставка по всей Литве.",
+          "Металлорукава Metalhex из оцинкованной и нержавеющей стали: для выхлопных газов и горячего воздуха до +650 °C. Доставка по всей Литве.",
         intro: [
           "Металлорукава (металлические шланги) изготавливаются из оцинкованной или нержавеющей стальной ленты. Они выдерживают высокую температуру и механические нагрузки, поэтому применяются для отвода выхлопных газов двигателей, горячего воздуха и дыма.",
-          "Оцинкованные Metalhex A / B / B1 рассчитаны на +300…+500 °C, нержавеющие Metalhex inox C / D / D1 — до +650 °C. Для герметичности — уплотнитель из силикона или стекловолокна.",
+          "Оцинкованные Metalhex A / B / B1 рассчитаны на +300…+500 °C, нержавеющие Metalhex inox C / D / D1 — до +650 °C. Для герметичности — уплотнитель из силикона или стекловолокна.",
         ],
         faq: [
           {
             q: "Когда выбирать металлорукав из нержавеющей стали?",
-            a: "Когда температура выше +500 °C или среда влажная и коррозионная — нержавеющие Metalhex inox выдерживают до +650 °C.",
+            a: "Когда температура выше +500 °C или среда влажная и коррозионная — нержавеющие Metalhex inox выдерживают до +650 °C.",
           },
           {
             q: "Герметичен ли металлорукав?",
@@ -257,7 +257,7 @@ export const categoryLandings: CategoryLanding[] = [
         faq: [
           {
             q: "Kuo skiriasi Camlock A ir C tipai?",
-            a: "A tipas — mova (adapteris) su vidiniu sriegiu, C tipas — jungtis su antgaliu žarnai. Žarną su C tipo jungtimi greitai prijungsite prie įrangos su A tipo jungtimi.",
+            a: "A tipas — adapteris su žiediniu grioveliu ir vidiniu sriegiu, C tipas — mova su kumšteliais ir antgaliu žarnai. Žarną su C tipo mova greitai prijungsite prie įrangos su A tipo adapteriu.",
           },
           {
             q: "Kokį tarpiklį rinktis Camlock jungčiai?",
@@ -278,7 +278,7 @@ export const categoryLandings: CategoryLanding[] = [
         faq: [
           {
             q: "Чем отличаются Camlock типа A и C?",
-            a: "Тип A — муфта (адаптер) с внутренней резьбой, тип C — соединение со штуцером под рукав. Рукав с соединением типа C быстро подключается к оборудованию с соединением типа A.",
+            a: "Тип A — адаптер с кольцевой канавкой и внутренней резьбой, тип C — муфта с кулачками и штуцером под рукав. Рукав с муфтой типа C быстро подключается к оборудованию с адаптером типа A.",
           },
           {
             q: "Какой уплотнитель выбрать для Camlock?",
@@ -323,7 +323,7 @@ export const fittingLandings: CategoryLanding[] = [
         faq: [
           {
             q: "Kuo skiriasi Camlock A ir C tipai?",
-            a: "A tipas — mova (adapteris) su vidiniu sriegiu, C tipas — jungtis su antgaliu žarnai. Žarną su C tipo jungtimi greitai prijungsite prie įrangos su A tipo jungtimi.",
+            a: "A tipas — adapteris su žiediniu grioveliu ir vidiniu sriegiu, C tipas — mova su kumšteliais ir antgaliu žarnai. Žarną su C tipo mova greitai prijungsite prie įrangos su A tipo adapteriu.",
           },
           {
             q: "Kokį tarpiklį rinktis Camlock jungčiai?",
@@ -348,7 +348,7 @@ export const fittingLandings: CategoryLanding[] = [
         faq: [
           {
             q: "Чем отличаются Camlock типа A и C?",
-            a: "Тип A — муфта (адаптер) с внутренней резьбой, тип C — соединение со штуцером под рукав. Рукав с соединением типа C быстро подключается к оборудованию с соединением типа A.",
+            a: "Тип A — адаптер с кольцевой канавкой и внутренней резьбой, тип C — муфта с кулачками и штуцером под рукав. Рукав с муфтой типа C быстро подключается к оборудованию с адаптером типа A.",
           },
           {
             q: "Какой уплотнитель выбрать для Camlock?",
@@ -523,7 +523,7 @@ export const purposeLandings: PurposeLanding[] = [
           "Abrazyvinėms drožlėms ir dulkėms — PUR žarnos su plieno spirale: poliuretanas dyla apie 100 kartų lėčiau nei PVC, o įžeminta spiralė nuveda statinį krūvį.",
           "Kai dilimas nedidelis — PVC žarnos su plieno spirale (A ir C tipai): lengvos, lanksčios ir pigesnės už PUR.",
           "Konstrukciją — lengvą, sunkią ar vakuuminę — parenkame pagal oro greitį ir vakuumą Jūsų sistemoje.",
-          "Kai svarbus atsparumas ir temperatūrai, ir mechaniniams pažeidimams — cinkuoto plieno Metalhex žarnos: iki +300…+500 °C, atitinka ATEX direktyvos reikalavimus.",
+          "Kai svarbus atsparumas ir temperatūrai, ir mechaniniams pažeidimams — cinkuoto plieno Metalhex žarnos: iki +300…+500 °C, atitinka ATEX direktyvos reikalavimus.",
         ],
         faq: [
           {
@@ -553,7 +553,7 @@ export const purposeLandings: PurposeLanding[] = [
           "Для абразивной стружки и пыли — рукава ПУ со стальной спиралью: полиуретан истирается примерно в 100 раз медленнее ПВХ, а заземлённая спираль отводит статический заряд.",
           "Когда износ невелик — рукава ПВХ со стальной спиралью (типы A и C): лёгкие, гибкие и дешевле ПУ.",
           "Конструкцию — лёгкую, тяжёлую или вакуумную — подберём по скорости воздуха и разрежению в вашей системе.",
-          "Когда важна стойкость и к температуре, и к механическим повреждениям — металлорукава Metalhex из оцинкованной стали: до +300…+500 °C, соответствуют требованиям директивы ATEX.",
+          "Когда важна стойкость и к температуре, и к механическим повреждениям — металлорукава Metalhex из оцинкованной стали: до +300…+500 °C, соответствуют требованиям директивы ATEX.",
         ],
         faq: [
           {
@@ -577,24 +577,24 @@ export const purposeLandings: PurposeLanding[] = [
     tag: "vent",
     copy: {
       lt: {
-        title: "Ventiliacijos žarnos: KLIN, PVC ir metalinės iki +1100 °C",
+        title: "Ventiliacijos žarnos: KLIN, PVC ir metalinės iki +1100 °C",
         h1: "Ventiliacijos žarnos",
         description:
-          "Ventiliacijos žarnos iš techninių audinių (KLIN), PVC ir metalo: karštam orui ir chemikalų garams iki +1100 °C, DN iki 1150 mm. Pristatymas po Lietuvą.",
+          "Ventiliacijos žarnos iš techninių audinių (KLIN), PVC ir metalo: karštam orui ir chemikalų garams iki +1100 °C, DN iki 1150 mm. Pristatymas po Lietuvą.",
         intro: [
           "Ventiliacijos žarnos (lankstūs ortakiai) naudojamos vėdinimo sistemose, karšto oro, dūmų ir chemikalų garų ištraukimui. Tiekiame žarnas ir įprastam vėdinimui, ir aukštoms bei žemoms temperatūroms, cheminiams garams ir sprogioms aplinkoms, pavyzdžiui, šachtoms.",
           "Didžiausią pasirinkimą sudaro KLIN tipo žarnos iš techninių audinių su plieno vielos spirale — jos itin lanksčios ir lengvai suspaudžiamos. Taip pat tiekiame PVC žarnas su plieno spirale, antistatines liutniovinilo žarnas ir metalines Metalhex žarnas.",
         ],
         choose: [
           "Įprastam vėdinimui — KLIN žarnos iš PVC ar poliuretano arba PVC žarnos su plieno spirale.",
-          "Chemikalų garams ir iki +260 °C — teflono (PTFE) ir silikono KLIN žarnos.",
-          "Karštiems išmetimams — stiklo pluošto KLIN žarnos (iki +1100 °C) arba nerūdijančio plieno Metalhex inox (iki +650 °C).",
+          "Chemikalų garams ir iki +260 °C — teflono (PTFE) ir silikono KLIN žarnos.",
+          "Karštiems išmetimams — stiklo pluošto KLIN žarnos (iki +1100 °C) arba nerūdijančio plieno Metalhex inox (iki +650 °C).",
           "Sprogioms aplinkoms — antistatinės liutniovinilo žarnos (KLIN K7 ir PVC žarna) arba ATEX direktyvos reikalavimus atitinkančios Metalhex žarnos.",
         ],
         faq: [
           {
             q: "Kokia ventiliacijos žarna atlaiko aukščiausią temperatūrą?",
-            a: "KLIN K9/B (stiklo pluoštas + nerūdijančio metalo tinklas + termoaudinys) — iki +1100 °C. Iki +500 °C tinka K9/A, iki +260 °C — teflono ir silikono žarnos.",
+            a: "KLIN K9/B (stiklo pluoštas + nerūdijančio metalo tinklas + termoaudinys) — iki +1100 °C. Iki +500 °C tinka K9/A, iki +260 °C — teflono ir silikono žarnos.",
           },
           {
             q: "Kokio skersmens būna ventiliacijos žarnos?",
@@ -607,24 +607,24 @@ export const purposeLandings: PurposeLanding[] = [
         ],
       },
       ru: {
-        title: "Рукава для вентиляции: КЛИН, ПВХ и металлорукава до +1100 °C",
+        title: "Рукава для вентиляции: КЛИН, ПВХ и металлорукава до +1100 °C",
         h1: "Рукава для вентиляции",
         description:
-          "Рукава для вентиляции из технических тканей (КЛИН), ПВХ и металла: для горячего воздуха и паров химикатов до +1100 °C, DN до 1150 мм. Доставка по Литве.",
+          "Рукава для вентиляции из технических тканей (КЛИН), ПВХ и металла: для горячего воздуха и паров химикатов до +1100 °C, DN до 1150 мм. Доставка по Литве.",
         intro: [
           "Вентиляционные рукава (гибкие воздуховоды) применяются в системах вентиляции, для отвода горячего воздуха, дыма и паров химикатов. Поставляем рукава и для обычной вентиляции, и для высоких и низких температур, химических паров и взрывоопасных сред, например шахт.",
           "Самый широкий выбор — рукава типа КЛИН из технических тканей со спиралью из стальной проволоки: они очень гибкие и легко сжимаются. Также поставляем ПВХ-рукава (шланги) со стальной спиралью, антистатические рукава из лютниовинила и металлорукава Metalhex.",
         ],
         choose: [
           "Для обычной вентиляции — рукава КЛИН из ПВХ или полиуретана либо ПВХ-рукава со стальной спиралью.",
-          "Для паров химикатов и до +260 °C — тефлоновые (PTFE) и силиконовые рукава КЛИН.",
-          "Для горячих выбросов — рукава КЛИН из стекловолокна (до +1100 °C) или металлорукава Metalhex inox из нержавеющей стали (до +650 °C).",
+          "Для паров химикатов и до +260 °C — тефлоновые (PTFE) и силиконовые рукава КЛИН.",
+          "Для горячих выбросов — рукава КЛИН из стекловолокна (до +1100 °C) или металлорукава Metalhex inox из нержавеющей стали (до +650 °C).",
           "Для взрывоопасных сред — антистатические рукава из лютниовинила (КЛИН K7 и ПВХ-рукав) или металлорукава Metalhex, соответствующие требованиям директивы ATEX.",
         ],
         faq: [
           {
             q: "Какой рукав для вентиляции выдерживает самую высокую температуру?",
-            a: "КЛИН K9/B (стекловолокно + сетка из нержавеющей стали + термоткань) — до +1100 °C. До +500 °C подходит K9/A, до +260 °C — тефлоновые и силиконовые рукава.",
+            a: "КЛИН K9/B (стекловолокно + сетка из нержавеющей стали + термоткань) — до +1100 °C. До +500 °C подходит K9/A, до +260 °C — тефлоновые и силиконовые рукава.",
           },
           {
             q: "Какого диаметра бывают рукава для вентиляции?",
@@ -655,7 +655,7 @@ export const purposeLandings: PurposeLanding[] = [
           "Skystiems maisto produktams ir mažiems diametrams — CRISTALIX (2–12,5 mm, maistinis PVC) arba sintetiniu kordu armuota CRISTALIXPRESS (4–15 mm).",
           "Pienui ir gėrimams, kuriuose yra iki 20 % alkoholio, — CRISTALIXPRESS arba GRAIN PRESS.",
           "Grūdams ir kitoms abrazyvinėms birioms medžiagoms — GRAIN PRESS PU: poliuretano sluoksnis daug atsparesnis dilimui.",
-          "Darbinė temperatūra — iki +60 °C, GRAIN PRESS PU — iki +80 °C.",
+          "Darbinė temperatūra — iki +60 °C, GRAIN PRESS PU — iki +80 °C.",
         ],
         faq: [
           {
@@ -668,7 +668,7 @@ export const purposeLandings: PurposeLanding[] = [
           },
           {
             q: "Kokioje temperatūroje galima naudoti šias žarnas?",
-            a: "CRISTALIX, CRISTALIXPRESS ir GRAIN PRESS — nuo −10 iki +60 °C, GRAIN PRESS PU — nuo −20 iki +80 °C.",
+            a: "CRISTALIX, CRISTALIXPRESS ir GRAIN PRESS — nuo −10 iki +60 °C, GRAIN PRESS PU — nuo −20 iki +80 °C.",
           },
         ],
       },
@@ -685,7 +685,7 @@ export const purposeLandings: PurposeLanding[] = [
           "Для жидких пищевых продуктов и малых диаметров — CRISTALIX (2–12,5 мм, пищевой ПВХ) или армированный синтетическим кордом CRISTALIXPRESS (4–15 мм).",
           "Для молока и напитков с содержанием алкоголя до 20 % — CRISTALIXPRESS или GRAIN PRESS.",
           "Для зерна и других абразивных сыпучих материалов — GRAIN PRESS PU: слой полиуретана гораздо устойчивее к истиранию.",
-          "Рабочая температура — до +60 °C, у GRAIN PRESS PU — до +80 °C.",
+          "Рабочая температура — до +60 °C, у GRAIN PRESS PU — до +80 °C.",
         ],
         faq: [
           {
@@ -698,7 +698,7 @@ export const purposeLandings: PurposeLanding[] = [
           },
           {
             q: "При какой температуре можно использовать эти рукава?",
-            a: "CRISTALIX, CRISTALIXPRESS и GRAIN PRESS — от −10 до +60 °C, GRAIN PRESS PU — от −20 до +80 °C.",
+            a: "CRISTALIX, CRISTALIXPRESS и GRAIN PRESS — от −10 до +60 °C, GRAIN PRESS PU — от −20 до +80 °C.",
           },
         ],
       },
@@ -718,10 +718,10 @@ export const purposeLandings: PurposeLanding[] = [
           "Garams ištraukti tiekiame KLIN tipo žarnas iš teflono (PTFE), nitrilo, neopreno, hipalono ir PVC, skysčiams — PVC žarnas AGROCHEM ir TERRASPRAY, o karštai ir korozinei aplinkai — nerūdijančio plieno Metalhex inox žarnas.",
         ],
         choose: [
-          "Agresyviems garams — teflono (PTFE) KLIN žarnos, atlaikančios iki +260 °C; yra ir antistatinė versija K1/C.",
+          "Agresyviems garams — teflono (PTFE) KLIN žarnos, atlaikančios iki +260 °C; yra ir antistatinė versija K1/C.",
           "Medžiagą visada patikrinkite cheminio atsparumo lentelėje: joje — PVC, PUR, silikono, teflono, nitrilo, neopreno, hipalono ir polietileno atsparumas dažniausiems chemikalams.",
           "Trąšoms ir herbicidams — TERRASPRAY, pasižyminti dideliu cheminiu atsparumu (iki 20 bar); daugelio kitų chemikalų poveikiui atspari AGROCHEM su kieto PVC spirale.",
-          "Kai aplinka korozinė arba karšta — nerūdijančio plieno Metalhex inox (iki +650 °C).",
+          "Kai aplinka korozinė arba karšta — nerūdijančio plieno Metalhex inox (iki +650 °C).",
         ],
         faq: [
           {
@@ -730,7 +730,7 @@ export const purposeLandings: PurposeLanding[] = [
           },
           {
             q: "Kaip sužinoti, ar žarnos medžiaga atspari chemikalui?",
-            a: "Pasinaudokite cheminio atsparumo lentele: joje nurodyta, ar medžiaga atspari, sąlyginai atspari ar neatspari chemikalui esant 20 °C. Kadangi temperatūra, koncentracija ir kontakto trukmė gali pakeisti rezultatą, dėl konkrečių sąlygų pasitarkite su mūsų inžinieriais.",
+            a: "Pasinaudokite cheminio atsparumo lentele: joje nurodyta, ar medžiaga atspari, sąlyginai atspari ar neatspari chemikalui esant 20 °C. Kadangi temperatūra, koncentracija ir kontakto trukmė gali pakeisti rezultatą, dėl konkrečių sąlygų pasitarkite su mūsų inžinieriais.",
           },
           {
             q: "Ar yra antistatinių chemiškai atsparių žarnų?",
@@ -748,10 +748,10 @@ export const purposeLandings: PurposeLanding[] = [
           "Для отвода паров поставляем рукава типа КЛИН из тефлона (PTFE), нитрила, неопрена, гипалона и ПВХ, для жидкостей — ПВХ-шланги AGROCHEM и TERRASPRAY, а для горячей и коррозионной среды — металлорукава Metalhex inox из нержавеющей стали.",
         ],
         choose: [
-          "Для агрессивных паров — тефлоновые (PTFE) рукава КЛИН, выдерживающие до +260 °C; есть и антистатическая версия K1/C.",
+          "Для агрессивных паров — тефлоновые (PTFE) рукава КЛИН, выдерживающие до +260 °C; есть и антистатическая версия K1/C.",
           "Материал всегда проверяйте по таблице химической стойкости: в ней — стойкость ПВХ, ПУ, силикона, тефлона, нитрила, неопрена, гипалона и полиэтилена к самым распространённым химикатам.",
           "Для удобрений и гербицидов — TERRASPRAY с высокой химической стойкостью (до 20 бар); к действию многих других химикатов устойчив AGROCHEM со спиралью из жёсткого ПВХ.",
-          "Для коррозионной или горячей среды — металлорукава Metalhex inox из нержавеющей стали (до +650 °C).",
+          "Для коррозионной или горячей среды — металлорукава Metalhex inox из нержавеющей стали (до +650 °C).",
         ],
         faq: [
           {
@@ -760,7 +760,7 @@ export const purposeLandings: PurposeLanding[] = [
           },
           {
             q: "Как узнать, стоек ли материал рукава к химикату?",
-            a: "Воспользуйтесь таблицей химической стойкости: в ней указано, стоек ли материал, условно стоек или нестоек к химикату при 20 °C. Температура, концентрация и время контакта могут изменить результат, поэтому по конкретным условиям посоветуйтесь с нашими инженерами.",
+            a: "Воспользуйтесь таблицей химической стойкости: в ней указано, стоек ли материал, условно стоек или нестоек к химикату при 20 °C. Температура, концентрация и время контакта могут изменить результат, поэтому по конкретным условиям посоветуйтесь с нашими инженерами.",
           },
           {
             q: "Есть ли антистатические химически стойкие рукава?",
@@ -800,7 +800,7 @@ export const purposeLandings: PurposeLanding[] = [
           },
           {
             q: "Ar žarnos tinka darbui šaltyje?",
-            a: "PUR žarnos išlaiko savybes esant žemai temperatūrai (nuo −40 °C), o ELASTIC SUPER NOVA — šalčiui atspari PVC/NBR žarna, naudojama nuo −40 °C.",
+            a: "PUR žarnos išlaiko savybes esant žemai temperatūrai (nuo −40 °C), o ELASTIC SUPER NOVA — šalčiui atspari PVC/NBR žarna, naudojama nuo −40 °C.",
           },
         ],
       },
@@ -830,7 +830,7 @@ export const purposeLandings: PurposeLanding[] = [
           },
           {
             q: "Подходят ли рукава для работы на морозе?",
-            a: "Рукава ПУ сохраняют свойства при низких температурах (от −40 °C), а ELASTIC SUPER NOVA — морозостойкий рукав из ПВХ/NBR, который применяют от −40 °C.",
+            a: "Рукава ПУ сохраняют свойства при низких температурах (от −40 °C), а ELASTIC SUPER NOVA — морозостойкий рукав из ПВХ/NBR, который применяют от −40 °C.",
           },
         ],
       },
@@ -841,24 +841,24 @@ export const purposeLandings: PurposeLanding[] = [
     tag: "exhaust",
     copy: {
       lt: {
-        title: "Žarnos išmetamosioms dujoms ir karštam orui iki +1100 °C",
+        title: "Žarnos išmetamosioms dujoms ir karštam orui iki +1100 °C",
         h1: "Žarnos išmetamosioms dujoms ir karštam orui",
         description:
-          "Žarnos išmetamosioms dujoms, dūmams ir karštam orui: KLIN iš stiklo pluošto iki +1100 °C, metalinės Metalhex iki +650 °C, DEPTAK autoservisams.",
+          "Žarnos išmetamosioms dujoms, dūmams ir karštam orui: KLIN iš stiklo pluošto iki +1100 °C, metalinės Metalhex iki +650 °C, DEPTAK autoservisams.",
         intro: [
           "Variklių išmetamosioms dujoms, dūmams ir karštam orui šalinti reikia žarnų, kurios atlaiko aukštą temperatūrą ir mechaninį poveikį.",
           "Tiekiame metalines Metalhex žarnas iš cinkuoto ir nerūdijančio plieno, aukštatemperatūrines KLIN tipo žarnas iš stiklo pluošto, silikono ir termoaudinių, taip pat poliuretano žarną DEPTAK, skirtą išmetamosioms dujoms šalinti autoservisuose.",
         ],
         choose: [
-          "Iki +1100 °C — KLIN K9/B (stiklo pluoštas, nerūdijančio metalo tinklas ir termoaudinys); iki +500 °C — K9/A, iki +400 °C — K2/B.",
-          "Variklių išmetamosioms dujoms ir dūmams — Metalhex: cinkuoto plieno iki +300…+500 °C, nerūdijančio plieno inox — iki +650 °C.",
+          "Iki +1100 °C — KLIN K9/B (stiklo pluoštas, nerūdijančio metalo tinklas ir termoaudinys); iki +500 °C — K9/A, iki +400 °C — K2/B.",
+          "Variklių išmetamosioms dujoms ir dūmams — Metalhex: cinkuoto plieno iki +300…+500 °C, nerūdijančio plieno inox — iki +650 °C.",
           "Kai reikia sandarumo — Metalhex versijos su silikoniniu (B, D) arba stiklo pluošto (B1, D1) sandarikliu.",
           "Automobilių išmetamosioms dujoms autoservisuose — DEPTAK: antistatinis, dilimui atsparus poliuretanas.",
         ],
         faq: [
           {
             q: "Kokia žarna atlaiko aukščiausią temperatūrą?",
-            a: "KLIN K9/B (stiklo pluoštas + nerūdijančio metalo tinklas + termoaudinys) — iki +1100 °C. Iki +500 °C tinka K9/A, iki +260 °C — teflono ir silikono žarnos.",
+            a: "KLIN K9/B (stiklo pluoštas + nerūdijančio metalo tinklas + termoaudinys) — iki +1100 °C. Iki +500 °C tinka K9/A, iki +260 °C — teflono ir silikono žarnos.",
           },
           {
             q: "Ar metalinė žarna sandari?",
@@ -871,24 +871,24 @@ export const purposeLandings: PurposeLanding[] = [
         ],
       },
       ru: {
-        title: "Рукава для выхлопных газов и горячего воздуха до +1100 °C",
+        title: "Рукава для выхлопных газов и горячего воздуха до +1100 °C",
         h1: "Рукава для выхлопных газов и горячего воздуха",
         description:
-          "Рукава для выхлопных газов, дыма и горячего воздуха: КЛИН из стекловолокна до +1100 °C, металлорукава Metalhex до +650 °C, DEPTAK для автосервисов.",
+          "Рукава для выхлопных газов, дыма и горячего воздуха: КЛИН из стекловолокна до +1100 °C, металлорукава Metalhex до +650 °C, DEPTAK для автосервисов.",
         intro: [
           "Для отвода выхлопных газов двигателей, дыма и горячего воздуха нужны рукава, которые выдерживают высокую температуру и механические нагрузки.",
           "Поставляем металлорукава Metalhex из оцинкованной и нержавеющей стали, высокотемпературные рукава типа КЛИН из стекловолокна, силикона и термотканей, а также полиуретановый шланг DEPTAK для удаления выхлопных газов в автосервисах.",
         ],
         choose: [
-          "До +1100 °C — КЛИН K9/B (стекловолокно, сетка из нержавеющей стали и термоткань); до +500 °C — K9/A, до +400 °C — K2/B.",
-          "Для выхлопных газов двигателей и дыма — Metalhex: из оцинкованной стали до +300…+500 °C, из нержавеющей стали (inox) — до +650 °C.",
+          "До +1100 °C — КЛИН K9/B (стекловолокно, сетка из нержавеющей стали и термоткань); до +500 °C — K9/A, до +400 °C — K2/B.",
+          "Для выхлопных газов двигателей и дыма — Metalhex: из оцинкованной стали до +300…+500 °C, из нержавеющей стали (inox) — до +650 °C.",
           "Когда нужна герметичность — версии Metalhex с силиконовым (B, D) или стекловолоконным (B1, D1) уплотнителем.",
           "Для выхлопных газов автомобилей в автосервисах — DEPTAK: антистатический, износостойкий полиуретан.",
         ],
         faq: [
           {
             q: "Какой рукав выдерживает самую высокую температуру?",
-            a: "КЛИН K9/B (стекловолокно + сетка из нержавеющей стали + термоткань) — до +1100 °C. До +500 °C подходит K9/A, до +260 °C — тефлоновые и силиконовые рукава.",
+            a: "КЛИН K9/B (стекловолокно + сетка из нержавеющей стали + термоткань) — до +1100 °C. До +500 °C подходит K9/A, до +260 °C — тефлоновые и силиконовые рукава.",
           },
           {
             q: "Герметичен ли металлорукав?",
@@ -923,7 +923,7 @@ export type SpecRange = { dn?: [number, number]; temp?: [number | null, number] 
 
 export function specRange(products: Product[]): SpecRange {
   const dn = products.flatMap((p) => (p.dn ? numbers(p.dn).map(Math.abs) : [])).filter((n) => n > 0);
-  // "iki +500 °C" / "+120 °C." are upper bounds only; "nuo −40 iki +80" gives
+  // "iki +500 °C" / "+120 °C." are upper bounds only; "nuo −40 iki +80" gives
   // both ends. A lower bound is reported only when some product states one.
   const temps = products.map((p) => (p.temp ? numbers(p.temp) : [])).filter((t) => t.length);
   const highs = temps.map((t) => Math.max(...t));
@@ -945,8 +945,8 @@ export function formatDn(r: SpecRange, locale: Locale) {
 export function formatTemp(r: SpecRange, locale: Locale) {
   if (!r.temp) return "";
   const [a, b] = r.temp;
-  if (a === null) return `${locale === "ru" ? "до" : "iki"} ${signed(b, locale)} °C`;
-  return `${signed(a, locale)} … ${signed(b, locale)} °C`;
+  if (a === null) return `${locale === "ru" ? "до" : "iki"} ${signed(b, locale)} °C`;
+  return `${signed(a, locale)} … ${signed(b, locale)} °C`;
 }
 
 // ── Cities ─────────────────────────────────────────────────────────────────
@@ -1127,7 +1127,7 @@ export const homeFaq: Record<Locale, Faq[]> = {
   lt: [
     {
       q: "Kokias technines žarnas parduoda Riko Market?",
-      a: "PVC, PUR (poliuretano), KLIN tipo (techninių audinių) ir metalines žarnas, taip pat Camlock ir STORZ jungtis bei žarnų apkabas. Diametrai nuo kelių milimetrų iki 1150 mm, darbinės temperatūros iki +1100 °C.",
+      a: "PVC, PUR (poliuretano), KLIN tipo (techninių audinių) ir metalines žarnas, taip pat Camlock ir STORZ jungtis bei žarnų apkabas. Diametrai nuo kelių milimetrų iki 1150 mm, darbinės temperatūros iki +1100 °C.",
     },
     {
       q: "Ar pristatote žarnas visoje Lietuvoje?",
@@ -1143,13 +1143,13 @@ export const homeFaq: Record<Locale, Faq[]> = {
     },
     {
       q: "Kokia žarna atlaiko aukštą temperatūrą?",
-      a: "Karštiems garams ir dujoms — KLIN tipo žarnos iš stiklo pluošto ir termoaudinių (iki +1100 °C) arba nerūdijančio plieno metalinės žarnos (iki +650 °C).",
+      a: "Karštiems garams ir dujoms — KLIN tipo žarnos iš stiklo pluošto ir termoaudinių (iki +1100 °C) arba nerūdijančio plieno metalinės žarnos (iki +650 °C).",
     },
   ],
   ru: [
     {
       q: "Какие технические рукава продаёт Riko Market?",
-      a: "Рукава из ПВХ, полиуретана (ПУ), рукава типа КЛИН (из технических тканей) и металлорукава, а также соединения Camlock и STORZ и хомуты. Диаметры от нескольких миллиметров до 1150 мм, рабочие температуры до +1100 °C.",
+      a: "Рукава из ПВХ, полиуретана (ПУ), рукава типа КЛИН (из технических тканей) и металлорукава, а также соединения Camlock и STORZ и хомуты. Диаметры от нескольких миллиметров до 1150 мм, рабочие температуры до +1100 °C.",
     },
     {
       q: "Доставляете ли вы рукава по всей Литве?",
@@ -1165,7 +1165,7 @@ export const homeFaq: Record<Locale, Faq[]> = {
     },
     {
       q: "Какой рукав выдерживает высокую температуру?",
-      a: "Для горячих газов и паров — рукава КЛИН из стекловолокна и термотканей (до +1100 °C) или металлорукава из нержавеющей стали (до +650 °C).",
+      a: "Для горячих газов и паров — рукава КЛИН из стекловолокна и термотканей (до +1100 °C) или металлорукава из нержавеющей стали (до +650 °C).",
     },
   ],
 };
